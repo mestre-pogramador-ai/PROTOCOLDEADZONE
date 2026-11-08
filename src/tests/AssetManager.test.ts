@@ -1,0 +1,3 @@
+import { describe, it, expect, vi } from 'vitest';
+import { AssetManager } from '../infrastructure/assets/AssetManager';
+describe('AssetManager', () => { it('reutiliza requisição por chave', async () => { const a = new AssetManager(); const load = vi.fn(async () => 7); const x = a.load('demo', load); const y = a.load('demo', load); expect(await x).toBe(7); expect(await y).toBe(7); expect(load).toHaveBeenCalledTimes(1); }); it('permite nova tentativa após erro', async () => { const a = new AssetManager(); await expect(a.load('x', async () => { throw Error('falha'); })).rejects.toThrow(); expect(a.has('x')).toBe(false); }); });
