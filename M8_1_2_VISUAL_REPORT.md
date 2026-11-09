@@ -17,6 +17,8 @@ sobre o M8.1.1; não foi feito merge em main ou deploy de produção.
 Commits da implementação: `38050dc` auditoria; `492318d` assets/pipeline;
 `a2dd1d3` apresentação; `ad16f0e` testes. O código validado corresponde a esses
 commits; relatório/evidências são registrados separadamente na documentação.
+Revisão entregue em [PR #8 — rascunho](https://github.com/mestre-pogramador-ai/PROTOCOLDEADZONE/pull/8),
+base `m8.1.1-visual-overhaul`. O commit `87b5ca7` reúne as evidências da entrega.
 
 Auditoria anterior à implementação:
 [M8_1_2_VISUAL_AUDIT.md](M8_1_2_VISUAL_AUDIT.md).
@@ -146,7 +148,9 @@ A morte recebeu uma curva de contato medida no próprio Three.js: 33 amostras
 de vértices deformados/indexados visíveis por arquétipo, com compensação vertical
 suave e limitada. O arquivo guarda hashes dos GLBs e a medição original.
 O teste final encontrou o ponto mais baixo dos cadáveres em aproximadamente
-**+0,004 m**, sem interseção com o piso nas poses verificadas.
+**+0,004 m em relação ao Y=0 do mapa físico** nas poses verificadas. A camada
+visual do piso permanece em Y=0,016; o contato fino de solas/roupa com essa
+superfície elevada ainda faz parte da revisão de arte.
 
 ## 5. Materiais e Sala de Contenção
 
@@ -321,6 +325,12 @@ Prioridades antes de considerar o visual finalizado:
    em trabalho apropriado. O carregamento atual no Three.js passou.
 6. Concluir o fluxo de revisão empilhado do M8.1/M8.1.1/M8.1.2. Preview hospedado
    não substitui testes locais; o acesso do autor ao Vercel já era bloqueio conhecido.
+
+Após o push de `87b5ca7`, o Vercel recusou o preview com:
+`Git author Indiplayer must have access to the project on Vercel to create deployments.`
+É um bloqueio de permissão do serviço, separado do build local aprovado.
+O preview hospedado não foi validado. Evidência:
+[github-preview-status.json](docs/validation/M812/github-preview-status.json).
 
 Recomendação: revisar a evolução comprovada da M9 e do Comum e manter a entrega
 recuperável em rascunho enquanto arte/desempenho recebem aceite. **Não avançar

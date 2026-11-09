@@ -1,0 +1,8 @@
+{
+  "commit": "87b5ca7f3d9b179d8ad6c649cf9cb5b0c9991f07",
+  "pullRequest": "https://github.com/mestre-pogramador-ai/PROTOCOLDEADZONE/pull/8",
+  "context": "Vercel",
+  "state": "failure",
+  "description": "Git author Indiplayer must have access to the project on Vercel to create deployments.",
+  "hostedPreviewValidated": false
+}
