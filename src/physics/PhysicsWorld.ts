@@ -51,11 +51,11 @@ export class PhysicsWorld {
   }
   isDoorOpen(): boolean { return this.doorOpen; }
 
-  step(dt: number, input: InputSnapshot, yaw: number): void {
+  step(dt: number, input: InputSnapshot, yaw: number, speedMultiplier=1): void {
     if (this.disposed) return;
     this.previous = this.player.pose();
     this.world.timestep = dt;
-    this.player.tick(input, yaw, dt);
+    this.player.tick(input, yaw, dt, speedMultiplier);
     this.world.step();
   }
 

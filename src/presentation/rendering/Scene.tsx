@@ -1,3 +1,4 @@
+import {PerkMachines} from './PerkMachines';
 import { useFrame, useThree } from '@react-three/fiber';
 import { useRef } from 'react';
 import type { Runtime } from '../../app/Runtime';
@@ -38,7 +39,7 @@ export function Scene({runtime}:{runtime:Runtime}){
    camera.rotation.order='YXZ';
    camera.rotation.set(look.pitch,look.yaw,0);
  },-100);
- return <><color attach="background" args={['#11191f']}/><fog attach="fog" args={['#11191f',18,42]}/><ambientLight intensity={.65}/><hemisphereLight args={['#85b9b9','#1b2024',1.1]}/><directionalLight position={[-4,10,5]} intensity={2.1} castShadow shadow-mapSize={[1024,1024]}/><pointLight position={[-3,2.9,0]} intensity={13} color="#63c5c0" distance={9}/><pointLight position={[7,2.9,0]} intensity={12} color="#c64d4d" distance={8}/>{CONTAINMENT_MODULES.map(m=><Module key={m.id} module={m}/>)}<LiveDoor runtime={runtime}/><InfectedView runtime={runtime}/><M9Viewmodel runtime={runtime}/><IndustrialDetails/><AmmoStationSign/>{[-5,0,5].map(x=><group key={x} position={[x,3.36,-7.3]}><mesh><boxGeometry args={[1.9,.07,.3]}/><meshStandardMaterial color="#a6dad4" emissive="#63c5c0" emissiveIntensity={2}/></mesh></group>)}<mesh rotation={[-Math.PI/2,0,0]} position={[0,.016,0]}><planeGeometry args={[15.7,15.7]}/><meshStandardMaterial color="#25383d" roughness={.94}/></mesh></>;
+ return <><color attach="background" args={['#11191f']}/><fog attach="fog" args={['#11191f',18,42]}/><ambientLight intensity={.65}/><hemisphereLight args={['#85b9b9','#1b2024',1.1]}/><directionalLight position={[-4,10,5]} intensity={2.1} castShadow shadow-mapSize={[1024,1024]}/><pointLight position={[-3,2.9,0]} intensity={13} color="#63c5c0" distance={9}/><pointLight position={[7,2.9,0]} intensity={12} color="#c64d4d" distance={8}/>{CONTAINMENT_MODULES.map(m=><Module key={m.id} module={m}/>)}<LiveDoor runtime={runtime}/><InfectedView runtime={runtime}/><M9Viewmodel runtime={runtime}/><IndustrialDetails/><AmmoStationSign/><PerkMachines/>{[-5,0,5].map(x=><group key={x} position={[x,3.36,-7.3]}><mesh><boxGeometry args={[1.9,.07,.3]}/><meshStandardMaterial color="#a6dad4" emissive="#63c5c0" emissiveIntensity={2}/></mesh></group>)}<mesh rotation={[-Math.PI/2,0,0]} position={[0,.016,0]}><planeGeometry args={[15.7,15.7]}/><meshStandardMaterial color="#25383d" roughness={.94}/></mesh></>;
 }
 function LiveDoor({runtime}:{runtime:Runtime}){const ref=useRef<import('three').Group>(null);useFrame(()=>{if(ref.current)ref.current.position.y=runtime.isDoorOpen()?3.3:0;});return <group ref={ref}><Door open={false}/></group>}
 
