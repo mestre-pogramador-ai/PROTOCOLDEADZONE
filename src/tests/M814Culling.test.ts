@@ -13,6 +13,9 @@ describe('M8.1.4 conservative animation culling',()=>{
   const loader=new GLTFLoader();loader.register(()=>({name:'test_skip_images',loadTexture:()=>{const t=new Texture();textures.push(t);return Promise.resolve(t);}}));
   const gltf=await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),''),root=new Group();root.add(gltf.scene);
   const skins:SkinnedMesh[]=[];gltf.scene.traverse(o=>{if(o instanceof SkinnedMesh){skins.push(o);expect(applyCharacterCulling(o,family),o.name).toBe(true);}});
+  // Mirror the renderer's shared skeleton. The exported LODs/vest must retain
+  // the same inverse bind matrices; metadata is measured before instancing.
+  for(const skin of skins.slice(1)){expect(skin.skeleton.boneInverses.map(m=>m.elements)).toEqual(skins[0].skeleton.boneInverses.map(m=>m.elements));if(skin.skeleton!==skins[0].skeleton)skin.skeleton.dispose();skin.skeleton=skins[0].skeleton;}
   const mixer=new AnimationMixer(root),retarget=createHeadRetarget(gltf.scene),p=new Vector3();
   try{
    for(const scale of family==='worker'?[.86,1,1.2]:[.83]){

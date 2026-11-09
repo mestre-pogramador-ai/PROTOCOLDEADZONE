@@ -15,9 +15,9 @@ export function createHeadRetarget(root:Object3D){
   if(!head||!top||!joints.length)return 0;
   target.set(x,1.78,z);read();const before=center.distanceTo(target);if(before<=.20)return before;
   goal.copy(center).sub(target).normalize().multiplyScalar(.17).add(target);
-  // A third bounded pass handles low-frame-rate crossfades on the scaled brute.
-  // It runs only when the prior passes have not reached the original .20m goal.
-  for(let pass=0;pass<3;pass++)for(const joint of joints){
+  // The real brute windup (.8s) needs additional convergence in partial blends.
+  // Keep the .20m goal and .24rad correction cap; most poses exit earlier.
+  for(let pass=0;pass<6;pass++)for(const joint of joints){
    read();if(center.distanceToSquared(target)<=.20*.20)return center.distanceTo(target);
    joint.getWorldPosition(pivot);from.copy(center).sub(pivot);to.copy(goal).sub(pivot);
    if(from.lengthSq()<1e-8||to.lengthSq()<1e-8)continue;
