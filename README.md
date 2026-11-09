@@ -1,8 +1,8 @@
 # PROTOCOL: DEAD ZONE
 
-**M6.1 — FPS Movement Stability (v0.7.1)** · FPS 3D de sobrevivência no navegador, em desenvolvimento.
+**M7 — Variantes de infectados (v0.8.0)** · FPS 3D de sobrevivência no navegador, em desenvolvimento.
 
-Este projeto mantém os marcos M0–M6 e corrige a estabilidade de movimento do jogador. A primeira arena inclui:
+Este projeto mantém os marcos M0–M6.2 e introduz variantes de infectados nas rodadas. A primeira arena inclui:
 menu, partida, preparação, rodadas, infectados, combate M9, créditos, porta comprável,
 pausa, derrota, relatório e reinício. **Não é o jogo final nem uma demo comercial.**
 
@@ -74,7 +74,7 @@ O recorde salvo neste navegador permanece.
 - `src/tests`: testes Vitest acumulados de todos os marcos
 - `docs/M6_VERTICAL_SLICE.md`: escopo, limitações e checklist manual
 
-**Limitações:** modelos e sons são placeholders, não há novos setores, novos inimigos,
+**Limitações:** modelos e sons são placeholders; não há setores adicionais,
 armas alternativas, missões, progressão meta, multiplayer ou extração neste marco.
 Leia `docs/M6_VERTICAL_SLICE.md` para mais detalhes.
 
@@ -85,4 +85,15 @@ Diagnóstico: **F8** marca um problema; **F9** ou **BAIXAR ERROS** exporta
 um relatório local de eventos e amostras da simulação, sem dados privados.
 Execute `npm test`, `npm run test:motion` e `npm run build` para validar.
 O aceite visual em hardware real e o agachamento com redução física da cápsula
-continuam pendentes; M7 não foi iniciado.
+continuam pendentes do M6.2.
+
+
+## M7 — Variantes de infectados
+
+R1–3 mantêm o Infectado Comum. A partir da **R4**, surgem Corredores
+(ágeis e frágeis); na **R7**, Brutamontes (lentos e resistentes);
+na **R10**, Predadores (rápidos, com dano maior).
+O HUD identifica tipos vivos e o início das rodadas de desbloqueio anuncia a ameaça.
+
+Escopo, atributos, testes executados e aceite manual pendente:
+[relatório M7](docs/M7_INFECTED_VARIANTS.md).
