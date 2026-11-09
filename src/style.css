@@ -124,9 +124,11 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 @media(max-height:570px){.m6-wave{top:24px}.m6-game .world-label{display:none}.menu-card{padding:16px}.menu-card h2{margin:12px 0}.menu-buttons{margin:16px 0}}
 
 /* M6.1: opt-in diagnostics only (?debugMovement=1); does not intercept mouse input. */
-.m61-motion-debug{position:absolute;top:7.3rem;left:1rem;z-index:8;pointer-events:none;display:flex;flex-direction:column;gap:.22rem;max-width:260px;padding:.7rem .85rem;color:#b9e6df;background:rgba(7,20,24,.9);border:1px solid rgba(99,197,192,.5);font:12px/1.35 ui-monospace,SFMono-Regular,Consolas,monospace;box-shadow:0 4px 18px rgba(0,0,0,.25)}
+.m61-motion-debug{position:absolute;top:45%;left:1rem;z-index:8;pointer-events:none;display:flex;flex-direction:column;gap:.22rem;max-width:260px;padding:.7rem .85rem;color:#b9e6df;background:rgba(7,20,24,.9);border:1px solid rgba(99,197,192,.5);font:12px/1.35 ui-monospace,SFMono-Regular,Consolas,monospace;box-shadow:0 4px 18px rgba(0,0,0,.25)}
 .m61-motion-debug strong{font-size:11px;letter-spacing:.1em;color:#63c5c0;margin-bottom:.15rem}
 .m61-motion-debug span{white-space:nowrap}
 
-.m6-errors { position: absolute; top: 3.5rem; right: 1rem; z-index: 30; padding: .45rem .7rem; background: #17282d; color: #a6dad4; border: 1px solid #637276; cursor: pointer; }
+.m6-errors { position: absolute; bottom: 216px; right: 1rem; z-index: 30; padding: .45rem .7rem; background: #17282d; color: #a6dad4; border: 1px solid #637276; cursor: pointer; }
 .m7-threats { display: flex; flex-direction: column; gap: .2rem; font-size: .65rem; margin-top: .5rem; }
+
+@media(max-width:760px){.m6-errors{right:10px;bottom:180px;font-size:10px}}

@@ -8,9 +8,11 @@ import { InputManager } from '../core/input/InputManager';
 import { Lifecycle } from '../core/lifecycle/Lifecycle';
 import { AssetManager } from '../infrastructure/assets/AssetManager';
 import { PhysicsWorld, type PhysicsSnapshot } from '../physics/PhysicsWorld';
-import { DOOR } from '../world/maps/containment';
-import { M9Controller } from '../gameplay/weapons/M9';
-import { traceCombatShot, type CombatTrace } from '../gameplay/combat/EnemyHitScan';
+import { AMMO_STATION, DOOR } from '../world/maps/containment';
+import { M9, M9Controller } from '../gameplay/weapons/M9';
+import type { CombatTrace } from '../gameplay/combat/EnemyHitScan';
+import {resolveShot} from '../gameplay/combat/ResolveShot';
+import {AmmoSupply,AMMO_SUPPLY} from '../gameplay/economy/AmmoSupply';
 import { EnemyManager } from '../gameplay/enemies/EnemyManager';
 import { PLAYER } from '../gameplay/player/PlayerController';
 import { PlayerDamage } from '../gameplay/combat/PlayerDamage';
@@ -40,6 +42,8 @@ export class Runtime {
   readonly rounds=new RoundDirector();
   readonly economy=new EconomyManager();
   readonly metrics=new SessionMetrics();
+  readonly ammoSupply=new AmmoSupply(this.weapon,this.economy);
+  private ammoRequest=0;
   private physics:PhysicsWorld;
   private disposed=false;
   private frameStats:FrameStats={steps:0,alpha:0,droppedSeconds:0};
@@ -67,7 +71,7 @@ export class Runtime {
   reset():void{
     this.ensureActive();this.clock.pause();this.lifecycle.reset();
     diagnostics.record('info','session.reset');this.physics.dispose();this.physics=new PhysicsWorld();this.clock.reset();this.input.clear();
-    this.weapon.reset();this.enemies.clear();this.rounds.reset();this.economy.reset();this.metrics.reset();
+    this.weapon.reset();this.ammoSupply.reset();this.ammoRequest=0;this.enemies.clear();this.rounds.reset();this.economy.reset();this.metrics.reset();
     this.lastTrace=null;this.traceAge=Infinity;this.yaw=0;this.pitch=0;
     this.playerDamage.reset();this.hitAge=Infinity;this.kills=0;this.lastHeadshot=false;
     this.gameOver=false;this.lastDamageAngle=0;this.spawnSequence=0;
@@ -78,7 +82,21 @@ export class Runtime {
   /** Debug only: game interaction uses buyDoor() to enforce the economy. */
   setDoorOpen(open:boolean):void{this.ensureActive();this.physics.setDoorOpen(open);}
   isDoorOpen():boolean{return this.physics.isDoorOpen();}
-  canInteract():boolean{const p=this.physics.snapshot().current.position;return Math.hypot(p[0]-DOOR.position[0],p[2]-DOOR.position[2])<2.8;}
+  getInteraction(){
+    const p=this.physics.snapshot().current.position;
+    if(Math.hypot(p[0]-AMMO_STATION.position[0],p[2]-AMMO_STATION.position[2])<AMMO_STATION.range){
+      const state=this.weapon.snapshot(),count=Math.min(AMMO_SUPPLY.pack,M9.maxReserve-state.reserve);
+      const wait=Math.ceil(this.ammoSupply.snapshot().emergencyRemaining);
+      const message=count===0?'RESERVA M9 CHEIA':state.ammo+state.reserve===0&&this.economy.balance<AMMO_SUPPLY.price
+        ?wait>0?`SOCORRO EM ${wait}s`:'[ E ] SOCORRO · 15 BALAS GRÁTIS'
+        :`[ E ] M9 +${count} BALAS · ${count*AMMO_SUPPLY.unitPrice} CR`;
+      return {kind:'ammo' as const,message};
+    }
+    if(Math.hypot(p[0]-DOOR.position[0],p[2]-DOOR.position[2])<2.8)
+      return {kind:'door' as const,message:this.isDoorOpen()?'CORREDOR DESBLOQUEADO':`[ E ] DESTRAVAR PORTA · ${ECONOMY.containmentDoorPrice} CR`};
+    return null;
+  }
+  canInteract():boolean{return this.getInteraction()!==null;}
   private announce(text:string):void{this.notification=text;this.notificationRemaining=2.2;}
   private announceRound(round:number):void{
     const unlocked=unlockedEnemy(round);
@@ -92,7 +110,18 @@ export class Runtime {
     return started;
   }
   interact():boolean{
-    if(!this.canInteract()||this.gameOver)return false;
+    if(this.gameOver||this.lifecycle.state!=='running')return false;
+    const interaction=this.getInteraction();if(!interaction)return false;
+    if(interaction.kind==='ammo'){
+      const result=this.ammoSupply.buy(++this.ammoRequest);
+      const success=result.status==='paid'||result.status==='emergency';
+      this.announce(success?`M9 +${result.quantity} ${result.quantity===1?'BALA':'BALAS'} · ${result.cost===0?'SOCORRO':`-${result.cost} CR`}`:
+        result.status==='full'?'RESERVA M9 CHEIA':result.status==='insufficient'?'CRÉDITOS INSUFICIENTES':'AGUARDE A ESTAÇÃO');
+      diagnostics.record(success?'info':'warning','ammo.'+result.status,{quantity:result.quantity,cost:result.cost});
+      if(success){this.bus.emit('ammo:received',{quantity:result.quantity,cost:result.cost});this.bus.emit('economy:purchase',{price:result.cost});}
+      else this.bus.emit('economy:denied',{price:AMMO_SUPPLY.price});
+      return success;
+    }
     if(this.economy.hasPurchase(DOOR.id)){
       // Purchased passage stays open; prevents accidentally trapping the player.
       this.physics.setDoorOpen(true);return true;
@@ -105,7 +134,7 @@ export class Runtime {
   frame(delta:number):void{
     if(this.disposed||this.lifecycle.state!=='running'||this.gameOver)return;
     this.frameStats=this.clock.frame(delta,dt=>{
-      this.metrics.tick(dt);
+      this.metrics.tick(dt);this.ammoSupply.tick(dt);
       const input=this.input.snapshot();
       this.physics.step(dt,input,this.yaw);
       if(this.physics.movementDiagnostics().reversePrevented)this.reverseTicks++;
@@ -129,23 +158,13 @@ export class Runtime {
       const shot=this.weapon.takeShot();
       if(shot){
         const origin:[number,number,number]=[px,pose.position[1]+(pose.crouching?.38:PLAYER.eyeOffset),pz];
-        const targets=this.enemies.snapshots();
-        const trace=traceCombatShot({origin,yaw:this.yaw,pitch:this.pitch,maxDistance:shot.range,
-          doorOpen:this.isDoorOpen(),id:shot.id,damage:shot.damage},targets);
+        const {trace,hit,killed}=resolveShot({origin,yaw:this.yaw,pitch:this.pitch,maxDistance:shot.range,
+          doorOpen:this.isDoorOpen(),id:shot.id,damage:shot.damage},shot.headshotMultiplier,this.enemies,this.economy);
         this.lastTrace=trace;this.traceAge=0;
-        const target=targets.find(e=>e.id===trace.enemyId&&e.state!=='dead');
-        this.metrics.recordShot(!!target,!!target&&trace.headshot);
-        this.bus.emit('combat:shot',{hit:!!target,headshot:!!target&&trace.headshot});
-        if(target){
-          this.economy.awardHit(target.id,shot.id);
-          const killed=this.enemies.applyDamage(target.id,shot.damage*(trace.headshot?shot.headshotMultiplier:1));
-          if(killed){
-            this.kills++;this.rounds.recordKill();
-            this.economy.awardKill(target.id,trace.headshot);
-            this.bus.emit('combat:enemyKilled',{headshot:trace.headshot});
-          }
-          this.lastHeadshot=trace.headshot;
-        }else this.lastHeadshot=false;
+        this.metrics.recordShot(hit,hit&&trace.headshot);
+        this.bus.emit('combat:shot',{hit,headshot:hit&&trace.headshot});
+        if(killed){this.kills++;this.rounds.recordKill();this.bus.emit('combat:enemyKilled',{headshot:trace.headshot});}
+        this.lastHeadshot=hit&&trace.headshot;
       }else this.traceAge+=dt;
       this.hitAge+=dt;this.playerDamage.tick(dt);
       const attacks=this.enemies.tick(dt,px,pz,this.isDoorOpen());

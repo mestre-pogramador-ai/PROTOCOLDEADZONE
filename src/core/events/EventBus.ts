@@ -13,6 +13,7 @@ export type AppEvents = {
   'weapon:reloaded': Record<string, never>;
   'round:started': { round: number };
   'round:completed': { round: number; reward: number };
+  'ammo:received': { quantity:number; cost:number };
   'economy:purchase': { price: number };
   'economy:denied': { price: number };
   'session:gameover': { rounds: number; kills: number };

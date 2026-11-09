@@ -7,7 +7,7 @@ export const ECONOMY = {
   headshotKill: 90, // substitui o bônus de morte comum, não soma
   containmentDoorPrice: 750,
 } as const;
-export type CreditReason = 'hit' | 'kill' | 'headshot' | 'round' | 'door';
+export type CreditReason = 'hit' | 'kill' | 'headshot' | 'round' | 'door' | 'ammo';
 export interface CreditNotice { delta: number; reason: CreditReason; serial: number }
 export interface EconomySnapshot { credits: number; lifetimeEarned: number; lifetimeSpent: number; lastNotice: CreditNotice | null; doorPurchased: boolean }
 export class EconomyManager {
@@ -50,13 +50,13 @@ export class EconomyManager {
     return this.reward(`round:${round}`, 50 + 10 * round, 'round');
   }
   hasPurchase(id: string): boolean { return this.transactions.has(`buy:${id}`); }
-  buy(id: string, cost: number): boolean {
+  buy(id: string, cost: number, reason: 'door'|'ammo' = 'door'): boolean {
     if (!id || !Number.isSafeInteger(cost) || cost < 0) return false;
     const key = `buy:${id}`;
     if (this.transactions.has(key)) return true;
     if (this.credits < cost) return false;
     this.transactions.add(key); this.credits -= cost; this.spent += cost;
-    this.notice = { delta: -cost, reason: 'door', serial: ++this.serial };
+    this.notice = { delta: -cost, reason, serial: ++this.serial };
     return true;
   }
   snapshot(): EconomySnapshot {
