@@ -77,3 +77,12 @@ O recorde salvo neste navegador permanece.
 **Limitações:** modelos e sons são placeholders, não há novos setores, novos inimigos,
 armas alternativas, missões, progressão meta, multiplayer ou extração neste marco.
 Leia `docs/M6_VERTICAL_SLICE.md` para mais detalhes.
+
+## M6.2 — estabilidade, combate e IA
+
+Correções e evidências: [relatório M6.2](docs/M6_2_VALIDATION.md).
+Diagnóstico: **F8** marca um problema; **F9** ou **BAIXAR ERROS** exporta
+um relatório local de eventos e amostras da simulação, sem dados privados.
+Execute `npm test`, `npm run test:motion` e `npm run build` para validar.
+O aceite visual em hardware real e o agachamento com redução física da cápsula
+continuam pendentes; M7 não foi iniciado.
