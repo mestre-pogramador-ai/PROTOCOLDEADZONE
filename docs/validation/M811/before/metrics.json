@@ -1,0 +1,130 @@
+{
+  "four": {
+    "frames": [
+      60.5,
+      114.39999999850988,
+      113.70000000111759,
+      116,
+      132.19999999925494,
+      98.70000000111759,
+      111.89999999850988,
+      97.5,
+      209.2000000011176,
+      118,
+      13.099999999627471,
+      179.59999999962747,
+      183.7000000011176,
+      105.29999999888241,
+      14.800000000745058,
+      190.69999999925494,
+      31.59999999962747,
+      97.60000000149012,
+      171.2999999988824,
+      93.09999999962747,
+      108.30000000074506,
+      224.69999999925494,
+      111,
+      72.30000000074506,
+      66.19999999925494,
+      112.20000000111759
+    ],
+    "render": {
+      "frame": 40,
+      "calls": 94,
+      "triangles": 8698,
+      "points": 0,
+      "lines": 0
+    },
+    "memory": {
+      "geometries": 104,
+      "textures": 1
+    },
+    "weapon": {
+      "ammo": 15,
+      "reserve": 90,
+      "reloading": false,
+      "reloadRemaining": 0,
+      "reloadDuration": 1.5,
+      "ads": false,
+      "adsBlend": 0,
+      "cooldownRemaining": 0,
+      "shotsFired": 0
+    },
+    "combat": {
+      "health": 100,
+      "maxHealth": 100,
+      "kills": 0,
+      "alive": 4,
+      "hitRecently": false,
+      "damageAngle": 0,
+      "gameOver": false,
+      "lastHeadshot": false,
+      "hitMarker": false,
+      "damageEvents": 0,
+      "invulnerability": 0
+    },
+    "count": 4
+  },
+  "twenty": {
+    "frames": [
+      79.40000000037253,
+      138.19999999925494,
+      153.5,
+      140,
+      159.2000000011176,
+      149.09999999962747,
+      137.69999999925494,
+      127.20000000111759,
+      134.5,
+      158.7999999988824,
+      123.30000000074506,
+      156.7999999988824,
+      125,
+      137.80000000074506,
+      164,
+      122,
+      149.80000000074506,
+      132.2999999988824,
+      167.30000000074506,
+      114.40000000037253,
+      121.79999999888241
+    ],
+    "render": {
+      "frame": 72,
+      "calls": 334,
+      "triangles": 41210,
+      "points": 0,
+      "lines": 0
+    },
+    "memory": {
+      "geometries": 344,
+      "textures": 1
+    },
+    "weapon": {
+      "ammo": 15,
+      "reserve": 90,
+      "reloading": false,
+      "reloadRemaining": 0,
+      "reloadDuration": 1.5,
+      "ads": false,
+      "adsBlend": 0,
+      "cooldownRemaining": 0,
+      "shotsFired": 0
+    },
+    "combat": {
+      "health": 100,
+      "maxHealth": 100,
+      "kills": 0,
+      "alive": 20,
+      "hitRecently": false,
+      "damageAngle": 0,
+      "gameOver": false,
+      "lastHeadshot": false,
+      "hitMarker": false,
+      "damageEvents": 0,
+      "invulnerability": 0
+    },
+    "count": 20
+  },
+  "errors": []
+}

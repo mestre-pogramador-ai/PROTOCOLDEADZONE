@@ -1,6 +1,6 @@
 # PROTOCOL: DEAD ZONE
 
-**M8.1 — Perks e progressão (v0.9.1)** · FPS 3D de sobrevivência no navegador, em desenvolvimento.
+**M8.1.1 — Integração visual GLB (v0.9.2)** · FPS 3D de sobrevivência no navegador, em desenvolvimento.
 
 Este projeto mantém os marcos M0–M6.2 e introduz variantes de infectados nas rodadas. A primeira arena inclui:
 menu, partida, preparação, rodadas, infectados, combate M9, créditos, porta comprável,
@@ -132,3 +132,16 @@ Morte ou reinício removem todos. Estação de munição e porta permanecem disp
 
 Consulte [M8_1_TEST_REPORT.md](M8_1_TEST_REPORT.md) para validação,
 análise econômica até R15 e limitações dos testes na nuvem.
+
+## M8.1.1 — Modelos locais e animação
+
+A M9 usa um modelo 9mm/Beretta de Quaternius; os braços rigados vêm de
+para/MakeHuman e os quatro infectados compartilham um humanoide animado
+de Quaternius. Assets locais, cache de recursos, LOD e viewmodel com câmera
+própria preservam a simulação e o balanceamento.
+
+Os modelos/adaptações continuam **provisórios para aceite de arte**:
+não são arte final/AAA, e rigging, empunhadura e variantes ainda exigem revisão humana.
+Fontes, modificações e licenças: [créditos dos assets](public/assets/manifests/ATTRIBUTION.md).
+Plano: [M8_1_1_VISUAL_PLAN.md](M8_1_1_VISUAL_PLAN.md).
+Validação e comparação: [M8_1_1_VISUAL_REPORT.md](M8_1_1_VISUAL_REPORT.md).
