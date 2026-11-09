@@ -97,3 +97,7 @@ O HUD identifica tipos vivos e o início das rodadas de desbloqueio anuncia a am
 
 Escopo, atributos, testes executados e aceite manual pendente:
 [relatório M7](docs/M7_INFECTED_VARIANTS.md).
+
+Validação após integração: [relatório de teste M7](docs/M7_TEST_REPORT.md).
+**Pendência de progressão:** sem reposição, as 105 balas iniciais não permitem
+concluir R5 (mínimo calculado: 136 headshots acumulados).
