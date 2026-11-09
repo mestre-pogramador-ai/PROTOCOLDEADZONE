@@ -2,6 +2,7 @@
 export type Vec3 = readonly [number, number, number];
 export interface SolidModule { id: string; kind: 'floor' | 'wall' | 'ceiling' | 'prop' | 'doorFrame'; position: Vec3; size: Vec3; material: 'floor' | 'wall' | 'trim' | 'hazard' | 'glass'; collision: boolean }
 export const CONTAINMENT_MODULES: readonly SolidModule[] = [
+  {id:'ammo-station',kind:'prop',position:[-2.5,.6,-1.5],size:[.8,1.2,.5],material:'trim',collision:true},
   {id:'floor-main',kind:'floor',position:[0,-0.25,0],size:[16,.5,16],material:'floor',collision:true},
   {id:'floor-corridor',kind:'floor',position:[14,-.25,0],size:[12,.5,4],material:'floor',collision:true},
   {id:'north-wall',kind:'wall',position:[0,1.75,-8],size:[16,3.5,.35],material:'wall',collision:true},
@@ -23,6 +24,7 @@ export const CONTAINMENT_MODULES: readonly SolidModule[] = [
   {id:'power-cabinet',kind:'prop',position:[-6,.95,0],size:[.7,1.9,1.3],material:'trim',collision:true},
   {id:'corridor-crate',kind:'prop',position:[17,.5,1],size:[1,1,1],material:'hazard',collision:true},
 ];
+export const AMMO_STATION={id:'ammo-station',position:[-2.5,1,-1.5] as Vec3,range:2.2};
 export const DOOR = { id:'door-containment-security', position:[8,1.5,0] as Vec3, size:[.28,3,2.9] as Vec3 };
 export const NAV_NODES = [
   {id:'containment-center',position:[0,0,0] as Vec3,links:['containment-door']},

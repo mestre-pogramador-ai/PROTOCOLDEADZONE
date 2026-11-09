@@ -7,7 +7,7 @@ import { supportsWebGL2 } from '../../app/config';
 import { Scene } from '../rendering/Scene';
 import { useUIStore } from './uiStore';
 import { M9, type WeaponState } from '../../gameplay/weapons/M9';
-import { ECONOMY, type EconomySnapshot } from '../../gameplay/economy/EconomyManager';
+import { type EconomySnapshot } from '../../gameplay/economy/EconomyManager';
 import type { RoundSnapshot } from '../../gameplay/rounds/RoundDirector';
 import { type OperationResults, formatDuration } from '../../gameplay/session/SessionMetrics';
 import { AudioDirector } from '../audio/AudioDirector';
@@ -47,7 +47,7 @@ export function App(){
  const [finalResults,setFinalResults]=useState<OperationResults|null>(null);
  const [prompt,setPrompt]=useState('');
  const [composition,setComposition]=useState<ReturnType<Runtime['enemies']['composition']>>({common:0,runner:0,brute:0,predator:0});
- const [nearDoor,setNearDoor]=useState(false);
+ const [interaction,setInteraction]=useState('');
  const [locked,setLocked]=useState(false);
  const showMovementDebug=typeof window!=='undefined'&&new URLSearchParams(window.location.search).has('debugMovement');
  const [movementDebug,setMovementDebug]=useState<ReturnType<Runtime['getMovementDiagnostics']>|null>(null);
@@ -85,9 +85,11 @@ export function App(){
   document.addEventListener('visibilitychange',onVisibility);
   window.addEventListener('blur',pause);
   window.addEventListener('keydown',onKey);
+  const syncPurchase=()=>{setWeapon(runtime.getWeaponState());setEconomy(runtime.getEconomyState());setPrompt(runtime.getPrompt().message);setInteraction(runtime.getInteraction()?.message??'');};
+  const unsubscribePurchase=runtime.bus.on('economy:purchase',syncPurchase);
   const interval=window.setInterval(()=>{
    const c=runtime.getCombatState();
-   setNearDoor(runtime.canInteract());setWeapon(runtime.getWeaponState());setCombat(c);
+   setInteraction(runtime.getInteraction()?.message??'');setWeapon(runtime.getWeaponState());setCombat(c);
    setComposition(runtime.enemies.composition());setRound(runtime.getRoundState());setEconomy(runtime.getEconomyState());
    setLiveMetrics(runtime.getResults());setPrompt(runtime.getPrompt().message);
    if(showMovementDebug)setMovementDebug(runtime.getMovementDiagnostics());
@@ -103,7 +105,7 @@ export function App(){
    document.removeEventListener('visibilitychange',onVisibility);
    window.removeEventListener('blur',pause);
    window.removeEventListener('keydown',onKey);
-   window.clearInterval(interval);director.dispose();if(audio.current===director)audio.current=null;
+   unsubscribePurchase();window.clearInterval(interval);director.dispose();if(audio.current===director)audio.current=null;
   };
  // The director must not be recreated when the settings sliders change.
  // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -155,13 +157,13 @@ export function App(){
      <div className={`m6-health ${health<=30?'danger':''}`}><div className="hud-label">INTEGRIDADE DO OPERADOR</div><div className="health-number">{health} <small>/ 100</small></div><div className="health-fill"><span style={{width:`${health}%`}}/></div></div>
      <div className="m6-ammo"><span className="hud-label">M9 / PISTOLA TÁTICA</span><strong>{weapon?.ammo??M9.magazineSize}<small> / {weapon?.reserve??M9.reserveOnSpawn}</small></strong><span className="ammo-note">{weapon?.reloading?`RECARREGANDO · ${weapon.reloadRemaining.toFixed(1)}s`:weapon?.ads?'MIRA ADS':'SEMI-AUTOMÁTICA · 32 DMG'}</span></div>
      {showMovementDebug&&movementDebug&&<div className="m61-motion-debug" aria-label="Diagnóstico de movimento">
-       <strong>M7 · RAPIER KCC</strong><span>{movementDebug.grounded?'CHÃO':'AR'} · contatos {movementDebug.collisions}</span>
+       <strong>M7.1 · RAPIER KCC</strong><span>{movementDebug.grounded?'CHÃO':'AR'} · contatos {movementDebug.collisions}</span>
        <span>vel. Y {movementDebug.verticalVelocity.toFixed(2)} m/s</span>
        <span>passo solicitado {movementDebug.requestedHorizontalMeters.toFixed(3)} m</span>
        <span>passo permitido {movementDebug.resolvedHorizontalMeters.toFixed(3)} m</span>
      </div>}
      {settings.showControls&&<div className="m6-controls">WASD MOVER · MOUSE MIRAR · CLIQUE DISPARAR · R RECARREGAR · SHIFT CORRER · E INTERAGIR · T RODADA · ESC PAUSA</div>}
-     {nearDoor&&<div className="m6-interact">{economy?.doorPurchased?'CORREDOR DESBLOQUEADO':`[ E ] DESTRAVAR PORTA · ${ECONOMY.containmentDoorPrice} CR`}</div>}
+     {interaction&&<div className="m6-interact">{interaction}</div>}
      {prompt&&<div className="m6-announcement" role="status">{prompt}</div>}
      {combat?.hitRecently&&<><div className="m6-damage"/><div className="m6-direction" style={{transform:`translateX(-50%) rotate(${-(combat.damageAngle??0)}rad)`}}>▼</div></>}
      <button className="m6-icon-action" onClick={pause} aria-label="Pausar operação">Ⅱ PAUSA</button>
@@ -169,7 +171,7 @@ export function App(){
     </>}
     {status==='ready'&&!settingsOpen&&<div className="menu-screen" role="dialog" aria-modal="true" aria-label="Menu principal"><div className="menu-card start-card"><div className="menu-eyebrow">CONEXÃO ESTABELECIDA // NÍVEL DE AMEAÇA: CRÍTICO</div><HeaderTitle/><h2>A CONTENÇÃO FALHOU.</h2><p>Você está isolado na Instalação Ômega. Elimine os infectados, sobreviva às rodadas e use os créditos para destravar o corredor.</p>
       <div className="menu-buttons"><button className="menu-primary" onClick={enter}>INICIAR OPERAÇÃO</button><button className="menu-secondary" onClick={openSettings}>CONFIGURAÇÕES</button><button className="menu-secondary" onClick={toggleFullscreen}>TELA CHEIA</button></div>
-      <div className="menu-foot">M7 / VARIANTES DE INFECTADOS · M9 · SETOR DE CONTENÇÃO · SEM CONTA OU SERVIDOR</div>
+      <div className="menu-foot">M7.1 / SUPRIMENTOS E SOBREVIVÊNCIA · M9 · SETOR DE CONTENÇÃO · SEM CONTA OU SERVIDOR</div>
       {best&&<div className="best-run">SEU RECORDE LOCAL · {best.completedRounds} rodadas · {best.kills} eliminações</div>}
      </div></div>}
     {status==='paused'&&!settingsOpen&&<div className="menu-screen" role="dialog" aria-modal="true" aria-label="Menu de pausa"><div className="menu-card pause-card"><div className="menu-eyebrow">SIMULAÇÃO SUSPENSA</div><h2>OPERAÇÃO PAUSADA</h2><p>Rodada {round?.round??1} · {combat?.kills??0} eliminações · {formatDuration(liveMetrics?.elapsedSeconds??0)} de sobrevivência</p><div className="menu-buttons"><button className="menu-primary" onClick={enter}>RETOMAR OPERAÇÃO</button><button className="menu-secondary" onClick={openSettings}>CONFIGURAÇÕES</button><button className="menu-secondary" onClick={toggleFullscreen}>TELA CHEIA</button><button className="menu-danger" onClick={reset}>REINICIAR PARTIDA</button></div><div className="menu-foot">O tempo, inimigos e recargas permanecem congelados durante a pausa.</div></div></div>}

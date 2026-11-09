@@ -1,6 +1,6 @@
 export const M9 = {
   id: 'm9', displayName: 'M9', damage: 32, headshotMultiplier: 2,
-  rpm: 360, magazineSize: 15, reserveOnSpawn: 90,
+  rpm: 360, magazineSize: 15, reserveOnSpawn: 90, maxReserve: 90,
   reloadSeconds: 1.5, adsSeconds: 0.15, adsMoveSpeed: 3.1,
   range: 80, recoilKick: 0.095,
 } as const;
@@ -31,6 +31,11 @@ export class M9Controller {
   }
   private beginReload(): void { if (this.ammo === M9.magazineSize || this.reserve === 0) return; this.reloadRemaining = M9.reloadSeconds; }
   private finishReload(): void { const moved = Math.min(M9.magazineSize - this.ammo, this.reserve); this.ammo += moved; this.reserve -= moved; }
+  addReserve(quantity:number):number {
+    if(!Number.isSafeInteger(quantity)||quantity<=0)return 0;
+    const added=Math.min(quantity,M9.maxReserve-this.reserve);
+    this.reserve+=added;return added;
+  }
   takeShot(): FireResult | null { const shot = this.pendingShot; this.pendingShot = null; return shot; }
   snapshot(): WeaponState { return { ammo:this.ammo, reserve:this.reserve, reloading:this.reloadRemaining>0, reloadRemaining:this.reloadRemaining, ads:this.ads, adsBlend:this.adsBlend, cooldownRemaining:this.cooldown, shotsFired:this.shotsFired }; }
   reset(): void { this.ammo=M9.magazineSize; this.reserve=M9.reserveOnSpawn; this.reloadRemaining=0; this.cooldown=0; this.ads=false; this.adsBlend=0; this.shotsFired=0; this.pendingShot=null; }

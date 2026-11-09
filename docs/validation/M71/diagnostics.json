@@ -1,0 +1,133 @@
+{
+  "version": "M7.1",
+  "entries": [
+    {
+      "seconds": 0.166,
+      "level": "warning",
+      "code": "console.warning",
+      "values": {}
+    },
+    {
+      "seconds": 3.678,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999977946281433,
+        "y": 0.8742090463638306,
+        "z": -3.605483129831555e-7,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 5.591,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999996423721313,
+        "y": 0.8742091059684753,
+        "z": 0.0000019709420939761912,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 2.77923558967738e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 5.591,
+      "level": "info",
+      "code": "ammo.paid",
+      "values": {
+        "quantity": 1,
+        "cost": 6
+      }
+    },
+    {
+      "seconds": 7.322,
+      "level": "warning",
+      "code": "ammo.full",
+      "values": {
+        "quantity": 0,
+        "cost": 0
+      }
+    },
+    {
+      "seconds": 7.574,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000028610229492,
+        "y": 0.8742090463638306,
+        "z": 0.0000026366592464910354,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 7.575,
+      "level": "info",
+      "code": "round.started",
+      "values": {
+        "round": 1
+      }
+    },
+    {
+      "seconds": 7.577,
+      "level": "info",
+      "code": "enemy.spawn.common",
+      "values": {
+        "hp": 100,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 8.386,
+      "level": "info",
+      "code": "session.paused",
+      "values": {}
+    },
+    {
+      "seconds": 8.713,
+      "level": "info",
+      "code": "session.resumed",
+      "values": {}
+    },
+    {
+      "seconds": 8.724,
+      "level": "info",
+      "code": "session.paused",
+      "values": {}
+    },
+    {
+      "seconds": 9.074,
+      "level": "info",
+      "code": "session.reset",
+      "values": {}
+    },
+    {
+      "seconds": 9.116,
+      "level": "warning",
+      "code": "user.marker",
+      "values": {}
+    },
+    {
+      "seconds": 9.122,
+      "level": "info",
+      "code": "report.export",
+      "values": {}
+    }
+  ]
+}
