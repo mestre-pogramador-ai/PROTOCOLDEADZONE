@@ -15,7 +15,8 @@ Commits desta etapa:
 - `3c15a35`: 11 testes novos de integração e segurança do cenário.
 - `15df5ca`: retarget visual limitado e um teste adicional do esqueleto real.
 - `a8ea03e`: harnesses de compras/passagem e consumo de input no navegador.
-- Commit posterior de entrega: evidências e este relatório.
+- `80b84ca`: evidências, comparação visual e relatório.
+- Commit documental posterior registra o PR e o bloqueio de prévia, sem mudar o código validado.
 
 Nenhuma arma, variante, recompensa, custo, perk, missão ou setor novo. Layout,
 25 sólidos originais, spawns e interações preservados. Há **uma adição física
@@ -285,7 +286,16 @@ se GPU real indicar gargalo. Não adicionar luzes/sombras antes dessa medição.
   sua nova transparência visual não concede tiro através dele.
 - Aviso de inicialização Rapier deprecada e tamanho do chunk Vite preexistem.
   Nenhum dano/HP, recompensa ou duração de arma foi alterado para esta entrega.
-- Estado de revisão hospedada/GitHub registrado no final após envio.
+- [PR #9 em rascunho](https://github.com/mestre-pogramador-ai/PROTOCOLDEADZONE/pull/9),
+  base `m8.1.2-visual-quality`, branch enviada ao GitHub. Working tree limpa
+  após os commits; main sem alteração. Revisão deve seguir a cadeia #6/#7/#8.
+- Check Vercel no commit de entrega `80b84ca`: **failure**. Descrição recebida:
+  `Git author Indiplayer must have access to the project on Vercel to create deployments.`
+  A prévia hospedada foi bloqueada por permissão do autor, não foi um build
+  executado/reprovado da aplicação. `Vercel Preview Comments`: success. Não
+  atribuímos sucesso ao deploy ou à CI hospedada. Autoria, conta e plano não
+  foram alterados; os builds e ensaios Chromium deste relatório são locais.
+  Estado sanitizado em [github-review.json](docs/validation/m813/github-review.json).
 
 **Recomendação:** revisar e integrar esta melhoria visual pela cadeia de PRs,
 com aprovação de desempenho condicionada ao profiling em GPU compatível. A
