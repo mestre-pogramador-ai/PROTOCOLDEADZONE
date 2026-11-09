@@ -1,0 +1,449 @@
+[
+  {
+    "profile": "headshots",
+    "kills": 380,
+    "misses": 0,
+    "shots": 1381,
+    "purchases": 44,
+    "delivered": 1320,
+    "reloads": 92,
+    "credits": {
+      "credits": 31200,
+      "lifetimeEarned": 49370,
+      "lifetimeSpent": 18670,
+      "lastNotice": {
+        "delta": 200,
+        "reason": "round",
+        "serial": 1766
+      },
+      "doorPurchased": true
+    },
+    "acquired": [
+      {
+        "id": "quickHands",
+        "round": 3,
+        "balance": 410
+      },
+      {
+        "id": "impulse",
+        "round": 4,
+        "balance": 400
+      },
+      {
+        "id": "vitality",
+        "round": 6,
+        "balance": 400
+      },
+      {
+        "id": "reactiveArmor",
+        "round": 7,
+        "balance": 430
+      }
+    ],
+    "evidence": [
+      {
+        "round": 1,
+        "shots": 16,
+        "balance": 690,
+        "purchases": 0,
+        "reloads": 1
+      },
+      {
+        "round": 2,
+        "shots": 36,
+        "balance": 1860,
+        "purchases": 0,
+        "reloads": 2
+      },
+      {
+        "round": 3,
+        "shots": 60,
+        "balance": 1260,
+        "purchases": 0,
+        "reloads": 3
+      },
+      {
+        "round": 4,
+        "shots": 90,
+        "balance": 820,
+        "purchases": 1,
+        "reloads": 5
+      },
+      {
+        "round": 5,
+        "shots": 136,
+        "balance": 2550,
+        "purchases": 3,
+        "reloads": 9
+      },
+      {
+        "round": 6,
+        "shots": 191,
+        "balance": 2330,
+        "purchases": 4,
+        "reloads": 12
+      },
+      {
+        "round": 7,
+        "shots": 261,
+        "balance": 1090,
+        "purchases": 7,
+        "reloads": 17
+      },
+      {
+        "round": 8,
+        "shots": 342,
+        "balance": 3920,
+        "purchases": 9,
+        "reloads": 22
+      },
+      {
+        "round": 9,
+        "shots": 437,
+        "balance": 6760,
+        "purchases": 13,
+        "reloads": 29
+      },
+      {
+        "round": 10,
+        "shots": 542,
+        "balance": 10080,
+        "purchases": 16,
+        "reloads": 36
+      },
+      {
+        "round": 11,
+        "shots": 677,
+        "balance": 13620,
+        "purchases": 21,
+        "reloads": 45
+      },
+      {
+        "round": 12,
+        "shots": 832,
+        "balance": 17600,
+        "purchases": 26,
+        "reloads": 55
+      },
+      {
+        "round": 13,
+        "shots": 1002,
+        "balance": 21990,
+        "purchases": 31,
+        "reloads": 66
+      },
+      {
+        "round": 14,
+        "shots": 1181,
+        "balance": 26480,
+        "purchases": 37,
+        "reloads": 78
+      },
+      {
+        "round": 15,
+        "shots": 1381,
+        "balance": 31200,
+        "purchases": 44,
+        "reloads": 92
+      }
+    ]
+  },
+  {
+    "profile": "body-80pct",
+    "kills": 380,
+    "misses": 652,
+    "shots": 3261,
+    "purchases": 107,
+    "delivered": 3210,
+    "reloads": 217,
+    "credits": {
+      "credits": 13480,
+      "lifetimeEarned": 42990,
+      "lifetimeSpent": 30010,
+      "lastNotice": {
+        "delta": 200,
+        "reason": "round",
+        "serial": 2331
+      },
+      "doorPurchased": true
+    },
+    "acquired": [
+      {
+        "id": "quickHands",
+        "round": 4,
+        "balance": 420
+      },
+      {
+        "id": "impulse",
+        "round": 5,
+        "balance": 400
+      },
+      {
+        "id": "vitality",
+        "round": 7,
+        "balance": 380
+      },
+      {
+        "id": "reactiveArmor",
+        "round": 9,
+        "balance": 360
+      }
+    ],
+    "evidence": [
+      {
+        "round": 1,
+        "shots": 39,
+        "balance": 610,
+        "purchases": 0,
+        "reloads": 2
+      },
+      {
+        "round": 2,
+        "shots": 89,
+        "balance": 1500,
+        "purchases": 1,
+        "reloads": 5
+      },
+      {
+        "round": 3,
+        "shots": 149,
+        "balance": 2420,
+        "purchases": 3,
+        "reloads": 9
+      },
+      {
+        "round": 4,
+        "shots": 219,
+        "balance": 1610,
+        "purchases": 5,
+        "reloads": 14
+      },
+      {
+        "round": 5,
+        "shots": 313,
+        "balance": 940,
+        "purchases": 8,
+        "reloads": 20
+      },
+      {
+        "round": 6,
+        "shots": 432,
+        "balance": 2480,
+        "purchases": 12,
+        "reloads": 28
+      },
+      {
+        "round": 7,
+        "shots": 584,
+        "balance": 1580,
+        "purchases": 17,
+        "reloads": 38
+      },
+      {
+        "round": 8,
+        "shots": 787,
+        "balance": 3160,
+        "purchases": 24,
+        "reloads": 52
+      },
+      {
+        "round": 9,
+        "shots": 1018,
+        "balance": 1400,
+        "purchases": 32,
+        "reloads": 67
+      },
+      {
+        "round": 10,
+        "shots": 1271,
+        "balance": 3410,
+        "purchases": 40,
+        "reloads": 84
+      },
+      {
+        "round": 11,
+        "shots": 1577,
+        "balance": 5220,
+        "purchases": 51,
+        "reloads": 105
+      },
+      {
+        "round": 12,
+        "shots": 1919,
+        "balance": 7370,
+        "purchases": 62,
+        "reloads": 127
+      },
+      {
+        "round": 13,
+        "shots": 2327,
+        "balance": 9320,
+        "purchases": 76,
+        "reloads": 155
+      },
+      {
+        "round": 14,
+        "shots": 2768,
+        "balance": 11500,
+        "purchases": 90,
+        "reloads": 184
+      },
+      {
+        "round": 15,
+        "shots": 3261,
+        "balance": 13480,
+        "purchases": 107,
+        "reloads": 217
+      }
+    ]
+  },
+  {
+    "profile": "body-67pct",
+    "kills": 380,
+    "misses": 1304,
+    "shots": 3913,
+    "purchases": 128,
+    "delivered": 3840,
+    "reloads": 260,
+    "credits": {
+      "credits": 9700,
+      "lifetimeEarned": 42990,
+      "lifetimeSpent": 33790,
+      "lastNotice": {
+        "delta": 200,
+        "reason": "round",
+        "serial": 2352
+      },
+      "doorPurchased": true
+    },
+    "acquired": [
+      {
+        "id": "quickHands",
+        "round": 4,
+        "balance": 360
+      },
+      {
+        "id": "impulse",
+        "round": 5,
+        "balance": 390
+      },
+      {
+        "id": "vitality",
+        "round": 7,
+        "balance": 380
+      },
+      {
+        "id": "reactiveArmor",
+        "round": 10,
+        "balance": 360
+      }
+    ],
+    "evidence": [
+      {
+        "round": 1,
+        "shots": 47,
+        "balance": 610,
+        "purchases": 0,
+        "reloads": 3
+      },
+      {
+        "round": 2,
+        "shots": 107,
+        "balance": 1320,
+        "purchases": 2,
+        "reloads": 7
+      },
+      {
+        "round": 3,
+        "shots": 179,
+        "balance": 2240,
+        "purchases": 4,
+        "reloads": 11
+      },
+      {
+        "round": 4,
+        "shots": 263,
+        "balance": 1250,
+        "purchases": 7,
+        "reloads": 17
+      },
+      {
+        "round": 5,
+        "shots": 376,
+        "balance": 400,
+        "purchases": 11,
+        "reloads": 25
+      },
+      {
+        "round": 6,
+        "shots": 518,
+        "balance": 1940,
+        "purchases": 15,
+        "reloads": 34
+      },
+      {
+        "round": 7,
+        "shots": 701,
+        "balance": 860,
+        "purchases": 21,
+        "reloads": 46
+      },
+      {
+        "round": 8,
+        "shots": 944,
+        "balance": 2260,
+        "purchases": 29,
+        "reloads": 62
+      },
+      {
+        "round": 9,
+        "shots": 1222,
+        "balance": 3640,
+        "purchases": 39,
+        "reloads": 81
+      },
+      {
+        "round": 10,
+        "shots": 1525,
+        "balance": 1790,
+        "purchases": 49,
+        "reloads": 101
+      },
+      {
+        "round": 11,
+        "shots": 1892,
+        "balance": 3420,
+        "purchases": 61,
+        "reloads": 126
+      },
+      {
+        "round": 12,
+        "shots": 2303,
+        "balance": 5030,
+        "purchases": 75,
+        "reloads": 153
+      },
+      {
+        "round": 13,
+        "shots": 2792,
+        "balance": 6620,
+        "purchases": 91,
+        "reloads": 186
+      },
+      {
+        "round": 14,
+        "shots": 3322,
+        "balance": 8080,
+        "purchases": 109,
+        "reloads": 221
+      },
+      {
+        "round": 15,
+        "shots": 3913,
+        "balance": 9700,
+        "purchases": 128,
+        "reloads": 260
+      }
+    ]
+  }
+]

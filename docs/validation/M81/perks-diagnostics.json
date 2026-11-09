@@ -1,0 +1,205 @@
+{
+  "version": "M8.1",
+  "entries": [
+    {
+      "seconds": 0.442,
+      "level": "warning",
+      "code": "console.warning",
+      "values": {}
+    },
+    {
+      "seconds": 3.754,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9996569752693176,
+        "y": 0.8750478625297546,
+        "z": 4.599370002746582,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0.07666666666666666,
+        "resolved": 0.07666666805810028,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 5.326,
+      "level": "info",
+      "code": "perk.acquired",
+      "values": {
+        "price": 2500
+      }
+    },
+    {
+      "seconds": 6.148,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -2.9930906295776367,
+        "y": 0.8744598031044006,
+        "z": 5.519004821777344,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.2640154523069214e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 6.605,
+      "level": "warning",
+      "code": "perk.owned",
+      "values": {
+        "price": 2500
+      }
+    },
+    {
+      "seconds": 8.804,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.003140676999464631,
+        "y": 0.8742299675941467,
+        "z": 5.518866062164307,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.8967415716968812e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 9.007,
+      "level": "info",
+      "code": "perk.acquired",
+      "values": {
+        "price": 2000
+      }
+    },
+    {
+      "seconds": 10.778,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.003141955006867647,
+        "y": 0.8741677403450012,
+        "z": 5.518871307373047,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 4.1601804856282994e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 13.071,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.003142946632578969,
+        "y": 0.8747029304504395,
+        "z": 5.51887321472168,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 8.208847646073991e-8,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 15.296,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.003142742672935128,
+        "y": 0.8749681711196899,
+        "z": 4.982204437255859,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0.07666666666666666,
+        "resolved": 0.07666666805744171,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 17.407,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": 3.5988197326660156,
+        "y": 0.8750154972076416,
+        "z": 5.211891174316406,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0.07666666666666666,
+        "resolved": 0.07677589714088195,
+        "contacts": 2,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 17.584,
+      "level": "info",
+      "code": "perk.acquired",
+      "values": {
+        "price": 2000
+      }
+    },
+    {
+      "seconds": 18.851,
+      "level": "info",
+      "code": "perk.acquired",
+      "values": {
+        "price": 3500
+      }
+    },
+    {
+      "seconds": 19.952,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": 6.003344535827637,
+        "y": 0.8732917308807373,
+        "z": 5.518295764923096,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 3.22678845402582e-8,
+        "contacts": 1,
+        "alive": 1,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 21.364,
+      "level": "info",
+      "code": "session.paused",
+      "values": {}
+    },
+    {
+      "seconds": 21.96,
+      "level": "warning",
+      "code": "user.marker",
+      "values": {}
+    },
+    {
+      "seconds": 21.965,
+      "level": "info",
+      "code": "report.export",
+      "values": {}
+    }
+  ]
+}
