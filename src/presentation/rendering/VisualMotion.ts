@@ -1,4 +1,9 @@
+import {DEATH_GROUNDING} from './DeathGrounding';
 const clamp=(n:number)=>Math.max(0,Math.min(1,n));
+export function deathGrounding(kind:keyof typeof DEATH_GROUNDING,age:number):number{
+ const samples=DEATH_GROUNDING[kind],position=clamp(age/2.15)*(samples.length-1),index=Math.floor(position);
+ return samples[index]+(samples[Math.min(index+1,samples.length-1)]-samples[index])*(position-index);
+}
 export function smoothStep(value:number){const x=clamp(value);return x*x*(3-2*x);}
 export function reloadProgress(remaining:number,duration:number):number{
  return duration>0?clamp(1-remaining/duration):0;

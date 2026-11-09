@@ -7,11 +7,12 @@ import type {Runtime} from '../../app/Runtime';
 import {M9} from '../../gameplay/weapons/M9';
 import {MODEL_PATHS,useModel} from './ModelAssets';
 import {magazineTravel,reloadProgress,presentationDelta} from './VisualMotion';
+import {ADS_PITCH,ADS_HEIGHT,hipOffsetX} from './ViewmodelLayout';
 /** Independent render pass. Animation never changes physics, shot origin or ammunition. */
 export function M9Viewmodel({runtime}:{runtime:Runtime}){
  const {gl,size}=useThree();
  const weapon=useModel(MODEL_PATHS.m9),arms=useModel(MODEL_PATHS.arms);
- const overlay=useMemo(()=>new Scene(),[]);
+ const overlay=useMemo(()=>{const scene=new Scene();scene.name='FPSViewmodel';return scene;},[]);
  const viewCamera=useMemo(()=>new PerspectiveCamera(55,1,.01,3),[]);
  const root=useRef<Group>(null),flash=useRef<Mesh>(null),tracer=useRef<Mesh>(null),impact=useRef<Mesh>(null);
  const previousAlpha=useRef(0);
@@ -28,6 +29,7 @@ export function M9Viewmodel({runtime}:{runtime:Runtime}){
  const slide=useMemo(()=>gun?.getObjectByName('Slide'),[gun]);
  const magazine=useMemo(()=>gun?.getObjectByName('Magazine'),[gun]);
  const trigger=useMemo(()=>gun?.getObjectByName('Trigger'),[gun]);
+ useEffect(()=>{viewCamera.aspect=size.width/size.height;viewCamera.updateProjectionMatrix();},[viewCamera,size.width,size.height]);
  useEffect(()=>{
   const pmrem=new PMREMGenerator(gl),room=new RoomEnvironment();
   const environment=pmrem.fromScene(room,.04);overlay.environment=environment.texture;
@@ -55,12 +57,13 @@ export function M9Viewmodel({runtime}:{runtime:Runtime}){
   if(root.current){
    const breathe=Math.sin(a.time*1.8)*.0015*(1-ads);
    const bob=Math.sin(a.time*9)*Math.min(.004,moving*.001)*(1-ads);
-   root.current.position.set(.15*(1-ads),-.10+ads*.006+breathe+bob-a.sprint*.10-(1-a.equip)*.22,-.48+kick*.18);
-   root.current.rotation.set(kick+a.sprint*.38+Math.sin(progress*Math.PI)*.18,0,-a.sprint*.16);
+   root.current.position.set(hipOffsetX(size.width/size.height)*(1-ads),-.20+ads*(.20-ADS_HEIGHT)+breathe+bob-a.sprint*.07-(1-a.equip)*.22,-.58+ads*.10+kick*.18);
+   // Pitch follows the imported front/rear sight line, not the damage ray.
+   root.current.rotation.set(ADS_PITCH*ads+kick+a.sprint*.38+Math.sin(progress*Math.PI)*.18,0,-a.sprint*.16);
   }
   if(slide)slide.position.z=Math.exp(-a.shotAge*42)*.026;
   if(trigger)trigger.rotation.x=-Math.exp(-a.shotAge*25)*.10;
-  if(magazine)magazine.position.y=-magazineTravel(progress)*.17;
+  if(magazine)magazine.position.y=-magazineTravel(progress)*.13;
   if(handRig?.action){handRig.action.time=progress*handRig.duration;handRig.mixer.update(0);}
   if(flash.current)flash.current.visible=a.shotAge<.045;
   const shot=runtime.getShotTrace();
@@ -74,7 +77,6 @@ export function M9Viewmodel({runtime}:{runtime:Runtime}){
     tracer.current.scale.set(1,distance,1);impact.current.position.set(...shot.end);
    }
   }
-  viewCamera.aspect=size.width/size.height;viewCamera.updateProjectionMatrix();
   // Aggregate both passes for render diagnostics, not just the final overlay pass.
   gl.info.autoReset=false;gl.info.reset();const clear=gl.autoClear;
   gl.autoClear=true;gl.render(state.scene,state.camera);
@@ -85,10 +87,10 @@ export function M9Viewmodel({runtime}:{runtime:Runtime}){
    <hemisphereLight args={['#d5e6ee','#292b27',2]}/>
    <directionalLight position={[1,2,1]} intensity={3} color="#ffe9ca"/>
    <directionalLight position={[-1,.5,-1]} intensity={1} color="#81b9bd"/>
-   <group ref={root} dispose={null}>
+   <group ref={root} name="FPSRoot" dispose={null}>
     {gun&&<primitive object={gun} dispose={null}/>}
     {handRig&&<primitive object={handRig.scene} dispose={null}/>}
-    <mesh ref={flash} position={[0,.065,-.19]} visible={false} rotation={[0,0,.4]}><planeGeometry args={[.06,.065]}/><meshBasicMaterial color="#ffd79a" transparent opacity={.9} depthWrite={false}/></mesh>
+    <mesh ref={flash} position={[0,.074,-.177]} visible={false} rotation={[0,0,.4]}><planeGeometry args={[.045,.05]}/><meshBasicMaterial color="#ffd79a" transparent opacity={.9} depthWrite={false}/></mesh>
    </group>
   </>,overlay)}
   <mesh ref={tracer} visible={false}><cylinderGeometry args={[.003,.003,1,4]}/><meshBasicMaterial color="#eec883" transparent opacity={.6} depthWrite={false}/></mesh>
