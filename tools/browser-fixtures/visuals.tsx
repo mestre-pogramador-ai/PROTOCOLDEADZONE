@@ -4,7 +4,7 @@ import {createRoot} from 'react-dom/client';
 import {Canvas,useFrame,useThree} from '@react-three/fiber';
 import {Runtime} from '../../src/app/Runtime';
 import {Scene} from '../../src/presentation/rendering/Scene';
-import {ENEMY_KINDS} from '../../src/gameplay/enemies/EnemyArchetypes';
+import {ENEMY_ARCHETYPES,ENEMY_KINDS} from '../../src/gameplay/enemies/EnemyArchetypes';
 import {useEffect} from 'react';
 import {ENVIRONMENT_VIEWS} from './environmentViews';
 async function boot(){
@@ -96,9 +96,15 @@ function Probe(){
    return {id:e.id,center:a.toArray(),target:[e.x,1.78,e.z]};
   }),poseTime,frames,enemies:r.enemies.snapshots(),programs:gl.info.programs?.length,render:{...gl.info.render},memory:{...gl.info.memory},movement:r.getMovementDiagnostics(),assets:modelCacheSnapshot(),weapon:r.getWeaponState(),combat:r.getCombatState(),trace:r.getShotTrace(),results:r.getResults(),count:r.enemies.snapshots().length}),
   visualCommand:(command:string,value?:number|string)=>{
+   if(command==='profile-floor-view')inspection={position:[-1,1.52,0],target:[-1,0,-2]};
    if(command==='profile-culling-view')inspection={position:[-1,1.52,0],target:[-1,1.52,4]};
    if(command==='profile-option')profile(String(value));
    if(command==='environment-view')inspection=ENVIRONMENT_VIEWS[value as keyof typeof ENVIRONMENT_VIEWS]??null;
+   if(command==='real-crowd'){
+    pose=null;inspection=null;r.reset();for(let i=0;i<100;i++)r.frame(1/60);r.pause();r.enemies.clear();
+    const count=typeof value==='number'?value:20;
+    for(let i=0;i<count;i++){const kind=ENEMY_KINDS[i%4];r.enemies.spawn(-2.5+(i%4)*1.2,-3-Math.floor(i/4),Math.round(100*ENEMY_ARCHETYPES[kind].hpMultiplier),kind);}
+   }
    if(command==='combat'){
     pose=null;r.enemies.clear();
     r.enemies.spawn(-1.8,-3.2,100,'common');r.enemies.spawn(-.7,-3.5,70,'runner');r.enemies.spawn(.5,-4,180,'brute');r.enemies.spawn(-.2,-5,120,'predator');
