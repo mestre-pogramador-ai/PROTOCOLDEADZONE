@@ -22,7 +22,7 @@ const path=require('node:path');
   await waitText('.m61-motion-debug','CHÃO');
   await waitText('.m6-interact','RESERVA M9 CHEIA');
   record.initialAmmo=await page.locator('.m6-ammo').innerText();
-  await page.mouse.down();await page.mouse.up();await waitText('.m6-ammo','14 / 90');
+  await page.mouse.down();try{await waitText('.m6-ammo','14 / 90');}finally{await page.mouse.up();}
   record.afterShot=await page.locator('.m6-ammo').innerText();
   await page.keyboard.press('KeyR');await waitText('.m6-ammo','15 / 89');
   await page.keyboard.press('KeyE');await waitText('.m6-credits','494');await waitText('.m6-ammo','15 / 90');

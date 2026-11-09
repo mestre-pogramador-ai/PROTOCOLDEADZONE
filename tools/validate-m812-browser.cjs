@@ -88,7 +88,7 @@ const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:
   await page.setViewportSize({width:1280,height:720});await command('fov',80);
   await command('reset',4);await ready();await command('pose','idle');
   await page.waitForFunction(()=>window.visualObserve().poseTime>.6);
-  await page.mouse.click(640,360);await page.waitForFunction(()=>window.visualObserve().weapon.ammo===14);await command('pause');
+  await page.mouse.down();try{await page.waitForFunction(()=>window.visualObserve().weapon.ammo===14);}finally{await page.mouse.up();}await command('pause');
   await page.screenshot({path:path.join(output,'fire.png')});record.fire=await observe();record.fireGeometry=await page.evaluate(()=>window.visualViewmodel());
   await command('reset',4);await ready();await command('combat');
   await page.waitForFunction(()=>window.visualObserve().movement.grounded);await shot();

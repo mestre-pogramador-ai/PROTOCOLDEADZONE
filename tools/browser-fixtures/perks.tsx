@@ -11,7 +11,7 @@ async function createRuntime(){
  Object.assign(window,{
   m81Observe:()=>({position:r.getSnapshot().current.position,look:r.getLook(),combat:r.getCombatState(),
    weapon:r.getWeaponState(),economy:r.getEconomyState(),perks:r.perks.snapshot().map(p=>p.id),
-   effects:r.perks.effects(),interaction:r.getInteraction(),lifecycle:r.lifecycle.state}),
+   effects:r.perks.effects(),interaction:r.getInteraction(),lifecycle:r.lifecycle.state,doorOpen:r.isDoorOpen()}),
   // Exercise real AI windup/damage, not a direct damage setter.
   m81SpawnAttacker:()=>{const p=r.getSnapshot().current.position;r.enemies.spawn(p[0]-1,p[2]);},
  });
