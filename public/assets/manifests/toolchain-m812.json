@@ -1,0 +1,18 @@
+{
+  "blender": "4.3.2",
+  "fbx2gltf": {
+    "version": "0.13.1",
+    "source": "https://github.com/godotengine/FBX2glTF/releases/tag/v0.13.1",
+    "download": "https://github.com/godotengine/FBX2glTF/releases/download/v0.13.1/FBX2glTF-linux-x86_64.zip",
+    "sha256": "52243ec1bf25c4501bdd4977057b6782702fe3ae1b79e2ac13039d2207870bec",
+    "redistributedBinary": false
+  },
+  "offlineNpmTools": {
+    "meshoptimizer": "1.3.0",
+    "gltf-validator": "2.0.0-dev.3.10"
+  },
+  "pythonOffline": [
+    "Pillow"
+  ],
+  "runtimeAddedDependencies": []
+}
