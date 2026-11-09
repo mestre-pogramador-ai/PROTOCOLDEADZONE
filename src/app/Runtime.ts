@@ -1,3 +1,4 @@
+import { ENEMY_ARCHETYPES, unlockedEnemy } from '../gameplay/enemies/EnemyArchetypes';
 import { diagnostics } from '../core/diagnostics/Diagnostics';
 import RAPIER from '@dimforge/rapier3d-compat';
 import { engineConfig, validateConfig } from './config';
@@ -79,10 +80,15 @@ export class Runtime {
   isDoorOpen():boolean{return this.physics.isDoorOpen();}
   canInteract():boolean{const p=this.physics.snapshot().current.position;return Math.hypot(p[0]-DOOR.position[0],p[2]-DOOR.position[2])<2.8;}
   private announce(text:string):void{this.notification=text;this.notificationRemaining=2.2;}
+  private announceRound(round:number):void{
+    const unlocked=unlockedEnemy(round);
+    this.announce(unlocked?`RODADA ${round} · NOVA AMEAÇA: ${ENEMY_ARCHETYPES[unlocked].label.toUpperCase()}`:`RODADA ${round} INICIADA`);
+    if(unlocked)this.notificationRemaining=4;
+  }
   beginRoundNow():boolean{
     if(this.gameOver||this.lifecycle.state!=='running')return false;
     const started=this.rounds.beginNow();
-    if(started){const round=this.rounds.snapshot().round;this.announce(`RODADA ${round} INICIADA`);diagnostics.record('info','round.started',{round});this.bus.emit('round:started',{round});}
+    if(started){const round=this.rounds.snapshot().round;this.announceRound(round);diagnostics.record('info','round.started',{round});this.bus.emit('round:started',{round});}
     return started;
   }
   interact():boolean{
@@ -156,14 +162,15 @@ export class Runtime {
       }
       this.notificationRemaining=Math.max(0,this.notificationRemaining-dt);
       if(this.playerDamage.health<=0){this.gameOver=true;this.bus.emit('session:gameover',{rounds:this.rounds.snapshot().completed,kills:this.kills});this.pause();return;}
-      const result=this.rounds.tick(dt,()=>this.enemies.alive(),hp=>{
+      const result=this.rounds.tick(dt,()=>this.enemies.alive(),(hp,kind)=>{
         const spawn=chooseSpawn({x:px,z:pz,doorOpen:this.isDoorOpen(),
           sequence:this.spawnSequence++,yaw:this.yaw,enemies:this.enemies.snapshots()});
         if(!spawn)return false;
-        this.enemies.spawn(spawn[0],spawn[1],hp);
+        this.enemies.spawn(spawn[0],spawn[1],hp,kind);
+        diagnostics.record('info','enemy.spawn.'+kind,{hp,round:this.rounds.snapshot().round});
         return true;
       });
-      if(result.started){const round=this.rounds.snapshot().round;this.announce(`RODADA ${round} INICIADA`);diagnostics.record('info','round.started',{round});this.bus.emit('round:started',{round});}
+      if(result.started){const round=this.rounds.snapshot().round;this.announceRound(round);diagnostics.record('info','round.started',{round});this.bus.emit('round:started',{round});}
       if(result.completedRound!==null){
         const reward=this.economy.awardRound(result.completedRound);
         this.announce(`RODADA ${result.completedRound} CONCLUÍDA · +${reward} CR`);

@@ -1,3 +1,4 @@
+import { ENEMY_ARCHETYPES, enemyKindForSpawn, type EnemyKind } from '../enemies/EnemyArchetypes';
 /** M5: ondas determinísticas, sem relógio ou timer adicional ao GameClock. */
 export type RoundPhase = 'preparation' | 'active';
 export interface RoundDifficulty { round: number; total: number; maxConcurrent: number; infectedHp: number; spawnInterval: number; preparationSeconds: number }
@@ -65,7 +66,7 @@ export class RoundDirector {
     return { ...d, phase: this.phase, prepRemaining: this.prepRemaining, spawned: this.spawned,
       remainingToSpawn: d.total - this.spawned, eliminated: this.eliminated, alive: this.alive, completed: this.completed };
   }
-  tick(dt: number, countAlive: () => number, spawn: (hp: number) => boolean): RoundTickEvents {
+  tick(dt: number, countAlive: () => number, spawn: (hp: number, kind: EnemyKind) => boolean): RoundTickEvents {
     const events: RoundTickEvents = { started: false, completedRound: null };
     if (!Number.isFinite(dt) || dt <= 0) return events;
     this.alive = countAlive();
@@ -78,7 +79,8 @@ export class RoundDirector {
     this.spawnTimer -= dt;
     // one attempted spawn per fixed tick; cap is strictly on living enemies
     if (this.spawned < diff.total && this.alive < diff.maxConcurrent && this.spawnTimer <= 0) {
-      if (spawn(diff.infectedHp)) { this.spawned++; this.alive = countAlive(); this.spawnTimer = diff.spawnInterval; }
+      const kind=enemyKindForSpawn(this.round,this.spawned);
+      if (spawn(Math.max(1,Math.round(diff.infectedHp*ENEMY_ARCHETYPES[kind].hpMultiplier)),kind)) { this.spawned++; this.alive = countAlive(); this.spawnTimer = diff.spawnInterval; }
       else this.spawnTimer = .3;
     }
     if (this.spawned === diff.total && this.alive === 0) {

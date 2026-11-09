@@ -1,3 +1,4 @@
+import {ENEMY_KINDS, type EnemyKind} from './EnemyArchetypes';
 import {Infected,INFECTED,type InfectedSnapshot,type EnemyAttack} from './Infected';
 import {canOccupyWithSeparation,resolveEnemySeparation} from './Separation';
 import {enemyCanOccupy,enemyCanTraverse,findEnemyPath,hasEnemyLineOfSight} from './Navigation';
@@ -12,8 +13,13 @@ export class EnemyManager {
  constructor(){this.reset();}
  reset():void{this.revision++;this.nextId=1;this.enemies=SPAWNS.slice(0,this.count).map(([x,z])=>new Infected(this.nextId++,x,z));this.routes.clear();}
  clear():void{this.revision++;this.enemies=[];this.nextId=1;this.routes.clear();}
- spawn(x:number,z:number,maxHp:number=INFECTED.maxHp):number {this.revision++;const id=this.nextId++;this.enemies.push(new Infected(id,x,z,maxHp));return id;}
+ spawn(x:number,z:number,maxHp:number=INFECTED.maxHp,kind:EnemyKind='common'):number {this.revision++;const id=this.nextId++;this.enemies.push(new Infected(id,x,z,maxHp,kind));return id;}
  setCount(count:number):void{this.count=Math.max(1,Math.min(6,Math.floor(count)));this.reset();}
+ composition():Record<EnemyKind,number>{
+  const counts=Object.fromEntries(ENEMY_KINDS.map(kind=>[kind,0])) as Record<EnemyKind,number>;
+  for(const e of this.enemies)if(e.state!=='dead')counts[e.kind]++;
+  return counts;
+ }
  snapshots():InfectedSnapshot[]{return this.enemies.map(e=>e.snapshot());}
  snapshotById(id:number):InfectedSnapshot|undefined{return this.enemies.find(e=>e.id===id)?.snapshot();}
  alive():number{let count=0;for(const e of this.enemies)if(e.state!=='dead')count++;return count;}
