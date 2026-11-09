@@ -6,6 +6,7 @@ import {Runtime} from '../../src/app/Runtime';
 import {Scene} from '../../src/presentation/rendering/Scene';
 import {ENEMY_KINDS} from '../../src/gameplay/enemies/EnemyArchetypes';
 import {useEffect} from 'react';
+import {ENVIRONMENT_VIEWS} from './environmentViews';
 async function boot(){
 const r=await Runtime.create();r.start();r.pause();
 // Fixed render laboratory, not a progression playthrough.
@@ -25,6 +26,7 @@ r.enemies.tick=(dt,...args)=>{
  return [];
 };
 let frames:number[]=[];let previous=performance.now();
+let inspection:typeof ENVIRONMENT_VIEWS[keyof typeof ENVIRONMENT_VIEWS]|null=null;
 function spawn(count:number){
  r.enemies.clear();
  for(let i=0;i<count;i++)r.enemies.spawn(-3.4+(i%4)*1.6,-4-Math.floor(i/4)*1.8,100,ENEMY_KINDS[i%4]);
@@ -32,6 +34,7 @@ function spawn(count:number){
 spawn(4);
 function Probe(){
  const {gl,scene}=useThree();
+ useFrame(({camera})=>{if(inspection){camera.position.set(...inspection.position);camera.lookAt(...inspection.target);camera.updateMatrixWorld();}},-90);
  useFrame(()=>{const now=performance.now();frames.push(now-previous);previous=now;if(frames.length>240)frames.shift();},2);
 
  useEffect(()=>{let viewScene:Object3D|undefined,viewCamera:Camera|undefined;Object.assign(window,{
@@ -78,6 +81,7 @@ function Probe(){
    return {id:e.id,center:a.toArray(),target:[e.x,1.78,e.z]};
   }),poseTime,frames,enemies:r.enemies.snapshots(),programs:gl.info.programs?.length,render:{...gl.info.render},memory:{...gl.info.memory},movement:r.getMovementDiagnostics(),assets:modelCacheSnapshot(),weapon:r.getWeaponState(),combat:r.getCombatState(),trace:r.getShotTrace(),results:r.getResults(),count:r.enemies.snapshots().length}),
   visualCommand:(command:string,value?:number|string)=>{
+   if(command==='environment-view')inspection=ENVIRONMENT_VIEWS[value as keyof typeof ENVIRONMENT_VIEWS]??null;
    if(command==='combat'){
     pose=null;r.enemies.clear();
     r.enemies.spawn(-1.8,-3.2,100,'common');r.enemies.spawn(-.7,-3.5,70,'runner');r.enemies.spawn(.5,-4,180,'brute');r.enemies.spawn(-.2,-5,120,'predator');
