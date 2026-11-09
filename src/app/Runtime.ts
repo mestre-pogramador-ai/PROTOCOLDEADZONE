@@ -17,6 +17,15 @@ import { chooseSpawn } from '../gameplay/rounds/SpawnDirector';
 import { ECONOMY, EconomyManager } from '../gameplay/economy/EconomyManager';
 import { SessionMetrics } from '../gameplay/session/SessionMetrics';
 
+// One WASM initialization per module, including concurrent StrictMode mounts.
+let rapierReady: Promise<void> | undefined;
+function initializeRapier(): Promise<void> {
+  return rapierReady ??= RAPIER.init().catch(error => {
+    rapierReady = undefined;
+    throw error;
+  });
+}
+
 /** R3F drives this ONE simulation; Rapier, waves and economy never own another loop. */
 export class Runtime {
   readonly bus=new EventBus<AppEvents>();
@@ -40,7 +49,7 @@ export class Runtime {
   private spawnSequence=0;
   private notification='';private notificationRemaining=0;
   private constructor(){this.physics=new PhysicsWorld();this.enemies.clear();}
-  static async create():Promise<Runtime>{await RAPIER.init();return new Runtime();}
+  static async create():Promise<Runtime>{await initializeRapier();return new Runtime();}
   setPointerLocked(v:boolean):void{this.locked=v;if(!v)this.input.clear();}
   look(dx:number,dy:number):void{if(!this.locked||this.lifecycle.state!=='running')return;this.yaw-=dx*this.sensitivity;this.pitch=Math.max(-1.45,Math.min(1.45,this.pitch-dy*this.sensitivity));}
   getLook(){return {yaw:this.yaw,pitch:this.pitch};}

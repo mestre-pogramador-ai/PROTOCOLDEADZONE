@@ -13,6 +13,11 @@ describe('M9 authoritative combat',()=>{
   it('ADS interpolates with fixed time',()=>{const w=new M9Controller();step(w,9,{...idle,ads:true});expect(w.snapshot().adsBlend).toBeCloseTo(1);step(w,9);expect(w.snapshot().adsBlend).toBeCloseTo(0);});
 });
 describe('Containment hitscan',()=>{
-  it('hits the west wall',()=>{const trace=traceContainmentShot({origin:[0,1.7,0],yaw:Math.PI/2,pitch:0,maxDistance:80,doorOpen:false,id:1,damage:32});expect(trace.hit).toBe(true);expect(trace.surfaceId).toBe('west-wall');});
+  it('hits the cabinet before the west wall when it obstructs the shot',()=>{
+    const trace=traceContainmentShot({origin:[0,1.7,0],yaw:Math.PI/2,pitch:0,maxDistance:80,doorOpen:false,id:1,damage:32});
+    expect(trace.hit).toBe(true);
+    expect(trace.surfaceId).toBe('power-cabinet');
+  });
+  it('hits the west wall along an unobstructed path',()=>{const trace=traceContainmentShot({origin:[0,1.7,2],yaw:Math.PI/2,pitch:0,maxDistance:80,doorOpen:false,id:1,damage:32});expect(trace.hit).toBe(true);expect(trace.surfaceId).toBe('west-wall');});
   it('closed door blocks shots but open door does not',()=>{const q={origin:[6,1.7,0] as const,yaw:-Math.PI/2,pitch:0,maxDistance:80,id:1,damage:32};expect(traceContainmentShot({...q,doorOpen:false}).surfaceId).toBe('door-containment-security');expect(traceContainmentShot({...q,doorOpen:true}).surfaceId).not.toBe('door-containment-security');});
 });
