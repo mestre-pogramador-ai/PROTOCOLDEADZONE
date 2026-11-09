@@ -1,0 +1,26 @@
+{
+  "milestone": "M8.1.3",
+  "scope": "Existing containment room and existing immediate corridor",
+  "origin": "Original PROTOCOL: DEAD ZONE environment artwork, generated locally by source code",
+  "art_license": "CC0-1.0",
+  "license_file": "CC0-1.0.txt",
+  "license_scope": "New generated environment meshes, texture pixels and signage only; no relicensing of code, existing characters, weapon or third-party assets",
+  "external_downloads": [],
+  "binary_model_files_added": [],
+  "sources": [
+    "src/presentation/rendering/EnvironmentLayout.ts",
+    "src/presentation/rendering/EnvironmentGeometry.ts",
+    "src/presentation/rendering/RoomSurfaces.ts"
+  ],
+  "geometry": {"format": "Three.js BufferGeometry generated on mount", "static_parts": 348, "static_batches": 13, "door_batches": 5, "triangles_static_and_door": 7178, "rig": "none; door uses existing runtime state"},
+  "textures": [
+    {"names": ["floor albedo", "concrete albedo", "paint albedo", "metal albedo"], "count": 4, "resolution": [512,512], "color_space": "sRGB"},
+    {"names": ["floor roughness", "paint roughness"], "count": 2, "resolution": [512,512], "color_space": "linear"},
+    {"names": ["signage, equipment screens, floor stains and impact marks atlas"], "count": 1, "resolution": [1024,1024], "color_space": "sRGB"}
+  ],
+  "network_texture_or_model_requests_added": 0,
+  "estimated_uncompressed_texture_mib_with_mips": 13.34,
+  "memory_note": "Analytical estimate for these seven RGBA textures only; actual GPU memory not measured",
+  "collisions": "All 25 previous solids retained; one main-room ceiling collider at underside Y=3.5. Decorative pieces are not extra navigation obstacles.",
+  "status": "Integrated and browser-inspected; native desktop GPU performance and human gameplay remain to validate"
+}
