@@ -1,3 +1,4 @@
+import { diagnostics } from '../core/diagnostics/Diagnostics';
 import RAPIER from '@dimforge/rapier3d-compat';
 import { engineConfig, validateConfig } from './config';
 import { GameClock, type FrameStats } from '../core/clock/GameClock';
@@ -46,6 +47,7 @@ export class Runtime {
   private readonly playerDamage=new PlayerDamage();
   private hitAge=Infinity;private kills=0;private lastHeadshot=false;
   private gameOver=false;private lastDamageAngle=0;
+  private diagnosticTicks=0;private reverseTicks=0;
   private spawnSequence=0;
   private notification='';private notificationRemaining=0;
   private constructor(){this.physics=new PhysicsWorld();this.enemies.clear();}
@@ -59,11 +61,11 @@ export class Runtime {
   }
   getFov():number{return this.fov;}
   start():void{this.ensureActive();if(this.gameOver)return;this.input.attach();this.input.clear();this.physics.syncInterpolation();this.lifecycle.start();this.clock.resume();}
-  pause():void{if(this.lifecycle.state!=='running')return;this.lifecycle.pause();this.clock.pause();this.input.clear();}
-  resume():void{this.ensureActive();if(this.gameOver)return;this.input.clear();this.physics.syncInterpolation();this.lifecycle.resume();this.clock.resume();}
+  pause():void{if(this.lifecycle.state!=='running')return;diagnostics.record('info','session.paused');this.lifecycle.pause();this.clock.pause();this.input.clear();}
+  resume():void{this.ensureActive();if(this.gameOver)return;this.input.clear();this.physics.syncInterpolation();diagnostics.record('info','session.resumed');this.lifecycle.resume();this.clock.resume();}
   reset():void{
     this.ensureActive();this.clock.pause();this.lifecycle.reset();
-    this.physics.dispose();this.physics=new PhysicsWorld();this.clock.reset();this.input.clear();
+    diagnostics.record('info','session.reset');this.physics.dispose();this.physics=new PhysicsWorld();this.clock.reset();this.input.clear();
     this.weapon.reset();this.enemies.clear();this.rounds.reset();this.economy.reset();this.metrics.reset();
     this.lastTrace=null;this.traceAge=Infinity;this.yaw=0;this.pitch=0;
     this.playerDamage.reset();this.hitAge=Infinity;this.kills=0;this.lastHeadshot=false;
@@ -80,7 +82,7 @@ export class Runtime {
   beginRoundNow():boolean{
     if(this.gameOver||this.lifecycle.state!=='running')return false;
     const started=this.rounds.beginNow();
-    if(started){const round=this.rounds.snapshot().round;this.announce(`RODADA ${round} INICIADA`);this.bus.emit('round:started',{round});}
+    if(started){const round=this.rounds.snapshot().round;this.announce(`RODADA ${round} INICIADA`);diagnostics.record('info','round.started',{round});this.bus.emit('round:started',{round});}
     return started;
   }
   interact():boolean{
@@ -100,6 +102,15 @@ export class Runtime {
       this.metrics.tick(dt);
       const input=this.input.snapshot();
       this.physics.step(dt,input,this.yaw);
+      if(this.physics.movementDiagnostics().reversePrevented)this.reverseTicks++;
+      if(++this.diagnosticTicks%60===0){
+        if(this.reverseTicks)diagnostics.record('warning','physics.reversePrevented',{ticks:this.reverseTicks});
+        this.reverseTicks=0;
+        const p=this.physics.snapshot().current.position,m=this.physics.movementDiagnostics();
+        diagnostics.record('info','simulation.sample',{x:p[0],y:p[1],z:p[2],grounded:m.grounded,
+          vertical:m.verticalVelocity,requested:m.requestedHorizontalMeters,resolved:m.resolvedHorizontalMeters,
+          contacts:m.collisions,alive:this.enemies.alive(),round:this.rounds.snapshot().round});
+      }
       const pose=this.physics.snapshot().current;
       const [px,,pz]=pose.position;
       if(input.pressed.has('interact'))this.interact();
@@ -152,11 +163,11 @@ export class Runtime {
         this.enemies.spawn(spawn[0],spawn[1],hp);
         return true;
       });
-      if(result.started){const round=this.rounds.snapshot().round;this.announce(`RODADA ${round} INICIADA`);this.bus.emit('round:started',{round});}
+      if(result.started){const round=this.rounds.snapshot().round;this.announce(`RODADA ${round} INICIADA`);diagnostics.record('info','round.started',{round});this.bus.emit('round:started',{round});}
       if(result.completedRound!==null){
         const reward=this.economy.awardRound(result.completedRound);
         this.announce(`RODADA ${result.completedRound} CONCLUÍDA · +${reward} CR`);
-        this.bus.emit('round:completed',{round:result.completedRound,reward});
+        diagnostics.record('info','round.completed',{round:result.completedRound});this.bus.emit('round:completed',{round:result.completedRound,reward});
       }
     });
   }
