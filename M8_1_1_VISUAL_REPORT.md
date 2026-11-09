@@ -16,6 +16,8 @@ testada; aceite de arte e desempenho pendentes**. M8.2 não iniciado.
   `7d50e6b` renderização; `4dfe67e` testes e fixtures.
   As execuções finais usam esse código e os metadados de versão `0.9.2`.
   Relatório, evidências e metadados são registrados no commit de documentação.
+  Entrega de evidências: `fa6bae9`. Revisão:
+  [PR #7, rascunho](https://github.com/mestre-pogramador-ai/PROTOCOLDEADZONE/pull/7).
 - Sem mudanças em atributos de M9/infectados, regras de IA, hitboxes, física,
   economia, perks, recompensas ou rodadas. Runtime recebe somente um getter
   de leitura do timing existente para a apresentação acompanhar o GameClock.
@@ -249,6 +251,14 @@ O cleanup cobre material/geometry/texture/ImageBitmap e descarte de skeleton/mix
    mas não controle manual de gameplay nem validação de latência numa GPU desktop.
    Deploy de produção não executado; aprovação de serviços de hospedagem/autor
    não é demonstrada por testes locais.
+
+Após enviar `fa6bae9`, o check **Vercel** falhou antes de oferecer preview com
+`Git author Indiplayer must have access to the project on Vercel to create deployments.`
+O check `Vercel Preview Comments` passou. É bloqueio de acesso do serviço,
+separado do build local aprovado; não foi alterada a identidade do autor ou a
+configuração de cobrança. Evidência:
+[github-preview-status.json](docs/validation/M811/github-preview-status.json).
+O preview hospedado não foi validado.
 
 ## 10. Recomendação sobre M8.2
 
