@@ -1,0 +1,94 @@
+
+> protocol-dead-zone@0.8.1 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/PROTOCOLDEADZONE
+
+stderr | src/tests/M62Stability.test.ts > M6.2 collision stability
+using deprecated parameters for the initialization function; pass a single object instead
+
+stdout | src/tests/M71Progression.test.ts > M7.1 finite-resource survival economy > completes R1–R10: headshots
+M71_PROGRESSION {"profile":"headshots","kills":187,"misses":0,"shots":542,"purchases":16,"delivered":480,"reloads":36,"credits":{"credits":20080,"lifetimeEarned":23210,"lifetimeSpent":3630,"lastNotice":{"delta":150,"reason":"round","serial":747},"doorPurchased":true},"evidence":[{"round":1,"shots":16,"balance":690,"purchases":0,"reloads":1},{"round":2,"shots":36,"balance":1860,"purchases":0,"reloads":2},{"round":3,"shots":60,"balance":3260,"purchases":0,"reloads":3},{"round":4,"shots":90,"balance":4820,"purchases":1,"reloads":5},{"round":5,"shots":136,"balance":6550,"purchases":3,"reloads":9},{"round":6,"shots":191,"balance":8830,"purchases":4,"reloads":12},{"round":7,"shots":261,"balance":11090,"purchases":7,"reloads":17},{"round":8,"shots":342,"balance":13920,"purchases":9,"reloads":22},{"round":9,"shots":437,"balance":16760,"purchases":13,"reloads":29},{"round":10,"shots":542,"balance":20080,"purchases":16,"reloads":36}]}
+
+stdout | src/tests/M62Stability.test.ts > M6.2 crowds > keeps 1 infected outside solids and separated
+crowd 1 validation ms 12.46 simulation-only ms/600 ticks 2.62
+
+stdout | src/tests/M62Stability.test.ts > M6.2 crowds > keeps 3 infected outside solids and separated
+crowd 3 validation ms 47.88 simulation-only ms/600 ticks 9.43
+
+stdout | src/tests/M62Stability.test.ts > M6.2 crowds > keeps 6 infected outside solids and separated
+crowd 6 validation ms 124.34 simulation-only ms/600 ticks 20.7
+
+stdout | src/tests/M71Progression.test.ts > M7.1 finite-resource survival economy > completes R1–R10: body-80pct
+M71_PROGRESSION {"profile":"body-80pct","kills":187,"misses":254,"shots":1271,"purchases":40,"delivered":1200,"reloads":84,"credits":{"credits":13410,"lifetimeEarned":20860,"lifetimeSpent":7950,"lastNotice":{"delta":150,"reason":"round","serial":1097},"doorPurchased":true},"evidence":[{"round":1,"shots":39,"balance":610,"purchases":0,"reloads":2},{"round":2,"shots":89,"balance":1500,"purchases":1,"reloads":5},{"round":3,"shots":149,"balance":2420,"purchases":3,"reloads":9},{"round":4,"shots":219,"balance":3610,"purchases":5,"reloads":14},{"round":5,"shots":313,"balance":4940,"purchases":8,"reloads":20},{"round":6,"shots":432,"balance":6480,"purchases":12,"reloads":28},{"round":7,"shots":584,"balance":8080,"purchases":17,"reloads":38},{"round":8,"shots":787,"balance":9660,"purchases":24,"reloads":52},{"round":9,"shots":1018,"balance":11400,"purchases":32,"reloads":67},{"round":10,"shots":1271,"balance":13410,"purchases":40,"reloads":84}]}
+
+stdout | src/tests/M62Stability.test.ts > M6.2 crowds > keeps 12 infected outside solids and separated
+crowd 12 validation ms 442.62 simulation-only ms/600 ticks 44.45
+
+stdout | src/tests/M71Progression.test.ts > M7.1 finite-resource survival economy > completes R1–R10: body-67pct
+M71_PROGRESSION {"profile":"body-67pct","kills":187,"misses":508,"shots":1525,"purchases":49,"delivered":1470,"reloads":101,"credits":{"credits":11790,"lifetimeEarned":20860,"lifetimeSpent":9570,"lastNotice":{"delta":150,"reason":"round","serial":1106},"doorPurchased":true},"evidence":[{"round":1,"shots":47,"balance":610,"purchases":0,"reloads":3},{"round":2,"shots":107,"balance":1320,"purchases":2,"reloads":7},{"round":3,"shots":179,"balance":2240,"purchases":4,"reloads":11},{"round":4,"shots":263,"balance":3250,"purchases":7,"reloads":17},{"round":5,"shots":376,"balance":4400,"purchases":11,"reloads":25},{"round":6,"shots":518,"balance":5940,"purchases":15,"reloads":34},{"round":7,"shots":701,"balance":7360,"purchases":21,"reloads":46},{"round":8,"shots":944,"balance":8760,"purchases":29,"reloads":62},{"round":9,"shots":1222,"balance":10140,"purchases":39,"reloads":81},{"round":10,"shots":1525,"balance":11790,"purchases":49,"reloads":101}]}
+
+ ✓ src/tests/M71Progression.test.ts (3 tests) 1683ms
+   ✓ M7.1 finite-resource survival economy > completes R1–R10: headshots  453ms
+   ✓ M7.1 finite-resource survival economy > completes R1–R10: body-80pct  524ms
+   ✓ M7.1 finite-resource survival economy > completes R1–R10: body-67pct  705ms
+stderr | src/tests/M71RuntimeProgression.test.ts > finishes ten waves through Runtime with 80% body hits, paid ammo and real reloads
+using deprecated parameters for the initialization function; pass a single object instead
+
+stderr | src/tests/M7Variants.test.ts > M7 mixed crowds and lifecycle > freezes every variant during pause and removes them on reset
+using deprecated parameters for the initialization function; pass a single object instead
+
+ ✓ src/tests/M7Variants.test.ts (20 tests) 2608ms
+   ✓ M7 mixed crowds and lifecycle > keeps 20 mixed enemies outside solids and separated for 20 simulated seconds  2412ms
+stdout | src/tests/M62Stability.test.ts > M6.2 crowds > keeps 20 infected outside solids and separated
+crowd 20 validation ms 1478 simulation-only ms/600 ticks 116.19
+
+stderr | src/tests/M7RuntimeValidation.test.ts > integrates real Runtime, Rapier and spawn positions through ten complete waves
+using deprecated parameters for the initialization function; pass a single object instead
+
+ ✓ src/tests/M62Stability.test.ts (20 tests) 2925ms
+   ✓ M6.2 crowds > keeps 12 infected outside solids and separated  488ms
+   ✓ M6.2 crowds > keeps 20 infected outside solids and separated  1595ms
+stderr | src/tests/M61Movement.test.ts > M6.1 — integração real com Rapier (requer npm install)
+using deprecated parameters for the initialization function; pass a single object instead
+
+stdout | src/tests/M71RuntimeProgression.test.ts > finishes ten waves through Runtime with 80% body hits, paid ammo and real reloads
+M71_RUNTIME {"results":{"elapsedSeconds":357,"shots":1271,"hits":1017,"headshots":0,"accuracy":80,"kills":187,"completedRounds":10,"highestRound":11,"creditsEarned":20860,"creditsSpent":7200,"finalCredits":14160,"doorPurchased":false,"damageTaken":0,"damageEvents":0},"rows":[{"round":1,"shots":39,"credits":1360,"spent":0},{"round":2,"shots":89,"credits":2250,"spent":180},{"round":3,"shots":149,"credits":3170,"spent":540},{"round":4,"shots":219,"credits":4360,"spent":900},{"round":5,"shots":313,"credits":5690,"spent":1440},{"round":6,"shots":432,"credits":7230,"spent":2160},{"round":7,"shots":584,"credits":8830,"spent":3060},{"round":8,"shots":787,"credits":10410,"spent":4320},{"round":9,"shots":1018,"credits":12150,"spent":5760},{"round":10,"shots":1271,"credits":14160,"spent":7200}]}
+
+ ✓ src/tests/M71RuntimeProgression.test.ts (1 test) 1362ms
+   ✓ finishes ten waves through Runtime with 80% body hits, paid ammo and real reloads  1360ms
+ ✓ src/tests/M7RuntimeValidation.test.ts (1 test) 555ms
+   ✓ integrates real Runtime, Rapier and spawn positions through ten complete waves  554ms
+ ✓ src/tests/M61Movement.test.ts (10 tests) 264ms
+stderr | src/tests/M71Ammo.test.ts > M7.1 atomic ammo supply > allows preparation purchases, blocks pause interaction and resets all resources
+using deprecated parameters for the initialization function; pass a single object instead
+
+ ✓ src/tests/M71Ammo.test.ts (9 tests) 65ms
+ ✓ src/tests/M5WavesEconomy.test.ts (7 tests) 12ms
+stderr | src/tests/RuntimeInitialization.test.ts > concurrent runtime creation shares WASM initialization and keeps worlds independent
+using deprecated parameters for the initialization function; pass a single object instead
+
+ ✓ src/tests/RuntimeInitialization.test.ts (1 test) 37ms
+ ✓ src/tests/M41Polish.test.ts (7 tests) 7ms
+ ✓ src/tests/M9.test.ts (10 tests) 6ms
+ ✓ src/tests/M6VerticalSlice.test.ts (7 tests) 7ms
+ ✓ src/tests/AssetManager.test.ts (2 tests) 5ms
+ ✓ src/tests/Infected.test.ts (5 tests) 6ms
+ ✓ src/tests/M42Refinement.test.ts (5 tests) 5ms
+ ✓ src/tests/GameClock.test.ts (4 tests) 4ms
+ ✓ src/tests/Config.test.ts (1 test) 3ms
+ ✓ src/tests/Containment.test.ts (4 tests) 6ms
+ ✓ src/tests/EventBus.test.ts (1 test) 3ms
+ ✓ src/tests/Lifecycle.test.ts (1 test) 2ms
+
+ Test Files  20 passed (20)
+      Tests  119 passed (119)
+   Start at  03:57:00
+   Duration  5.06s (transform 450ms, setup 0ms, collect 1.64s, tests 9.57s, environment 3ms, prepare 1.13s)
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

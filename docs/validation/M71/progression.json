@@ -1,0 +1,362 @@
+{
+  "profiles": [
+    {
+      "profile": "headshots",
+      "kills": 187,
+      "misses": 0,
+      "shots": 542,
+      "purchases": 16,
+      "delivered": 480,
+      "reloads": 36,
+      "credits": {
+        "credits": 20080,
+        "lifetimeEarned": 23210,
+        "lifetimeSpent": 3630,
+        "lastNotice": {
+          "delta": 150,
+          "reason": "round",
+          "serial": 747
+        },
+        "doorPurchased": true
+      },
+      "evidence": [
+        {
+          "round": 1,
+          "shots": 16,
+          "balance": 690,
+          "purchases": 0,
+          "reloads": 1
+        },
+        {
+          "round": 2,
+          "shots": 36,
+          "balance": 1860,
+          "purchases": 0,
+          "reloads": 2
+        },
+        {
+          "round": 3,
+          "shots": 60,
+          "balance": 3260,
+          "purchases": 0,
+          "reloads": 3
+        },
+        {
+          "round": 4,
+          "shots": 90,
+          "balance": 4820,
+          "purchases": 1,
+          "reloads": 5
+        },
+        {
+          "round": 5,
+          "shots": 136,
+          "balance": 6550,
+          "purchases": 3,
+          "reloads": 9
+        },
+        {
+          "round": 6,
+          "shots": 191,
+          "balance": 8830,
+          "purchases": 4,
+          "reloads": 12
+        },
+        {
+          "round": 7,
+          "shots": 261,
+          "balance": 11090,
+          "purchases": 7,
+          "reloads": 17
+        },
+        {
+          "round": 8,
+          "shots": 342,
+          "balance": 13920,
+          "purchases": 9,
+          "reloads": 22
+        },
+        {
+          "round": 9,
+          "shots": 437,
+          "balance": 16760,
+          "purchases": 13,
+          "reloads": 29
+        },
+        {
+          "round": 10,
+          "shots": 542,
+          "balance": 20080,
+          "purchases": 16,
+          "reloads": 36
+        }
+      ]
+    },
+    {
+      "profile": "body-80pct",
+      "kills": 187,
+      "misses": 254,
+      "shots": 1271,
+      "purchases": 40,
+      "delivered": 1200,
+      "reloads": 84,
+      "credits": {
+        "credits": 13410,
+        "lifetimeEarned": 20860,
+        "lifetimeSpent": 7950,
+        "lastNotice": {
+          "delta": 150,
+          "reason": "round",
+          "serial": 1097
+        },
+        "doorPurchased": true
+      },
+      "evidence": [
+        {
+          "round": 1,
+          "shots": 39,
+          "balance": 610,
+          "purchases": 0,
+          "reloads": 2
+        },
+        {
+          "round": 2,
+          "shots": 89,
+          "balance": 1500,
+          "purchases": 1,
+          "reloads": 5
+        },
+        {
+          "round": 3,
+          "shots": 149,
+          "balance": 2420,
+          "purchases": 3,
+          "reloads": 9
+        },
+        {
+          "round": 4,
+          "shots": 219,
+          "balance": 3610,
+          "purchases": 5,
+          "reloads": 14
+        },
+        {
+          "round": 5,
+          "shots": 313,
+          "balance": 4940,
+          "purchases": 8,
+          "reloads": 20
+        },
+        {
+          "round": 6,
+          "shots": 432,
+          "balance": 6480,
+          "purchases": 12,
+          "reloads": 28
+        },
+        {
+          "round": 7,
+          "shots": 584,
+          "balance": 8080,
+          "purchases": 17,
+          "reloads": 38
+        },
+        {
+          "round": 8,
+          "shots": 787,
+          "balance": 9660,
+          "purchases": 24,
+          "reloads": 52
+        },
+        {
+          "round": 9,
+          "shots": 1018,
+          "balance": 11400,
+          "purchases": 32,
+          "reloads": 67
+        },
+        {
+          "round": 10,
+          "shots": 1271,
+          "balance": 13410,
+          "purchases": 40,
+          "reloads": 84
+        }
+      ]
+    },
+    {
+      "profile": "body-67pct",
+      "kills": 187,
+      "misses": 508,
+      "shots": 1525,
+      "purchases": 49,
+      "delivered": 1470,
+      "reloads": 101,
+      "credits": {
+        "credits": 11790,
+        "lifetimeEarned": 20860,
+        "lifetimeSpent": 9570,
+        "lastNotice": {
+          "delta": 150,
+          "reason": "round",
+          "serial": 1106
+        },
+        "doorPurchased": true
+      },
+      "evidence": [
+        {
+          "round": 1,
+          "shots": 47,
+          "balance": 610,
+          "purchases": 0,
+          "reloads": 3
+        },
+        {
+          "round": 2,
+          "shots": 107,
+          "balance": 1320,
+          "purchases": 2,
+          "reloads": 7
+        },
+        {
+          "round": 3,
+          "shots": 179,
+          "balance": 2240,
+          "purchases": 4,
+          "reloads": 11
+        },
+        {
+          "round": 4,
+          "shots": 263,
+          "balance": 3250,
+          "purchases": 7,
+          "reloads": 17
+        },
+        {
+          "round": 5,
+          "shots": 376,
+          "balance": 4400,
+          "purchases": 11,
+          "reloads": 25
+        },
+        {
+          "round": 6,
+          "shots": 518,
+          "balance": 5940,
+          "purchases": 15,
+          "reloads": 34
+        },
+        {
+          "round": 7,
+          "shots": 701,
+          "balance": 7360,
+          "purchases": 21,
+          "reloads": 46
+        },
+        {
+          "round": 8,
+          "shots": 944,
+          "balance": 8760,
+          "purchases": 29,
+          "reloads": 62
+        },
+        {
+          "round": 9,
+          "shots": 1222,
+          "balance": 10140,
+          "purchases": 39,
+          "reloads": 81
+        },
+        {
+          "round": 10,
+          "shots": 1525,
+          "balance": 11790,
+          "purchases": 49,
+          "reloads": 101
+        }
+      ]
+    }
+  ],
+  "runtime": [
+    {
+      "results": {
+        "elapsedSeconds": 357,
+        "shots": 1271,
+        "hits": 1017,
+        "headshots": 0,
+        "accuracy": 80,
+        "kills": 187,
+        "completedRounds": 10,
+        "highestRound": 11,
+        "creditsEarned": 20860,
+        "creditsSpent": 7200,
+        "finalCredits": 14160,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "rows": [
+        {
+          "round": 1,
+          "shots": 39,
+          "credits": 1360,
+          "spent": 0
+        },
+        {
+          "round": 2,
+          "shots": 89,
+          "credits": 2250,
+          "spent": 180
+        },
+        {
+          "round": 3,
+          "shots": 149,
+          "credits": 3170,
+          "spent": 540
+        },
+        {
+          "round": 4,
+          "shots": 219,
+          "credits": 4360,
+          "spent": 900
+        },
+        {
+          "round": 5,
+          "shots": 313,
+          "credits": 5690,
+          "spent": 1440
+        },
+        {
+          "round": 6,
+          "shots": 432,
+          "credits": 7230,
+          "spent": 2160
+        },
+        {
+          "round": 7,
+          "shots": 584,
+          "credits": 8830,
+          "spent": 3060
+        },
+        {
+          "round": 8,
+          "shots": 787,
+          "credits": 10410,
+          "spent": 4320
+        },
+        {
+          "round": 9,
+          "shots": 1018,
+          "credits": 12150,
+          "spent": 5760
+        },
+        {
+          "round": 10,
+          "shots": 1271,
+          "credits": 14160,
+          "spent": 7200
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # PROTOCOL: DEAD ZONE
 
-**M7 — Variantes de infectados (v0.8.0)** · FPS 3D de sobrevivência no navegador, em desenvolvimento.
+**M7.1 — Munição e sobrevivência (v0.8.1)** · FPS 3D de sobrevivência no navegador, em desenvolvimento.
 
 Este projeto mantém os marcos M0–M6.2 e introduz variantes de infectados nas rodadas. A primeira arena inclui:
 menu, partida, preparação, rodadas, infectados, combate M9, créditos, porta comprável,
@@ -40,7 +40,7 @@ npm run preview
 | Shift | Correr |
 | Ctrl / C | Agachar |
 | Espaço | Pular |
-| E | Comprar/abrir a porta (750 CR) |
+| E | Interagir com estação de munição ou porta próxima |
 | T | Começar a próxima onda antes do fim da preparação |
 | Esc | Pausar e liberar o mouse |
 
@@ -99,5 +99,18 @@ Escopo, atributos, testes executados e aceite manual pendente:
 [relatório M7](docs/M7_INFECTED_VARIANTS.md).
 
 Validação após integração: [relatório de teste M7](docs/M7_TEST_REPORT.md).
-**Pendência de progressão:** sem reposição, as 105 balas iniciais não permitem
-concluir R5 (mínimo calculado: 136 headshots acumulados).
+A falta de reposição identificada no M7 é tratada no M7.1.
+
+
+## M7.1 — Estação de munição
+
+A estação verde fica próxima ao ponto inicial na Sala de Contenção.
+Aproxime-se e pressione **E**: pacote de 30 balas por **180 CR**, com reserva
+máxima de 90. Complementos parciais custam 6 CR por bala. A compra abastece
+a reserva; use **R** para recarregar.
+
+Sem nenhuma bala e sem saldo para o pacote, a estação oferece 15 balas de
+socorro gratuitas. Novas concessões exigem 30 segundos de simulação; a pausa
+congela essa espera. Não há créditos grátis nem socorro quando é possível comprar.
+
+Validação, balanceamento e limites: [relatório M7.1](M7_1_TEST_REPORT.md).
