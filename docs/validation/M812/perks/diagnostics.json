@@ -1,0 +1,237 @@
+{
+  "version": "M8.1.2",
+  "entries": [
+    {
+      "seconds": 0.242,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.252,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.254,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.256,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.27,
+      "level": "warning",
+      "code": "console.warning",
+      "values": {}
+    },
+    {
+      "seconds": 8.062,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0005977153778076,
+        "y": 0.8744841814041138,
+        "z": 4.29124116897583,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0.07666666666666666,
+        "resolved": 0.07666666805744171,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 11.456,
+      "level": "info",
+      "code": "perk.acquired",
+      "values": {
+        "price": 2500
+      }
+    },
+    {
+      "seconds": 12.337,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -3.1469521522521973,
+        "y": 0.8745753169059753,
+        "z": 5.5177788734436035,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.662450728190379e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 12.948,
+      "level": "warning",
+      "code": "perk.owned",
+      "values": {
+        "price": 2500
+      }
+    },
+    {
+      "seconds": 16.371,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": 0.10487677156925201,
+        "y": 0.8745906352996826,
+        "z": 5.5176544189453125,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.6544954917208088e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 17.217,
+      "level": "info",
+      "code": "perk.acquired",
+      "values": {
+        "price": 2000
+      }
+    },
+    {
+      "seconds": 20.904,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": 0.10487695038318634,
+        "y": 0.8740164637565613,
+        "z": 5.517650127410889,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.9238903576806696e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 24.765,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": 0.10487823933362961,
+        "y": 0.8745905756950378,
+        "z": 5.517651081085205,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 4.144504828218487e-8,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 29.048,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": 0.10457777231931686,
+        "y": 0.8749942779541016,
+        "z": 4.67456579208374,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0.07666666666666666,
+        "resolved": 0.0766666680581184,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 33.49,
+      "level": "info",
+      "code": "perk.acquired",
+      "values": {
+        "price": 2000
+      }
+    },
+    {
+      "seconds": 33.49,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": 3.4743685722351074,
+        "y": 0.8735219240188599,
+        "z": 5.51505708694458,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 4.4661195630624206e-8,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 36.554,
+      "level": "info",
+      "code": "perk.acquired",
+      "values": {
+        "price": 3500
+      }
+    },
+    {
+      "seconds": 38.785,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": 6.307789325714111,
+        "y": 0.8678992986679077,
+        "z": 5.5148701667785645,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 3.450989395085867e-7,
+        "contacts": 1,
+        "alive": 1,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 41.457,
+      "level": "info",
+      "code": "session.paused",
+      "values": {}
+    },
+    {
+      "seconds": 42.292,
+      "level": "warning",
+      "code": "user.marker",
+      "values": {}
+    },
+    {
+      "seconds": 42.295,
+      "level": "info",
+      "code": "report.export",
+      "values": {}
+    }
+  ]
+}

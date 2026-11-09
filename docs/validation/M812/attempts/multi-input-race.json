@@ -1,0 +1,7193 @@
+{
+  "record": {
+    "four": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -3.400000267852076,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -3.4,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.8000002303527847,
+            1.774307046661515,
+            -3.9777516801341397
+          ],
+          "target": [
+            -1.7999999999999998,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            -0.20000032142249038,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -0.19999999999999973,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.3999999999999955,
+            1.7799999496275754,
+            -4.000000032860414
+          ],
+          "target": [
+            1.4000000000000008,
+            1.78,
+            -4
+          ]
+        }
+      ],
+      "poseTime": 0,
+      "frames": [
+        88.1000000005588,
+        232.20000000018626,
+        203.8999999994412,
+        186,
+        199.1000000005588,
+        212.19999999925494,
+        239,
+        201.70000000018626,
+        209.6000000005588,
+        517.8999999994412,
+        14.299999999813735,
+        331.1000000005588,
+        289.8999999994412,
+        11.5
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -3.4,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1.7999999999999998,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": -0.19999999999999973,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.4000000000000008,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 84,
+        "calls": 66,
+        "triangles": 45534,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 51,
+        "textures": 23
+      },
+      "movement": {
+        "grounded": false,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 0,
+        "collisions": 0,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 3,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 4,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 0,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 4
+    },
+    "twenty": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -3.400000267852076,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -3.4,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.8000002303527847,
+            1.774307046661515,
+            -3.9777516801341397
+          ],
+          "target": [
+            -1.7999999999999998,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            -0.20000032142249038,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -0.19999999999999973,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.3999999999999955,
+            1.7799999496275754,
+            -4.000000032860414
+          ],
+          "target": [
+            1.4000000000000008,
+            1.78,
+            -4
+          ]
+        }
+      ],
+      "poseTime": 0,
+      "frames": [
+        152.79999999981374,
+        273.40000000037253,
+        283.3999999994412,
+        536.2000000001863,
+        12.799999999813735,
+        258.20000000018626,
+        248.6000000005588,
+        294.69999999925494,
+        270.6000000005588,
+        287.3999999994412,
+        295.40000000037253
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -3.4,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1.7999999999999998,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": -0.19999999999999973,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.4000000000000008,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "common",
+          "id": 5,
+          "x": -3.4,
+          "z": -5.8,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "runner",
+          "id": 6,
+          "x": -1.7999999999999998,
+          "z": -5.8,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "brute",
+          "id": 7,
+          "x": -0.19999999999999973,
+          "z": -5.8,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "predator",
+          "id": 8,
+          "x": 1.4000000000000008,
+          "z": -5.8,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "common",
+          "id": 9,
+          "x": -3.4,
+          "z": -7.6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "runner",
+          "id": 10,
+          "x": -1.7999999999999998,
+          "z": -7.6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "brute",
+          "id": 11,
+          "x": -0.19999999999999973,
+          "z": -7.6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "predator",
+          "id": 12,
+          "x": 1.4000000000000008,
+          "z": -7.6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "common",
+          "id": 13,
+          "x": -3.4,
+          "z": -9.4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "runner",
+          "id": 14,
+          "x": -1.7999999999999998,
+          "z": -9.4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "brute",
+          "id": 15,
+          "x": -0.19999999999999973,
+          "z": -9.4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "predator",
+          "id": 16,
+          "x": 1.4000000000000008,
+          "z": -9.4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "common",
+          "id": 17,
+          "x": -3.4,
+          "z": -11.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "runner",
+          "id": 18,
+          "x": -1.7999999999999998,
+          "z": -11.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "brute",
+          "id": 19,
+          "x": -0.19999999999999973,
+          "z": -11.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        },
+        {
+          "kind": "predator",
+          "id": 20,
+          "x": 1.4000000000000008,
+          "z": -11.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 0
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 120,
+        "calls": 96,
+        "triangles": 97175,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 53,
+        "textures": 39
+      },
+      "movement": {
+        "grounded": false,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 0,
+        "collisions": 0,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 15,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 5,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 20,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 0,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 20
+    },
+    "lodBounds": [
+      [
+        0.7050222586243389,
+        1.9019955944499303,
+        0.6146342080728782
+      ],
+      [
+        0.6063191424169303,
+        1.8941875389568401,
+        0.685233905510211
+      ],
+      [
+        0.8460267103492054,
+        1.9019955944499307,
+        0.6146342080728786
+      ],
+      [
+        0.9368728384879385,
+        1.9415958041882264,
+        0.704730062264856
+      ],
+      [
+        0.7050222586243389,
+        1.9019955944499303,
+        0.6146342537018645
+      ],
+      [
+        0.6063191424169301,
+        1.8941875389568394,
+        0.6852339055102119
+      ],
+      [
+        0.8460267103492052,
+        1.9019955944499307,
+        0.6146342537018636
+      ],
+      [
+        0.9368728384879385,
+        1.9415958041882264,
+        0.7047299683875394
+      ],
+      [
+        0.7050222586243384,
+        1.9019955944499303,
+        0.6146342993308487
+      ],
+      [
+        0.6063191424169303,
+        1.8941875389568397,
+        0.6852339055102128
+      ],
+      [
+        0.8460267103492054,
+        1.9019955944499307,
+        0.6146342993308487
+      ],
+      [
+        0.9368728384879385,
+        1.9415958041882264,
+        0.7047298745102255
+      ],
+      [
+        0.7050222586243389,
+        1.9019955944499303,
+        0.6146343449598355
+      ],
+      [
+        0.6063191424169303,
+        1.8941875389568397,
+        0.6852339055102163
+      ],
+      [
+        0.8460267103492055,
+        1.9019955944499307,
+        0.6146343449598337
+      ],
+      [
+        0.9368728384879385,
+        1.9415958041882264,
+        0.7047297806329045
+      ],
+      [
+        0.7050222586243389,
+        1.9019955944499303,
+        0.6146343905888187
+      ],
+      [
+        0.6063191424169301,
+        1.8941875389568397,
+        0.6852339055102163
+      ],
+      [
+        0.8460267103492053,
+        1.9019955944499307,
+        0.614634390588817
+      ],
+      [
+        0.9368728384879385,
+        1.9415958041882264,
+        0.7047296867555914
+      ]
+    ],
+    "animatedTwenty": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -3.4208135784275084,
+            1.767015440852767,
+            -4.1245471377282374
+          ],
+          "target": [
+            -3.4,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.9424735219328015,
+            1.7282641295911265,
+            -4.013231365576314
+          ],
+          "target": [
+            -1.7999999999999998,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            -0.3424441532268638,
+            1.8210114512477047,
+            -4.165066044813077
+          ],
+          "target": [
+            -0.19999999999999973,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.317954383267955,
+            1.6612690620003319,
+            -3.854913834216202
+          ],
+          "target": [
+            1.4000000000000008,
+            1.78,
+            -4
+          ]
+        }
+      ],
+      "poseTime": 0.6666666666666671,
+      "frames": [
+        184,
+        226.40000000037253,
+        306.3999999994412,
+        301.30000000074506,
+        247.8999999994412,
+        283.6000000005588,
+        315.3999999994412,
+        338.79999999981374,
+        361.80000000074506,
+        231.79999999981374
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -3.4,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1.7999999999999998,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": -0.19999999999999973,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.4000000000000008,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "common",
+          "id": 5,
+          "x": -3.4,
+          "z": -5.8,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "runner",
+          "id": 6,
+          "x": -1.7999999999999998,
+          "z": -5.8,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "brute",
+          "id": 7,
+          "x": -0.19999999999999973,
+          "z": -5.8,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "predator",
+          "id": 8,
+          "x": 1.4000000000000008,
+          "z": -5.8,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "common",
+          "id": 9,
+          "x": -3.4,
+          "z": -7.6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "runner",
+          "id": 10,
+          "x": -1.7999999999999998,
+          "z": -7.6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "brute",
+          "id": 11,
+          "x": -0.19999999999999973,
+          "z": -7.6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "predator",
+          "id": 12,
+          "x": 1.4000000000000008,
+          "z": -7.6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "common",
+          "id": 13,
+          "x": -3.4,
+          "z": -9.4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "runner",
+          "id": 14,
+          "x": -1.7999999999999998,
+          "z": -9.4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "brute",
+          "id": 15,
+          "x": -0.19999999999999973,
+          "z": -9.4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "predator",
+          "id": 16,
+          "x": 1.4000000000000008,
+          "z": -9.4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "common",
+          "id": 17,
+          "x": -3.4,
+          "z": -11.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "runner",
+          "id": 18,
+          "x": -1.7999999999999998,
+          "z": -11.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "brute",
+          "id": 19,
+          "x": -0.19999999999999973,
+          "z": -11.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "predator",
+          "id": 20,
+          "x": 1.4000000000000008,
+          "z": -11.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 140,
+        "calls": 96,
+        "triangles": 97175,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 53,
+        "textures": 39
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 7.357109521993114e-7,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 15,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 5,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 20,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 0,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 20
+    },
+    "validRoomTwenty": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -2.5178895300886306,
+            1.770134027187066,
+            -3.105666300556387
+          ],
+          "target": [
+            -2.5,
+            1.78,
+            -3
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.386399836042634,
+            1.8302621406550772,
+            -3.165753189840151
+          ],
+          "target": [
+            -1.3,
+            1.78,
+            -3
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            -0.30817175558407717,
+            1.7342572995749759,
+            -3.041833653132535
+          ],
+          "target": [
+            -0.10000000000000009,
+            1.78,
+            -3
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            0.9457524007305818,
+            1.548544278679591,
+            -2.818363845538551
+          ],
+          "target": [
+            1.0999999999999996,
+            1.78,
+            -3
+          ]
+        }
+      ],
+      "poseTime": 1.4,
+      "frames": [
+        98.8999999994412,
+        333.20000000018626,
+        364.79999999981374,
+        307.20000000018626,
+        296.40000000037253,
+        331.59999999962747,
+        355,
+        321.70000000018626,
+        306.70000000018626
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -2.5,
+          "z": -3,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1.3,
+          "z": -3,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": -0.10000000000000009,
+          "z": -3,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.0999999999999996,
+          "z": -3,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "common",
+          "id": 5,
+          "x": -2.5,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "runner",
+          "id": 6,
+          "x": -1.3,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "brute",
+          "id": 7,
+          "x": -0.10000000000000009,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "predator",
+          "id": 8,
+          "x": 1.0999999999999996,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "common",
+          "id": 9,
+          "x": -2.5,
+          "z": -5,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "runner",
+          "id": 10,
+          "x": -1.3,
+          "z": -5,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "brute",
+          "id": 11,
+          "x": -0.10000000000000009,
+          "z": -5,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "predator",
+          "id": 12,
+          "x": 1.0999999999999996,
+          "z": -5,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "common",
+          "id": 13,
+          "x": -2.5,
+          "z": -6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "runner",
+          "id": 14,
+          "x": -1.3,
+          "z": -6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "brute",
+          "id": 15,
+          "x": -0.10000000000000009,
+          "z": -6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "predator",
+          "id": 16,
+          "x": 1.0999999999999996,
+          "z": -6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "common",
+          "id": 17,
+          "x": -2.5,
+          "z": -7,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "runner",
+          "id": 18,
+          "x": -1.3,
+          "z": -7,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "brute",
+          "id": 19,
+          "x": -0.10000000000000009,
+          "z": -7,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        },
+        {
+          "kind": "predator",
+          "id": 20,
+          "x": 1.0999999999999996,
+          "z": -7,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 9.799999999999999
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 162,
+        "calls": 108,
+        "triangles": 139649,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 53,
+        "textures": 39
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 2.436888080944185e-7,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 15,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 5,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 20,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 1,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 20
+    },
+    "poses": {
+      "idle": {
+        "heads": [
+          {
+            "id": 1,
+            "center": [
+              -3.400000267852076,
+              1.7800000225666683,
+              -3.9999998366803315
+            ],
+            "target": [
+              -3.4,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 2,
+            "center": [
+              -1.8000002303527847,
+              1.774307046661515,
+              -3.9777516801341397
+            ],
+            "target": [
+              -1.7999999999999998,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 3,
+            "center": [
+              -0.20000032142249038,
+              1.7800000225666683,
+              -3.9999998366803315
+            ],
+            "target": [
+              -0.19999999999999973,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 4,
+            "center": [
+              1.4242654549839493,
+              1.7721464486935457,
+              -4.021944133843178
+            ],
+            "target": [
+              1.4000000000000008,
+              1.78,
+              -4
+            ]
+          }
+        ],
+        "poseTime": 0.13333333333333333,
+        "frames": [
+          98.8999999994412,
+          333.20000000018626,
+          364.79999999981374,
+          307.20000000018626,
+          296.40000000037253,
+          331.59999999962747,
+          355,
+          321.70000000018626,
+          306.70000000018626,
+          327.59999999962747,
+          23.100000000558794,
+          621.7999999998137,
+          18.799999999813735,
+          529.9000000003725,
+          342.79999999981374,
+          322.70000000018626
+        ],
+        "enemies": [
+          {
+            "kind": "common",
+            "id": 1,
+            "x": -3.4,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "idle",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 0.9333333333333333
+          },
+          {
+            "kind": "runner",
+            "id": 2,
+            "x": -1.7999999999999998,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "idle",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 0.9333333333333333
+          },
+          {
+            "kind": "brute",
+            "id": 3,
+            "x": -0.19999999999999973,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "idle",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 0.9333333333333333
+          },
+          {
+            "kind": "predator",
+            "id": 4,
+            "x": 1.4000000000000008,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "idle",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 0.9333333333333333
+          }
+        ],
+        "programs": 13,
+        "render": {
+          "frame": 176,
+          "calls": 66,
+          "triangles": 45534,
+          "points": 0,
+          "lines": 0
+        },
+        "memory": {
+          "geometries": 53,
+          "textures": 23
+        },
+        "movement": {
+          "grounded": false,
+          "verticalVelocity": -1.308,
+          "requestedHorizontalMeters": 0,
+          "resolvedHorizontalMeters": 0,
+          "collisions": 0,
+          "reversePrevented": false
+        },
+        "assets": [
+          {
+            "path": "assets/models/characters/infected-worker.glb",
+            "refs": 3,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/characters/infected-hunter.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/weapons/m9-service.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/viewmodels/operator-arms.glb",
+            "refs": 1,
+            "loaded": true
+          }
+        ],
+        "weapon": {
+          "ammo": 15,
+          "reserve": 90,
+          "reloading": false,
+          "reloadRemaining": 0,
+          "reloadDuration": 1.5,
+          "ads": false,
+          "adsBlend": 0,
+          "cooldownRemaining": 0,
+          "shotsFired": 0
+        },
+        "combat": {
+          "health": 100,
+          "maxHealth": 100,
+          "kills": 0,
+          "alive": 4,
+          "hitRecently": false,
+          "damageAngle": 0,
+          "gameOver": false,
+          "lastHeadshot": false,
+          "hitMarker": false,
+          "damageEvents": 0,
+          "invulnerability": 0
+        },
+        "trace": null,
+        "results": {
+          "elapsedSeconds": 0,
+          "shots": 0,
+          "hits": 0,
+          "headshots": 0,
+          "accuracy": 0,
+          "kills": 0,
+          "completedRounds": 0,
+          "highestRound": 1,
+          "creditsEarned": 0,
+          "creditsSpent": 0,
+          "finalCredits": 500,
+          "doorPurchased": false,
+          "damageTaken": 0,
+          "damageEvents": 0
+        },
+        "count": 4
+      },
+      "chase": {
+        "heads": [
+          {
+            "id": 1,
+            "center": [
+              -3.469015805406478,
+              1.8165927283777776,
+              -4.131190598045325
+            ],
+            "target": [
+              -3.4,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 2,
+            "center": [
+              -1.8735720507248077,
+              1.8128950867669633,
+              -4.096329838070256
+            ],
+            "target": [
+              -1.7999999999999998,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 3,
+            "center": [
+              -0.2625647782470072,
+              1.8133645799127012,
+              -4.105791222914616
+            ],
+            "target": [
+              -0.19999999999999973,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 4,
+            "center": [
+              1.2183648778711575,
+              1.4464979819162125,
+              -3.7802794799985158
+            ],
+            "target": [
+              1.4000000000000008,
+              1.78,
+              -4
+            ]
+          }
+        ],
+        "poseTime": 0.06666666666666667,
+        "frames": [
+          98.8999999994412,
+          333.20000000018626,
+          364.79999999981374,
+          307.20000000018626,
+          296.40000000037253,
+          331.59999999962747,
+          355,
+          321.70000000018626,
+          306.70000000018626,
+          327.59999999962747,
+          23.100000000558794,
+          621.7999999998137,
+          18.799999999813735,
+          529.9000000003725,
+          342.79999999981374,
+          322.70000000018626,
+          302.8999999994412
+        ],
+        "enemies": [
+          {
+            "kind": "common",
+            "id": 1,
+            "x": -3.4,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "chase",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 0.4666666666666667
+          },
+          {
+            "kind": "runner",
+            "id": 2,
+            "x": -1.7999999999999998,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "chase",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 0.4666666666666667
+          },
+          {
+            "kind": "brute",
+            "id": 3,
+            "x": -0.19999999999999973,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "chase",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 0.4666666666666667
+          },
+          {
+            "kind": "predator",
+            "id": 4,
+            "x": 1.4000000000000008,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "chase",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 0.4666666666666667
+          }
+        ],
+        "programs": 13,
+        "render": {
+          "frame": 178,
+          "calls": 66,
+          "triangles": 45534,
+          "points": 0,
+          "lines": 0
+        },
+        "memory": {
+          "geometries": 53,
+          "textures": 23
+        },
+        "movement": {
+          "grounded": true,
+          "verticalVelocity": 0,
+          "requestedHorizontalMeters": 0,
+          "resolvedHorizontalMeters": 4.6182703662560334e-8,
+          "collisions": 1,
+          "reversePrevented": false
+        },
+        "assets": [
+          {
+            "path": "assets/models/characters/infected-worker.glb",
+            "refs": 3,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/characters/infected-hunter.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/weapons/m9-service.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/viewmodels/operator-arms.glb",
+            "refs": 1,
+            "loaded": true
+          }
+        ],
+        "weapon": {
+          "ammo": 15,
+          "reserve": 90,
+          "reloading": false,
+          "reloadRemaining": 0,
+          "reloadDuration": 1.5,
+          "ads": false,
+          "adsBlend": 0,
+          "cooldownRemaining": 0,
+          "shotsFired": 0
+        },
+        "combat": {
+          "health": 100,
+          "maxHealth": 100,
+          "kills": 0,
+          "alive": 4,
+          "hitRecently": false,
+          "damageAngle": 0,
+          "gameOver": false,
+          "lastHeadshot": false,
+          "hitMarker": false,
+          "damageEvents": 0,
+          "invulnerability": 0
+        },
+        "trace": null,
+        "results": {
+          "elapsedSeconds": 0,
+          "shots": 0,
+          "hits": 0,
+          "headshots": 0,
+          "accuracy": 0,
+          "kills": 0,
+          "completedRounds": 0,
+          "highestRound": 1,
+          "creditsEarned": 0,
+          "creditsSpent": 0,
+          "finalCredits": 500,
+          "doorPurchased": false,
+          "damageTaken": 0,
+          "damageEvents": 0
+        },
+        "count": 4
+      },
+      "windup": {
+        "heads": [
+          {
+            "id": 1,
+            "center": [
+              -3.4683751225782986,
+              1.6617072020259605,
+              -4.01121651593739
+            ],
+            "target": [
+              -3.4,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 2,
+            "center": [
+              -1.8441259355939799,
+              1.6571968299654443,
+              -3.8450710854074592
+            ],
+            "target": [
+              -1.7999999999999998,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 3,
+            "center": [
+              -0.34313650353492864,
+              1.547439464859791,
+              -4.179785634135541
+            ],
+            "target": [
+              -0.19999999999999973,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 4,
+            "center": [
+              1.2216719181499305,
+              1.7513102786608843,
+              -4.254860476341827
+            ],
+            "target": [
+              1.4000000000000008,
+              1.78,
+              -4
+            ]
+          }
+        ],
+        "poseTime": 0.21666666666666665,
+        "frames": [
+          98.8999999994412,
+          333.20000000018626,
+          364.79999999981374,
+          307.20000000018626,
+          296.40000000037253,
+          331.59999999962747,
+          355,
+          321.70000000018626,
+          306.70000000018626,
+          327.59999999962747,
+          23.100000000558794,
+          621.7999999998137,
+          18.799999999813735,
+          529.9000000003725,
+          342.79999999981374,
+          322.70000000018626,
+          302.8999999994412,
+          439.5,
+          29.40000000037253,
+          199.70000000018626,
+          227.09999999962747
+        ],
+        "enemies": [
+          {
+            "kind": "common",
+            "id": 1,
+            "x": -3.4,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "windup",
+            "timer": 0.225,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.5166666666666666
+          },
+          {
+            "kind": "runner",
+            "id": 2,
+            "x": -1.7999999999999998,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "windup",
+            "timer": 0.225,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.5166666666666666
+          },
+          {
+            "kind": "brute",
+            "id": 3,
+            "x": -0.19999999999999973,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "windup",
+            "timer": 0.225,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.5166666666666666
+          },
+          {
+            "kind": "predator",
+            "id": 4,
+            "x": 1.4000000000000008,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "windup",
+            "timer": 0.225,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.5166666666666666
+          }
+        ],
+        "programs": 13,
+        "render": {
+          "frame": 186,
+          "calls": 66,
+          "triangles": 45534,
+          "points": 0,
+          "lines": 0
+        },
+        "memory": {
+          "geometries": 53,
+          "textures": 23
+        },
+        "movement": {
+          "grounded": true,
+          "verticalVelocity": 0,
+          "requestedHorizontalMeters": 0,
+          "resolvedHorizontalMeters": 5.520312394779697e-8,
+          "collisions": 1,
+          "reversePrevented": false
+        },
+        "assets": [
+          {
+            "path": "assets/models/characters/infected-worker.glb",
+            "refs": 3,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/characters/infected-hunter.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/weapons/m9-service.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/viewmodels/operator-arms.glb",
+            "refs": 1,
+            "loaded": true
+          }
+        ],
+        "weapon": {
+          "ammo": 15,
+          "reserve": 90,
+          "reloading": false,
+          "reloadRemaining": 0,
+          "reloadDuration": 1.5,
+          "ads": false,
+          "adsBlend": 0,
+          "cooldownRemaining": 0,
+          "shotsFired": 0
+        },
+        "combat": {
+          "health": 100,
+          "maxHealth": 100,
+          "kills": 0,
+          "alive": 4,
+          "hitRecently": false,
+          "damageAngle": 0,
+          "gameOver": false,
+          "lastHeadshot": false,
+          "hitMarker": false,
+          "damageEvents": 0,
+          "invulnerability": 0
+        },
+        "trace": null,
+        "results": {
+          "elapsedSeconds": 0,
+          "shots": 0,
+          "hits": 0,
+          "headshots": 0,
+          "accuracy": 0,
+          "kills": 0,
+          "completedRounds": 0,
+          "highestRound": 1,
+          "creditsEarned": 0,
+          "creditsSpent": 0,
+          "finalCredits": 500,
+          "doorPurchased": false,
+          "damageTaken": 0,
+          "damageEvents": 0
+        },
+        "count": 4
+      },
+      "active": {
+        "heads": [
+          {
+            "id": 1,
+            "center": [
+              -3.4794377109091377,
+              1.562559678286341,
+              -4.317804751975418
+            ],
+            "target": [
+              -3.4,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 2,
+            "center": [
+              -1.8683164313818583,
+              1.5829594230115611,
+              -4.311916840541356
+            ],
+            "target": [
+              -1.7999999999999998,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 3,
+            "center": [
+              -0.2953252530909653,
+              1.562559678286341,
+              -4.317804751975418
+            ],
+            "target": [
+              -0.19999999999999973,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 4,
+            "center": [
+              1.2257503489424617,
+              1.8159851674127858,
+              -4.340698886882385
+            ],
+            "target": [
+              1.4000000000000008,
+              1.78,
+              -4
+            ]
+          }
+        ],
+        "poseTime": 0.19999999999999998,
+        "frames": [
+          98.8999999994412,
+          333.20000000018626,
+          364.79999999981374,
+          307.20000000018626,
+          296.40000000037253,
+          331.59999999962747,
+          355,
+          321.70000000018626,
+          306.70000000018626,
+          327.59999999962747,
+          23.100000000558794,
+          621.7999999998137,
+          18.799999999813735,
+          529.9000000003725,
+          342.79999999981374,
+          322.70000000018626,
+          302.8999999994412,
+          439.5,
+          29.40000000037253,
+          199.70000000018626,
+          227.09999999962747,
+          227.90000000037253,
+          234.79999999981374,
+          238.29999999981374
+        ],
+        "enemies": [
+          {
+            "kind": "common",
+            "id": 1,
+            "x": -3.4,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "active",
+            "timer": 0.075,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.4
+          },
+          {
+            "kind": "runner",
+            "id": 2,
+            "x": -1.7999999999999998,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "active",
+            "timer": 0.075,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.4
+          },
+          {
+            "kind": "brute",
+            "id": 3,
+            "x": -0.19999999999999973,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "active",
+            "timer": 0.075,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.4
+          },
+          {
+            "kind": "predator",
+            "id": 4,
+            "x": 1.4000000000000008,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "active",
+            "timer": 0.075,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.4
+          }
+        ],
+        "programs": 13,
+        "render": {
+          "frame": 192,
+          "calls": 66,
+          "triangles": 45534,
+          "points": 0,
+          "lines": 0
+        },
+        "memory": {
+          "geometries": 53,
+          "textures": 23
+        },
+        "movement": {
+          "grounded": true,
+          "verticalVelocity": 0,
+          "requestedHorizontalMeters": 0,
+          "resolvedHorizontalMeters": 0,
+          "collisions": 1,
+          "reversePrevented": false
+        },
+        "assets": [
+          {
+            "path": "assets/models/characters/infected-worker.glb",
+            "refs": 3,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/characters/infected-hunter.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/weapons/m9-service.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/viewmodels/operator-arms.glb",
+            "refs": 1,
+            "loaded": true
+          }
+        ],
+        "weapon": {
+          "ammo": 15,
+          "reserve": 90,
+          "reloading": false,
+          "reloadRemaining": 0,
+          "reloadDuration": 1.5,
+          "ads": false,
+          "adsBlend": 0,
+          "cooldownRemaining": 0,
+          "shotsFired": 0
+        },
+        "combat": {
+          "health": 100,
+          "maxHealth": 100,
+          "kills": 0,
+          "alive": 4,
+          "hitRecently": false,
+          "damageAngle": 0,
+          "gameOver": false,
+          "lastHeadshot": false,
+          "hitMarker": false,
+          "damageEvents": 0,
+          "invulnerability": 0
+        },
+        "trace": null,
+        "results": {
+          "elapsedSeconds": 0,
+          "shots": 0,
+          "hits": 0,
+          "headshots": 0,
+          "accuracy": 0,
+          "kills": 0,
+          "completedRounds": 0,
+          "highestRound": 1,
+          "creditsEarned": 0,
+          "creditsSpent": 0,
+          "finalCredits": 500,
+          "doorPurchased": false,
+          "damageTaken": 0,
+          "damageEvents": 0
+        },
+        "count": 4
+      },
+      "recovery": {
+        "heads": [
+          {
+            "id": 1,
+            "center": [
+              -3.4529257800715962,
+              1.5906963183981613,
+              -3.914309895773214
+            ],
+            "target": [
+              -3.4,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 2,
+            "center": [
+              -1.8426147816547482,
+              1.5613699436129598,
+              -3.9013283321405505
+            ],
+            "target": [
+              -1.7999999999999998,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 3,
+            "center": [
+              -0.26643039819001246,
+              1.6576633224949722,
+              -4.008751031084803
+            ],
+            "target": [
+              -0.19999999999999973,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 4,
+            "center": [
+              1.332182063404085,
+              1.8711677666541116,
+              -4.191123790234824
+            ],
+            "target": [
+              1.4000000000000008,
+              1.78,
+              -4
+            ]
+          }
+        ],
+        "poseTime": 0.19999999999999998,
+        "frames": [
+          98.8999999994412,
+          333.20000000018626,
+          364.79999999981374,
+          307.20000000018626,
+          296.40000000037253,
+          331.59999999962747,
+          355,
+          321.70000000018626,
+          306.70000000018626,
+          327.59999999962747,
+          23.100000000558794,
+          621.7999999998137,
+          18.799999999813735,
+          529.9000000003725,
+          342.79999999981374,
+          322.70000000018626,
+          302.8999999994412,
+          439.5,
+          29.40000000037253,
+          199.70000000018626,
+          227.09999999962747,
+          227.90000000037253,
+          234.79999999981374,
+          238.29999999981374,
+          227.20000000018626,
+          258.29999999981374,
+          227.29999999981374,
+          265.79999999981374,
+          246.5,
+          245.20000000018626,
+          210.20000000018626
+        ],
+        "enemies": [
+          {
+            "kind": "common",
+            "id": 1,
+            "x": -3.4,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "recovery",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.4
+          },
+          {
+            "kind": "runner",
+            "id": 2,
+            "x": -1.7999999999999998,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "recovery",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.4
+          },
+          {
+            "kind": "brute",
+            "id": 3,
+            "x": -0.19999999999999973,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "recovery",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.4
+          },
+          {
+            "kind": "predator",
+            "id": 4,
+            "x": 1.4000000000000008,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "recovery",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0,
+            "walkPhase": 1.4
+          }
+        ],
+        "programs": 13,
+        "render": {
+          "frame": 206,
+          "calls": 66,
+          "triangles": 45534,
+          "points": 0,
+          "lines": 0
+        },
+        "memory": {
+          "geometries": 53,
+          "textures": 23
+        },
+        "movement": {
+          "grounded": true,
+          "verticalVelocity": 0,
+          "requestedHorizontalMeters": 0,
+          "resolvedHorizontalMeters": 7.530714116966962e-7,
+          "collisions": 1,
+          "reversePrevented": false
+        },
+        "assets": [
+          {
+            "path": "assets/models/characters/infected-worker.glb",
+            "refs": 3,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/characters/infected-hunter.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/weapons/m9-service.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/viewmodels/operator-arms.glb",
+            "refs": 1,
+            "loaded": true
+          }
+        ],
+        "weapon": {
+          "ammo": 15,
+          "reserve": 90,
+          "reloading": false,
+          "reloadRemaining": 0,
+          "reloadDuration": 1.5,
+          "ads": false,
+          "adsBlend": 0,
+          "cooldownRemaining": 0,
+          "shotsFired": 0
+        },
+        "combat": {
+          "health": 100,
+          "maxHealth": 100,
+          "kills": 0,
+          "alive": 4,
+          "hitRecently": false,
+          "damageAngle": 0,
+          "gameOver": false,
+          "lastHeadshot": false,
+          "hitMarker": false,
+          "damageEvents": 0,
+          "invulnerability": 0
+        },
+        "trace": null,
+        "results": {
+          "elapsedSeconds": 1,
+          "shots": 0,
+          "hits": 0,
+          "headshots": 0,
+          "accuracy": 0,
+          "kills": 0,
+          "completedRounds": 0,
+          "highestRound": 1,
+          "creditsEarned": 0,
+          "creditsSpent": 0,
+          "finalCredits": 500,
+          "doorPurchased": false,
+          "damageTaken": 0,
+          "damageEvents": 0
+        },
+        "count": 4
+      },
+      "hurt": {
+        "heads": [
+          {
+            "id": 1,
+            "center": [
+              -3.400000267852076,
+              1.7800000225666683,
+              -3.9999998366803315
+            ],
+            "target": [
+              -3.4,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 2,
+            "center": [
+              -1.8000002303527847,
+              1.7743070466615154,
+              -3.9777516801341397
+            ],
+            "target": [
+              -1.7999999999999998,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 3,
+            "center": [
+              -0.20000032142249038,
+              1.7800000225666683,
+              -3.9999998366803315
+            ],
+            "target": [
+              -0.19999999999999973,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 4,
+            "center": [
+              1.4325568488551617,
+              1.757172392597241,
+              -4.032215590785629
+            ],
+            "target": [
+              1.4000000000000008,
+              1.78,
+              -4
+            ]
+          }
+        ],
+        "poseTime": 0.19999999999999998,
+        "frames": [
+          98.8999999994412,
+          333.20000000018626,
+          364.79999999981374,
+          307.20000000018626,
+          296.40000000037253,
+          331.59999999962747,
+          355,
+          321.70000000018626,
+          306.70000000018626,
+          327.59999999962747,
+          23.100000000558794,
+          621.7999999998137,
+          18.799999999813735,
+          529.9000000003725,
+          342.79999999981374,
+          322.70000000018626,
+          302.8999999994412,
+          439.5,
+          29.40000000037253,
+          199.70000000018626,
+          227.09999999962747,
+          227.90000000037253,
+          234.79999999981374,
+          238.29999999981374,
+          227.20000000018626,
+          258.29999999981374,
+          227.29999999981374,
+          265.79999999981374,
+          246.5,
+          245.20000000018626,
+          210.20000000018626,
+          203.09999999962747,
+          217.80000000074506,
+          210.79999999981374
+        ],
+        "enemies": [
+          {
+            "kind": "common",
+            "id": 1,
+            "x": -3.4,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "hurt",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0.1,
+            "walkPhase": 1.4
+          },
+          {
+            "kind": "runner",
+            "id": 2,
+            "x": -1.7999999999999998,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "hurt",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0.1,
+            "walkPhase": 1.4
+          },
+          {
+            "kind": "brute",
+            "id": 3,
+            "x": -0.19999999999999973,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "hurt",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0.1,
+            "walkPhase": 1.4
+          },
+          {
+            "kind": "predator",
+            "id": 4,
+            "x": 1.4000000000000008,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "hurt",
+            "timer": 0.45,
+            "deathAge": 0,
+            "hitFlash": 0.1,
+            "walkPhase": 1.4
+          }
+        ],
+        "programs": 13,
+        "render": {
+          "frame": 212,
+          "calls": 66,
+          "triangles": 45534,
+          "points": 0,
+          "lines": 0
+        },
+        "memory": {
+          "geometries": 53,
+          "textures": 23
+        },
+        "movement": {
+          "grounded": true,
+          "verticalVelocity": 0,
+          "requestedHorizontalMeters": 0,
+          "resolvedHorizontalMeters": 4.788125424001512e-7,
+          "collisions": 1,
+          "reversePrevented": false
+        },
+        "assets": [
+          {
+            "path": "assets/models/characters/infected-worker.glb",
+            "refs": 3,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/characters/infected-hunter.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/weapons/m9-service.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/viewmodels/operator-arms.glb",
+            "refs": 1,
+            "loaded": true
+          }
+        ],
+        "weapon": {
+          "ammo": 15,
+          "reserve": 90,
+          "reloading": false,
+          "reloadRemaining": 0,
+          "reloadDuration": 1.5,
+          "ads": false,
+          "adsBlend": 0,
+          "cooldownRemaining": 0,
+          "shotsFired": 0
+        },
+        "combat": {
+          "health": 100,
+          "maxHealth": 100,
+          "kills": 0,
+          "alive": 4,
+          "hitRecently": false,
+          "damageAngle": 0,
+          "gameOver": false,
+          "lastHeadshot": false,
+          "hitMarker": false,
+          "damageEvents": 0,
+          "invulnerability": 0
+        },
+        "trace": null,
+        "results": {
+          "elapsedSeconds": 1,
+          "shots": 0,
+          "hits": 0,
+          "headshots": 0,
+          "accuracy": 0,
+          "kills": 0,
+          "completedRounds": 0,
+          "highestRound": 1,
+          "creditsEarned": 0,
+          "creditsSpent": 0,
+          "finalCredits": 500,
+          "doorPurchased": false,
+          "damageTaken": 0,
+          "damageEvents": 0
+        },
+        "count": 4
+      },
+      "dead": {
+        "heads": [
+          {
+            "id": 1,
+            "center": [
+              -3.421360905068278,
+              0.12985760455518625,
+              -4.754862699371376
+            ],
+            "target": [
+              -3.4,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 2,
+            "center": [
+              -1.8183703783587193,
+              0.12985760455518625,
+              -4.754862699371376
+            ],
+            "target": [
+              -1.7999999999999998,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 3,
+            "center": [
+              -0.2256330860819335,
+              0.12985760455518625,
+              -4.754862699371376
+            ],
+            "target": [
+              -0.19999999999999973,
+              1.78,
+              -4
+            ]
+          },
+          {
+            "id": 4,
+            "center": [
+              1.502517416634821,
+              0.1547728700780041,
+              -3.5633418774497025
+            ],
+            "target": [
+              1.4000000000000008,
+              1.78,
+              -4
+            ]
+          }
+        ],
+        "poseTime": 2.2333333333333303,
+        "frames": [
+          98.8999999994412,
+          333.20000000018626,
+          364.79999999981374,
+          307.20000000018626,
+          296.40000000037253,
+          331.59999999962747,
+          355,
+          321.70000000018626,
+          306.70000000018626,
+          327.59999999962747,
+          23.100000000558794,
+          621.7999999998137,
+          18.799999999813735,
+          529.9000000003725,
+          342.79999999981374,
+          322.70000000018626,
+          302.8999999994412,
+          439.5,
+          29.40000000037253,
+          199.70000000018626,
+          227.09999999962747,
+          227.90000000037253,
+          234.79999999981374,
+          238.29999999981374,
+          227.20000000018626,
+          258.29999999981374,
+          227.29999999981374,
+          265.79999999981374,
+          246.5,
+          245.20000000018626,
+          210.20000000018626,
+          203.09999999962747,
+          217.80000000074506,
+          210.79999999981374,
+          215.20000000018626,
+          242.5,
+          196.3999999994412,
+          174.90000000037253,
+          197.3999999994412,
+          233.80000000074506,
+          236.19999999925494,
+          226.40000000037253,
+          253.40000000037253,
+          186.3999999994412,
+          213.20000000018626,
+          218.20000000018626,
+          210,
+          253.20000000018626,
+          421.8999999994412,
+          213.29999999981374,
+          226.90000000037253,
+          47.5,
+          199.5,
+          226.59999999962747,
+          190.20000000018626,
+          234.70000000018626,
+          235.90000000037253,
+          201.29999999981374,
+          224.20000000018626,
+          193.59999999962747,
+          208.59999999962747,
+          219.80000000074506,
+          209,
+          216.19999999925494,
+          245.6000000005588,
+          208.3999999994412,
+          246.40000000037253,
+          252.90000000037253
+        ],
+        "enemies": [
+          {
+            "kind": "common",
+            "id": 1,
+            "x": -3.4,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "dead",
+            "timer": 0.45,
+            "deathAge": 2.2333333333333303,
+            "hitFlash": 0,
+            "walkPhase": 15.633333333333312
+          },
+          {
+            "kind": "runner",
+            "id": 2,
+            "x": -1.7999999999999998,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "dead",
+            "timer": 0.45,
+            "deathAge": 2.2333333333333303,
+            "hitFlash": 0,
+            "walkPhase": 15.633333333333312
+          },
+          {
+            "kind": "brute",
+            "id": 3,
+            "x": -0.19999999999999973,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "dead",
+            "timer": 0.45,
+            "deathAge": 2.2333333333333303,
+            "hitFlash": 0,
+            "walkPhase": 15.633333333333312
+          },
+          {
+            "kind": "predator",
+            "id": 4,
+            "x": 1.4000000000000008,
+            "z": -4,
+            "yaw": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "state": "dead",
+            "timer": 0.45,
+            "deathAge": 2.2333333333333303,
+            "hitFlash": 0,
+            "walkPhase": 15.633333333333312
+          }
+        ],
+        "programs": 13,
+        "render": {
+          "frame": 280,
+          "calls": 66,
+          "triangles": 45534,
+          "points": 0,
+          "lines": 0
+        },
+        "memory": {
+          "geometries": 53,
+          "textures": 23
+        },
+        "movement": {
+          "grounded": true,
+          "verticalVelocity": 0,
+          "requestedHorizontalMeters": 0,
+          "resolvedHorizontalMeters": 3.635045285555341e-7,
+          "collisions": 1,
+          "reversePrevented": false
+        },
+        "assets": [
+          {
+            "path": "assets/models/characters/infected-worker.glb",
+            "refs": 3,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/characters/infected-hunter.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/weapons/m9-service.glb",
+            "refs": 1,
+            "loaded": true
+          },
+          {
+            "path": "assets/models/viewmodels/operator-arms.glb",
+            "refs": 1,
+            "loaded": true
+          }
+        ],
+        "weapon": {
+          "ammo": 15,
+          "reserve": 90,
+          "reloading": false,
+          "reloadRemaining": 0,
+          "reloadDuration": 1.5,
+          "ads": false,
+          "adsBlend": 0,
+          "cooldownRemaining": 0,
+          "shotsFired": 0
+        },
+        "combat": {
+          "health": 100,
+          "maxHealth": 100,
+          "kills": 0,
+          "alive": 0,
+          "hitRecently": false,
+          "damageAngle": 0,
+          "gameOver": false,
+          "lastHeadshot": false,
+          "hitMarker": false,
+          "damageEvents": 0,
+          "invulnerability": 0
+        },
+        "trace": null,
+        "results": {
+          "elapsedSeconds": 3,
+          "shots": 0,
+          "hits": 0,
+          "headshots": 0,
+          "accuracy": 0,
+          "kills": 0,
+          "completedRounds": 0,
+          "highestRound": 1,
+          "creditsEarned": 0,
+          "creditsSpent": 0,
+          "finalCredits": 500,
+          "doorPurchased": false,
+          "damageTaken": 0,
+          "damageEvents": 0
+        },
+        "count": 4
+      }
+    },
+    "corpseFloor": [
+      0.003999698622042747,
+      0.003999698622042525,
+      0.003999698622042525,
+      0.00399976019002618
+    ],
+    "ads": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -3.400000267852076,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -3.4,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.8000002303527847,
+            1.774307046661515,
+            -3.9777516801341397
+          ],
+          "target": [
+            -1.7999999999999998,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            -0.20000032142249038,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -0.19999999999999973,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.4390573531633328,
+            1.708233606918994,
+            -4.005674448710226
+          ],
+          "target": [
+            1.4000000000000008,
+            1.78,
+            -4
+          ]
+        }
+      ],
+      "poseTime": 1.183333333333334,
+      "frames": [
+        98.8999999994412,
+        333.20000000018626,
+        364.79999999981374,
+        307.20000000018626,
+        296.40000000037253,
+        331.59999999962747,
+        355,
+        321.70000000018626,
+        306.70000000018626,
+        327.59999999962747,
+        23.100000000558794,
+        621.7999999998137,
+        18.799999999813735,
+        529.9000000003725,
+        342.79999999981374,
+        322.70000000018626,
+        302.8999999994412,
+        439.5,
+        29.40000000037253,
+        199.70000000018626,
+        227.09999999962747,
+        227.90000000037253,
+        234.79999999981374,
+        238.29999999981374,
+        227.20000000018626,
+        258.29999999981374,
+        227.29999999981374,
+        265.79999999981374,
+        246.5,
+        245.20000000018626,
+        210.20000000018626,
+        203.09999999962747,
+        217.80000000074506,
+        210.79999999981374,
+        215.20000000018626,
+        242.5,
+        196.3999999994412,
+        174.90000000037253,
+        197.3999999994412,
+        233.80000000074506,
+        236.19999999925494,
+        226.40000000037253,
+        253.40000000037253,
+        186.3999999994412,
+        213.20000000018626,
+        218.20000000018626,
+        210,
+        253.20000000018626,
+        421.8999999994412,
+        213.29999999981374,
+        226.90000000037253,
+        47.5,
+        199.5,
+        226.59999999962747,
+        190.20000000018626,
+        234.70000000018626,
+        235.90000000037253,
+        201.29999999981374,
+        224.20000000018626,
+        193.59999999962747,
+        208.59999999962747,
+        219.80000000074506,
+        209,
+        216.19999999925494,
+        245.6000000005588,
+        208.3999999994412,
+        246.40000000037253,
+        252.90000000037253,
+        220,
+        2.599999999627471,
+        483.40000000037253,
+        243.09999999962747,
+        328.20000000018626,
+        448.3999999994412,
+        159.40000000037253,
+        165.59999999962747,
+        201.20000000018626,
+        240.70000000018626,
+        244,
+        293,
+        243.40000000037253,
+        239.5,
+        266.69999999925494,
+        247,
+        280.80000000074506,
+        288.09999999962747,
+        514.4000000003725,
+        61.799999999813735,
+        237.59999999962747,
+        23.600000000558794,
+        546.8999999994412
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -3.4,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.283333333333339
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1.7999999999999998,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.283333333333339
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": -0.19999999999999973,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.283333333333339
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.4000000000000008,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.283333333333339
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 326,
+        "calls": 65,
+        "triangles": 45390,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 53,
+        "textures": 23
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 2.6517856167561896e-7,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 3,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": true,
+        "adsBlend": 1,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 4,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 1,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 4
+    },
+    "sprint": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -3.400000267852076,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -3.4,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.8000002303527847,
+            1.774307046661515,
+            -3.9777516801341397
+          ],
+          "target": [
+            -1.7999999999999998,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            -0.20000032142249038,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -0.19999999999999973,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.4022352495139643,
+            1.7799747391269407,
+            -4.0020321018706095
+          ],
+          "target": [
+            1.4000000000000008,
+            1.78,
+            -4
+          ]
+        }
+      ],
+      "poseTime": 1.6833333333333322,
+      "frames": [
+        98.8999999994412,
+        333.20000000018626,
+        364.79999999981374,
+        307.20000000018626,
+        296.40000000037253,
+        331.59999999962747,
+        355,
+        321.70000000018626,
+        306.70000000018626,
+        327.59999999962747,
+        23.100000000558794,
+        621.7999999998137,
+        18.799999999813735,
+        529.9000000003725,
+        342.79999999981374,
+        322.70000000018626,
+        302.8999999994412,
+        439.5,
+        29.40000000037253,
+        199.70000000018626,
+        227.09999999962747,
+        227.90000000037253,
+        234.79999999981374,
+        238.29999999981374,
+        227.20000000018626,
+        258.29999999981374,
+        227.29999999981374,
+        265.79999999981374,
+        246.5,
+        245.20000000018626,
+        210.20000000018626,
+        203.09999999962747,
+        217.80000000074506,
+        210.79999999981374,
+        215.20000000018626,
+        242.5,
+        196.3999999994412,
+        174.90000000037253,
+        197.3999999994412,
+        233.80000000074506,
+        236.19999999925494,
+        226.40000000037253,
+        253.40000000037253,
+        186.3999999994412,
+        213.20000000018626,
+        218.20000000018626,
+        210,
+        253.20000000018626,
+        421.8999999994412,
+        213.29999999981374,
+        226.90000000037253,
+        47.5,
+        199.5,
+        226.59999999962747,
+        190.20000000018626,
+        234.70000000018626,
+        235.90000000037253,
+        201.29999999981374,
+        224.20000000018626,
+        193.59999999962747,
+        208.59999999962747,
+        219.80000000074506,
+        209,
+        216.19999999925494,
+        245.6000000005588,
+        208.3999999994412,
+        246.40000000037253,
+        252.90000000037253,
+        220,
+        2.599999999627471,
+        483.40000000037253,
+        243.09999999962747,
+        328.20000000018626,
+        448.3999999994412,
+        159.40000000037253,
+        165.59999999962747,
+        201.20000000018626,
+        240.70000000018626,
+        244,
+        293,
+        243.40000000037253,
+        239.5,
+        266.69999999925494,
+        247,
+        280.80000000074506,
+        288.09999999962747,
+        514.4000000003725,
+        61.799999999813735,
+        237.59999999962747,
+        23.600000000558794,
+        546.8999999994412,
+        263.70000000018626,
+        801,
+        2.7000000001862645,
+        9.799999999813735,
+        190,
+        24.299999999813735,
+        338.79999999981374,
+        176.1000000005588,
+        215.20000000018626,
+        535
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -3.4,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 11.783333333333326
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1.7999999999999998,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 11.783333333333326
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": -0.19999999999999973,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 11.783333333333326
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.4000000000000008,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 11.783333333333326
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 346,
+        "calls": 63,
+        "triangles": 45366,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 53,
+        "textures": 23
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0.11666666666666667,
+        "resolvedHorizontalMeters": 0.11666666716348527,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 3,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 4,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 1,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 4
+    },
+    "walk": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -3.400000267852076,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -3.4,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.8000002303527847,
+            1.774307046661515,
+            -3.9777516801341397
+          ],
+          "target": [
+            -1.7999999999999998,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            -0.20000032142249038,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -0.19999999999999973,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.391328510858234,
+            1.7307371695934233,
+            -4.032427419922554
+          ],
+          "target": [
+            1.4000000000000008,
+            1.78,
+            -4
+          ]
+        }
+      ],
+      "poseTime": 1.9999999999999978,
+      "frames": [
+        98.8999999994412,
+        333.20000000018626,
+        364.79999999981374,
+        307.20000000018626,
+        296.40000000037253,
+        331.59999999962747,
+        355,
+        321.70000000018626,
+        306.70000000018626,
+        327.59999999962747,
+        23.100000000558794,
+        621.7999999998137,
+        18.799999999813735,
+        529.9000000003725,
+        342.79999999981374,
+        322.70000000018626,
+        302.8999999994412,
+        439.5,
+        29.40000000037253,
+        199.70000000018626,
+        227.09999999962747,
+        227.90000000037253,
+        234.79999999981374,
+        238.29999999981374,
+        227.20000000018626,
+        258.29999999981374,
+        227.29999999981374,
+        265.79999999981374,
+        246.5,
+        245.20000000018626,
+        210.20000000018626,
+        203.09999999962747,
+        217.80000000074506,
+        210.79999999981374,
+        215.20000000018626,
+        242.5,
+        196.3999999994412,
+        174.90000000037253,
+        197.3999999994412,
+        233.80000000074506,
+        236.19999999925494,
+        226.40000000037253,
+        253.40000000037253,
+        186.3999999994412,
+        213.20000000018626,
+        218.20000000018626,
+        210,
+        253.20000000018626,
+        421.8999999994412,
+        213.29999999981374,
+        226.90000000037253,
+        47.5,
+        199.5,
+        226.59999999962747,
+        190.20000000018626,
+        234.70000000018626,
+        235.90000000037253,
+        201.29999999981374,
+        224.20000000018626,
+        193.59999999962747,
+        208.59999999962747,
+        219.80000000074506,
+        209,
+        216.19999999925494,
+        245.6000000005588,
+        208.3999999994412,
+        246.40000000037253,
+        252.90000000037253,
+        220,
+        2.599999999627471,
+        483.40000000037253,
+        243.09999999962747,
+        328.20000000018626,
+        448.3999999994412,
+        159.40000000037253,
+        165.59999999962747,
+        201.20000000018626,
+        240.70000000018626,
+        244,
+        293,
+        243.40000000037253,
+        239.5,
+        266.69999999925494,
+        247,
+        280.80000000074506,
+        288.09999999962747,
+        514.4000000003725,
+        61.799999999813735,
+        237.59999999962747,
+        23.600000000558794,
+        546.8999999994412,
+        263.70000000018626,
+        801,
+        2.7000000001862645,
+        9.799999999813735,
+        190,
+        24.299999999813735,
+        338.79999999981374,
+        176.1000000005588,
+        215.20000000018626,
+        535,
+        4.3999999994412065,
+        1.900000000372529,
+        13.299999999813735,
+        159.5,
+        18.40000000037253,
+        655.8999999994412,
+        228.90000000037253,
+        200.3999999994412
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -3.4,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 13.999999999999984
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1.7999999999999998,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 13.999999999999984
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": -0.19999999999999973,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 13.999999999999984
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.4000000000000008,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 13.999999999999984
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 362,
+        "calls": 61,
+        "triangles": 45342,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 53,
+        "textures": 23
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0.07666666666666666,
+        "resolvedHorizontalMeters": 0.07666666805744171,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 3,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 4,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 1,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 4
+    },
+    "realHeadshots": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -0.9982457410953832,
+            1.786012275012637,
+            -3.846905978979224
+          ],
+          "target": [
+            -0.9999999915563623,
+            1.78,
+            -3.9000000000000004
+          ]
+        }
+      ],
+      "poseTime": 1.9999999999999978,
+      "frames": [
+        98.8999999994412,
+        333.20000000018626,
+        364.79999999981374,
+        307.20000000018626,
+        296.40000000037253,
+        331.59999999962747,
+        355,
+        321.70000000018626,
+        306.70000000018626,
+        327.59999999962747,
+        23.100000000558794,
+        621.7999999998137,
+        18.799999999813735,
+        529.9000000003725,
+        342.79999999981374,
+        322.70000000018626,
+        302.8999999994412,
+        439.5,
+        29.40000000037253,
+        199.70000000018626,
+        227.09999999962747,
+        227.90000000037253,
+        234.79999999981374,
+        238.29999999981374,
+        227.20000000018626,
+        258.29999999981374,
+        227.29999999981374,
+        265.79999999981374,
+        246.5,
+        245.20000000018626,
+        210.20000000018626,
+        203.09999999962747,
+        217.80000000074506,
+        210.79999999981374,
+        215.20000000018626,
+        242.5,
+        196.3999999994412,
+        174.90000000037253,
+        197.3999999994412,
+        233.80000000074506,
+        236.19999999925494,
+        226.40000000037253,
+        253.40000000037253,
+        186.3999999994412,
+        213.20000000018626,
+        218.20000000018626,
+        210,
+        253.20000000018626,
+        421.8999999994412,
+        213.29999999981374,
+        226.90000000037253,
+        47.5,
+        199.5,
+        226.59999999962747,
+        190.20000000018626,
+        234.70000000018626,
+        235.90000000037253,
+        201.29999999981374,
+        224.20000000018626,
+        193.59999999962747,
+        208.59999999962747,
+        219.80000000074506,
+        209,
+        216.19999999925494,
+        245.6000000005588,
+        208.3999999994412,
+        246.40000000037253,
+        252.90000000037253,
+        220,
+        2.599999999627471,
+        483.40000000037253,
+        243.09999999962747,
+        328.20000000018626,
+        448.3999999994412,
+        159.40000000037253,
+        165.59999999962747,
+        201.20000000018626,
+        240.70000000018626,
+        244,
+        293,
+        243.40000000037253,
+        239.5,
+        266.69999999925494,
+        247,
+        280.80000000074506,
+        288.09999999962747,
+        514.4000000003725,
+        61.799999999813735,
+        237.59999999962747,
+        23.600000000558794,
+        546.8999999994412,
+        263.70000000018626,
+        801,
+        2.7000000001862645,
+        9.799999999813735,
+        190,
+        24.299999999813735,
+        338.79999999981374,
+        176.1000000005588,
+        215.20000000018626,
+        535,
+        4.3999999994412065,
+        1.900000000372529,
+        13.299999999813735,
+        159.5,
+        18.40000000037253,
+        655.8999999994412,
+        228.90000000037253,
+        200.3999999994412,
+        271.80000000074506,
+        19.799999999813735,
+        481.09999999962747,
+        155.20000000018626,
+        642,
+        3.599999999627471,
+        13.800000000745058,
+        44.59999999962747,
+        169.40000000037253,
+        332.19999999925494
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -0.9999999915563623,
+          "z": -3.9000000000000004,
+          "yaw": 5.8967938707924934e-8,
+          "hp": 0,
+          "maxHp": 100,
+          "state": "dead",
+          "timer": 0,
+          "deathAge": 0.06666666666666667,
+          "hitFlash": 0.16,
+          "walkPhase": 0.5
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 382,
+        "calls": 59,
+        "triangles": 23870,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 54,
+        "textures": 19
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 3.636120431308147e-8,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 13,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0.11666666666666667,
+        "shotsFired": 2
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 1,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": true,
+        "hitMarker": true,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": {
+        "id": 2,
+        "start": [
+          -1.0000001192092896,
+          1.5250603795051574,
+          -8.086570915111224e-7
+        ],
+        "end": [
+          -1.000000334473615,
+          1.7636924334767008,
+          -3.6505324404376935
+        ],
+        "hit": true,
+        "surfaceId": null,
+        "damage": 32,
+        "enemyId": 1,
+        "headshot": true
+      },
+      "results": {
+        "elapsedSeconds": 0,
+        "shots": 2,
+        "hits": 2,
+        "headshots": 2,
+        "accuracy": 100,
+        "kills": 1,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 110,
+        "creditsSpent": 0,
+        "finalCredits": 610,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 1
+    },
+    "reload": {
+      "heads": [],
+      "poseTime": 1.9999999999999978,
+      "frames": [
+        98.8999999994412,
+        333.20000000018626,
+        364.79999999981374,
+        307.20000000018626,
+        296.40000000037253,
+        331.59999999962747,
+        355,
+        321.70000000018626,
+        306.70000000018626,
+        327.59999999962747,
+        23.100000000558794,
+        621.7999999998137,
+        18.799999999813735,
+        529.9000000003725,
+        342.79999999981374,
+        322.70000000018626,
+        302.8999999994412,
+        439.5,
+        29.40000000037253,
+        199.70000000018626,
+        227.09999999962747,
+        227.90000000037253,
+        234.79999999981374,
+        238.29999999981374,
+        227.20000000018626,
+        258.29999999981374,
+        227.29999999981374,
+        265.79999999981374,
+        246.5,
+        245.20000000018626,
+        210.20000000018626,
+        203.09999999962747,
+        217.80000000074506,
+        210.79999999981374,
+        215.20000000018626,
+        242.5,
+        196.3999999994412,
+        174.90000000037253,
+        197.3999999994412,
+        233.80000000074506,
+        236.19999999925494,
+        226.40000000037253,
+        253.40000000037253,
+        186.3999999994412,
+        213.20000000018626,
+        218.20000000018626,
+        210,
+        253.20000000018626,
+        421.8999999994412,
+        213.29999999981374,
+        226.90000000037253,
+        47.5,
+        199.5,
+        226.59999999962747,
+        190.20000000018626,
+        234.70000000018626,
+        235.90000000037253,
+        201.29999999981374,
+        224.20000000018626,
+        193.59999999962747,
+        208.59999999962747,
+        219.80000000074506,
+        209,
+        216.19999999925494,
+        245.6000000005588,
+        208.3999999994412,
+        246.40000000037253,
+        252.90000000037253,
+        220,
+        2.599999999627471,
+        483.40000000037253,
+        243.09999999962747,
+        328.20000000018626,
+        448.3999999994412,
+        159.40000000037253,
+        165.59999999962747,
+        201.20000000018626,
+        240.70000000018626,
+        244,
+        293,
+        243.40000000037253,
+        239.5,
+        266.69999999925494,
+        247,
+        280.80000000074506,
+        288.09999999962747,
+        514.4000000003725,
+        61.799999999813735,
+        237.59999999962747,
+        23.600000000558794,
+        546.8999999994412,
+        263.70000000018626,
+        801,
+        2.7000000001862645,
+        9.799999999813735,
+        190,
+        24.299999999813735,
+        338.79999999981374,
+        176.1000000005588,
+        215.20000000018626,
+        535,
+        4.3999999994412065,
+        1.900000000372529,
+        13.299999999813735,
+        159.5,
+        18.40000000037253,
+        655.8999999994412,
+        228.90000000037253,
+        200.3999999994412,
+        271.80000000074506,
+        19.799999999813735,
+        481.09999999962747,
+        155.20000000018626,
+        642,
+        3.599999999627471,
+        13.800000000745058,
+        44.59999999962747,
+        169.40000000037253,
+        332.19999999925494,
+        23.200000000186265,
+        163.29999999981374,
+        174,
+        183.20000000018626,
+        189.6000000005588,
+        425.8999999994412,
+        12.100000000558794,
+        387.19999999925494,
+        14.600000000558794,
+        183.29999999981374,
+        213.5,
+        199.79999999981374,
+        167.40000000037253,
+        184.70000000018626,
+        156.69999999925494,
+        189.70000000018626,
+        187.70000000018626,
+        167.70000000018626,
+        172.70000000018626,
+        195.5,
+        169.29999999981374,
+        185.29999999981374,
+        193.5,
+        200.40000000037253,
+        179.29999999981374,
+        206.5,
+        206.70000000018626,
+        198.19999999925494,
+        191.40000000037253,
+        200.09999999962747,
+        197.80000000074506,
+        205.79999999981374,
+        206.29999999981374,
+        224.40000000037253,
+        199.09999999962747,
+        192.70000000018626,
+        195.8999999994412,
+        230.6000000005588,
+        216.79999999981374,
+        234.20000000018626,
+        220.8999999994412,
+        199,
+        210.1000000005588,
+        201.5,
+        200.70000000018626,
+        191.59999999962747,
+        203.5,
+        199
+      ],
+      "enemies": [],
+      "programs": 12,
+      "render": {
+        "frame": 478,
+        "calls": 54,
+        "triangles": 16696,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 50,
+        "textures": 14
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 3.8180339563999017e-7,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 13,
+        "reserve": 90,
+        "reloading": true,
+        "reloadRemaining": 0.9166666666666682,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 2
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 1,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": true,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 3,
+        "shots": 2,
+        "hits": 2,
+        "headshots": 2,
+        "accuracy": 100,
+        "kills": 1,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 110,
+        "creditsSpent": 0,
+        "finalCredits": 610,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 0
+    },
+    "showcase": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -2.100000267852076,
+            1.7800000225666683,
+            -3.1999998366803304
+          ],
+          "target": [
+            -2.1,
+            1.78,
+            -3.2
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.0000002303527848,
+            1.774307046661515,
+            -3.177751680134139
+          ],
+          "target": [
+            -1,
+            1.78,
+            -3.2
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            0.09999967857750944,
+            1.7800000225666683,
+            -3.1999998366803304
+          ],
+          "target": [
+            0.10000000000000009,
+            1.78,
+            -3.2
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.2148308742477187,
+            1.651164031244787,
+            -3.2142147584380325
+          ],
+          "target": [
+            1.2000000000000002,
+            1.78,
+            -3.2
+          ]
+        }
+      ],
+      "poseTime": 0.9333333333333346,
+      "frames": [
+        98.8999999994412,
+        333.20000000018626,
+        364.79999999981374,
+        307.20000000018626,
+        296.40000000037253,
+        331.59999999962747,
+        355,
+        321.70000000018626,
+        306.70000000018626,
+        327.59999999962747,
+        23.100000000558794,
+        621.7999999998137,
+        18.799999999813735,
+        529.9000000003725,
+        342.79999999981374,
+        322.70000000018626,
+        302.8999999994412,
+        439.5,
+        29.40000000037253,
+        199.70000000018626,
+        227.09999999962747,
+        227.90000000037253,
+        234.79999999981374,
+        238.29999999981374,
+        227.20000000018626,
+        258.29999999981374,
+        227.29999999981374,
+        265.79999999981374,
+        246.5,
+        245.20000000018626,
+        210.20000000018626,
+        203.09999999962747,
+        217.80000000074506,
+        210.79999999981374,
+        215.20000000018626,
+        242.5,
+        196.3999999994412,
+        174.90000000037253,
+        197.3999999994412,
+        233.80000000074506,
+        236.19999999925494,
+        226.40000000037253,
+        253.40000000037253,
+        186.3999999994412,
+        213.20000000018626,
+        218.20000000018626,
+        210,
+        253.20000000018626,
+        421.8999999994412,
+        213.29999999981374,
+        226.90000000037253,
+        47.5,
+        199.5,
+        226.59999999962747,
+        190.20000000018626,
+        234.70000000018626,
+        235.90000000037253,
+        201.29999999981374,
+        224.20000000018626,
+        193.59999999962747,
+        208.59999999962747,
+        219.80000000074506,
+        209,
+        216.19999999925494,
+        245.6000000005588,
+        208.3999999994412,
+        246.40000000037253,
+        252.90000000037253,
+        220,
+        2.599999999627471,
+        483.40000000037253,
+        243.09999999962747,
+        328.20000000018626,
+        448.3999999994412,
+        159.40000000037253,
+        165.59999999962747,
+        201.20000000018626,
+        240.70000000018626,
+        244,
+        293,
+        243.40000000037253,
+        239.5,
+        266.69999999925494,
+        247,
+        280.80000000074506,
+        288.09999999962747,
+        514.4000000003725,
+        61.799999999813735,
+        237.59999999962747,
+        23.600000000558794,
+        546.8999999994412,
+        263.70000000018626,
+        801,
+        2.7000000001862645,
+        9.799999999813735,
+        190,
+        24.299999999813735,
+        338.79999999981374,
+        176.1000000005588,
+        215.20000000018626,
+        535,
+        4.3999999994412065,
+        1.900000000372529,
+        13.299999999813735,
+        159.5,
+        18.40000000037253,
+        655.8999999994412,
+        228.90000000037253,
+        200.3999999994412,
+        271.80000000074506,
+        19.799999999813735,
+        481.09999999962747,
+        155.20000000018626,
+        642,
+        3.599999999627471,
+        13.800000000745058,
+        44.59999999962747,
+        169.40000000037253,
+        332.19999999925494,
+        23.200000000186265,
+        163.29999999981374,
+        174,
+        183.20000000018626,
+        189.6000000005588,
+        425.8999999994412,
+        12.100000000558794,
+        387.19999999925494,
+        14.600000000558794,
+        183.29999999981374,
+        213.5,
+        199.79999999981374,
+        167.40000000037253,
+        184.70000000018626,
+        156.69999999925494,
+        189.70000000018626,
+        187.70000000018626,
+        167.70000000018626,
+        172.70000000018626,
+        195.5,
+        169.29999999981374,
+        185.29999999981374,
+        193.5,
+        200.40000000037253,
+        179.29999999981374,
+        206.5,
+        206.70000000018626,
+        198.19999999925494,
+        191.40000000037253,
+        200.09999999962747,
+        197.80000000074506,
+        205.79999999981374,
+        206.29999999981374,
+        224.40000000037253,
+        199.09999999962747,
+        192.70000000018626,
+        195.8999999994412,
+        230.6000000005588,
+        216.79999999981374,
+        234.20000000018626,
+        220.8999999994412,
+        199,
+        210.1000000005588,
+        201.5,
+        200.70000000018626,
+        191.59999999962747,
+        203.5,
+        199,
+        190.29999999981374,
+        14.200000000186265,
+        362.90000000037253,
+        168.79999999981374,
+        186.8999999994412,
+        196.40000000037253,
+        193.59999999962747,
+        166.20000000018626,
+        188.20000000018626,
+        204.40000000037253,
+        145.5,
+        170,
+        303.5,
+        147.09999999962747,
+        175.5,
+        163.29999999981374,
+        7.5,
+        309.6000000005588,
+        201.79999999981374,
+        40,
+        738.3999999994412,
+        3.1000000005587935,
+        5.5,
+        426.70000000018626,
+        226.69999999925494,
+        202,
+        232.30000000074506,
+        220,
+        227.3999999994412,
+        209.6000000005588,
+        212.09999999962747,
+        234.40000000037253,
+        9.899999999441206,
+        427.79999999981374,
+        463.90000000037253,
+        29.799999999813735
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -2.1,
+          "z": -3.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 6.533333333333342
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1,
+          "z": -3.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 6.533333333333342
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": 0.10000000000000009,
+          "z": -3.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 6.533333333333342
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.2000000000000002,
+          "z": -3.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 6.533333333333342
+        }
+      ],
+      "programs": 15,
+      "render": {
+        "frame": 550,
+        "calls": 66,
+        "triangles": 45534,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 54,
+        "textures": 23
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 3.075631795104381e-7,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 3,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 88,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 2
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 1,
+        "alive": 4,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": true,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 5,
+        "shots": 2,
+        "hits": 2,
+        "headshots": 2,
+        "accuracy": 100,
+        "kills": 1,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 110,
+        "creditsSpent": 0,
+        "finalCredits": 610,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 4
+    },
+    "close": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -1.0000002678520756,
+            1.7800000225666683,
+            -1.8499998366803303
+          ],
+          "target": [
+            -1,
+            1.78,
+            -1.85
+          ]
+        }
+      ],
+      "poseTime": 0.7000000000000005,
+      "frames": [
+        98.8999999994412,
+        333.20000000018626,
+        364.79999999981374,
+        307.20000000018626,
+        296.40000000037253,
+        331.59999999962747,
+        355,
+        321.70000000018626,
+        306.70000000018626,
+        327.59999999962747,
+        23.100000000558794,
+        621.7999999998137,
+        18.799999999813735,
+        529.9000000003725,
+        342.79999999981374,
+        322.70000000018626,
+        302.8999999994412,
+        439.5,
+        29.40000000037253,
+        199.70000000018626,
+        227.09999999962747,
+        227.90000000037253,
+        234.79999999981374,
+        238.29999999981374,
+        227.20000000018626,
+        258.29999999981374,
+        227.29999999981374,
+        265.79999999981374,
+        246.5,
+        245.20000000018626,
+        210.20000000018626,
+        203.09999999962747,
+        217.80000000074506,
+        210.79999999981374,
+        215.20000000018626,
+        242.5,
+        196.3999999994412,
+        174.90000000037253,
+        197.3999999994412,
+        233.80000000074506,
+        236.19999999925494,
+        226.40000000037253,
+        253.40000000037253,
+        186.3999999994412,
+        213.20000000018626,
+        218.20000000018626,
+        210,
+        253.20000000018626,
+        421.8999999994412,
+        213.29999999981374,
+        226.90000000037253,
+        47.5,
+        199.5,
+        226.59999999962747,
+        190.20000000018626,
+        234.70000000018626,
+        235.90000000037253,
+        201.29999999981374,
+        224.20000000018626,
+        193.59999999962747,
+        208.59999999962747,
+        219.80000000074506,
+        209,
+        216.19999999925494,
+        245.6000000005588,
+        208.3999999994412,
+        246.40000000037253,
+        252.90000000037253,
+        220,
+        2.599999999627471,
+        483.40000000037253,
+        243.09999999962747,
+        328.20000000018626,
+        448.3999999994412,
+        159.40000000037253,
+        165.59999999962747,
+        201.20000000018626,
+        240.70000000018626,
+        244,
+        293,
+        243.40000000037253,
+        239.5,
+        266.69999999925494,
+        247,
+        280.80000000074506,
+        288.09999999962747,
+        514.4000000003725,
+        61.799999999813735,
+        237.59999999962747,
+        23.600000000558794,
+        546.8999999994412,
+        263.70000000018626,
+        801,
+        2.7000000001862645,
+        9.799999999813735,
+        190,
+        24.299999999813735,
+        338.79999999981374,
+        176.1000000005588,
+        215.20000000018626,
+        535,
+        4.3999999994412065,
+        1.900000000372529,
+        13.299999999813735,
+        159.5,
+        18.40000000037253,
+        655.8999999994412,
+        228.90000000037253,
+        200.3999999994412,
+        271.80000000074506,
+        19.799999999813735,
+        481.09999999962747,
+        155.20000000018626,
+        642,
+        3.599999999627471,
+        13.800000000745058,
+        44.59999999962747,
+        169.40000000037253,
+        332.19999999925494,
+        23.200000000186265,
+        163.29999999981374,
+        174,
+        183.20000000018626,
+        189.6000000005588,
+        425.8999999994412,
+        12.100000000558794,
+        387.19999999925494,
+        14.600000000558794,
+        183.29999999981374,
+        213.5,
+        199.79999999981374,
+        167.40000000037253,
+        184.70000000018626,
+        156.69999999925494,
+        189.70000000018626,
+        187.70000000018626,
+        167.70000000018626,
+        172.70000000018626,
+        195.5,
+        169.29999999981374,
+        185.29999999981374,
+        193.5,
+        200.40000000037253,
+        179.29999999981374,
+        206.5,
+        206.70000000018626,
+        198.19999999925494,
+        191.40000000037253,
+        200.09999999962747,
+        197.80000000074506,
+        205.79999999981374,
+        206.29999999981374,
+        224.40000000037253,
+        199.09999999962747,
+        192.70000000018626,
+        195.8999999994412,
+        230.6000000005588,
+        216.79999999981374,
+        234.20000000018626,
+        220.8999999994412,
+        199,
+        210.1000000005588,
+        201.5,
+        200.70000000018626,
+        191.59999999962747,
+        203.5,
+        199,
+        190.29999999981374,
+        14.200000000186265,
+        362.90000000037253,
+        168.79999999981374,
+        186.8999999994412,
+        196.40000000037253,
+        193.59999999962747,
+        166.20000000018626,
+        188.20000000018626,
+        204.40000000037253,
+        145.5,
+        170,
+        303.5,
+        147.09999999962747,
+        175.5,
+        163.29999999981374,
+        7.5,
+        309.6000000005588,
+        201.79999999981374,
+        40,
+        738.3999999994412,
+        3.1000000005587935,
+        5.5,
+        426.70000000018626,
+        226.69999999925494,
+        202,
+        232.30000000074506,
+        220,
+        227.3999999994412,
+        209.6000000005588,
+        212.09999999962747,
+        234.40000000037253,
+        9.899999999441206,
+        427.79999999981374,
+        463.90000000037253,
+        29.799999999813735,
+        319.79999999981374,
+        142.1000000005588,
+        227.59999999962747,
+        229.20000000018626,
+        191.20000000018626,
+        195.20000000018626,
+        180.79999999981374,
+        195,
+        21.200000000186265,
+        180.3999999994412,
+        17.5,
+        587.2000000001863
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -1,
+          "z": -1.85,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.900000000000004
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 574,
+        "calls": 56,
+        "triangles": 23844,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 53,
+        "textures": 19
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 1.189969205728615e-7,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 88,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 2
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 1,
+        "alive": 1,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": true,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 5,
+        "shots": 2,
+        "hits": 2,
+        "headshots": 2,
+        "accuracy": 100,
+        "kills": 1,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 110,
+        "creditsSpent": 0,
+        "finalCredits": 610,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 1
+    },
+    "framing": [
+      {
+        "viewport": {
+          "width": 960,
+          "height": 720
+        },
+        "fov": 70,
+        "ads": {
+          "gun": {
+            "minX": -0.04174476730887302,
+            "maxX": 0.05398129479740532,
+            "minY": -0.5614594160904939,
+            "maxY": 0.017589458315989688
+          },
+          "hands": {
+            "R": {
+              "minX": -0.06635363970904286,
+              "maxX": 0.15572773758983274,
+              "minY": -0.5427345615212311,
+              "maxY": -0.12580055774898702
+            },
+            "L": {
+              "minX": -0.18874033126030756,
+              "maxX": 0.028347661235566774,
+              "minY": -0.5598868536416912,
+              "maxY": -0.23676093592284675
+            }
+          },
+          "sights": {
+            "front": [
+              0,
+              -1.3599464958409383e-9,
+              0.9756806285228723
+            ],
+            "rear": [
+              0,
+              1.3533861159089175e-8,
+              0.9637339846103405
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            1.686653198327389e-107
+          ]
+        },
+        "hip": {
+          "gun": {
+            "minX": 0.2841951248341325,
+            "maxX": 0.4546876696505399,
+            "minY": -0.8836628571121113,
+            "maxY": -0.29931294720220847
+          },
+          "hands": {
+            "R": {
+              "minX": 0.3170220141703217,
+              "maxX": 0.5535126149209241,
+              "minY": -0.8600701275988153,
+              "maxY": -0.45879262434705026
+            },
+            "L": {
+              "minX": 0.22184918493242123,
+              "maxX": 0.38354354435667776,
+              "minY": -0.8605829492163815,
+              "maxY": -0.5723215467672927
+            }
+          },
+          "sights": {
+            "front": [
+              0.3047488769995448,
+              -0.297227434116834,
+              0.9797390711372536
+            ],
+            "rear": [
+              0.4018346268517767,
+              -0.41062677864349434,
+              0.9711534759870822
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            2.550302670266283e-116
+          ]
+        }
+      },
+      {
+        "viewport": {
+          "width": 960,
+          "height": 720
+        },
+        "fov": 85,
+        "ads": {
+          "gun": {
+            "minX": -0.04174476730887302,
+            "maxX": 0.05398129479740532,
+            "minY": -0.5614594160904939,
+            "maxY": 0.017589458315989688
+          },
+          "hands": {
+            "R": {
+              "minX": -0.06635363970904286,
+              "maxX": 0.15572773758983274,
+              "minY": -0.5427345615212311,
+              "maxY": -0.12580055774898702
+            },
+            "L": {
+              "minX": -0.18874033126030756,
+              "maxX": 0.028347661235566774,
+              "minY": -0.5598868536416912,
+              "maxY": -0.23676093592284675
+            }
+          },
+          "sights": {
+            "front": [
+              0,
+              -1.3599464958409383e-9,
+              0.9756806285228723
+            ],
+            "rear": [
+              0,
+              1.3533861159089175e-8,
+              0.9637339846103405
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            5.734797373089637e-120
+          ]
+        },
+        "hip": {
+          "gun": {
+            "minX": 0.2841951248341325,
+            "maxX": 0.4546876696505399,
+            "minY": -0.8795414667203149,
+            "maxY": -0.29629810097459075
+          },
+          "hands": {
+            "R": {
+              "minX": 0.3170220141703217,
+              "maxX": 0.5535126149209241,
+              "minY": -0.855932919823414,
+              "maxY": -0.45534301185353176
+            },
+            "L": {
+              "minX": 0.22184918493242123,
+              "maxX": 0.38354354435667776,
+              "minY": -0.8566078530653761,
+              "maxY": -0.5686856252396815
+            }
+          },
+          "sights": {
+            "front": [
+              0.3047488769995448,
+              -0.29423006538714747,
+              0.9797390711372536
+            ],
+            "rear": [
+              0.4018346268517767,
+              -0.4066745194690247,
+              0.9711534759870822
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            7.841874367658513e-125
+          ]
+        }
+      },
+      {
+        "viewport": {
+          "width": 960,
+          "height": 720
+        },
+        "fov": 100,
+        "ads": {
+          "gun": {
+            "minX": -0.04174476730887302,
+            "maxX": 0.05398129479740532,
+            "minY": -0.5614594160904939,
+            "maxY": 0.017589458315989688
+          },
+          "hands": {
+            "R": {
+              "minX": -0.06635363970904286,
+              "maxX": 0.15572773758983274,
+              "minY": -0.5427345615212311,
+              "maxY": -0.12580055774898702
+            },
+            "L": {
+              "minX": -0.18874033126030756,
+              "maxX": 0.028347661235566774,
+              "minY": -0.5598868536416912,
+              "maxY": -0.23676093592284675
+            }
+          },
+          "sights": {
+            "front": [
+              0,
+              -1.3599464958409383e-9,
+              0.9756806285228723
+            ],
+            "rear": [
+              0,
+              1.3533861159089175e-8,
+              0.9637339846103405
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            1.763381305602108e-128
+          ]
+        },
+        "hip": {
+          "gun": {
+            "minX": 0.2841951248341325,
+            "maxX": 0.4546876696505399,
+            "minY": -0.8751720934705594,
+            "maxY": -0.2931018523286726
+          },
+          "hands": {
+            "R": {
+              "minX": 0.3170220141703217,
+              "maxX": 0.5535126149209241,
+              "minY": -0.8515467774626948,
+              "maxY": -0.451685837182284
+            },
+            "L": {
+              "minX": 0.22184918493242123,
+              "maxX": 0.38354354435667776,
+              "minY": -0.8523935765382168,
+              "maxY": -0.5648309313740926
+            }
+          },
+          "sights": {
+            "front": [
+              0.3047488769995448,
+              -0.291052345855114,
+              0.9797390711372536
+            ],
+            "rear": [
+              0.4018346268517767,
+              -0.40248445401261884,
+              0.9711534759870822
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            1.0444900890013564e-135
+          ]
+        }
+      },
+      {
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "fov": 70,
+        "ads": {
+          "gun": {
+            "minX": -0.03130857548165476,
+            "maxX": 0.04048597109805399,
+            "minY": -0.5614594160904939,
+            "maxY": 0.017589458315989688
+          },
+          "hands": {
+            "R": {
+              "minX": -0.04976522978178215,
+              "maxX": 0.11679580319237456,
+              "minY": -0.5427345615212311,
+              "maxY": -0.12580055774898702
+            },
+            "L": {
+              "minX": -0.14155524844523068,
+              "maxX": 0.02126074592667508,
+              "minY": -0.5598868536416912,
+              "maxY": -0.23676093592284675
+            }
+          },
+          "sights": {
+            "front": [
+              0,
+              -1.3599464958409383e-9,
+              0.9756806285228723
+            ],
+            "rear": [
+              0,
+              1.3533861159089175e-8,
+              0.9637339846103405
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            9.73774486178866e-143
+          ]
+        },
+        "hip": {
+          "gun": {
+            "minX": 0.2890019987722934,
+            "maxX": 0.44448931295367333,
+            "minY": -0.8776947709508183,
+            "maxY": -0.29494722099357595
+          },
+          "hands": {
+            "R": {
+              "minX": 0.33081703025314574,
+              "maxX": 0.5250200914337348,
+              "minY": -0.8540791366652909,
+              "maxY": -0.453797323580258
+            },
+            "L": {
+              "minX": 0.2576112190903981,
+              "maxX": 0.3777245504236884,
+              "minY": -0.8548267082216324,
+              "maxY": -0.5670564563755461
+            }
+          },
+          "sights": {
+            "front": [
+              0.3047488769995448,
+              -0.29288701665200423,
+              0.9797390711372536
+            ],
+            "rear": [
+              0.4018346268517767,
+              -0.4049036073244302,
+              0.9711534759870822
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            6.350225353899674e-151
+          ]
+        }
+      },
+      {
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "fov": 85,
+        "ads": {
+          "gun": {
+            "minX": -0.03130857548165476,
+            "maxX": 0.04048597109805399,
+            "minY": -0.5614594160904939,
+            "maxY": 0.017589458315989688
+          },
+          "hands": {
+            "R": {
+              "minX": -0.04976522978178215,
+              "maxX": 0.11679580319237456,
+              "minY": -0.5427345615212311,
+              "maxY": -0.12580055774898702
+            },
+            "L": {
+              "minX": -0.14155524844523068,
+              "maxX": 0.02126074592667508,
+              "minY": -0.5598868536416912,
+              "maxY": -0.23676093592284675
+            }
+          },
+          "sights": {
+            "front": [
+              0,
+              -1.3599464958409383e-9,
+              0.9756806285228723
+            ],
+            "rear": [
+              0,
+              1.3533861159089175e-8,
+              0.9637339846103405
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            1.4279581832641318e-154
+          ]
+        },
+        "hip": {
+          "gun": {
+            "minX": 0.2890019987722934,
+            "maxX": 0.44448931295367333,
+            "minY": -0.8814229862595897,
+            "maxY": -0.297674454958543
+          },
+          "hands": {
+            "R": {
+              "minX": 0.33081703025314574,
+              "maxX": 0.5250200914337348,
+              "minY": -0.8578216604006115,
+              "maxY": -0.45691784769592153
+            },
+            "L": {
+              "minX": 0.2576112190903981,
+              "maxX": 0.3777245504236884,
+              "minY": -0.8584225855628119,
+              "maxY": -0.5703455158948079
+            }
+          },
+          "sights": {
+            "front": [
+              0.3047488769995448,
+              -0.2955984404487631,
+              0.9797390711372536
+            ],
+            "rear": [
+              0.4018346268517767,
+              -0.4084788263058253,
+              0.9711534759870822
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            3.2110113570992034e-158
+          ]
+        }
+      },
+      {
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "fov": 100,
+        "ads": {
+          "gun": {
+            "minX": -0.03130857548165476,
+            "maxX": 0.04048597109805399,
+            "minY": -0.5614594160904939,
+            "maxY": 0.017589458315989688
+          },
+          "hands": {
+            "R": {
+              "minX": -0.04976522978178215,
+              "maxX": 0.11679580319237456,
+              "minY": -0.5427345615212311,
+              "maxY": -0.12580055774898702
+            },
+            "L": {
+              "minX": -0.14155524844523068,
+              "maxX": 0.02126074592667508,
+              "minY": -0.5598868536416912,
+              "maxY": -0.23676093592284675
+            }
+          },
+          "sights": {
+            "front": [
+              0,
+              -1.3599464958409383e-9,
+              0.9756806285228723
+            ],
+            "rear": [
+              0,
+              1.3533861159089175e-8,
+              0.9637339846103405
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            4.390799886610328e-163
+          ]
+        },
+        "hip": {
+          "gun": {
+            "minX": 0.2890019987722934,
+            "maxX": 0.44448931295367333,
+            "minY": -0.885388371581413,
+            "maxY": -0.30057518161679564
+          },
+          "hands": {
+            "R": {
+              "minX": 0.33081703025314574,
+              "maxX": 0.5250200914337348,
+              "minY": -0.8618022643779887,
+              "maxY": -0.46023688361520837
+            },
+            "L": {
+              "minX": 0.2576112190903981,
+              "maxX": 0.3777245504236884,
+              "minY": -0.862247214251569,
+              "maxY": -0.5738438085791382
+            }
+          },
+          "sights": {
+            "front": [
+              0.3047488769995448,
+              -0.2984823511766693,
+              0.9797390711372536
+            ],
+            "rear": [
+              0.4018346268517767,
+              -0.41228148245547797,
+              0.9711534759870822
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            2.702499955218883e-172
+          ]
+        }
+      },
+      {
+        "viewport": {
+          "width": 1680,
+          "height": 720
+        },
+        "fov": 70,
+        "ads": {
+          "gun": {
+            "minX": -0.023854152747927435,
+            "maxX": 0.03084645416994589,
+            "minY": -0.5614594160904939,
+            "maxY": 0.017589458315989688
+          },
+          "hands": {
+            "R": {
+              "minX": -0.03791636554802448,
+              "maxX": 0.08898727862276155,
+              "minY": -0.5427345615212311,
+              "maxY": -0.12580055774898702
+            },
+            "L": {
+              "minX": -0.10785161786303288,
+              "maxX": 0.016198663563181014,
+              "minY": -0.5598868536416912,
+              "maxY": -0.23676093592284675
+            }
+          },
+          "sights": {
+            "front": [
+              0,
+              -1.3599464958409383e-9,
+              0.9756806285228723
+            ],
+            "rear": [
+              0,
+              1.3533861159089175e-8,
+              0.9637339846103405
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            2.0856340398949296e-179
+          ]
+        },
+        "hip": {
+          "gun": {
+            "minX": 0.2779867839382761,
+            "maxX": 0.41787542977853037,
+            "minY": -0.8803254352492154,
+            "maxY": -0.2968715833039112
+          },
+          "hands": {
+            "R": {
+              "minX": 0.32289543677190025,
+              "maxX": 0.48373769270611505,
+              "minY": -0.8567198971259993,
+              "maxY": -0.45599919517389936
+            },
+            "L": {
+              "minX": 0.26555968788376944,
+              "maxX": 0.3648804616323204,
+              "minY": -0.85736399358726,
+              "maxY": -0.5693772481582169
+            }
+          },
+          "sights": {
+            "front": [
+              0.2902370257138521,
+              -0.2948002231567831,
+              0.9797390711372536
+            ],
+            "rear": [
+              0.38269964462073963,
+              -0.4074263159542617,
+              0.9711534759870822
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            5.229698607778271e-187
+          ]
+        }
+      },
+      {
+        "viewport": {
+          "width": 1680,
+          "height": 720
+        },
+        "fov": 85,
+        "ads": {
+          "gun": {
+            "minX": -0.023854152747927435,
+            "maxX": 0.03084645416994589,
+            "minY": -0.5614594160904939,
+            "maxY": 0.017589458315989688
+          },
+          "hands": {
+            "R": {
+              "minX": -0.03791636554802448,
+              "maxX": 0.08898727862276155,
+              "minY": -0.5427345615212311,
+              "maxY": -0.12580055774898702
+            },
+            "L": {
+              "minX": -0.10785161786303288,
+              "maxX": 0.016198663563181014,
+              "minY": -0.5598868536416912,
+              "maxY": -0.23676093592284675
+            }
+          },
+          "sights": {
+            "front": [
+              0,
+              -1.3599464958409383e-9,
+              0.9756806285228723
+            ],
+            "rear": [
+              0,
+              1.3533861159089175e-8,
+              0.9637339846103405
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            1.1759883321929746e-190
+          ]
+        },
+        "hip": {
+          "gun": {
+            "minX": 0.2779867839382761,
+            "maxX": 0.41787542977853037,
+            "minY": -0.8767599842182455,
+            "maxY": -0.2942634133494532
+          },
+          "hands": {
+            "R": {
+              "minX": 0.32289543677190025,
+              "maxX": 0.48373769270611505,
+              "minY": -0.8531407623375301,
+              "maxY": -0.45301490510374637
+            },
+            "L": {
+              "minX": 0.26555968788376944,
+              "maxX": 0.3648804616323204,
+              "minY": -0.8539251029890735,
+              "maxY": -0.5662317805060987
+            }
+          },
+          "sights": {
+            "front": [
+              0.2902370257138521,
+              -0.2922071731393108,
+              0.9797390711372536
+            ],
+            "rear": [
+              0.38269964462073963,
+              -0.40400718182507994,
+              0.9711534759870822
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            2.6444134952580177e-194
+          ]
+        }
+      },
+      {
+        "viewport": {
+          "width": 1680,
+          "height": 720
+        },
+        "fov": 100,
+        "ads": {
+          "gun": {
+            "minX": -0.023854152747927435,
+            "maxX": 0.03084645416994589,
+            "minY": -0.5614594160904939,
+            "maxY": 0.017589458315989688
+          },
+          "hands": {
+            "R": {
+              "minX": -0.03791636554802448,
+              "maxX": 0.08898727862276155,
+              "minY": -0.5427345615212311,
+              "maxY": -0.12580055774898702
+            },
+            "L": {
+              "minX": -0.10785161786303288,
+              "maxX": 0.016198663563181014,
+              "minY": -0.5598868536416912,
+              "maxY": -0.23676093592284675
+            }
+          },
+          "sights": {
+            "front": [
+              0,
+              -1.3599464958409383e-9,
+              0.9756806285228723
+            ],
+            "rear": [
+              0,
+              1.3533861159089175e-8,
+              0.9637339846103405
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            5.946421867011194e-198
+          ]
+        },
+        "hip": {
+          "gun": {
+            "minX": 0.2779867839382761,
+            "maxX": 0.41787542977853037,
+            "minY": -0.87527529564851,
+            "maxY": -0.29317734595274075
+          },
+          "hands": {
+            "R": {
+              "minX": 0.32289543677190025,
+              "maxX": 0.48373769270611505,
+              "minY": -0.8516503757177656,
+              "maxY": -0.451772217623973
+            },
+            "L": {
+              "minX": 0.26555968788376944,
+              "maxX": 0.3648804616323204,
+              "minY": -0.8524931154174169,
+              "maxY": -0.5649219771098359
+            }
+          },
+          "sights": {
+            "front": [
+              0.2902370257138521,
+              -0.2911274018317671,
+              0.9797390711372536
+            ],
+            "rear": [
+              0.38269964462073963,
+              -0.40258342103972766,
+              0.9711534759870822
+            ]
+          },
+          "magazine": [
+            0,
+            0,
+            0
+          ],
+          "slide": [
+            0,
+            0,
+            6.9465185200948835e-208
+          ]
+        }
+      }
+    ],
+    "fire": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -3.400000267852076,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -3.4,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.8000002303527847,
+            1.7743070466615154,
+            -3.9777516801341397
+          ],
+          "target": [
+            -1.7999999999999998,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            -0.2000003214224905,
+            1.7800000225666683,
+            -3.9999998366803315
+          ],
+          "target": [
+            -0.19999999999999973,
+            1.78,
+            -4
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.4167403502565041,
+            1.667323397330211,
+            -4.0227390298765595
+          ],
+          "target": [
+            1.4000000000000008,
+            1.78,
+            -4
+          ]
+        }
+      ],
+      "poseTime": 0.6666666666666671,
+      "frames": [
+        176.1000000005588,
+        215.20000000018626,
+        535,
+        4.3999999994412065,
+        1.900000000372529,
+        13.299999999813735,
+        159.5,
+        18.40000000037253,
+        655.8999999994412,
+        228.90000000037253,
+        200.3999999994412,
+        271.80000000074506,
+        19.799999999813735,
+        481.09999999962747,
+        155.20000000018626,
+        642,
+        3.599999999627471,
+        13.800000000745058,
+        44.59999999962747,
+        169.40000000037253,
+        332.19999999925494,
+        23.200000000186265,
+        163.29999999981374,
+        174,
+        183.20000000018626,
+        189.6000000005588,
+        425.8999999994412,
+        12.100000000558794,
+        387.19999999925494,
+        14.600000000558794,
+        183.29999999981374,
+        213.5,
+        199.79999999981374,
+        167.40000000037253,
+        184.70000000018626,
+        156.69999999925494,
+        189.70000000018626,
+        187.70000000018626,
+        167.70000000018626,
+        172.70000000018626,
+        195.5,
+        169.29999999981374,
+        185.29999999981374,
+        193.5,
+        200.40000000037253,
+        179.29999999981374,
+        206.5,
+        206.70000000018626,
+        198.19999999925494,
+        191.40000000037253,
+        200.09999999962747,
+        197.80000000074506,
+        205.79999999981374,
+        206.29999999981374,
+        224.40000000037253,
+        199.09999999962747,
+        192.70000000018626,
+        195.8999999994412,
+        230.6000000005588,
+        216.79999999981374,
+        234.20000000018626,
+        220.8999999994412,
+        199,
+        210.1000000005588,
+        201.5,
+        200.70000000018626,
+        191.59999999962747,
+        203.5,
+        199,
+        190.29999999981374,
+        14.200000000186265,
+        362.90000000037253,
+        168.79999999981374,
+        186.8999999994412,
+        196.40000000037253,
+        193.59999999962747,
+        166.20000000018626,
+        188.20000000018626,
+        204.40000000037253,
+        145.5,
+        170,
+        303.5,
+        147.09999999962747,
+        175.5,
+        163.29999999981374,
+        7.5,
+        309.6000000005588,
+        201.79999999981374,
+        40,
+        738.3999999994412,
+        3.1000000005587935,
+        5.5,
+        426.70000000018626,
+        226.69999999925494,
+        202,
+        232.30000000074506,
+        220,
+        227.3999999994412,
+        209.6000000005588,
+        212.09999999962747,
+        234.40000000037253,
+        9.899999999441206,
+        427.79999999981374,
+        463.90000000037253,
+        29.799999999813735,
+        319.79999999981374,
+        142.1000000005588,
+        227.59999999962747,
+        229.20000000018626,
+        191.20000000018626,
+        195.20000000018626,
+        180.79999999981374,
+        195,
+        21.200000000186265,
+        180.3999999994412,
+        17.5,
+        587.2000000001863,
+        228.09999999962747,
+        626.7000000001863,
+        4.1000000005587935,
+        15,
+        162,
+        189.8999999994412,
+        189.40000000037253,
+        182,
+        417.20000000018626,
+        192.69999999925494,
+        16.700000000186265,
+        178.6000000005588,
+        149,
+        177.8999999994412,
+        185.1000000005588,
+        191.69999999925494,
+        198.70000000018626,
+        202.5,
+        172.90000000037253,
+        148.79999999981374,
+        169.90000000037253,
+        194,
+        19.699999999254942,
+        132.90000000037253,
+        27.5,
+        548.7000000001863,
+        209.8999999994412,
+        198.6000000005588,
+        399.8999999994412,
+        14,
+        272.5,
+        6.300000000745058,
+        272.3999999994412,
+        21.299999999813735,
+        358.30000000074506,
+        236.69999999925494,
+        565.1000000005588,
+        2.099999999627471,
+        21.799999999813735,
+        150.6000000005588,
+        25.59999999962747,
+        428.5,
+        211.70000000018626,
+        476.40000000037253,
+        310.79999999981374,
+        12.099999999627471,
+        88.29999999981374,
+        189.70000000018626,
+        203.20000000018626,
+        227.09999999962747,
+        206.40000000037253,
+        251.59999999962747,
+        226.1000000005588,
+        212.29999999981374,
+        213.09999999962747,
+        198.40000000037253,
+        201.20000000018626,
+        209.09999999962747,
+        37.799999999813735,
+        401.6000000005588,
+        194,
+        237.8999999994412,
+        192.80000000074506,
+        202.8999999994412,
+        187.79999999981374,
+        179.5,
+        13.400000000372529,
+        324.5,
+        499.40000000037253,
+        37,
+        189.29999999981374,
+        451.20000000018626,
+        3.599999999627471,
+        12.700000000186265,
+        229.09999999962747,
+        2.2000000001862645,
+        472.90000000037253,
+        282.59999999962747,
+        249.5,
+        270,
+        276,
+        240.5,
+        266.29999999981374,
+        253.5,
+        263.90000000037253,
+        262,
+        300.70000000018626,
+        265.29999999981374,
+        277.70000000018626,
+        263.29999999981374,
+        252.5,
+        271.59999999962747,
+        275.40000000037253,
+        269.59999999962747,
+        575,
+        274.5,
+        11.5,
+        388.6000000005588,
+        111.8999999994412,
+        498.40000000037253,
+        11.399999999441206,
+        511,
+        28.300000000745058,
+        281.19999999925494,
+        690.2000000001863,
+        213.20000000018626,
+        7.7000000001862645,
+        38,
+        221,
+        153.70000000018626,
+        140.29999999981374,
+        226.59999999962747,
+        159.6000000005588,
+        197.3999999994412,
+        211.90000000037253,
+        239.09999999962747,
+        265.20000000018626,
+        238.29999999981374,
+        273.79999999981374,
+        262.30000000074506,
+        10.299999999813735,
+        450,
+        264.29999999981374
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -3.4,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1.7999999999999998,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": -0.19999999999999973,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.4000000000000008,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 4.66666666666667
+        }
+      ],
+      "programs": 15,
+      "render": {
+        "frame": 820,
+        "calls": 69,
+        "triangles": 45560,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 56,
+        "textures": 23
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 7.357109521993114e-7,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 3,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 14,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0.11666666666666667,
+        "shotsFired": 1
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 4,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": {
+        "id": 1,
+        "start": [
+          -1.0000008344650269,
+          1.5244091391563415,
+          -0.0000020315028450568207
+        ],
+        "end": [
+          -1.0000008344650269,
+          1.5244091391563415,
+          -7.825
+        ],
+        "hit": true,
+        "surfaceId": "north-wall",
+        "damage": 32,
+        "enemyId": null,
+        "headshot": false
+      },
+      "results": {
+        "elapsedSeconds": 0,
+        "shots": 1,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 4
+    },
+    "fireGeometry": {
+      "gun": {
+        "minX": 0.3016051929963066,
+        "maxX": 0.4703645371697002,
+        "minY": -0.9080366306025898,
+        "maxY": -0.27049382814578854
+      },
+      "hands": {
+        "R": {
+          "minX": 0.3399526357564154,
+          "maxX": 0.5420216372337966,
+          "minY": -0.8881696091809722,
+          "maxY": -0.44852657438136206
+        },
+        "L": {
+          "minX": 0.2641975255984825,
+          "maxX": 0.38764263607876875,
+          "minY": -0.8785512236833355,
+          "maxY": -0.5727055167181054
+        }
+      },
+      "sights": {
+        "front": [
+          0.3157667639700145,
+          -0.26083811117191363,
+          0.9787647250866459
+        ],
+        "rear": [
+          0.42017441148106527,
+          -0.4272592150992448,
+          0.9695316317287016
+        ]
+      },
+      "magazine": [
+        0,
+        0,
+        0
+      ],
+      "slide": [
+        0,
+        0,
+        0.026
+      ]
+    },
+    "multipleCombat": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -1.6905440224907093,
+            1.6068773255208697,
+            -2.5649578562187596
+          ],
+          "target": [
+            -1.678732193498936,
+            1.78,
+            -2.7149287484230573
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -0.8420625442844056,
+            1.7276108189176527,
+            -1.2515152313587086
+          ],
+          "target": [
+            -0.877634691759465,
+            1.78,
+            -1.42759899722969
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            0.05695312246661418,
+            1.7179449718394166,
+            -2.479024697166318
+          ],
+          "target": [
+            0.05525394891511144,
+            1.78,
+            -2.6582771613625122
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            -1.0111194134284724,
+            1.446251700911498,
+            -1.226156997277076
+          ],
+          "target": [
+            -0.8006568756906456,
+            1.78,
+            -1.4184489813842498
+          ]
+        }
+      ],
+      "poseTime": 0.6666666666666671,
+      "frames": [
+        199.79999999981374,
+        167.40000000037253,
+        184.70000000018626,
+        156.69999999925494,
+        189.70000000018626,
+        187.70000000018626,
+        167.70000000018626,
+        172.70000000018626,
+        195.5,
+        169.29999999981374,
+        185.29999999981374,
+        193.5,
+        200.40000000037253,
+        179.29999999981374,
+        206.5,
+        206.70000000018626,
+        198.19999999925494,
+        191.40000000037253,
+        200.09999999962747,
+        197.80000000074506,
+        205.79999999981374,
+        206.29999999981374,
+        224.40000000037253,
+        199.09999999962747,
+        192.70000000018626,
+        195.8999999994412,
+        230.6000000005588,
+        216.79999999981374,
+        234.20000000018626,
+        220.8999999994412,
+        199,
+        210.1000000005588,
+        201.5,
+        200.70000000018626,
+        191.59999999962747,
+        203.5,
+        199,
+        190.29999999981374,
+        14.200000000186265,
+        362.90000000037253,
+        168.79999999981374,
+        186.8999999994412,
+        196.40000000037253,
+        193.59999999962747,
+        166.20000000018626,
+        188.20000000018626,
+        204.40000000037253,
+        145.5,
+        170,
+        303.5,
+        147.09999999962747,
+        175.5,
+        163.29999999981374,
+        7.5,
+        309.6000000005588,
+        201.79999999981374,
+        40,
+        738.3999999994412,
+        3.1000000005587935,
+        5.5,
+        426.70000000018626,
+        226.69999999925494,
+        202,
+        232.30000000074506,
+        220,
+        227.3999999994412,
+        209.6000000005588,
+        212.09999999962747,
+        234.40000000037253,
+        9.899999999441206,
+        427.79999999981374,
+        463.90000000037253,
+        29.799999999813735,
+        319.79999999981374,
+        142.1000000005588,
+        227.59999999962747,
+        229.20000000018626,
+        191.20000000018626,
+        195.20000000018626,
+        180.79999999981374,
+        195,
+        21.200000000186265,
+        180.3999999994412,
+        17.5,
+        587.2000000001863,
+        228.09999999962747,
+        626.7000000001863,
+        4.1000000005587935,
+        15,
+        162,
+        189.8999999994412,
+        189.40000000037253,
+        182,
+        417.20000000018626,
+        192.69999999925494,
+        16.700000000186265,
+        178.6000000005588,
+        149,
+        177.8999999994412,
+        185.1000000005588,
+        191.69999999925494,
+        198.70000000018626,
+        202.5,
+        172.90000000037253,
+        148.79999999981374,
+        169.90000000037253,
+        194,
+        19.699999999254942,
+        132.90000000037253,
+        27.5,
+        548.7000000001863,
+        209.8999999994412,
+        198.6000000005588,
+        399.8999999994412,
+        14,
+        272.5,
+        6.300000000745058,
+        272.3999999994412,
+        21.299999999813735,
+        358.30000000074506,
+        236.69999999925494,
+        565.1000000005588,
+        2.099999999627471,
+        21.799999999813735,
+        150.6000000005588,
+        25.59999999962747,
+        428.5,
+        211.70000000018626,
+        476.40000000037253,
+        310.79999999981374,
+        12.099999999627471,
+        88.29999999981374,
+        189.70000000018626,
+        203.20000000018626,
+        227.09999999962747,
+        206.40000000037253,
+        251.59999999962747,
+        226.1000000005588,
+        212.29999999981374,
+        213.09999999962747,
+        198.40000000037253,
+        201.20000000018626,
+        209.09999999962747,
+        37.799999999813735,
+        401.6000000005588,
+        194,
+        237.8999999994412,
+        192.80000000074506,
+        202.8999999994412,
+        187.79999999981374,
+        179.5,
+        13.400000000372529,
+        324.5,
+        499.40000000037253,
+        37,
+        189.29999999981374,
+        451.20000000018626,
+        3.599999999627471,
+        12.700000000186265,
+        229.09999999962747,
+        2.2000000001862645,
+        472.90000000037253,
+        282.59999999962747,
+        249.5,
+        270,
+        276,
+        240.5,
+        266.29999999981374,
+        253.5,
+        263.90000000037253,
+        262,
+        300.70000000018626,
+        265.29999999981374,
+        277.70000000018626,
+        263.29999999981374,
+        252.5,
+        271.59999999962747,
+        275.40000000037253,
+        269.59999999962747,
+        575,
+        274.5,
+        11.5,
+        388.6000000005588,
+        111.8999999994412,
+        498.40000000037253,
+        11.399999999441206,
+        511,
+        28.300000000745058,
+        281.19999999925494,
+        690.2000000001863,
+        213.20000000018626,
+        7.7000000001862645,
+        38,
+        221,
+        153.70000000018626,
+        140.29999999981374,
+        226.59999999962747,
+        159.6000000005588,
+        197.3999999994412,
+        211.90000000037253,
+        239.09999999962747,
+        265.20000000018626,
+        238.29999999981374,
+        273.79999999981374,
+        262.30000000074506,
+        10.299999999813735,
+        450,
+        264.29999999981374,
+        302.29999999981374,
+        540.2999999998137,
+        84.20000000018626,
+        182.70000000018626,
+        540.2999999998137,
+        60.5,
+        243.70000000018626,
+        311.40000000037253,
+        656.5,
+        55.39999999944121,
+        251.1000000005588,
+        291.8999999994412,
+        549.5,
+        171.40000000037253,
+        135.79999999981374,
+        230.29999999981374,
+        285.6000000005588,
+        281.29999999981374,
+        242.5,
+        288.5,
+        284.8999999994412,
+        243.90000000037253,
+        287,
+        304.5,
+        253,
+        234.70000000018626,
+        290.8999999994412,
+        283.6000000005588,
+        279.70000000018626,
+        268.3999999994412,
+        277.6000000005588,
+        269
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -1.678732193498936,
+          "z": -2.7149287484230573,
+          "yaw": 0.24497859523758236,
+          "hp": 0,
+          "maxHp": 100,
+          "state": "dead",
+          "timer": 0,
+          "deathAge": 1.4,
+          "hitFlash": 0.16,
+          "walkPhase": 2.4999999999999996
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -0.877634691759465,
+          "z": -1.42759899722969,
+          "yaw": -0.08550414046380811,
+          "hp": 0,
+          "maxHp": 70,
+          "state": "dead",
+          "timer": 0,
+          "deathAge": 1.0000000000000013,
+          "hitFlash": 0.16,
+          "walkPhase": 10.400000000000006
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": 0.05525394891511144,
+          "z": -2.6582771613625122,
+          "yaw": -0.37789047704138895,
+          "hp": 0,
+          "maxHp": 180,
+          "state": "dead",
+          "timer": 0,
+          "deathAge": 0.39999999999999997,
+          "hitFlash": 0.16,
+          "walkPhase": 7.087499999999992
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": -0.8006568756906456,
+          "z": -1.4184489813842498,
+          "yaw": -0.13962111348657727,
+          "hp": 56,
+          "maxHp": 120,
+          "state": "chase",
+          "timer": -0.009999999999999964,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 18.19999999999999
+        }
+      ],
+      "programs": 15,
+      "render": {
+        "frame": 884,
+        "calls": 67,
+        "triangles": 45546,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 57,
+        "textures": 23
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 4.3731958090565833e-7,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 3,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 7,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 8
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 3,
+        "alive": 1,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": true,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 1,
+        "shots": 8,
+        "hits": 8,
+        "headshots": 8,
+        "accuracy": 100,
+        "kills": 3,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 350,
+        "creditsSpent": 0,
+        "finalCredits": 850,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 4
+    }
+  },
+  "errors": [
+    "Finite-ammo multi-archetype combat regression"
+  ],
+  "httpErrors": []
+}

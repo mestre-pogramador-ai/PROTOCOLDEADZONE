@@ -133,15 +133,30 @@ Morte ou reinício removem todos. Estação de munição e porta permanecem disp
 Consulte [M8_1_TEST_REPORT.md](M8_1_TEST_REPORT.md) para validação,
 análise econômica até R15 e limitações dos testes na nuvem.
 
-## M8.1.1 — Modelos locais e animação
+## M8.1.1 — Primeira integração de modelos (histórico)
 
-A M9 usa um modelo 9mm/Beretta de Quaternius; os braços rigados vêm de
-para/MakeHuman e os quatro infectados compartilham um humanoide animado
-de Quaternius. Assets locais, cache de recursos, LOD e viewmodel com câmera
-própria preservam a simulação e o balanceamento.
+Essa etapa usava uma pistola e um humanoide de Quaternius, com braços
+para/MakeHuman. A seleção ativa foi revista no M8.1.2. Cache de recursos,
+LOD e viewmodel com câmera própria preservam a simulação e o balanceamento.
 
 Os modelos/adaptações continuam **provisórios para aceite de arte**:
 não são arte final/AAA, e rigging, empunhadura e variantes ainda exigem revisão humana.
 Fontes, modificações e licenças: [créditos dos assets](public/assets/manifests/ATTRIBUTION.md).
 Plano: [M8_1_1_VISUAL_PLAN.md](M8_1_1_VISUAL_PLAN.md).
 Validação e comparação: [M8_1_1_VISUAL_REPORT.md](M8_1_1_VISUAL_REPORT.md).
+
+## M8.1.2 — M9 texturizada e infectados
+
+A M9 recebe a Beretta 92 texturizada de Pixel32 e nova empunhadura dos braços
+CC0. A arma fica na posição inferior lateral; o ADS alinha as miras mantendo
+o hitscan e os atributos existentes. Os infectados usam os modelos de
+Pixelhouse e Rosswet Mobile, com clips de ataque/morte, materiais PBR e LOD.
+A sala ganha superfícies com desgaste, cabos e sinalização de contenção.
+
+Os quatro GLBs ativos são locais e têm fontes/licenças registradas.
+Revisão artística dos contatos/animações e profiling em GPU desktop continuam
+pendentes; não foi comprovada a meta de 60 FPS.
+
+[Comparação, testes e limitações](M8_1_2_VISUAL_REPORT.md) ·
+[Pipeline dos assets](docs/ASSET_PIPELINE_M812.md) ·
+[Créditos](public/assets/manifests/ATTRIBUTION.md)

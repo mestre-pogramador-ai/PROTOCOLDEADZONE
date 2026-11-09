@@ -41,8 +41,9 @@ que downloads candidatos já estejam integrados no jogo:
   com nova pose, escala e detalhes, removendo a adaptação de vértices por caixa.
   NetSirK FPS Arms Pack CC-BY 4.0 e J-Toastie FPS Rig CC-BY 3.0 foram baixados
   para comparação, mas são mais simples; não adotá-los só por terem animação.
-- Beretta 93r de Kristian M/Poly Pizza foi inspecionada e rejeitada como
-  substituição principal: mais estilizada e outro equipamento.
+- A página/preview da Beretta 93r de Kristian M/Poly Pizza foi inspecionada e
+  rejeitada como substituição principal: mais estilizada e outro equipamento.
+  O modelo 3D dessa opção não foi baixado ou declarado integrado.
 
 ## Ordem e critérios
 
