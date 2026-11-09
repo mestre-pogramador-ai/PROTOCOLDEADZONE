@@ -13,7 +13,7 @@ export class Diagnostics {
       code: /^[a-zA-Z0-9_.-]{1,64}$/.test(code)?code:'invalid.code',values:safe});
     if(this.entries.length>this.capacity)this.entries.shift();
   }
-  report(): string { return JSON.stringify({version:'M6.2',entries:this.entries},null,2); }
+  report(): string { return JSON.stringify({version:'M7',entries:this.entries},null,2); }
 }
 export const diagnostics = new Diagnostics();
 export function downloadDiagnostics(): void {
