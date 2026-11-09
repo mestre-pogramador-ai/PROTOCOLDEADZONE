@@ -1,0 +1,74 @@
+{
+  "errors": [],
+  "afterShot": "M9 / PISTOLA TÁTICA\n14 / 90\nSEMI-AUTOMÁTICA · 32 DMG",
+  "reload": "M9 / PISTOLA TÁTICA\n14 / 90\nRECARREGANDO · 1.5s",
+  "paused": 1,
+  "afterReload": "M9 / PISTOLA TÁTICA\n15 / 89\nSEMI-AUTOMÁTICA · 32 DMG",
+  "reportVersion": "M7",
+  "marker": true,
+  "ammo": {
+    "initial": 105,
+    "rows": [
+      {
+        "round": 1,
+        "enemies": 8,
+        "headshots": 16,
+        "cumulative": 16
+      },
+      {
+        "round": 2,
+        "enemies": 10,
+        "headshots": 20,
+        "cumulative": 36
+      },
+      {
+        "round": 3,
+        "enemies": 12,
+        "headshots": 24,
+        "cumulative": 60
+      },
+      {
+        "round": 4,
+        "enemies": 15,
+        "headshots": 30,
+        "cumulative": 90
+      },
+      {
+        "round": 5,
+        "enemies": 17,
+        "headshots": 46,
+        "cumulative": 136
+      },
+      {
+        "round": 6,
+        "enemies": 20,
+        "headshots": 55,
+        "cumulative": 191
+      },
+      {
+        "round": 7,
+        "enemies": 22,
+        "headshots": 70,
+        "cumulative": 261
+      },
+      {
+        "round": 8,
+        "enemies": 25,
+        "headshots": 81,
+        "cumulative": 342
+      },
+      {
+        "round": 9,
+        "enemies": 28,
+        "headshots": 95,
+        "cumulative": 437
+      },
+      {
+        "round": 10,
+        "enemies": 30,
+        "headshots": 105,
+        "cumulative": 542
+      }
+    ]
+  }
+}
