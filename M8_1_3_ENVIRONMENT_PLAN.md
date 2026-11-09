@@ -29,8 +29,7 @@ com o código visual M8.1.2, antes das alterações no renderer.
   obstáculos no centro ou nas aproximações. Storytelling de falha de contenção.
 - Compartilhar materiais e agrupar geometria estática por superfície. Manter
   duas luzes pontuais sem sombras e uma única sombra direcional de 1024.
-- Medir custos reais, não estimar 60 FPS. Armas, personagens e seus materiais
-  não serão alterados neste milestone.
+- Medir custos reais, não estimar 60 FPS. Armas, modelos e materiais dos personagens serão preservados.
 
 ## Validação
 
@@ -38,3 +37,11 @@ Testar limites das peças/atlas, orçamento de batches, rotas/linhas de tiro,
 spawns, teto/salto com Rapier, porta, munição e perks; executar toda a suíte,
 TypeScript, build e test:motion. Chromium com mesmas câmeras e workloads antes/
 depois, smoke normal, compras, HUD e combate real. Documentar pendências.
+
+## Ajuste descoberto na validação
+
+O harness M8.1.2 encontrou uma transição visual do Brutamontes a 0,23657 m do
+alvo da cabeça, acima da margem de teste 0,235 m. Acrescentada uma terceira
+passagem CCD limitada no retarget existente e cobertura do esqueleto/clip real.
+Nenhum modelo, material, estado da IA ou hitbox foi alterado. O ensaio completo
+do Chromium passou mantendo a tolerância original.

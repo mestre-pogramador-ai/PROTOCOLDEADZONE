@@ -1,0 +1,87 @@
+{
+  "base_commit": "bd7ecbccba272c30af2527ed6cb8dce71c1a7f23",
+  "implementation_commit": "15df5ca",
+  "chromium": "156.0.8078.79",
+  "renderer": "SwiftShader",
+  "viewport": [
+    1280,
+    720
+  ],
+  "sample_window_ms": 5000,
+  "before": {
+    "empty": {
+      "samples": 26,
+      "fps": 5.27,
+      "median_ms": 193.05,
+      "p95_ms": 290.5,
+      "draw_calls": 54,
+      "triangles_per_frame": 16696,
+      "resources": {
+        "geometries": 68,
+        "textures": 18
+      }
+    },
+    "four": {
+      "samples": 19,
+      "fps": 3.87,
+      "median_ms": 255,
+      "p95_ms": 325.6,
+      "draw_calls": 66,
+      "triangles_per_frame": 45534,
+      "resources": {
+        "geometries": 72,
+        "textures": 27
+      }
+    },
+    "twenty": {
+      "samples": 14,
+      "fps": 2.89,
+      "median_ms": 342.0,
+      "p95_ms": 379,
+      "draw_calls": 108,
+      "triangles_per_frame": 139649,
+      "resources": {
+        "geometries": 74,
+        "textures": 43
+      }
+    }
+  },
+  "after": {
+    "empty": {
+      "samples": 17,
+      "fps": 3.52,
+      "median_ms": 288.5,
+      "p95_ms": 469.1,
+      "draw_calls": 32,
+      "triangles_per_frame": 25824,
+      "resources": {
+        "geometries": 36,
+        "textures": 21
+      }
+    },
+    "four": {
+      "samples": 14,
+      "fps": 2.85,
+      "median_ms": 350.15,
+      "p95_ms": 737.3,
+      "draw_calls": 44,
+      "triangles_per_frame": 54662,
+      "resources": {
+        "geometries": 40,
+        "textures": 30
+      }
+    },
+    "twenty": {
+      "samples": 10,
+      "fps": 2.05,
+      "median_ms": 486.15,
+      "p95_ms": 565.7,
+      "draw_calls": 86,
+      "triangles_per_frame": 148777,
+      "resources": {
+        "geometries": 42,
+        "textures": 46
+      }
+    }
+  }
+}

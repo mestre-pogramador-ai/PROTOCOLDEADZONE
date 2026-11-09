@@ -1,0 +1,773 @@
+{
+  "phase": "before",
+  "record": {
+    "empty": {
+      "heads": [],
+      "poseTime": 0,
+      "frames": [
+        53.09999999962747,
+        218.90000000037253,
+        200.7999999988824,
+        203.80000000074506,
+        205,
+        196,
+        179.40000000037253,
+        195.19999999925494,
+        199.19999999925494,
+        183.80000000074506,
+        166.40000000037253,
+        190.90000000037253,
+        199.09999999962747,
+        186.09999999962747,
+        193.19999999925494,
+        181.10000000149012,
+        150.5,
+        190.2999999988824,
+        192.90000000037253,
+        189.19999999925494,
+        385.2000000011176,
+        202.7999999988824,
+        199.2000000011176,
+        123.29999999888241,
+        290.5,
+        55.100000001490116
+      ],
+      "enemies": [],
+      "programs": 10,
+      "render": {
+        "frame": 224,
+        "calls": 54,
+        "triangles": 16696,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 68,
+        "textures": 18
+      },
+      "movement": {
+        "grounded": false,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 0,
+        "collisions": 0,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 0,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 0
+    },
+    "four": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -2.100000267852076,
+            1.7800000225666683,
+            -3.1999998366803304
+          ],
+          "target": [
+            -2.1,
+            1.78,
+            -3.2
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.0000002303527848,
+            1.774307046661515,
+            -3.177751680134139
+          ],
+          "target": [
+            -1,
+            1.78,
+            -3.2
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            0.09999967857750944,
+            1.7800000225666683,
+            -3.1999998366803304
+          ],
+          "target": [
+            0.10000000000000009,
+            1.78,
+            -3.2
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.2269027483833774,
+            1.769454586277377,
+            -3.2246178291562417
+          ],
+          "target": [
+            1.2000000000000002,
+            1.78,
+            -3.2
+          ]
+        }
+      ],
+      "poseTime": 0.19999999999999998,
+      "frames": [
+        237.2999999988824,
+        257.40000000037253,
+        254.80000000074506,
+        266.5,
+        231.2999999988824,
+        280.40000000037253,
+        252,
+        245,
+        271.59999999962747,
+        247.2000000011176,
+        268.19999999925494,
+        236.59999999962747,
+        260.6000000014901,
+        240,
+        275,
+        262.7999999988824,
+        246.2000000011176,
+        325.59999999962747,
+        255
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -2.1,
+          "z": -3.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 1.4
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1,
+          "z": -3.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 1.4
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": 0.10000000000000009,
+          "z": -3.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 1.4
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.2000000000000002,
+          "z": -3.2,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "idle",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 1.4
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 278,
+        "calls": 66,
+        "triangles": 45534,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 72,
+        "textures": 27
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 4.6182703662560334e-8,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 3,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 1,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 4,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 0,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 4
+    },
+    "twenty": {
+      "heads": [
+        {
+          "id": 1,
+          "center": [
+            -2.63372035517272,
+            1.8041132320074067,
+            -3.1269196190604385
+          ],
+          "target": [
+            -2.5,
+            1.78,
+            -3
+          ]
+        },
+        {
+          "id": 2,
+          "center": [
+            -1.4296992970480615,
+            1.7717589495849868,
+            -3.056215863593196
+          ],
+          "target": [
+            -1.3,
+            1.78,
+            -3
+          ]
+        },
+        {
+          "id": 3,
+          "center": [
+            -0.1823081567625135,
+            1.821446633551166,
+            -3.1426725620560925
+          ],
+          "target": [
+            -0.10000000000000009,
+            1.78,
+            -3
+          ]
+        },
+        {
+          "id": 4,
+          "center": [
+            1.194106116632639,
+            1.6765091991029886,
+            -2.891893350920936
+          ],
+          "target": [
+            1.0999999999999996,
+            1.78,
+            -3
+          ]
+        }
+      ],
+      "poseTime": 1.1500000000000008,
+      "frames": [
+        366.5,
+        379,
+        373.7000000011176,
+        330.2999999988824,
+        340.2000000011176,
+        353.7999999988824,
+        329.1000000014901,
+        335.19999999925494,
+        345.30000000074506,
+        336.19999999925494,
+        343.80000000074506,
+        332.09999999962747,
+        366.2999999988824,
+        314.7000000011176
+      ],
+      "enemies": [
+        {
+          "kind": "common",
+          "id": 1,
+          "x": -2.5,
+          "z": -3,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "runner",
+          "id": 2,
+          "x": -1.3,
+          "z": -3,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "brute",
+          "id": 3,
+          "x": -0.10000000000000009,
+          "z": -3,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "predator",
+          "id": 4,
+          "x": 1.0999999999999996,
+          "z": -3,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "common",
+          "id": 5,
+          "x": -2.5,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "runner",
+          "id": 6,
+          "x": -1.3,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "brute",
+          "id": 7,
+          "x": -0.10000000000000009,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "predator",
+          "id": 8,
+          "x": 1.0999999999999996,
+          "z": -4,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "common",
+          "id": 9,
+          "x": -2.5,
+          "z": -5,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "runner",
+          "id": 10,
+          "x": -1.3,
+          "z": -5,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "brute",
+          "id": 11,
+          "x": -0.10000000000000009,
+          "z": -5,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "predator",
+          "id": 12,
+          "x": 1.0999999999999996,
+          "z": -5,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "common",
+          "id": 13,
+          "x": -2.5,
+          "z": -6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "runner",
+          "id": 14,
+          "x": -1.3,
+          "z": -6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "brute",
+          "id": 15,
+          "x": -0.10000000000000009,
+          "z": -6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "predator",
+          "id": 16,
+          "x": 1.0999999999999996,
+          "z": -6,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "common",
+          "id": 17,
+          "x": -2.5,
+          "z": -7,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "runner",
+          "id": 18,
+          "x": -1.3,
+          "z": -7,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "brute",
+          "id": 19,
+          "x": -0.10000000000000009,
+          "z": -7,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        },
+        {
+          "kind": "predator",
+          "id": 20,
+          "x": 1.0999999999999996,
+          "z": -7,
+          "yaw": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "state": "chase",
+          "timer": 0.45,
+          "deathAge": 0,
+          "hitFlash": 0,
+          "walkPhase": 8.050000000000006
+        }
+      ],
+      "programs": 13,
+      "render": {
+        "frame": 322,
+        "calls": 108,
+        "triangles": 139649,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 74,
+        "textures": 43
+      },
+      "movement": {
+        "grounded": true,
+        "verticalVelocity": 0,
+        "requestedHorizontalMeters": 0,
+        "resolvedHorizontalMeters": 0,
+        "collisions": 1,
+        "reversePrevented": false
+      },
+      "assets": [
+        {
+          "path": "assets/models/weapons/m9-service.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/viewmodels/operator-arms.glb",
+          "refs": 1,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-worker.glb",
+          "refs": 15,
+          "loaded": true
+        },
+        {
+          "path": "assets/models/characters/infected-hunter.glb",
+          "refs": 5,
+          "loaded": true
+        }
+      ],
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 20,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "trace": null,
+      "results": {
+        "elapsedSeconds": 1,
+        "shots": 0,
+        "hits": 0,
+        "headshots": 0,
+        "accuracy": 0,
+        "kills": 0,
+        "completedRounds": 0,
+        "highestRound": 1,
+        "creditsEarned": 0,
+        "creditsSpent": 0,
+        "finalCredits": 500,
+        "doorPurchased": false,
+        "damageTaken": 0,
+        "damageEvents": 0
+      },
+      "count": 20
+    }
+  },
+  "errors": [],
+  "httpErrors": []
+}
