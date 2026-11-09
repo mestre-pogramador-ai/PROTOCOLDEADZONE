@@ -6,14 +6,14 @@ import type {InfectedSnapshot} from '../../gameplay/enemies/Infected';
 /** Procedural humanoid placeholder. Rig groups expose animation states without touching combat logic. */
 export function InfectedView({runtime}:{runtime:Runtime}){
  const [ids,setIds]=useState<number[]>(()=>runtime.enemies.snapshots().map(e=>e.id));
- const previous=useRef(ids.join(','));
- useFrame(()=>{const next=runtime.enemies.snapshots().map(e=>e.id);const signature=next.join(',');if(previous.current!==signature){previous.current=signature;setIds(next);}});
+ const previous=useRef(runtime.enemies.rosterRevision);
+ useFrame(()=>{const revision=runtime.enemies.rosterRevision;if(previous.current!==revision){previous.current=revision;setIds(runtime.enemies.snapshots().map(e=>e.id));}});
  return <>{ids.map(id=><InfectedSlot key={id} runtime={runtime} id={id}/>)}</>;
 }
 function InfectedSlot({runtime,id}:{runtime:Runtime;id:number}){
  const root=useRef<Group>(null),body=useRef<Group>(null),leftArm=useRef<Group>(null),rightArm=useRef<Group>(null),leftLeg=useRef<Group>(null),rightLeg=useRef<Group>(null),chest=useRef<Mesh>(null),head=useRef<Mesh>(null);
  useFrame(()=>{
-  const e:InfectedSnapshot|undefined=runtime.enemies.snapshotById(id);if(!e||!root.current||!body.current)return;
+  const e:Readonly<InfectedSnapshot>|undefined=runtime.enemies.renderState(id);if(!e||!root.current||!body.current)return;
   root.current.visible=e.state!=='dead'||e.deathAge<2.5;root.current.position.set(e.x,0,e.z);root.current.rotation.y=e.yaw;
   const dying=e.state==='dead',death=Math.min(1,e.deathAge/.6),walking=e.state==='chase',swing=walking?Math.sin(e.walkPhase)*.5:0;
   body.current.position.y=dying?-.55*death:walking?Math.abs(Math.sin(e.walkPhase))*.035:0;

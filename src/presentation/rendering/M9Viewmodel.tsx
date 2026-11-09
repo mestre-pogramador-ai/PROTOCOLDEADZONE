@@ -1,6 +1,7 @@
 import { useFrame, useThree } from '@react-three/fiber';
 import { useRef } from 'react';
 import { Group, Mesh, Quaternion, Vector3 } from 'three';
+import { M9 } from '../../gameplay/weapons/M9';
 import type { Runtime } from '../../app/Runtime';
 /** Low-poly procedural placeholder, not final licensed GLB. Visual-only and never used for authoritative hitscan. */
 export function M9Viewmodel({runtime}:{runtime:Runtime}) {
@@ -11,28 +12,29 @@ export function M9Viewmodel({runtime}:{runtime:Runtime}) {
   const impact=useRef<Mesh>(null);
   const lastShot=useRef(0);
   const recoil=useRef(0);const slide=useRef<Mesh>(null);
-  const axis=new Vector3(0,1,0);
+  const scratch=useRef({axis:new Vector3(0,1,0),local:new Vector3(),start:new Vector3(),end:new Vector3(),vector:new Vector3(),rotation:new Quaternion()});
   useFrame((_,delta)=>{
+    const {axis,local,start,end,vector,rotation}=scratch.current;
     const state=runtime.getWeaponState();
     if(state.shotsFired<lastShot.current){lastShot.current=state.shotsFired;recoil.current=0;}
-    else if(state.shotsFired>lastShot.current){lastShot.current=state.shotsFired;recoil.current=.11;}
+    else if(state.shotsFired>lastShot.current){lastShot.current=state.shotsFired;recoil.current=M9.recoilKick;}
     recoil.current=Math.max(0,recoil.current-delta*1.25);if(slide.current)slide.current.position.z=-.17+recoil.current*.8;
     if(gun.current){
       const ads=state.adsBlend;
-      const local=new Vector3(-.33+ads*.33,-.28+ads*.18,-.62+ads*.08);
+      local.set(-.33+ads*.33,-.28+ads*.18,-.62+ads*.08);
       gun.current.position.copy(local.applyQuaternion(camera.quaternion).add(camera.position));
       gun.current.quaternion.copy(camera.quaternion);
-      gun.current.rotateX(-recoil.current+(state.reloading?Math.sin((1.5-state.reloadRemaining)*6)*.38:0));
+      gun.current.rotateX(-recoil.current+(state.reloading?Math.sin((M9.reloadSeconds-state.reloadRemaining)/M9.reloadSeconds*Math.PI)*.38:0));
     }
     const shot=runtime.getShotTrace();
     if(flash.current)flash.current.visible=!!shot;
     if(tracer.current&&impact.current){
       tracer.current.visible=!!shot;impact.current.visible=!!shot?.hit;
       if(shot){
-        const start=new Vector3(...shot.start),end=new Vector3(...shot.end);
-        const vector=end.clone().sub(start),length=vector.length();
+        start.set(...shot.start);end.set(...shot.end);
+        vector.copy(end).sub(start);const length=vector.length();
         tracer.current.position.copy(start.add(end).multiplyScalar(.5));
-        tracer.current.quaternion.copy(new Quaternion().setFromUnitVectors(axis,vector.normalize()));
+        tracer.current.quaternion.copy(rotation.setFromUnitVectors(axis,vector.normalize()));
         tracer.current.scale.set(1,length,1);
         impact.current.position.set(...shot.end);
       }

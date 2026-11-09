@@ -11,9 +11,10 @@ export class M9Controller {
   private ammo: number = M9.magazineSize; private reserve: number = M9.reserveOnSpawn; private reloadRemaining = 0; private cooldown = 0;
   private ads = false; private adsBlend = 0; private shotsFired = 0; private pendingShot: FireResult | null = null;
   tick(dt: number, intent: { fire: boolean; ads: boolean; reload: boolean }): void {
+    if (!Number.isFinite(dt) || dt <= 0) return;
     this.pendingShot = null;
     this.cooldown = Math.max(0, this.cooldown - dt);
-    this.ads = intent.ads;
+    this.ads = intent.ads && !intent.reload && this.reloadRemaining <= 0;
     this.adsBlend = Math.max(0, Math.min(1, this.adsBlend + (this.ads ? 1 : -1) * dt / M9.adsSeconds));
     if (this.reloadRemaining > 0) {
       this.reloadRemaining = Math.max(0, this.reloadRemaining - dt);

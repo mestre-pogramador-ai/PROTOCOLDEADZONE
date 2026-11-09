@@ -25,6 +25,7 @@ export interface PlayerMovementDiagnostics {
   requestedHorizontalMeters: number;
   resolvedHorizontalMeters: number;
   collisions: number;
+  reversePrevented: boolean;
 }
 
 /**
@@ -39,7 +40,7 @@ export class PlayerController {
   private crouching = false;
   private verticalVelocity = 0;
   private diagnostic: PlayerMovementDiagnostics = {
-    grounded: false, verticalVelocity: 0, requestedHorizontalMeters: 0, resolvedHorizontalMeters: 0, collisions: 0,
+    grounded: false, verticalVelocity: 0, requestedHorizontalMeters: 0, resolvedHorizontalMeters: 0, collisions: 0, reversePrevented: false,
   };
 
   constructor(
@@ -68,7 +69,19 @@ export class PlayerController {
 
     // Rapier shape-casts the capsule against the level and returns a safe sliding displacement.
     this.controller.computeColliderMovement(this.collider, desired);
-    const allowed = this.controller.computedMovement();
+    let allowed = this.controller.computedMovement();
+    // At multi-plane corners Rapier may return horizontal travel opposite to intent.
+    // Re-query a stationary horizontal step instead of applying or clamping that result.
+    const horizontalLength = Math.hypot(desired.x, desired.z);
+    const reversePrevented = this.grounded && horizontalLength > 1e-7 &&
+      (allowed.x * desired.x + allowed.z * desired.z) / horizontalLength < -.001;
+    if (reversePrevented) {
+      this.controller.computeColliderMovement(this.collider, { x: 0, y: desired.y, z: 0 });
+      allowed = this.controller.computedMovement();
+    }
+    // A ceiling contact must stop upward velocity, rather than pinning the capsule
+    // against the ceiling until gravity eventually reverses the jump.
+    if (desired.y > 0 && allowed.y < desired.y - .001) this.verticalVelocity = 0;
     const current = this.body.translation();
     this.body.setNextKinematicTranslation({
       x: current.x + allowed.x,
@@ -84,6 +97,7 @@ export class PlayerController {
       requestedHorizontalMeters: Math.hypot(desired.x, desired.z),
       resolvedHorizontalMeters: Math.hypot(allowed.x, allowed.z),
       collisions: this.controller.numComputedCollisions(),
+      reversePrevented,
     };
   }
 

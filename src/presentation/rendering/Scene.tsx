@@ -26,7 +26,7 @@ export function Scene({runtime}:{runtime:Runtime}){
    camera.position.set(render.x,render.y+smoothEyeHeight.current,render.z);
    const weapon=runtime.getWeaponState();
    if('fov' in camera && typeof camera.fov==='number'){
-     const desired=weapon.ads?Math.max(50,runtime.getFov()-18):runtime.getFov();
+     const desired=runtime.getFov()+(Math.max(50,runtime.getFov()-18)-runtime.getFov())*weapon.adsBlend;
      camera.fov+=(desired-camera.fov)*Math.min(1,delta*12);
      camera.updateProjectionMatrix();
    }
