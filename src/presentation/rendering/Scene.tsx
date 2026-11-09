@@ -6,6 +6,7 @@ import {PLAYER} from '../../gameplay/player/PlayerController';
 import {interpolatePosition} from '../../gameplay/player/MovementMath';
 import {M9Viewmodel} from './M9Viewmodel';
 import {InfectedView} from './InfectedView';
+import {EnvironmentLights} from './EnvironmentLights';
 import {ContainmentEnvironment} from './ContainmentEnvironment';
 /** Only bridge to the authoritative clock. Camera follows interpolated Rapier pose. */
 export function Scene({runtime,groundingEnabled=true}:{runtime:Runtime;groundingEnabled?:boolean}){
@@ -34,10 +35,7 @@ export function Scene({runtime,groundingEnabled=true}:{runtime:Runtime;grounding
  },-100);
  return <>
   <color attach="background" args={['#17232b']}/><fog attach="fog" args={['#17232b',22,46]}/>
-  <ambientLight intensity={.75}/><hemisphereLight args={['#b5c9ce','#454c48',1.35]}/>
-  <directionalLight position={[-4,10,5]} intensity={1.7} color="#e0e9e3" castShadow shadow-radius={3} shadow-normalBias={.025} shadow-mapSize={[1024,1024]} shadow-camera-left={-11} shadow-camera-right={11} shadow-camera-top={11} shadow-camera-bottom={-11} shadow-camera-far={35}/>
-  <pointLight position={[-3,2.95,-1]} intensity={16} color="#7ec2cb" distance={11}/>
-  <pointLight position={[7,2.85,-2.8]} intensity={12} color="#d16c58" distance={8}/>
+  <EnvironmentLights/>
   <ContainmentEnvironment runtime={runtime}/><InfectedView runtime={runtime} groundingEnabled={groundingEnabled}/><M9Viewmodel runtime={runtime}/>
  </>;
 }
