@@ -91,7 +91,7 @@ const fs=require('node:fs'),path=require('node:path');
   record.insufficient=await observe();if(record.insufficient.economy.credits!==500||record.insufficient.perks.length)throw new Error('Insufficient credit acquired a perk');
   const diagnostics=JSON.parse(fs.readFileSync(path.join(output,'diagnostics.json'),'utf8'));
   record.reportVersion=diagnostics.version;
-  if(diagnostics.version!=='M8.1'||!diagnostics.entries.some(e=>e.code==='user.marker'))throw new Error('Diagnostic export failed');
+  if(diagnostics.version!==(process.env.EXPECTED_REPORT_VERSION||'M8.1')||!diagnostics.entries.some(e=>e.code==='user.marker'))throw new Error('Diagnostic export failed');
  }catch(e){errors.push(e.message);}
  finally{fs.writeFileSync(path.join(output,'result.json'),JSON.stringify({record,errors,warnings},null,2));console.log(JSON.stringify({record,errors,warnings}));await browser.close();}
  if(errors.length)process.exitCode=1;
