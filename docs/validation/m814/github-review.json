@@ -1,0 +1,30 @@
+{
+  "pr": 10,
+  "url": "https://github.com/mestre-pogramador-ai/PROTOCOLDEADZONE/pull/10",
+  "draft": true,
+  "base": "m8.1.3-environment-polish",
+  "reviewedHead": "9b19bbc5cf802f395368ff920df128149ea1a21c",
+  "mergeable": "MERGEABLE",
+  "parentChain": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "parentMergeable": "MERGEABLE",
+  "historicalPR4": "CONFLICTING; not modified",
+  "checks": [
+    {
+      "name": "Vercel",
+      "state": "failure",
+      "description": "Git author Indiplayer must have access to the project on Vercel to create deployments."
+    },
+    {
+      "name": "Vercel Preview Comments",
+      "state": "success"
+    }
+  ],
+  "merged": false,
+  "productionDeployment": false,
+  "note": "Documentation-only follow-up commit after this check"
+}

@@ -1,0 +1,15 @@
+{
+  "parts": 348,
+  "roomBatches": 13,
+  "corridorBatches": 9,
+  "doorBatches": 5,
+  "triangles": 7178,
+  "vertexCount": 14564,
+  "attributeBytes": 466048,
+  "indexBytes": 43068,
+  "legacyNonIndexedEquivalent": {
+    "vertices": 21534,
+    "attributeBytes": 689088
+  },
+  "note": "CPU typed-array byte lengths, not measured VRAM; legacy equivalent from unchanged nonindexed part meshes"
+}

@@ -1,0 +1,245 @@
+{
+  "baseCommit": "71b6cea0443ad886b921ea39232422287ff0c63b",
+  "implementationCommit": "e455c8f",
+  "renderer": "SwiftShader",
+  "viewport": [
+    1280,
+    720
+  ],
+  "dpr": 1,
+  "samplesPerLoad": 48,
+  "before": {
+    "0": {
+      "fps": 3.13,
+      "medianMs": 310.75,
+      "p95Ms": 494.8,
+      "cpuSubmissionMedianMs": 0.7,
+      "render": {
+        "frame": 784,
+        "calls": 32,
+        "triangles": 25824,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 36,
+        "textures": 21
+      },
+      "programs": 13
+    },
+    "6": {
+      "fps": 2.82,
+      "medianMs": 356.65,
+      "p95Ms": 688.8,
+      "cpuSubmissionMedianMs": 1.4,
+      "render": {
+        "frame": 710,
+        "calls": 48,
+        "triangles": 68958,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 42,
+        "textures": 32
+      },
+      "programs": 16
+    },
+    "12": {
+      "fps": 2.38,
+      "medianMs": 414.75,
+      "p95Ms": 781.3,
+      "cpuSubmissionMedianMs": 2.0,
+      "render": {
+        "frame": 636,
+        "calls": 68,
+        "triangles": 112338,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 42,
+        "textures": 38
+      },
+      "programs": 16
+    },
+    "20": {
+      "fps": 2.13,
+      "medianMs": 467.45,
+      "p95Ms": 870.9,
+      "cpuSubmissionMedianMs": 2.7,
+      "render": {
+        "frame": 562,
+        "calls": 86,
+        "triangles": 148777,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 42,
+        "textures": 46
+      },
+      "programs": 16
+    }
+  },
+  "after": {
+    "0": {
+      "fps": 3.69,
+      "medianMs": 272.9,
+      "p95Ms": 538.2,
+      "cpuSubmissionMedianMs": 0.8,
+      "render": {
+        "frame": 790,
+        "calls": 32,
+        "triangles": 24402,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 45,
+        "textures": 19
+      },
+      "programs": 13
+    },
+    "6": {
+      "fps": 3.1,
+      "medianMs": 315.45,
+      "p95Ms": 369.2,
+      "cpuSubmissionMedianMs": 1.6,
+      "render": {
+        "frame": 714,
+        "calls": 48,
+        "triangles": 67536,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 51,
+        "textures": 30
+      },
+      "programs": 16
+    },
+    "12": {
+      "fps": 2.67,
+      "medianMs": 377.45,
+      "p95Ms": 435.5,
+      "cpuSubmissionMedianMs": 1.8,
+      "render": {
+        "frame": 638,
+        "calls": 68,
+        "triangles": 110916,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 51,
+        "textures": 36
+      },
+      "programs": 16
+    },
+    "20": {
+      "fps": 2.36,
+      "medianMs": 412.25,
+      "p95Ms": 557.7,
+      "cpuSubmissionMedianMs": 2.5,
+      "render": {
+        "frame": 562,
+        "calls": 86,
+        "triangles": 147355,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 51,
+        "textures": 44
+      },
+      "programs": 16
+    }
+  },
+  "visualMAE": {
+    "player": 0.078,
+    "wide": 0.0599,
+    "ceiling": 0.0358,
+    "console": 0.0828,
+    "pods": 0.0666,
+    "perks": 0.0597,
+    "door": 0.06
+  },
+  "combat": [
+    {
+      "count": 6,
+      "frames": 67,
+      "fps": 2.64,
+      "medianMs": 271.6,
+      "p95Ms": 1156.5,
+      "shots": 9,
+      "hits": 9,
+      "headshots": 9,
+      "kills": 4,
+      "health": 60,
+      "ammo": 6,
+      "credits": 950,
+      "render": {
+        "frame": 198,
+        "calls": 65,
+        "triangles": 68858,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 44,
+        "textures": 26
+      }
+    },
+    {
+      "count": 12,
+      "frames": 68,
+      "fps": 2.18,
+      "medianMs": 440.5,
+      "p95Ms": 1441.1,
+      "shots": 9,
+      "hits": 9,
+      "headshots": 9,
+      "kills": 4,
+      "health": 56,
+      "ammo": 6,
+      "credits": 950,
+      "render": {
+        "frame": 356,
+        "calls": 87,
+        "triangles": 108680,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 47,
+        "textures": 34
+      }
+    },
+    {
+      "count": 20,
+      "frames": 68,
+      "fps": 1.89,
+      "medianMs": 443.25,
+      "p95Ms": 1644.1,
+      "shots": 9,
+      "hits": 9,
+      "headshots": 9,
+      "kills": 4,
+      "health": 64,
+      "ammo": 6,
+      "credits": 950,
+      "render": {
+        "frame": 512,
+        "calls": 108,
+        "triangles": 158863,
+        "points": 0,
+        "lines": 0
+      },
+      "memory": {
+        "geometries": 50,
+        "textures": 42
+      }
+    }
+  ]
+}
