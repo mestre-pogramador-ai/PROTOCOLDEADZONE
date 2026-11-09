@@ -1,7 +1,7 @@
 import {BufferGeometry,BoxGeometry,CylinderGeometry,PlaneGeometry,Float32BufferAttribute,Matrix4,Euler,Quaternion,Vector3} from 'three';
-import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
+import {mergeGeometries,mergeVertices} from 'three/addons/utils/BufferGeometryUtils.js';
 import {ATLAS_TILES,type EnvironmentPart,type Surface} from './EnvironmentLayout';
-export interface EnvironmentBatch{surface:Surface;geometry:BufferGeometry;castShadow:boolean;receiveShadow:boolean;}
+export interface EnvironmentBatch{surface:Surface;geometry:BufferGeometry;castShadow:boolean;receiveShadow:boolean;bucket:string;}
 /** Flat bevels for industrial housings: 44 triangles instead of 108 for a
  * one-segment rounded box. No dense curved mesh on small machine edges. */
 function beveledBox(w:number,h:number,d:number):BufferGeometry{
@@ -52,16 +52,18 @@ export function createPartGeometry(part:EnvironmentPart):BufferGeometry{
  if(!g.getAttribute('uv'))g.setAttribute('uv',new Float32BufferAttribute(new Float32Array(g.getAttribute('position').count*2),2));
  return g;
 }
-export function buildEnvironmentBatches(parts:readonly EnvironmentPart[]):EnvironmentBatch[]{
- const grouped=new Map<string,{surface:Surface;shadow:boolean;pieces:BufferGeometry[]}>();
+export function buildEnvironmentBatches(parts:readonly EnvironmentPart[],partition:(part:EnvironmentPart)=>string=()=>'scene'):EnvironmentBatch[]{
+ const grouped=new Map<string,{surface:Surface;shadow:boolean;bucket:string;pieces:BufferGeometry[]}>();
  try{
-  for(const p of parts){const key=p.surface+'/'+Boolean(p.shadow),group=grouped.get(key)??{surface:p.surface,shadow:Boolean(p.shadow),pieces:[]};group.pieces.push(createPartGeometry(p));grouped.set(key,group);}
+  for(const p of parts){const bucket=partition(p),key=bucket+'/'+p.surface+'/'+Boolean(p.shadow),group=grouped.get(key)??{surface:p.surface,shadow:Boolean(p.shadow),bucket,pieces:[]};group.pieces.push(createPartGeometry(p));grouped.set(key,group);}
   const batches:EnvironmentBatch[]=[];
-  for(const {surface,shadow,pieces}of grouped.values()){
-   const geometry=mergeGeometries(pieces);if(!geometry)throw new Error(`Cannot batch environment surface ${surface}`);
+  for(const {surface,shadow,pieces,bucket}of grouped.values()){
+   const merged=mergeGeometries(pieces);if(!merged)throw new Error(`Cannot batch environment surface ${surface}`);
+   const geometry=mergeVertices(merged,1e-6);merged.dispose();
    // Roof/walls never cast the sun's shadow indoors. Props remain grounded by the
    // single soft shadow; indirect room illumination is represented by hemi/ambient.
-   batches.push({surface,geometry,castShadow:shadow,receiveShadow:shadow||surface==='floor'});
+   geometry.computeBoundingBox();geometry.computeBoundingSphere();
+   batches.push({surface,geometry,bucket,castShadow:shadow,receiveShadow:shadow||surface==='floor'});
   }
   return batches;
  }finally{for(const {pieces} of grouped.values())for(const g of pieces)g.dispose();}

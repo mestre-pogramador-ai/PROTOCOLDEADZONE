@@ -1,8 +1,12 @@
 import {useEffect,useMemo} from 'react';
 import {CanvasTexture,RepeatWrapping,SRGBColorSpace,MeshStandardMaterial,MeshBasicMaterial,DoubleSide,type Material,type Texture} from 'three';
+import {usePackedRoughness} from './EnvironmentShaders';
 import {ATLAS_TILES,type Surface} from './EnvironmentLayout';
 /** Original, deterministic local PBR art. No network, external fonts or private data. */
-export function createRoomSurfaces(){
+export interface EnvironmentSignage{roomName:string;subtitle:string;doorName:string;floorArea:string;powerCircuit:string}
+export const CONTAINMENT_SIGNAGE:EnvironmentSignage={roomName:'CONTENÇÃO // B-01',subtitle:'INSTALAÇÃO BIOLÓGICA • ACESSO CONTROLADO',doorName:'INTERTRAVA B-01',floorArea:'ÁREA DE CONTENÇÃO',powerCircuit:'CIRCUITO B-01'};
+export function createRoomSurfaces(overrides:Partial<EnvironmentSignage>={}){
+ const signage={...CONTAINMENT_SIGNAGE,...overrides};
  const textures:Texture[]=[];
  const make=(w:number,h:number,paint:(ctx:CanvasRenderingContext2D)=>void,srgb=true,repeat=false)=>{
   const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d');if(!ctx)throw new Error('Room surface canvas unavailable');paint(ctx);
@@ -30,7 +34,14 @@ export function createRoomSurfaces(){
  },!roughness,true);
  const materials={} as Record<Surface,Material>;
  for(const [kind,base,metalness]of [['floor','#6b7879',.15],['concrete','#818a87',.04],['paint','#84928c',.35],['metal','#55666c',.78]] as const){
-  materials[kind]=new MeshStandardMaterial({map:paintSurface(base,kind),roughnessMap:kind==='floor'||kind==='paint'?paintSurface(base,kind,true):null,roughness:kind==='metal'?.64:1,metalness});
+  const map=paintSurface(base,kind),material=new MeshStandardMaterial({map,roughness:kind==='metal'?.64:1,metalness});
+  if(kind==='floor'||kind==='paint'){
+   const roughness=paintSurface(base,kind,true),albedo=map.image as HTMLCanvasElement,roughCanvas=roughness.image as HTMLCanvasElement;
+   const ctx=albedo.getContext('2d')!,pixels=ctx.getImageData(0,0,512,512),rough=roughCanvas.getContext('2d')!.getImageData(0,0,512,512);
+   for(let i=0;i<pixels.data.length;i+=4)pixels.data[i+3]=rough.data[i+1];
+   ctx.putImageData(pixels,0,0);map.needsUpdate=true;roughness.dispose();textures.splice(textures.indexOf(roughness),1);usePackedRoughness(material);
+  }
+  materials[kind]=material;
  }
  materials.rubber=new MeshStandardMaterial({color:'#202c30',roughness:.91,metalness:.08});
  materials.hazard=new MeshStandardMaterial({color:'#bd9858',roughness:.78,metalness:.1});
@@ -45,7 +56,7 @@ export function createRoomSurfaces(){
   };
   const text=(s:string,x:number,y:number,size:number,color='#c9ded5')=>{c.font=`600 ${size}px monospace`;c.fillStyle=color;c.fillText(s,x,y);};
   const stripes=(w:number,y:number)=>{for(let x=-40;x<w+50;x+=48){c.fillStyle='#b49752';c.beginPath();c.moveTo(x,y);c.lineTo(x+24,y);c.lineTo(x+4,y+20);c.lineTo(x-20,y+20);c.fill();}};
-  tile('banner',(_,w)=>{text('CONTENÇÃO // B-01',35,85,64);text('INSTALAÇÃO BIOLÓGICA • ACESSO CONTROLADO',37,132,29);stripes(w,158);});
+  tile('banner',(_,w)=>{text(signage.roomName,35,85,64);text(signage.subtitle,37,132,29);stripes(w,158);});
   tile('bio',(_,w)=>{c.fillStyle='#baa15f';c.fillRect(12,12,w-24,232);text('☣',53,144,132,'#17292c');text('QUARENTENA',22,193,28,'#17292c');text('RISCO 03',48,225,22,'#17292c');});
   tile('console',()=>{
    text('CONTROLE DE CONTENÇÃO',24,43,28);text('PRESSÃO  0.23',26,86,21,'#8dd9c1');text('SELAGEM: FALHA',26,118,21,'#ee9b70');
@@ -53,10 +64,10 @@ export function createRoomSurfaces(){
    for(let i=0;i<7;i++){c.fillStyle=i<5?'#558a82':'#d28264';c.fillRect(300+i*24,65,15,64);}
   });
   tile('ammo',()=>{text('M9 // 9mm',19,57,30);text('REPOSIÇÃO',23,111,29,'#91d4b0');text('[ E ] COMPRAR',24,158,24);text('CRÉDITOS / HUD',22,209,20,'#c5aa71');});
-  tile('cabinet',()=>{text('ALTA TENSÃO',19,48,27,'#d4ba72');text('⚡',78,150,85,'#d1a55f');text('CIRCUITO B-01',20,193,23);text('FALHA / REDE',28,229,21,'#e18a71');});
+  tile('cabinet',()=>{text('ALTA TENSÃO',19,48,27,'#d4ba72');text('⚡',78,150,85,'#d1a55f');text(signage.powerCircuit,20,193,23);text('FALHA / REDE',28,229,21,'#e18a71');});
   tile('crate',()=>{text('BIO // 03',23,55,32);text('EQUIPAMENTO',23,102,25);text('ESTERILIZADO',23,139,24,'#92b9ae');stripes(256,188);text('PZD - 041',45,238,20);});
-  tile('door',()=>{text('INTERTRAVA B-01',29,61,43);text('SEGURANÇA',35,117,35,'#d6b572');text('ACESSO CONDICIONADO',34,165,28);stripes(512,210);});
-  tile('floor',()=>{text('MANTENHA LIVRE',38,89,47,'#b9a679');text('ÁREA DE CONTENÇÃO',40,148,36,'#b9a679');stripes(512,209);});
+  tile('door',()=>{text(signage.doorName,29,61,43);text('SEGURANÇA',35,117,35,'#d6b572');text('ACESSO CONDICIONADO',34,165,28);stripes(512,210);});
+  tile('floor',()=>{text('MANTENHA LIVRE',38,89,47,'#b9a679');text(signage.floorArea,40,148,36,'#b9a679');stripes(512,209);});
   tile('failure',()=>{text('SELAGEM PERDIDA',27,69,43,'#e5a28a');text('ISOLAR / NÃO OPERAR',29,121,31);text('SISTEMA EM EMERGÊNCIA',29,174,29,'#d0b47a');stripes(512,215);});
   tile('stain',()=>{c.clearRect(0,0,256,64);for(let i=0;i<90;i++){c.fillStyle=i%3?'#343a32':'#464337';c.beginPath();c.ellipse(15+random()*225,12+random()*40,2+random()*17,1+random()*5,-.15,0,Math.PI*2);c.fill();}});
   tile('scuff',()=>{c.clearRect(0,0,256,64);for(let i=0;i<12;i++){c.fillStyle='#364044';c.beginPath();c.ellipse(20+random()*220,8+random()*48,1+random()*4,1+random()*3,0,0,Math.PI*2);c.fill();}});
@@ -64,4 +75,4 @@ export function createRoomSurfaces(){
  materials.atlas=new MeshBasicMaterial({map:atlas,toneMapped:false,alphaTest:.1});
  return{materials,textures,dispose:()=>{Object.values(materials).forEach(m=>m.dispose());textures.forEach(t=>t.dispose());}};
 }
-export function useRoomSurfaces(){const resources=useMemo(createRoomSurfaces,[]);useEffect(()=>()=>resources.dispose(),[resources]);return resources;}
+export function useRoomSurfaces(overrides?:Partial<EnvironmentSignage>){const resources=useMemo(()=>createRoomSurfaces(overrides),[overrides]);useEffect(()=>()=>resources.dispose(),[resources]);return resources;}
