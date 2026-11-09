@@ -56,7 +56,7 @@ const path=require('node:path');
   await (await buttonDownload).saveAs(path.join(output,'button-diagnostics.json'));
   const report=JSON.parse(fs.readFileSync(path.join(output,'diagnostics.json'),'utf8'));
   record.reportVersion=report.version;record.marker=report.entries.some(entry=>entry.code==='user.marker');
-  if(!record.marker||report.version!=='M7.1')throw new Error('Missing marker or incorrect report version');
+  if(!record.marker||report.version!==(process.env.EXPECTED_REPORT_VERSION||'M7.1'))throw new Error('Missing marker or incorrect report version');
  }catch(error){errors.push(error.message);}
  finally{
   fs.writeFileSync(path.join(output,'result.json'),JSON.stringify({record,errors,warnings,httpErrors},null,2));
