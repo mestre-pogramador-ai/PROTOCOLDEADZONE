@@ -21,12 +21,12 @@ const fs=require('node:fs'),path=require('node:path');
   const security=await page.evaluate(()=>({node:typeof window.require,process:typeof window.process,pointerLock:!!document.pointerLockElement}));
   if(security.node!=='undefined'||security.process!=='undefined'||!security.pointerLock)throw new Error('Isolation or Pointer Lock failed');
   stage('pause');if(!await page.getByRole('button',{name:'RETOMAR OPERAÇÃO',exact:true}).isVisible())await page.keyboard.press('Escape');await page.getByRole('button',{name:'RETOMAR OPERAÇÃO',exact:true}).waitFor();
-  const nativeF11=()=>app.evaluate(({BrowserWindow})=>{const contents=BrowserWindow.getAllWindows()[0].webContents;contents.sendInputEvent({type:'keyDown',keyCode:'F11'});contents.sendInputEvent({type:'keyUp',keyCode:'F11'});});
-  stage('fullscreen');await nativeF11();let full=false;for(let i=0;i<30&&!full;i++){full=await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].isFullScreen());if(!full)await page.waitForTimeout(100);}if(!full)throw new Error('Fullscreen failed');await nativeF11();
+  const nativeKey=key=>app.evaluate(({BrowserWindow},keyCode)=>{const contents=BrowserWindow.getAllWindows()[0].webContents;contents.sendInputEvent({type:'keyDown',keyCode});contents.sendInputEvent({type:'keyUp',keyCode});},key);
+  stage('fullscreen');await nativeKey('F11');let full=false;for(let i=0;i<30&&!full;i++){full=await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].isFullScreen());if(!full)await page.waitForTimeout(100);}if(!full)throw new Error('Fullscreen failed');await nativeKey('F11');
   await page.screenshot({path:path.join(out,'paused.png')});
   stage('diagnostics keyboard');const reportPath=path.resolve(out,'diagnostics.json');fs.rmSync(reportPath,{force:true});
-  await app.evaluate(({session},file)=>{session.defaultSession.once('will-download',(_event,item)=>item.setSavePath(file));},reportPath);
-  await page.keyboard.press('F8');await page.keyboard.press('F9');
+  await app.evaluate(({app,session},file)=>{app.desktopSmokeDownloads=[];session.defaultSession.prependListener('will-download',(event,item,contents)=>app.desktopSmokeDownloads.push({filename:item.getFilename(),url:item.getURL(),origin:contents?.getURL()}));session.defaultSession.once('will-download',(_event,item)=>item.setSavePath(file));},reportPath);
+  await nativeKey('F8');await nativeKey('F9');
   for(let i=0;i<100&&!fs.existsSync(reportPath);i++)await page.waitForTimeout(100);
   const report=JSON.parse(fs.readFileSync(reportPath,'utf8'));if(!report.entries.some(e=>e.code==='user.marker'))throw new Error('Diagnostic marker missing');
   stage('diagnostics button');const buttonPath=path.resolve(out,'button-diagnostics.json');fs.rmSync(buttonPath,{force:true});
@@ -37,5 +37,5 @@ const fs=require('node:fs'),path=require('node:path');
   fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({security,menu,gpu,requests,errors},null,2));if(errors.length)throw new Error(errors.join('\n'));
   stage('close');const exited=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(new Error('Application did not close')),15000);app.process().once('exit',code=>{clearTimeout(timer);code===0?resolve():reject(new Error('Abnormal exit '+code));});});
   await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].close());await exited;stage('passed');
- }catch(error){const page=app.windows()[0];if(page){await page.screenshot({path:path.join(out,'failure.png'),timeout:10000}).catch(()=>{});fs.writeFileSync(path.join(out,'failure-state.txt'),await page.locator('body').innerText({timeout:5000}).catch(()=>''));}throw error;}finally{fs.writeFileSync(path.join(out,'network-and-errors.json'),JSON.stringify({requests,errors},null,2));if(app.process().exitCode===null)await app.close();}
+ }catch(error){fs.writeFileSync(path.join(out,'download-events.json'),JSON.stringify(await app.evaluate(({app})=>app.desktopSmokeDownloads||[]).catch(()=>[]),null,2));const page=app.windows()[0];if(page){await page.screenshot({path:path.join(out,'failure.png'),timeout:10000}).catch(()=>{});fs.writeFileSync(path.join(out,'failure-state.txt'),await page.locator('body').innerText({timeout:5000}).catch(()=>''));}throw error;}finally{fs.writeFileSync(path.join(out,'network-and-errors.json'),JSON.stringify({requests,errors},null,2));if(app.process().exitCode===null)await app.close();}
 })().catch(e=>{fs.mkdirSync('desktop-evidence',{recursive:true});fs.writeFileSync('desktop-evidence/failure.txt',e.stack||String(e));console.error(e);process.exitCode=1;});
