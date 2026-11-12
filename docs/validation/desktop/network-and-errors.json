@@ -1,0 +1,21 @@
+{
+  "requests": [
+    "pdz://game/index.html?debugMovement=1",
+    "pdz://game/assets/index-FjVlObb-.js",
+    "pdz://game/assets/index-CkQrLLJq.css",
+    "pdz://game/assets/models/weapons/m9-service.glb",
+    "pdz://game/assets/models/viewmodels/operator-arms.glb",
+    "pdz://game/assets/models/characters/infected-worker.glb",
+    "pdz://game/assets/models/characters/infected-hunter.glb",
+    "blob:pdz://game/53e7bbe9-3e16-49b3-a601-b50c315da7b1",
+    "blob:pdz://game/b788a1a8-737a-4d8e-99de-0083418e33bc",
+    "blob:pdz://game/649a5d9c-144f-4982-9e29-1f71e65cdfef",
+    "blob:pdz://game/aad2a62c-9921-448a-a127-3f2cfaa5c9b6",
+    "blob:pdz://game/476539b5-5f01-485b-b8cd-5210f7bc1ccf",
+    "blob:pdz://game/1dd97b6e-2d77-4c3f-8139-99cbba128f39",
+    "blob:pdz://game/2caeaa6b-4fd1-4d03-a536-da0093fa7799",
+    "blob:pdz://game/62aacb28-5817-40ee-9ac9-953c1d06c9ad",
+    "blob:pdz://game/9a1364fc-b4db-4a3a-90df-27ebda25d7f6"
+  ],
+  "errors": []
+}
