@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path');
 (async()=>{
  const out='desktop-evidence';fs.mkdirSync(out,{recursive:true});const errors=[],requests=[];
  const options=process.env.DESKTOP_EXECUTABLE?{executablePath:path.resolve(process.env.DESKTOP_EXECUTABLE)}:{args:['.']};
- const app=await _electron.launch({...options,timeout:60000});
+ const app=await _electron.launch({...options,chromiumSandbox:true,timeout:60000});
  try{
   const page=await app.firstWindow();page.setDefaultTimeout(90000);
   page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
@@ -22,9 +22,10 @@ const fs=require('node:fs'),path=require('node:path');
   await page.keyboard.press('F8');await page.keyboard.press('F9');
   for(let i=0;i<100&&!fs.existsSync(reportPath);i++)await page.waitForTimeout(100);
   const report=JSON.parse(fs.readFileSync(reportPath,'utf8'));if(!report.entries.some(e=>e.code==='user.marker'))throw new Error('Diagnostic marker missing');
+  const gpu=await app.evaluate(({app})=>app.getGPUFeatureStatus());
   const menu=await app.evaluate(({Menu})=>Menu.getApplicationMenu().items[0].submenu.items.map(i=>i.label));
-  fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({security,menu,requests,errors},null,2));if(errors.length)throw new Error(errors.join('\n'));
+  fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({security,menu,gpu,requests,errors},null,2));if(errors.length)throw new Error(errors.join('\n'));
   const exited=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(new Error('Application did not close')),15000);app.process().once('exit',code=>{clearTimeout(timer);code===0?resolve():reject(new Error('Abnormal exit '+code));});});
   await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].close());await exited;
- }finally{if(app.process().exitCode===null)await app.close();}
+ }finally{fs.writeFileSync(path.join(out,'network-and-errors.json'),JSON.stringify({requests,errors},null,2));if(app.process().exitCode===null)await app.close();}
 })().catch(e=>{fs.mkdirSync('desktop-evidence',{recursive:true});fs.writeFileSync('desktop-evidence/failure.txt',e.stack||String(e));console.error(e);process.exitCode=1;});
