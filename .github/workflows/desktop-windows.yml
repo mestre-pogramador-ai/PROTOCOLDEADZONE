@@ -22,12 +22,14 @@ jobs:
       - run: npx tsc -b
       - run: npm run test:motion
       - run: npm run desktop:build
+        id: package
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'
       - run: npm run test:desktop
         env:
           DESKTOP_EXECUTABLE: release/win-unpacked/PROTOCOL-DEAD-ZONE.exe
       - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() && steps.package.outcome == 'success' }}
         with:
           name: PROTOCOL-DEAD-ZONE-Windows-x64
           path: release/*.exe
