@@ -9,19 +9,25 @@ const fs=require('node:fs'),path=require('node:path');
   page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
   page.on('request',r=>{requests.push(r.url());if(!r.url().startsWith('pdz://game/')&&!r.url().startsWith('blob:'))errors.push('Nonlocal request');});
   page.on('response',r=>{if(r.status()>=400)errors.push('HTTP '+r.status()+' '+new URL(r.url()).pathname);});
+  await page.goto('pdz://game/index.html?debugMovement=1');
   await page.getByRole('button',{name:'INICIAR OPERAÇÃO',exact:true}).click();
   await page.waitForFunction(()=>document.querySelector('.m6-ammo')?.textContent.includes('15 / 90'));
+  await page.waitForFunction(()=>document.querySelector('.m61-motion-debug')?.textContent.includes('CHÃO'));
+  await page.keyboard.down('KeyW');try{await page.waitForFunction(()=>Number(document.querySelector('.m61-motion-debug')?.textContent.match(/passo permitido ([0-9.]+)/)?.[1])>.001);}finally{await page.keyboard.up('KeyW');}
   await page.mouse.down();try{await page.waitForFunction(()=>document.querySelector('.m6-ammo')?.textContent.includes('14 / 90'));}finally{await page.mouse.up();}
   const security=await page.evaluate(()=>({node:typeof window.require,process:typeof window.process,pointerLock:!!document.pointerLockElement}));
   if(security.node!=='undefined'||security.process!=='undefined'||!security.pointerLock)throw new Error('Isolation or Pointer Lock failed');
   await page.keyboard.press('F11');let full=false;for(let i=0;i<30&&!full;i++){full=await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].isFullScreen());if(!full)await page.waitForTimeout(100);}if(!full)throw new Error('Fullscreen failed');await page.keyboard.press('F11');
-  await page.keyboard.press('Escape');await page.getByRole('button',{name:'RETOMAR OPERAÇÃO',exact:true}).waitFor();
+  if(!await page.getByRole('button',{name:'RETOMAR OPERAÇÃO',exact:true}).isVisible())await page.keyboard.press('Escape');await page.getByRole('button',{name:'RETOMAR OPERAÇÃO',exact:true}).waitFor();
   await page.screenshot({path:path.join(out,'paused.png')});
-  const reportPath=path.resolve(out,'diagnostics.json');
+  const reportPath=path.resolve(out,'diagnostics.json');fs.rmSync(reportPath,{force:true});
   await app.evaluate(({session},file)=>{session.defaultSession.once('will-download',(_event,item)=>item.setSavePath(file));},reportPath);
   await page.keyboard.press('F8');await page.keyboard.press('F9');
   for(let i=0;i<100&&!fs.existsSync(reportPath);i++)await page.waitForTimeout(100);
   const report=JSON.parse(fs.readFileSync(reportPath,'utf8'));if(!report.entries.some(e=>e.code==='user.marker'))throw new Error('Diagnostic marker missing');
+  const buttonPath=path.resolve(out,'button-diagnostics.json');fs.rmSync(buttonPath,{force:true});
+  await app.evaluate(({session},file)=>{session.defaultSession.once('will-download',(_event,item)=>item.setSavePath(file));},buttonPath);
+  await page.getByRole('button',{name:'BAIXAR ERROS'}).click();for(let i=0;i<100&&!fs.existsSync(buttonPath);i++)await page.waitForTimeout(100);JSON.parse(fs.readFileSync(buttonPath,'utf8'));
   const gpu=await app.evaluate(({app})=>app.getGPUFeatureStatus());
   const menu=await app.evaluate(({Menu})=>Menu.getApplicationMenu().items[0].submenu.items.map(i=>i.label));
   fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({security,menu,gpu,requests,errors},null,2));if(errors.length)throw new Error(errors.join('\n'));

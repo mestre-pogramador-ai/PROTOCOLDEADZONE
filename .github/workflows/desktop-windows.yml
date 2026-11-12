@@ -4,6 +4,7 @@ on:
   pull_request:
   push:
     branches: [main, desktop-windows-test-build]
+    paths-ignore: ['**/*.md', 'docs/**']
 permissions:
   contents: read
 jobs:
