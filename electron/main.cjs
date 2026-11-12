@@ -3,7 +3,7 @@ const path=require('node:path');
 const {assetResponse}=require('./assets.cjs');
 const {ORIGIN,isLocal}=require('./policy.cjs');
 protocol.registerSchemesAsPrivileged([{scheme:'pdz',privileges:{standard:true,secure:true,supportFetchAPI:true,corsEnabled:true}}]);
-const csp="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-src 'none'";
+const csp="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-src 'none'";
 let window;
 if(!app.requestSingleInstanceLock())app.quit();
 else {
