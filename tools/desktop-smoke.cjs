@@ -50,6 +50,9 @@ const fs=require('node:fs'),path=require('node:path');
   const menu=await app.evaluate(({Menu})=>Menu.getApplicationMenu().items[0].submenu.items.map(i=>i.label));
   fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({security,menu,gpu,webgl,requests,errors},null,2));if(errors.length)throw new Error(errors.join('\n'));
   stage('close');const exited=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(new Error('Application did not close')),15000);child.once('exit',code=>{clearTimeout(timer);code===0?resolve():reject(new Error('Abnormal exit '+code));});});
-  await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].close());await exited;stage('passed');
+  await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].close());
+  // Playwright keeps a Node inspector connection open. Its graceful close
+  // detaches the inspector; waiting for OS exit first can deadlock the driver.
+  await app.close();await exited;stage('passed');
  }catch(error){if(child.exitCode===null){fs.writeFileSync(path.join(out,'download-state.json'),JSON.stringify(await app.evaluate(({app})=>app.desktopSmokeDownloadState||'not started').catch(()=>null)));const page=app.windows()[0];if(page){await page.screenshot({path:path.join(out,'failure.png'),timeout:10000}).catch(()=>{});fs.writeFileSync(path.join(out,'failure-state.txt'),await page.locator('body').innerText({timeout:5000}).catch(()=>''));}}throw error;}finally{fs.writeFileSync(path.join(out,'network-and-errors.json'),JSON.stringify({requests,errors},null,2));if(child.exitCode===null)await app.close();}
 })().catch(e=>{fs.mkdirSync('desktop-evidence',{recursive:true});fs.writeFileSync('desktop-evidence/failure.txt',e.stack||String(e));console.error(e);process.exitCode=1;});
