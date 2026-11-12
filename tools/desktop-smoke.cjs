@@ -1,0 +1,30 @@
+const {_electron}=require('playwright-core');
+const fs=require('node:fs'),path=require('node:path');
+(async()=>{
+ const out='desktop-evidence';fs.mkdirSync(out,{recursive:true});const errors=[],requests=[];
+ const options=process.env.DESKTOP_EXECUTABLE?{executablePath:path.resolve(process.env.DESKTOP_EXECUTABLE)}:{args:['.']};
+ const app=await _electron.launch({...options,timeout:60000});
+ try{
+  const page=await app.firstWindow();page.setDefaultTimeout(90000);
+  page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+  page.on('request',r=>{requests.push(r.url());if(!r.url().startsWith('pdz://game/')&&!r.url().startsWith('blob:'))errors.push('Nonlocal request');});
+  page.on('response',r=>{if(r.status()>=400)errors.push('HTTP '+r.status()+' '+new URL(r.url()).pathname);});
+  await page.getByRole('button',{name:'INICIAR OPERAÇÃO',exact:true}).click();
+  await page.waitForFunction(()=>document.querySelector('.m6-ammo')?.textContent.includes('15 / 90'));
+  await page.mouse.down();try{await page.waitForFunction(()=>document.querySelector('.m6-ammo')?.textContent.includes('14 / 90'));}finally{await page.mouse.up();}
+  const security=await page.evaluate(()=>({node:typeof window.require,process:typeof window.process,pointerLock:!!document.pointerLockElement}));
+  if(security.node!=='undefined'||security.process!=='undefined'||!security.pointerLock)throw new Error('Isolation or Pointer Lock failed');
+  await page.keyboard.press('F11');let full=false;for(let i=0;i<30&&!full;i++){full=await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].isFullScreen());if(!full)await page.waitForTimeout(100);}if(!full)throw new Error('Fullscreen failed');await page.keyboard.press('F11');
+  await page.keyboard.press('Escape');await page.getByRole('button',{name:'RETOMAR OPERAÇÃO',exact:true}).waitFor();
+  await page.screenshot({path:path.join(out,'paused.png')});
+  const reportPath=path.resolve(out,'diagnostics.json');
+  await app.evaluate(({session},file)=>{session.defaultSession.once('will-download',(_event,item)=>item.setSavePath(file));},reportPath);
+  await page.keyboard.press('F8');await page.keyboard.press('F9');
+  for(let i=0;i<100&&!fs.existsSync(reportPath);i++)await page.waitForTimeout(100);
+  const report=JSON.parse(fs.readFileSync(reportPath,'utf8'));if(!report.entries.some(e=>e.code==='user.marker'))throw new Error('Diagnostic marker missing');
+  const menu=await app.evaluate(({Menu})=>Menu.getApplicationMenu().items[0].submenu.items.map(i=>i.label));
+  fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({security,menu,requests,errors},null,2));if(errors.length)throw new Error(errors.join('\n'));
+  const exited=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(new Error('Application did not close')),15000);app.process().once('exit',code=>{clearTimeout(timer);code===0?resolve():reject(new Error('Abnormal exit '+code));});});
+  await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].close());await exited;
+ }finally{if(app.process().exitCode===null)await app.close();}
+})().catch(e=>{fs.mkdirSync('desktop-evidence',{recursive:true});fs.writeFileSync('desktop-evidence/failure.txt',e.stack||String(e));console.error(e);process.exitCode=1;});
