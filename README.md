@@ -1,6 +1,6 @@
 # PROTOCOL: DEAD ZONE
 
-**M7.1 — Munição e sobrevivência (v0.8.1)** · FPS 3D de sobrevivência no navegador, em desenvolvimento.
+**M8.1 — Perks e progressão (v0.9.1)** · FPS 3D de sobrevivência no navegador, em desenvolvimento.
 
 Este projeto mantém os marcos M0–M6.2 e introduz variantes de infectados nas rodadas. A primeira arena inclui:
 menu, partida, preparação, rodadas, infectados, combate M9, créditos, porta comprável,
@@ -114,3 +114,21 @@ socorro gratuitas. Novas concessões exigem 30 segundos de simulação; a pausa
 congela essa espera. Não há créditos grátis nem socorro quando é possível comprar.
 
 Validação, balanceamento e limites: [relatório M7.1](M7_1_TEST_REPORT.md).
+
+## M8.1 — Perks de sessão
+
+Quatro máquinas ficam junto à parede sul da Sala de Contenção, identificadas
+por nome, cor e preço. Aproxime-se e use **E**:
+
+| Perk | Preço | Benefício |
+| --- | ---: | --- |
+| Vitalidade | 2.500 CR | Vida máxima 150; +50 de vida atual ao comprar |
+| Mãos Rápidas | 2.000 CR | Recarga 25% menor, a partir da próxima recarga |
+| Impulso | 2.000 CR | Velocidade +12%, sem alterar o salto |
+| Blindagem Reativa | 3.500 CR | Dano recebido -15% |
+
+Máximo de quatro perks. Comprar novamente não cobra nem acumula efeitos.
+Morte ou reinício removem todos. Estação de munição e porta permanecem disponíveis.
+
+Consulte [M8_1_TEST_REPORT.md](M8_1_TEST_REPORT.md) para validação,
+análise econômica até R15 e limitações dos testes na nuvem.

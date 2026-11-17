@@ -1,7 +1,14 @@
 /** M1: mapa fixo autoral; medidas em metros, Y para cima. */
 export type Vec3 = readonly [number, number, number];
 export interface SolidModule { id: string; kind: 'floor' | 'wall' | 'ceiling' | 'prop' | 'doorFrame'; position: Vec3; size: Vec3; material: 'floor' | 'wall' | 'trim' | 'hazard' | 'glass'; collision: boolean }
+export const PERK_MACHINES=[
+ {id:'perk-vitality',perk:'vitality',position:[-3,.9,7.1] as Vec3},
+ {id:'perk-quick-hands',perk:'quickHands',position:[0,.9,7.1] as Vec3},
+ {id:'perk-impulse',perk:'impulse',position:[3.5,.9,7.1] as Vec3},
+ {id:'perk-armor',perk:'reactiveArmor',position:[6,.9,7.1] as Vec3},
+] as const;
 export const CONTAINMENT_MODULES: readonly SolidModule[] = [
+  ...PERK_MACHINES.map(m=>({id:m.id,kind:'prop' as const,position:m.position,size:[.6,1.8,.45] as Vec3,material:'trim' as const,collision:true})),
   {id:'ammo-station',kind:'prop',position:[-2.5,.6,-1.5],size:[.8,1.2,.5],material:'trim',collision:true},
   {id:'floor-main',kind:'floor',position:[0,-0.25,0],size:[16,.5,16],material:'floor',collision:true},
   {id:'floor-corridor',kind:'floor',position:[14,-.25,0],size:[12,.5,4],material:'floor',collision:true},

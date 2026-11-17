@@ -24,7 +24,7 @@ export function M9Viewmodel({runtime}:{runtime:Runtime}) {
       local.set(-.33+ads*.33,-.28+ads*.18,-.62+ads*.08);
       gun.current.position.copy(local.applyQuaternion(camera.quaternion).add(camera.position));
       gun.current.quaternion.copy(camera.quaternion);
-      gun.current.rotateX(-recoil.current+(state.reloading?Math.sin((M9.reloadSeconds-state.reloadRemaining)/M9.reloadSeconds*Math.PI)*.38:0));
+      gun.current.rotateX(-recoil.current+(state.reloading?Math.sin((state.reloadDuration-state.reloadRemaining)/state.reloadDuration*Math.PI)*.38:0));
     }
     const shot=runtime.getShotTrace();
     if(flash.current)flash.current.visible=!!shot;

@@ -132,3 +132,9 @@ html,body,#root{width:100%;height:100%;overflow:hidden}
 .m7-threats { display: flex; flex-direction: column; gap: .2rem; font-size: .65rem; margin-top: .5rem; }
 
 @media(max-width:760px){.m6-errors{right:10px;bottom:180px;font-size:10px}}
+
+.m81-perks { position:absolute;left:50%;top:22px;transform:translateX(-50%);z-index:4;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;max-width:48%;pointer-events:none; }
+.m81-perks span { border:1px solid;padding:6px 8px;background:#102027e8;font-size:11px; }
+.m81-perks b { display:inline-block;min-width:16px; }
+.m6-interact { max-width:min(80%,720px);text-align:center; }
+@media(max-width:760px){.m81-perks{top:10px;max-width:55%;gap:3px}.m81-perks span{font-size:9px;padding:3px}.m81-perks span b{min-width:10px}}

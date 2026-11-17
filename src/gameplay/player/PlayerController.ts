@@ -49,7 +49,7 @@ export class PlayerController {
     private readonly controller: RAPIER.KinematicCharacterController,
   ) {}
 
-  tick(input: InputSnapshot, yaw: number, dt: number): void {
+  tick(input: InputSnapshot, yaw: number, dt: number, speedMultiplier=1): void {
     if (!Number.isFinite(dt) || dt <= 0) return;
     this.crouching = input.held.has('crouch');
     const speed = this.crouching
@@ -58,7 +58,7 @@ export class PlayerController {
       : input.held.has('sprint') ? PLAYER.sprintSpeed
       : PLAYER.walkSpeed;
 
-    const horizontal = horizontalDisplacement(input.moveX, input.moveY, yaw, speed, dt);
+    const horizontal = horizontalDisplacement(input.moveX, input.moveY, yaw, speed*(Number.isFinite(speedMultiplier)&&speedMultiplier>0?speedMultiplier:1), dt);
     const vertical = advanceVerticalVelocity(
       this.verticalVelocity, this.grounded, input.pressed.has('jump'), this.crouching, dt,
       { gravity: PLAYER.gravity, jumpSpeed: PLAYER.jumpSpeed,

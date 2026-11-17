@@ -1,3 +1,5 @@
+import {PerkManager} from '../gameplay/perks/PerkManager';
+import {perkRegistry} from '../gameplay/perks/PerkRegistry';
 import { ENEMY_ARCHETYPES, unlockedEnemy } from '../gameplay/enemies/EnemyArchetypes';
 import { diagnostics } from '../core/diagnostics/Diagnostics';
 import RAPIER from '@dimforge/rapier3d-compat';
@@ -8,7 +10,7 @@ import { InputManager } from '../core/input/InputManager';
 import { Lifecycle } from '../core/lifecycle/Lifecycle';
 import { AssetManager } from '../infrastructure/assets/AssetManager';
 import { PhysicsWorld, type PhysicsSnapshot } from '../physics/PhysicsWorld';
-import { AMMO_STATION, DOOR } from '../world/maps/containment';
+import { AMMO_STATION, PERK_MACHINES, DOOR } from '../world/maps/containment';
 import { M9, M9Controller } from '../gameplay/weapons/M9';
 import type { CombatTrace } from '../gameplay/combat/EnemyHitScan';
 import {resolveShot} from '../gameplay/combat/ResolveShot';
@@ -42,6 +44,7 @@ export class Runtime {
   readonly rounds=new RoundDirector();
   readonly economy=new EconomyManager();
   readonly metrics=new SessionMetrics();
+  readonly perks=new PerkManager(this.economy,perkRegistry,()=>this.syncPerkEffects());
   readonly ammoSupply=new AmmoSupply(this.weapon,this.economy);
   private ammoRequest=0;
   private physics:PhysicsWorld;
@@ -64,6 +67,11 @@ export class Runtime {
     if(Number.isFinite(fov))this.fov=Math.max(70,Math.min(100,fov));
     if(Number.isFinite(sensitivity))this.sensitivity=.0022*Math.max(.3,Math.min(2.5,sensitivity));
   }
+  private syncPerkEffects():void{
+    const effects=this.perks.effects();
+    this.playerDamage.configure(effects.maxHealth,effects.damageMultiplier,true);
+    this.weapon.configureReloadMultiplier(effects.reloadMultiplier);
+  }
   getFov():number{return this.fov;}
   start():void{this.ensureActive();if(this.gameOver)return;this.input.attach();this.input.clear();this.physics.syncInterpolation();this.lifecycle.start();this.clock.resume();}
   pause():void{if(this.lifecycle.state!=='running')return;diagnostics.record('info','session.paused');this.lifecycle.pause();this.clock.pause();this.input.clear();}
@@ -71,7 +79,7 @@ export class Runtime {
   reset():void{
     this.ensureActive();this.clock.pause();this.lifecycle.reset();
     diagnostics.record('info','session.reset');this.physics.dispose();this.physics=new PhysicsWorld();this.clock.reset();this.input.clear();
-    this.weapon.reset();this.ammoSupply.reset();this.ammoRequest=0;this.enemies.clear();this.rounds.reset();this.economy.reset();this.metrics.reset();
+    this.weapon.reset();this.ammoSupply.reset();this.ammoRequest=0;this.enemies.clear();this.rounds.reset();this.economy.reset();this.perks.reset();this.metrics.reset();
     this.lastTrace=null;this.traceAge=Infinity;this.yaw=0;this.pitch=0;
     this.playerDamage.reset();this.hitAge=Infinity;this.kills=0;this.lastHeadshot=false;
     this.gameOver=false;this.lastDamageAngle=0;this.spawnSequence=0;
@@ -94,6 +102,12 @@ export class Runtime {
     }
     if(Math.hypot(p[0]-DOOR.position[0],p[2]-DOOR.position[2])<2.8)
       return {kind:'door' as const,message:this.isDoorOpen()?'CORREDOR DESBLOQUEADO':`[ E ] DESTRAVAR PORTA · ${ECONOMY.containmentDoorPrice} CR`};
+    let nearest:typeof PERK_MACHINES[number]|undefined,distance=1.8;
+    for(const machine of PERK_MACHINES){const d=Math.hypot(p[0]-machine.position[0],p[2]-machine.position[2]);if(d<distance){distance=d;nearest=machine;}}
+    if(nearest){
+      const perk=perkRegistry.get(nearest.perk)!;
+      return {kind:'perk' as const,id:perk.id,message:`${this.perks.has(perk.id)?'':'[ E ] '}${perk.name} · ${perk.price.toLocaleString('pt-BR')} CR · ${perk.description}${this.perks.has(perk.id)?' · JÁ ADQUIRIDO':''}`};
+    }
     return null;
   }
   canInteract():boolean{return this.getInteraction()!==null;}
@@ -112,6 +126,14 @@ export class Runtime {
   interact():boolean{
     if(this.gameOver||this.lifecycle.state!=='running')return false;
     const interaction=this.getInteraction();if(!interaction)return false;
+    if(interaction.kind==='perk'){
+      const result=this.perks.buy(interaction.id),perk=perkRegistry.get(interaction.id)!;
+      this.announce(result==='acquired'?`${perk.name.toUpperCase()} ATIVADO`:result==='owned'?'PERK JÁ ADQUIRIDO':result==='limit'?'LIMITE DE 4 PERKS':'CRÉDITOS INSUFICIENTES');
+      diagnostics.record(result==='acquired'?'info':'warning','perk.'+result,{price:perk.price});
+      if(result==='acquired'){this.bus.emit('perk:changed',{});this.bus.emit('economy:purchase',{price:perk.price});}
+      else this.bus.emit('economy:denied',{price:perk.price});
+      return result==='acquired';
+    }
     if(interaction.kind==='ammo'){
       const result=this.ammoSupply.buy(++this.ammoRequest);
       const success=result.status==='paid'||result.status==='emergency';
@@ -136,7 +158,7 @@ export class Runtime {
     this.frameStats=this.clock.frame(delta,dt=>{
       this.metrics.tick(dt);this.ammoSupply.tick(dt);
       const input=this.input.snapshot();
-      this.physics.step(dt,input,this.yaw);
+      this.physics.step(dt,input,this.yaw,this.perks.effects().speedMultiplier);
       if(this.physics.movementDiagnostics().reversePrevented)this.reverseTicks++;
       if(++this.diagnosticTicks%60===0){
         if(this.reverseTicks)diagnostics.record('warning','physics.reversePrevented',{ticks:this.reverseTicks});
@@ -180,7 +202,7 @@ export class Runtime {
         }
       }
       this.notificationRemaining=Math.max(0,this.notificationRemaining-dt);
-      if(this.playerDamage.health<=0){this.gameOver=true;this.bus.emit('session:gameover',{rounds:this.rounds.snapshot().completed,kills:this.kills});this.pause();return;}
+      if(this.playerDamage.health<=0){this.gameOver=true;this.perks.clearOnDeath();this.bus.emit('perk:changed',{});this.bus.emit('session:gameover',{rounds:this.rounds.snapshot().completed,kills:this.kills});this.pause();return;}
       const result=this.rounds.tick(dt,()=>this.enemies.alive(),(hp,kind)=>{
         const spawn=chooseSpawn({x:px,z:pz,doorOpen:this.isDoorOpen(),
           sequence:this.spawnSequence++,yaw:this.yaw,enemies:this.enemies.snapshots()});
@@ -206,7 +228,7 @@ export class Runtime {
     earned:e.lifetimeEarned,spent:e.lifetimeSpent,credits:e.credits,doorPurchased:e.doorPurchased,
   });}
   getPrompt(){return {message:this.notificationRemaining>0?this.notification:'',remaining:this.notificationRemaining};}
-  getCombatState(){return {health:this.playerDamage.health,maxHealth:100,kills:this.kills,alive:this.enemies.alive(),
+  getCombatState(){return {health:this.playerDamage.health,maxHealth:this.playerDamage.maxHealth,kills:this.kills,alive:this.enemies.alive(),
     hitRecently:this.hitAge<.55,damageAngle:this.lastDamageAngle,gameOver:this.gameOver,lastHeadshot:this.lastHeadshot,
     hitMarker:this.traceAge<.14&&this.lastTrace!==null&&this.lastTrace.enemyId!==null,
     damageEvents:this.playerDamage.events,invulnerability:this.playerDamage.immunity};}
