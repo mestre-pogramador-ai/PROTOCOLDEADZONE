@@ -6,7 +6,9 @@ export type AppEvents = {
   'session:reset': { sessionId: number };
   'session:ended': { sessionId: number };
   'asset:failed': { key: string; message: string };
-  'combat:shot': { hit: boolean; headshot: boolean };
+  'combat:shot': { hit: boolean; headshot: boolean; impact?: 'metal'|'concrete'|'glass'|'flesh'; position?: readonly [number,number,number] };
+  'weapon:empty': Record<string,never>;
+  'world:doorOpened': Record<string,never>;
   'combat:damage': { health: number; amount: number };
   'combat:enemyKilled': { headshot: boolean };
   'weapon:reloadStarted': Record<string, never>;

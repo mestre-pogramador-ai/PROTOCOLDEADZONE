@@ -1,0 +1,142 @@
+{
+  "record": {
+    "settings": {
+      "masterVolume": 0.65,
+      "effectsVolume": 0.85,
+      "ambientVolume": 0.2,
+      "musicVolume": 0.17,
+      "muted": false,
+      "reducedMotion": false,
+      "showControls": true,
+      "fov": 80,
+      "sensitivity": 1
+    },
+    "diagnostics": {
+      "version": "M8.1.4",
+      "entries": [
+        {
+          "seconds": 0.404,
+          "level": "info",
+          "code": "visual.modelLoaded",
+          "values": {
+            "bytesKnown": true
+          }
+        },
+        {
+          "seconds": 0.416,
+          "level": "info",
+          "code": "visual.modelLoaded",
+          "values": {
+            "bytesKnown": true
+          }
+        },
+        {
+          "seconds": 0.422,
+          "level": "info",
+          "code": "visual.modelLoaded",
+          "values": {
+            "bytesKnown": true
+          }
+        },
+        {
+          "seconds": 0.424,
+          "level": "info",
+          "code": "visual.modelLoaded",
+          "values": {
+            "bytesKnown": true
+          }
+        },
+        {
+          "seconds": 0.436,
+          "level": "warning",
+          "code": "console.warning",
+          "values": {}
+        },
+        {
+          "seconds": 4.475,
+          "level": "info",
+          "code": "audio.ready",
+          "values": {
+            "loaded": 33,
+            "failed": 0
+          }
+        },
+        {
+          "seconds": 7.895,
+          "level": "info",
+          "code": "report.export",
+          "values": {}
+        }
+      ]
+    },
+    "passed": true
+  },
+  "files": [
+    "http://localhost:4187/assets/audio/m9-shot.wav",
+    "http://localhost:4187/assets/audio/slide.wav",
+    "http://localhost:4187/assets/audio/magazine.wav",
+    "http://localhost:4187/assets/audio/metal.wav",
+    "http://localhost:4187/assets/audio/step-1.wav",
+    "http://localhost:4187/assets/audio/step-2.wav",
+    "http://localhost:4187/assets/audio/door.wav",
+    "http://localhost:4187/assets/audio/cloth.wav",
+    "http://localhost:4187/assets/audio/infected-1.wav",
+    "http://localhost:4187/assets/audio/infected-2.wav",
+    "http://localhost:4187/assets/audio/infected-3.wav",
+    "http://localhost:4187/assets/audio/infected-4.wav",
+    "http://localhost:4187/assets/audio/infected-5.wav",
+    "http://localhost:4187/assets/audio/infected-6.wav",
+    "http://localhost:4187/assets/audio/infected-7.wav",
+    "http://localhost:4187/assets/audio/infected-8.wav",
+    "http://localhost:4187/assets/audio/menu.wav",
+    "http://localhost:4187/assets/audio/preparation.wav",
+    "http://localhost:4187/assets/audio/suspense.wav",
+    "http://localhost:4187/assets/audio/combat.wav",
+    "http://localhost:4187/assets/audio/critical.wav",
+    "http://localhost:4187/assets/audio/gameover.wav",
+    "http://localhost:4187/assets/audio/vent.wav",
+    "http://localhost:4187/assets/audio/concrete.wav",
+    "http://localhost:4187/assets/audio/electric.wav",
+    "http://localhost:4187/assets/audio/glass.wav",
+    "http://localhost:4187/assets/audio/flesh.wav",
+    "http://localhost:4187/assets/audio/alarm.wav",
+    "http://localhost:4187/assets/audio/click.wav",
+    "http://localhost:4187/assets/audio/headshot.wav",
+    "http://localhost:4187/assets/audio/kill.wav",
+    "http://localhost:4187/assets/audio/denied.wav",
+    "http://localhost:4187/assets/audio/purchase.wav",
+    "http://localhost:4187/assets/audio/m9-shot.wav",
+    "http://localhost:4187/assets/audio/slide.wav",
+    "http://localhost:4187/assets/audio/magazine.wav",
+    "http://localhost:4187/assets/audio/step-1.wav",
+    "http://localhost:4187/assets/audio/metal.wav",
+    "http://localhost:4187/assets/audio/step-2.wav",
+    "http://localhost:4187/assets/audio/door.wav",
+    "http://localhost:4187/assets/audio/cloth.wav",
+    "http://localhost:4187/assets/audio/infected-1.wav",
+    "http://localhost:4187/assets/audio/infected-2.wav",
+    "http://localhost:4187/assets/audio/infected-3.wav",
+    "http://localhost:4187/assets/audio/infected-4.wav",
+    "http://localhost:4187/assets/audio/infected-6.wav",
+    "http://localhost:4187/assets/audio/infected-5.wav",
+    "http://localhost:4187/assets/audio/infected-7.wav",
+    "http://localhost:4187/assets/audio/infected-8.wav",
+    "http://localhost:4187/assets/audio/menu.wav",
+    "http://localhost:4187/assets/audio/preparation.wav",
+    "http://localhost:4187/assets/audio/suspense.wav",
+    "http://localhost:4187/assets/audio/combat.wav",
+    "http://localhost:4187/assets/audio/critical.wav",
+    "http://localhost:4187/assets/audio/gameover.wav",
+    "http://localhost:4187/assets/audio/vent.wav",
+    "http://localhost:4187/assets/audio/electric.wav",
+    "http://localhost:4187/assets/audio/concrete.wav",
+    "http://localhost:4187/assets/audio/glass.wav",
+    "http://localhost:4187/assets/audio/flesh.wav",
+    "http://localhost:4187/assets/audio/alarm.wav",
+    "http://localhost:4187/assets/audio/click.wav",
+    "http://localhost:4187/assets/audio/headshot.wav",
+    "http://localhost:4187/assets/audio/kill.wav",
+    "http://localhost:4187/assets/audio/denied.wav"
+  ],
+  "errors": []
+}

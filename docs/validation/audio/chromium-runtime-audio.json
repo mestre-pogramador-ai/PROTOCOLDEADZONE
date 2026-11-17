@@ -1,0 +1,633 @@
+{
+  "record": {
+    "menu": {
+      "audio": {
+        "masterGain": 0.6502470374107361,
+        "musicGain": 0.31928905844688416,
+        "played": {
+          "menu": 1
+        },
+        "volumes": {
+          "masterVolume": 0.65,
+          "effectsVolume": 0.85,
+          "ambientVolume": 0.2,
+          "musicVolume": 0.3,
+          "muted": false,
+          "reducedMotion": false,
+          "showControls": true,
+          "fov": 80,
+          "sensitivity": 1
+        },
+        "loaded": 33,
+        "failed": 0,
+        "voices": 1,
+        "enemyVoices": 0,
+        "music": "menu",
+        "paused": false,
+        "context": "running"
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "credits": {
+        "credits": 500,
+        "lifetimeEarned": 0,
+        "lifetimeSpent": 0,
+        "lastNotice": null,
+        "doorPurchased": false
+      }
+    },
+    "combat": {
+      "audio": {
+        "masterGain": 0.6499999761581421,
+        "musicGain": 0.30109283328056335,
+        "played": {
+          "menu": 1,
+          "preparation": 1,
+          "vent": 1,
+          "electric": 1,
+          "metal": 1,
+          "m9-shot": 4,
+          "slide": 4,
+          "flesh": 4,
+          "infected-2": 2,
+          "kill": 1
+        },
+        "volumes": {
+          "masterVolume": 0.65,
+          "effectsVolume": 0.85,
+          "ambientVolume": 0.2,
+          "musicVolume": 0.3,
+          "muted": false,
+          "reducedMotion": false,
+          "showControls": true,
+          "fov": 80,
+          "sensitivity": 1
+        },
+        "loaded": 33,
+        "failed": 0,
+        "voices": 8,
+        "enemyVoices": 2,
+        "music": "preparation",
+        "paused": false,
+        "context": "running"
+      },
+      "weapon": {
+        "ammo": 11,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 4
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 1,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "credits": {
+        "credits": 600,
+        "lifetimeEarned": 100,
+        "lifetimeSpent": 0,
+        "lastNotice": {
+          "delta": 60,
+          "reason": "kill",
+          "serial": 5
+        },
+        "doorPurchased": false
+      }
+    },
+    "reload": {
+      "audio": {
+        "masterGain": 0.6499999761581421,
+        "musicGain": 0.30016428232192993,
+        "played": {
+          "menu": 1,
+          "preparation": 1,
+          "vent": 1,
+          "electric": 1,
+          "metal": 1,
+          "m9-shot": 4,
+          "slide": 5,
+          "flesh": 4,
+          "infected-2": 2,
+          "kill": 1,
+          "magazine": 2
+        },
+        "volumes": {
+          "masterVolume": 0.65,
+          "effectsVolume": 0.85,
+          "ambientVolume": 0.2,
+          "musicVolume": 0.3,
+          "muted": false,
+          "reducedMotion": false,
+          "showControls": true,
+          "fov": 80,
+          "sensitivity": 1
+        },
+        "loaded": 33,
+        "failed": 0,
+        "voices": 4,
+        "enemyVoices": 0,
+        "music": "preparation",
+        "paused": false,
+        "context": "running"
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 86,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 4
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 1,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "credits": {
+        "credits": 600,
+        "lifetimeEarned": 100,
+        "lifetimeSpent": 0,
+        "lastNotice": {
+          "delta": 60,
+          "reason": "kill",
+          "serial": 5
+        },
+        "doorPurchased": false
+      }
+    },
+    "empty": {
+      "audio": {
+        "masterGain": 0.6499999761581421,
+        "musicGain": 0.30016428232192993,
+        "played": {
+          "menu": 1,
+          "preparation": 1,
+          "vent": 1,
+          "electric": 1,
+          "metal": 1,
+          "m9-shot": 19,
+          "slide": 20,
+          "flesh": 4,
+          "infected-2": 2,
+          "kill": 1,
+          "magazine": 2,
+          "concrete": 15,
+          "click": 1
+        },
+        "volumes": {
+          "masterVolume": 0.65,
+          "effectsVolume": 0.85,
+          "ambientVolume": 0.2,
+          "musicVolume": 0.3,
+          "muted": false,
+          "reducedMotion": false,
+          "showControls": true,
+          "fov": 80,
+          "sensitivity": 1
+        },
+        "loaded": 33,
+        "failed": 0,
+        "voices": 6,
+        "enemyVoices": 0,
+        "music": "preparation",
+        "paused": false,
+        "context": "running"
+      },
+      "weapon": {
+        "ammo": 0,
+        "reserve": 86,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 19
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 1,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "credits": {
+        "credits": 600,
+        "lifetimeEarned": 100,
+        "lifetimeSpent": 0,
+        "lastNotice": {
+          "delta": 60,
+          "reason": "kill",
+          "serial": 5
+        },
+        "doorPurchased": false
+      }
+    },
+    "crowd": {
+      "audio": {
+        "masterGain": 0.6499999761581421,
+        "musicGain": 0.07248340547084808,
+        "played": {
+          "menu": 1,
+          "preparation": 1,
+          "vent": 1,
+          "electric": 1,
+          "metal": 1,
+          "m9-shot": 19,
+          "slide": 20,
+          "flesh": 4,
+          "infected-2": 2,
+          "kill": 1,
+          "magazine": 2,
+          "concrete": 15,
+          "click": 1,
+          "combat": 1,
+          "infected-5": 3,
+          "infected-1": 2,
+          "infected-8": 2,
+          "infected-4": 2
+        },
+        "volumes": {
+          "masterVolume": 0.65,
+          "effectsVolume": 0.85,
+          "ambientVolume": 0.2,
+          "musicVolume": 0.07,
+          "muted": false,
+          "reducedMotion": false,
+          "showControls": true,
+          "fov": 80,
+          "sensitivity": 1
+        },
+        "loaded": 33,
+        "failed": 0,
+        "voices": 9,
+        "enemyVoices": 5,
+        "music": "combat",
+        "paused": false,
+        "context": "running"
+      },
+      "weapon": {
+        "ammo": 0,
+        "reserve": 86,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 19
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 1,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "credits": {
+        "credits": 600,
+        "lifetimeEarned": 100,
+        "lifetimeSpent": 0,
+        "lastNotice": {
+          "delta": 60,
+          "reason": "kill",
+          "serial": 5
+        },
+        "doorPurchased": false
+      }
+    },
+    "burst": {
+      "masterGain": 0.6499999761581421,
+      "musicGain": 0.07246193289756775,
+      "played": {
+        "menu": 1,
+        "preparation": 1,
+        "vent": 1,
+        "electric": 1,
+        "metal": 1,
+        "m9-shot": 19,
+        "slide": 20,
+        "flesh": 4,
+        "infected-2": 2,
+        "kill": 1,
+        "magazine": 2,
+        "concrete": 15,
+        "click": 1,
+        "combat": 1,
+        "infected-5": 4,
+        "infected-1": 4,
+        "infected-8": 3,
+        "infected-4": 3
+      },
+      "volumes": {
+        "masterVolume": 0.65,
+        "effectsVolume": 0.85,
+        "ambientVolume": 0.2,
+        "musicVolume": 0.07,
+        "muted": false,
+        "reducedMotion": false,
+        "showControls": true,
+        "fov": 80,
+        "sensitivity": 1
+      },
+      "loaded": 33,
+      "failed": 0,
+      "voices": 14,
+      "enemyVoices": 10,
+      "music": "combat",
+      "paused": false,
+      "context": "running"
+    },
+    "newPositions": [
+      -2,
+      -2,
+      -2,
+      -2,
+      -2
+    ],
+    "peaks": {
+      "total": 14,
+      "enemy": 10
+    },
+    "reset": {
+      "audio": {
+        "masterGain": 0.6499999761581421,
+        "musicGain": 0.07004106789827347,
+        "played": {
+          "preparation": 1,
+          "vent": 1,
+          "electric": 1
+        },
+        "volumes": {
+          "masterVolume": 0.65,
+          "effectsVolume": 0.85,
+          "ambientVolume": 0.2,
+          "musicVolume": 0.07,
+          "muted": false,
+          "reducedMotion": false,
+          "showControls": true,
+          "fov": 80,
+          "sensitivity": 1
+        },
+        "loaded": 33,
+        "failed": 0,
+        "voices": 3,
+        "enemyVoices": 0,
+        "music": "preparation",
+        "paused": false,
+        "context": "running"
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "credits": {
+        "credits": 500,
+        "lifetimeEarned": 0,
+        "lifetimeSpent": 0,
+        "lastNotice": null,
+        "doorPurchased": false
+      }
+    },
+    "gameover": {
+      "audio": {
+        "masterGain": 0.6499999761581421,
+        "musicGain": 0.07004106789827347,
+        "played": {
+          "preparation": 1,
+          "vent": 1,
+          "electric": 1,
+          "gameover": 1
+        },
+        "volumes": {
+          "masterVolume": 0.65,
+          "effectsVolume": 0.85,
+          "ambientVolume": 0.2,
+          "musicVolume": 0.07,
+          "muted": false,
+          "reducedMotion": false,
+          "showControls": true,
+          "fov": 80,
+          "sensitivity": 1
+        },
+        "loaded": 33,
+        "failed": 0,
+        "voices": 4,
+        "enemyVoices": 0,
+        "music": "gameover",
+        "paused": false,
+        "context": "running"
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "credits": {
+        "credits": 500,
+        "lifetimeEarned": 0,
+        "lifetimeSpent": 0,
+        "lastNotice": null,
+        "doorPurchased": false
+      }
+    },
+    "disposed": {
+      "audio": {
+        "masterGain": 0.6499999761581421,
+        "musicGain": 0,
+        "played": {
+          "preparation": 1,
+          "vent": 1,
+          "electric": 1,
+          "gameover": 1
+        },
+        "volumes": {
+          "masterVolume": 0.65,
+          "effectsVolume": 0.85,
+          "ambientVolume": 0.2,
+          "musicVolume": 0.07,
+          "muted": false,
+          "reducedMotion": false,
+          "showControls": true,
+          "fov": 80,
+          "sensitivity": 1
+        },
+        "loaded": 0,
+        "failed": 0,
+        "voices": 0,
+        "enemyVoices": 0,
+        "music": "gameover",
+        "paused": false,
+        "context": "locked"
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "credits": {
+        "credits": 500,
+        "lifetimeEarned": 0,
+        "lifetimeSpent": 0,
+        "lastNotice": null,
+        "doorPurchased": false
+      }
+    },
+    "contexts": [
+      "closed"
+    ],
+    "passed": true
+  },
+  "files": [
+    "http://localhost:4186/assets/audio/m9-shot.wav",
+    "http://localhost:4186/assets/audio/slide.wav",
+    "http://localhost:4186/assets/audio/magazine.wav",
+    "http://localhost:4186/assets/audio/metal.wav",
+    "http://localhost:4186/assets/audio/step-1.wav",
+    "http://localhost:4186/assets/audio/step-2.wav",
+    "http://localhost:4186/assets/audio/door.wav",
+    "http://localhost:4186/assets/audio/cloth.wav",
+    "http://localhost:4186/assets/audio/infected-1.wav",
+    "http://localhost:4186/assets/audio/infected-2.wav",
+    "http://localhost:4186/assets/audio/infected-3.wav",
+    "http://localhost:4186/assets/audio/infected-4.wav",
+    "http://localhost:4186/assets/audio/infected-5.wav",
+    "http://localhost:4186/assets/audio/infected-6.wav",
+    "http://localhost:4186/assets/audio/infected-7.wav",
+    "http://localhost:4186/assets/audio/infected-8.wav",
+    "http://localhost:4186/assets/audio/menu.wav",
+    "http://localhost:4186/assets/audio/suspense.wav",
+    "http://localhost:4186/assets/audio/preparation.wav",
+    "http://localhost:4186/assets/audio/combat.wav",
+    "http://localhost:4186/assets/audio/critical.wav",
+    "http://localhost:4186/assets/audio/gameover.wav",
+    "http://localhost:4186/assets/audio/vent.wav",
+    "http://localhost:4186/assets/audio/electric.wav",
+    "http://localhost:4186/assets/audio/concrete.wav",
+    "http://localhost:4186/assets/audio/glass.wav",
+    "http://localhost:4186/assets/audio/flesh.wav",
+    "http://localhost:4186/assets/audio/alarm.wav",
+    "http://localhost:4186/assets/audio/click.wav",
+    "http://localhost:4186/assets/audio/headshot.wav",
+    "http://localhost:4186/assets/audio/kill.wav",
+    "http://localhost:4186/assets/audio/denied.wav",
+    "http://localhost:4186/assets/audio/purchase.wav"
+  ],
+  "errors": []
+}

@@ -1,0 +1,359 @@
+{
+  "version": "M8.1.4",
+  "entries": [
+    {
+      "seconds": 0.494,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.495,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.51,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.548,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.563,
+      "level": "warning",
+      "code": "console.warning",
+      "values": {}
+    },
+    {
+      "seconds": 36.358,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999977946281433,
+        "y": 0.8742090463638306,
+        "z": -3.605483129831555e-7,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 38.606,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999996423721313,
+        "y": 0.8742091059684753,
+        "z": 0.0000019709420939761912,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 2.77923558967738e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 40.865,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000028610229492,
+        "y": 0.8742090463638306,
+        "z": 0.0000026366592464910354,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 43.124,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000075101852417,
+        "y": 0.8744090795516968,
+        "z": -0.0000020672382561315317,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.681038384049316e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 45.373,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000052452087402,
+        "y": 0.8742098808288574,
+        "z": -0.0000037547642932622693,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 47.633,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000032186508179,
+        "y": 0.8741090297698975,
+        "z": -0.0000017830247998062987,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 2.7271054560012515e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 49.025,
+      "level": "info",
+      "code": "audio.ready",
+      "values": {
+        "loaded": 33,
+        "failed": 0
+      }
+    },
+    {
+      "seconds": 49.973,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000041723251343,
+        "y": 0.8743098974227905,
+        "z": -0.000002825861656674533,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.6927587864756788e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 52.245,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000054836273193,
+        "y": 0.87410968542099,
+        "z": -0.000011255373465246521,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 4.799280759471003e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 54.571,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000014305114746,
+        "y": 0.8741089105606079,
+        "z": -0.000012016131222480908,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 3.163422829190318e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 56.864,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000009536743164,
+        "y": 0.8741090893745422,
+        "z": -0.00001155629342974862,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.7176664357521076e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 59.174,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000019073486328,
+        "y": 0.8744090795516968,
+        "z": -0.000013344596482056659,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 61.478,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999985694885254,
+        "y": 0.8750603199005127,
+        "z": -0.00001669677294557914,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0.0000011670750888836308,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 63.762,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999993443489075,
+        "y": 0.8742091059684753,
+        "z": -0.000021535142877837643,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.7032984089837555e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 66.075,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0004312992095947,
+        "y": 0.8749734163284302,
+        "z": -1.8396146297454834,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0.07666666666666666,
+        "resolved": 0.07668136060237885,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 68.32,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0004311800003052,
+        "y": 0.8742226958274841,
+        "z": -1.8396157026290894,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.663647806972162e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 70.46,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0004311800003052,
+        "y": 0.8742226958274841,
+        "z": -1.8396157026290894,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.663647806972162e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 72.645,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0004311800003052,
+        "y": 0.8742226958274841,
+        "z": -1.8396157026290894,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.663647806972162e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 72.93,
+      "level": "info",
+      "code": "session.paused",
+      "values": {}
+    },
+    {
+      "seconds": 84.313,
+      "level": "warning",
+      "code": "user.marker",
+      "values": {}
+    },
+    {
+      "seconds": 84.615,
+      "level": "info",
+      "code": "report.export",
+      "values": {}
+    }
+  ]
+}
