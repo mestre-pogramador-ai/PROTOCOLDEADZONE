@@ -49,15 +49,14 @@ const fs=require('node:fs'),path=require('node:path');
   await page.waitForFunction(()=>document.querySelector('.m6-announcement')?.innerText.includes('JÁ ADQUIRIDO'));
   if((await observe()).economy.credits!==duplicateBefore)throw new Error('Duplicate perk charged');
   await faceNorth();await axis(0,0);
-  await page.mouse.down();await page.mouse.up();
-  await page.waitForFunction(()=>window.m81Observe().weapon.ammo===14);
+  await page.mouse.down();try{await page.waitForFunction(()=>window.m81Observe().weapon.ammo===14);}finally{await page.mouse.up();}
   await page.keyboard.press('KeyR');
   await page.waitForFunction(()=>window.m81Observe().weapon.reloading);
   await purchase('quickHands',2000);
   record.reloadDuringPurchase=(await observe()).weapon.reloadDuration;
   if(record.reloadDuringPurchase!==1.5)throw new Error('Active reload was modified');
   await page.waitForFunction(()=>!window.m81Observe().weapon.reloading);
-  await page.mouse.down();await page.mouse.up();await page.waitForFunction(()=>window.m81Observe().weapon.ammo===14);
+  await page.mouse.down();try{await page.waitForFunction(()=>window.m81Observe().weapon.ammo===14);}finally{await page.mouse.up();}
   await page.keyboard.press('KeyR');await page.waitForFunction(()=>window.m81Observe().weapon.reloading);
   record.nextReload=(await observe()).weapon.reloadDuration;if(record.nextReload!==1.125)throw new Error('Quick reload not applied');
   await page.waitForFunction(()=>!window.m81Observe().weapon.reloading);

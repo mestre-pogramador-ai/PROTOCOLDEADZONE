@@ -10,6 +10,8 @@ export const PERK_MACHINES=[
 export const CONTAINMENT_MODULES: readonly SolidModule[] = [
   ...PERK_MACHINES.map(m=>({id:m.id,kind:'prop' as const,position:m.position,size:[.6,1.8,.45] as Vec3,material:'trim' as const,collision:true})),
   {id:'ammo-station',kind:'prop',position:[-2.5,.6,-1.5],size:[.8,1.2,.5],material:'trim',collision:true},
+  // M8.1.3: physical closure matches wall height; elevated collider is ignored by 2D navigation.
+  {id:'ceiling-main',kind:'ceiling',position:[0,3.6,0],size:[16,.2,16],material:'wall',collision:true},
   {id:'floor-main',kind:'floor',position:[0,-0.25,0],size:[16,.5,16],material:'floor',collision:true},
   {id:'floor-corridor',kind:'floor',position:[14,-.25,0],size:[12,.5,4],material:'floor',collision:true},
   {id:'north-wall',kind:'wall',position:[0,1.75,-8],size:[16,3.5,.35],material:'wall',collision:true},

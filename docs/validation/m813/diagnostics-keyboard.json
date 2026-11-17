@@ -1,0 +1,165 @@
+{
+  "version": "M8.1.3",
+  "entries": [
+    {
+      "seconds": 0.317,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.324,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.327,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.33,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.343,
+      "level": "warning",
+      "code": "console.warning",
+      "values": {}
+    },
+    {
+      "seconds": 9.749,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999977946281433,
+        "y": 0.8742090463638306,
+        "z": -3.605483129831555e-7,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 14.906,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999996423721313,
+        "y": 0.8742091059684753,
+        "z": 0.0000019709420939761912,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 2.77923558967738e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 15.548,
+      "level": "info",
+      "code": "ammo.paid",
+      "values": {
+        "quantity": 1,
+        "cost": 6
+      }
+    },
+    {
+      "seconds": 19.038,
+      "level": "warning",
+      "code": "ammo.full",
+      "values": {
+        "quantity": 0,
+        "cost": 0
+      }
+    },
+    {
+      "seconds": 19.492,
+      "level": "info",
+      "code": "round.started",
+      "values": {
+        "round": 1
+      }
+    },
+    {
+      "seconds": 19.508,
+      "level": "info",
+      "code": "enemy.spawn.common",
+      "values": {
+        "hp": 100,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 21.44,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000028610229492,
+        "y": 0.8742090463638306,
+        "z": 0.0000026366592464910354,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 1,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 22.309,
+      "level": "info",
+      "code": "session.paused",
+      "values": {}
+    },
+    {
+      "seconds": 23.21,
+      "level": "info",
+      "code": "session.resumed",
+      "values": {}
+    },
+    {
+      "seconds": 23.243,
+      "level": "info",
+      "code": "session.paused",
+      "values": {}
+    },
+    {
+      "seconds": 24.057,
+      "level": "info",
+      "code": "session.reset",
+      "values": {}
+    },
+    {
+      "seconds": 24.112,
+      "level": "warning",
+      "code": "user.marker",
+      "values": {}
+    },
+    {
+      "seconds": 24.115,
+      "level": "info",
+      "code": "report.export",
+      "values": {}
+    }
+  ]
+}

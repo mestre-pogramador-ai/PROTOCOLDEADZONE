@@ -1,0 +1,20 @@
+{
+  "pull_request": 9,
+  "url": "https://github.com/mestre-pogramador-ai/PROTOCOLDEADZONE/pull/9",
+  "draft": true,
+  "base": "m8.1.2-visual-quality",
+  "head_at_review": "80b84ca9e6bfca17abedcfd1c728ce1b132ff4a0",
+  "checks": [
+    {
+      "name": "Vercel",
+      "state": "failure",
+      "description": "Git author Indiplayer must have access to the project on Vercel to create deployments."
+    },
+    {
+      "name": "Vercel Preview Comments",
+      "state": "success"
+    }
+  ],
+  "production_deploy_performed": false,
+  "note": "Subsequent documentation commit only; no code changes after verification."
+}

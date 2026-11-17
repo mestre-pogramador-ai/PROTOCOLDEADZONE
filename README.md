@@ -160,3 +160,14 @@ pendentes; não foi comprovada a meta de 60 FPS.
 [Comparação, testes e limitações](M8_1_2_VISUAL_REPORT.md) ·
 [Pipeline dos assets](docs/ASSET_PIPELINE_M812.md) ·
 [Créditos](public/assets/manifests/ATTRIBUTION.md)
+
+## M8.1.3 — Polish da Sala de Contenção
+
+Materiais em escala real, teto modular, equipamentos detalhados, sinalização
+biológica e iluminação fria/ciano/vermelha. Layout e compras preservados; o novo
+teto físico bloqueia saltos através do forro. Sem novo setor ou balanceamento.
+
+[Relatório, capturas e testes](M8_1_3_ENVIRONMENT_REPORT.md) ·
+[Registro da arte local](public/assets/manifests/environment-m813.json).
+A meta de 60 FPS ainda requer GPU desktop: o relatório registra também a
+regressão observada no renderizador por software, sem declarar homologação.

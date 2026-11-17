@@ -1,0 +1,356 @@
+{
+  "record": {
+    "initial": {
+      "position": [
+        -0.9999999403953552,
+        0.8749604225158691,
+        2.5675387149703965e-8
+      ],
+      "look": {
+        "yaw": 0,
+        "pitch": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "economy": {
+        "credits": 15750,
+        "lifetimeEarned": 15250,
+        "lifetimeSpent": 0,
+        "lastNotice": {
+          "delta": 550,
+          "reason": "round",
+          "serial": 50
+        },
+        "doorPurchased": false
+      },
+      "perks": [],
+      "effects": {
+        "maxHealth": 100,
+        "reloadMultiplier": 1,
+        "speedMultiplier": 1,
+        "damageMultiplier": 1
+      },
+      "interaction": {
+        "kind": "ammo",
+        "message": "RESERVA M9 CHEIA"
+      },
+      "lifecycle": "running",
+      "doorOpen": false
+    },
+    "ammo": {
+      "position": [
+        -1,
+        0.8741090893745422,
+        0.0000013887793102185242
+      ],
+      "look": {
+        "yaw": 0,
+        "pitch": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 1
+      },
+      "economy": {
+        "credits": 15744,
+        "lifetimeEarned": 15250,
+        "lifetimeSpent": 6,
+        "lastNotice": {
+          "delta": -6,
+          "reason": "ammo",
+          "serial": 51
+        },
+        "doorPurchased": false
+      },
+      "perks": [],
+      "effects": {
+        "maxHealth": 100,
+        "reloadMultiplier": 1,
+        "speedMultiplier": 1,
+        "damageMultiplier": 1
+      },
+      "interaction": {
+        "kind": "ammo",
+        "message": "RESERVA M9 CHEIA"
+      },
+      "lifecycle": "running",
+      "doorOpen": false
+    },
+    "closed": {
+      "position": [
+        7.464900016784668,
+        0.8748947978019714,
+        0.000981697696261108
+      ],
+      "look": {
+        "yaw": 0,
+        "pitch": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 1
+      },
+      "economy": {
+        "credits": 15744,
+        "lifetimeEarned": 15250,
+        "lifetimeSpent": 6,
+        "lastNotice": {
+          "delta": -6,
+          "reason": "ammo",
+          "serial": 51
+        },
+        "doorPurchased": false
+      },
+      "perks": [],
+      "effects": {
+        "maxHealth": 100,
+        "reloadMultiplier": 1,
+        "speedMultiplier": 1,
+        "damageMultiplier": 1
+      },
+      "interaction": {
+        "kind": "door",
+        "message": "[ E ] DESTRAVAR PORTA · 750 CR"
+      },
+      "lifecycle": "running",
+      "doorOpen": false
+    },
+    "door": {
+      "position": [
+        7.464899063110352,
+        0.8743259906768799,
+        0.0009760966058820486
+      ],
+      "look": {
+        "yaw": -1.5707963267948966,
+        "pitch": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 1
+      },
+      "economy": {
+        "credits": 14994,
+        "lifetimeEarned": 15250,
+        "lifetimeSpent": 756,
+        "lastNotice": {
+          "delta": -750,
+          "reason": "door",
+          "serial": 52
+        },
+        "doorPurchased": true
+      },
+      "perks": [],
+      "effects": {
+        "maxHealth": 100,
+        "reloadMultiplier": 1,
+        "speedMultiplier": 1,
+        "damageMultiplier": 1
+      },
+      "interaction": {
+        "kind": "door",
+        "message": "CORREDOR DESBLOQUEADO"
+      },
+      "lifecycle": "running",
+      "doorOpen": true
+    },
+    "passage": {
+      "position": [
+        9.304816246032715,
+        0.8745433688163757,
+        0.0010735734831541777
+      ],
+      "look": {
+        "yaw": -1.5707963267948966,
+        "pitch": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 1
+      },
+      "economy": {
+        "credits": 14994,
+        "lifetimeEarned": 15250,
+        "lifetimeSpent": 756,
+        "lastNotice": {
+          "delta": -750,
+          "reason": "door",
+          "serial": 52
+        },
+        "doorPurchased": true
+      },
+      "perks": [],
+      "effects": {
+        "maxHealth": 100,
+        "reloadMultiplier": 1,
+        "speedMultiplier": 1,
+        "damageMultiplier": 1
+      },
+      "interaction": {
+        "kind": "door",
+        "message": "CORREDOR DESBLOQUEADO"
+      },
+      "lifecycle": "running",
+      "doorOpen": true
+    },
+    "reset": {
+      "position": [
+        -1,
+        1.0499999523162842,
+        0
+      ],
+      "look": {
+        "yaw": 0,
+        "pitch": 0
+      },
+      "combat": {
+        "health": 100,
+        "maxHealth": 100,
+        "kills": 0,
+        "alive": 0,
+        "hitRecently": false,
+        "damageAngle": 0,
+        "gameOver": false,
+        "lastHeadshot": false,
+        "hitMarker": false,
+        "damageEvents": 0,
+        "invulnerability": 0
+      },
+      "weapon": {
+        "ammo": 15,
+        "reserve": 90,
+        "reloading": false,
+        "reloadRemaining": 0,
+        "reloadDuration": 1.5,
+        "ads": false,
+        "adsBlend": 0,
+        "cooldownRemaining": 0,
+        "shotsFired": 0
+      },
+      "economy": {
+        "credits": 500,
+        "lifetimeEarned": 0,
+        "lifetimeSpent": 0,
+        "lastNotice": null,
+        "doorPurchased": false
+      },
+      "perks": [],
+      "effects": {
+        "maxHealth": 100,
+        "reloadMultiplier": 1,
+        "speedMultiplier": 1,
+        "damageMultiplier": 1
+      },
+      "interaction": {
+        "kind": "ammo",
+        "message": "RESERVA M9 CHEIA"
+      },
+      "lifecycle": "running",
+      "doorOpen": false
+    }
+  },
+  "errors": [],
+  "httpErrors": []
+}
