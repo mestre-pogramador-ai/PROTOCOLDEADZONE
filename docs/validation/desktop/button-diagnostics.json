@@ -1,0 +1,254 @@
+{
+  "version": "M8.1.4",
+  "entries": [
+    {
+      "seconds": 0.122,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.158,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.21,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.237,
+      "level": "info",
+      "code": "visual.modelLoaded",
+      "values": {
+        "bytesKnown": true
+      }
+    },
+    {
+      "seconds": 0.256,
+      "level": "warning",
+      "code": "console.warning",
+      "values": {}
+    },
+    {
+      "seconds": 16.861,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999977946281433,
+        "y": 0.8742090463638306,
+        "z": -3.605483129831555e-7,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 19.713,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9999996423721313,
+        "y": 0.8742091059684753,
+        "z": 0.0000019709420939761912,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 2.77923558967738e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 22.575,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000028610229492,
+        "y": 0.8742090463638306,
+        "z": 0.0000026366592464910354,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 25.406,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000075101852417,
+        "y": 0.8744090795516968,
+        "z": -0.0000020672382561315317,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.681038384049316e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 28.284,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000052452087402,
+        "y": 0.8742098808288574,
+        "z": -0.0000037547642932622693,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 0,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 31.133,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -1.0000032186508179,
+        "y": 0.8741090297698975,
+        "z": -0.0000017830247998062987,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 2.7271054560012515e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 33.968,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9993662238121033,
+        "y": 0.8750906586647034,
+        "z": -1.2266548871994019,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0.07666666666666666,
+        "resolved": 0.07671028124054746,
+        "contacts": 2,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 36.715,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9992532134056091,
+        "y": 0.8750754594802856,
+        "z": -1.5331928730010986,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 5.941819224927041e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 39.474,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9992527365684509,
+        "y": 0.8747308254241943,
+        "z": -1.5331928730010986,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 3.6786437350206093e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 42.282,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9992525577545166,
+        "y": 0.8749971389770508,
+        "z": -1.5331923961639404,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 1.9092720691422625e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 44.989,
+      "level": "info",
+      "code": "simulation.sample",
+      "values": {
+        "x": -0.9992536306381226,
+        "y": 0.8750728964805603,
+        "z": -1.5331934690475464,
+        "grounded": true,
+        "vertical": 0,
+        "requested": 0,
+        "resolved": 3.798118470972747e-7,
+        "contacts": 1,
+        "alive": 0,
+        "round": 1
+      }
+    },
+    {
+      "seconds": 47.738,
+      "level": "info",
+      "code": "session.paused",
+      "values": {}
+    },
+    {
+      "seconds": 107.537,
+      "level": "warning",
+      "code": "user.marker",
+      "values": {}
+    },
+    {
+      "seconds": 108.118,
+      "level": "info",
+      "code": "report.export",
+      "values": {}
+    },
+    {
+      "seconds": 246.02,
+      "level": "info",
+      "code": "report.export",
+      "values": {}
+    }
+  ]
+}

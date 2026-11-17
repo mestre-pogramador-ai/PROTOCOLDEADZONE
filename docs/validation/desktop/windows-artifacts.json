@@ -1,0 +1,16 @@
+{
+  "run": 43165153199,
+  "sourceCommit": "5d9ea51",
+  "files": [
+    {
+      "file": "PROTOCOL-DEAD-ZONE-Portable.exe",
+      "bytes": 117666065,
+      "sha256": "558df241aa381d67709e8df53ef93d066327ee50ff90852ae5f57af9758221b6"
+    },
+    {
+      "file": "PROTOCOL-DEAD-ZONE-Setup-0.9.5-x64.exe",
+      "bytes": 131617982,
+      "sha256": "24a62bda3f01d6c17dcb3bad5ca569d7ded21c5aa2d3af6dd89a03278c5138d8"
+    }
+  ]
+}

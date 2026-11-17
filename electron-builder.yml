@@ -1,0 +1,25 @@
+appId: com.protocoldeadzone.desktop
+productName: PROTOCOL DEAD ZONE
+asar: true
+directories:
+  output: release
+files:
+  - dist/**/*
+  - electron/**/*.cjs
+  - package.json
+win:
+  executableName: PROTOCOL-DEAD-ZONE
+  signAndEditExecutable: false
+  target:
+    - target: portable
+      arch: [x64]
+    - target: nsis
+      arch: [x64]
+portable:
+  artifactName: PROTOCOL-DEAD-ZONE-Portable.exe
+nsis:
+  artifactName: PROTOCOL-DEAD-ZONE-Setup-${version}-x64.exe
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true

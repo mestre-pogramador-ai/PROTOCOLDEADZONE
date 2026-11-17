@@ -9,7 +9,11 @@
     "preview": "vite preview --host 0.0.0.0",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:motion": "tsc -p tools/tsconfig.motion.json && node .tmp/motion/tools/run-motion-tests.js"
+    "test:motion": "tsc -p tools/tsconfig.motion.json && node .tmp/motion/tools/run-motion-tests.js",
+    "desktop:start": "electron .",
+    "desktop:pack": "npm run build && electron-builder --dir",
+    "desktop:build": "npm run build && electron-builder --win --x64 --publish never",
+    "test:desktop": "node tools/desktop-smoke.cjs"
   },
   "dependencies": {
     "@dimforge/rapier3d-compat": "^0.17.3",
@@ -25,8 +29,13 @@
     "@types/react-dom": "^19.0.4",
     "@types/three": "^0.175.0",
     "@vitejs/plugin-react": "^4.4.1",
+    "electron": "^45.3.1",
+    "electron-builder": "^26.18.0",
+    "playwright-core": "^1.65.0",
     "typescript": "~5.8.3",
     "vite": "^6.2.5",
     "vitest": "^3.1.1"
-  }
+  },
+  "main": "electron/main.cjs",
+  "description": "PROTOCOL: DEAD ZONE — desktop test build"
 }

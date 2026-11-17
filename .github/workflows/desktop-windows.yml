@@ -1,0 +1,42 @@
+name: Windows Desktop Test Build
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+    paths-ignore: ['**/*.md', 'docs/**']
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test -- --maxWorkers=2 --testTimeout=30000
+      - run: npx tsc -b
+      - run: npm run test:motion
+      - run: npm run desktop:build
+        id: package
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+      - run: npm run test:desktop
+        env:
+          DESKTOP_EXECUTABLE: release/win-unpacked/PROTOCOL-DEAD-ZONE.exe
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() && steps.package.outcome == 'success' }}
+        with:
+          name: PROTOCOL-DEAD-ZONE-Windows-x64
+          path: release/*.exe
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: desktop-smoke-evidence
+          path: desktop-evidence/
+          if-no-files-found: warn

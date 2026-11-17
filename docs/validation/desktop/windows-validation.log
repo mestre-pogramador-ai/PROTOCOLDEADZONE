@@ -1,0 +1,19 @@
+windows	Set up job	2026-11-12T06:00:50.1359868Z Microsoft Windows Server 2025
+windows	Run npm test -- --maxWorkers=2 --testTimeout=30000	2026-11-12T06:02:01.8156633Z  Test Files  29 passed (29)
+windows	Run npm test -- --maxWorkers=2 --testTimeout=30000	2026-11-12T06:02:01.8161229Z       Tests  187 passed (187)
+windows	Run npm run test:motion	2026-11-12T06:02:14.9423661Z 13 verificações isoladas passaram. Integração Rapier requer npm install e Vitest.
+windows	Run npm run desktop:build	2026-11-12T06:02:30.0545690Z ✓ built in 5.48s
+windows	Run npm run desktop:build	2026-11-12T06:02:47.2999843Z   • building        target=portable file=release\PROTOCOL-DEAD-ZONE-Portable.exe archs=x64
+windows	Run npm run desktop:build	2026-11-12T06:05:41.3317255Z   • building        target=nsis file=release\PROTOCOL-DEAD-ZONE-Setup-0.9.5-x64.exe archs=x64 oneClick=false perMachine=false
+windows	Run npm run test:desktop	2026-11-12T06:07:07.9624207Z DESKTOP_SMOKE launch
+windows	Run npm run test:desktop	2026-11-12T06:07:08.7745148Z DESKTOP_SMOKE window
+windows	Run npm run test:desktop	2026-11-12T06:07:08.7750297Z DESKTOP_SMOKE local assets and start
+windows	Run npm run test:desktop	2026-11-12T06:07:50.4166064Z DESKTOP_SMOKE physics and movement
+windows	Run npm run test:desktop	2026-11-12T06:07:53.4894506Z DESKTOP_SMOKE fire
+windows	Run npm run test:desktop	2026-11-12T06:07:55.3024480Z DESKTOP_SMOKE reload
+windows	Run npm run test:desktop	2026-11-12T06:08:00.1564524Z DESKTOP_SMOKE pause
+windows	Run npm run test:desktop	2026-11-12T06:08:04.9068819Z DESKTOP_SMOKE fullscreen
+windows	Run npm run test:desktop	2026-11-12T06:08:55.9703623Z DESKTOP_SMOKE diagnostics keyboard
+windows	Run npm run test:desktop	2026-11-12T06:10:52.3451945Z DESKTOP_SMOKE diagnostics button
+windows	Run npm run test:desktop	2026-11-12T06:11:45.0295772Z DESKTOP_SMOKE close
+windows	Run npm run test:desktop	2026-11-12T06:11:47.8455393Z DESKTOP_SMOKE passed
