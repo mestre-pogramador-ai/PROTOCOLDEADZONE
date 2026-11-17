@@ -1,0 +1,44 @@
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Warning: No mesh data to join
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Warning: No mesh data to join
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Warning: No mesh data to join
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+13:25:00 | INFO: Starting glTF 2.0 export
+13:25:00 | INFO: Extracting primitive: Cube
+13:25:00 | INFO: Primitives created: 2
+13:25:00 | INFO: Extracting primitive: Circle.001
+13:25:00 | INFO: Primitives created: 1
+13:25:00 | INFO: Extracting primitive: Cube.007
+13:25:00 | INFO: Primitives created: 1
+13:25:00 | INFO: Extracting primitive: Cube.003
+13:25:00 | INFO: Primitives created: 1
+13:25:00 | INFO: Extracting primitive: Cube.005
+13:25:00 | INFO: Primitives created: 1
+13:25:00 | INFO: Finished glTF 2.0 export in 0.03995108604431152 s
+
+GLOVE_PANELS 318
+13:25:00 | INFO: Starting glTF 2.0 export
+13:25:00 | INFO: Extracting primitive: caucasian_male_1:Body
+13:25:00 | INFO: Primitives created: 3
+13:25:00 | INFO: Extracting primitive: Fitted glove panels
+13:25:00 | INFO: Primitives created: 1
+13:25:00 | WARNING: Baking animation because there are keyframes with different interpolation methods in one channel
+13:25:00 | WARNING: Baking animation because there are keyframes with different interpolation methods in one channel
+13:25:00 | INFO: Finished glTF 2.0 export in 0.15768790245056152 s
+
+Blender 4.3.2
+Read blend: "/tmp/m812-research/textured-pistol/pistol.blend"
+Warning: region type 4 missing in space type "Info" (id: 7) - removing region
+Read blend: "/tmp/m812-research/arms/FPS ARMS RIG 1.blend"
+Warning: region type 4 missing in space type "Info" (id: 7) - removing region
+
+Blender quit

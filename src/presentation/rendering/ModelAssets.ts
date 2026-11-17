@@ -3,10 +3,10 @@ import {GLTFLoader,type GLTF} from 'three/addons/loaders/GLTFLoader.js';
 import {BufferGeometry,Mesh,SkinnedMesh,MeshStandardMaterial,Texture,type Material} from 'three';
 import {diagnostics} from '../../core/diagnostics/Diagnostics';
 export const MODEL_PATHS={
- m9:'assets/models/weapons/m9.glb',
- arms:'assets/models/viewmodels/tactical-arms.glb',
- infectedLod:'assets/models/characters/infected-lod.glb',
- infected:'assets/models/characters/infected.glb',
+ m9:'assets/models/weapons/m9-service.glb',
+ arms:'assets/models/viewmodels/operator-arms.glb',
+ infected:'assets/models/characters/infected-worker.glb',
+ hunter:'assets/models/characters/infected-hunter.glb',
 } as const;
 interface Entry {refs:number;promise:Promise<GLTF>;value?:GLTF;timer?:ReturnType<typeof setTimeout>}
 const entries=new Map<string,Entry>();

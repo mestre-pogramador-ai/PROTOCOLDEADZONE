@@ -1,0 +1,89 @@
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+13:05:17 | INFO: Starting glTF 2.0 export
+13:05:17 | WARNING: Mesh Detailed humanoid is not valid, and may be exported wrongly
+13:05:17 | INFO: Extracting primitive: Detailed humanoid
+13:05:17 | INFO: Primitives created: 1
+13:05:17 | WARNING: There are more than 4 joint vertex influences.The 4 with highest weight will be used (and normalized).
+13:05:17 | WARNING: Mesh Detailed humanoid.001 is not valid, and may be exported wrongly
+13:05:17 | INFO: Extracting primitive: Detailed humanoid.001
+13:05:17 | INFO: Primitives created: 1
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | WARNING: Baking animation because of unsupported constraints acting on the bone
+13:05:17 | INFO: Finished glTF 2.0 export in 0.6977884769439697 s
+
+EXPORTED public/assets/models/characters/infected-hunter.glb scale 0.25327367642366305 head [-2.2046614208716397e-14, -1.1149985790252686, 6.988246917724609] floor -0.039723873138427734
+Blender 4.3.2
+Read blend: "/tmp/m812-research/zombie-thin/new_thin_zombie.blend"
+Warning: region type 4 missing in space type "Info" (id: 7) - removing region
+
+Blender quit

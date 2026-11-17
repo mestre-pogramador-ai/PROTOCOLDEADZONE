@@ -1,0 +1,26 @@
+{
+  "record": {
+    "initialAmmo": "M9 / PISTOLA TÁTICA\n15 / 90\nSEMI-AUTOMÁTICA · 32 DMG",
+    "afterShot": "M9 / PISTOLA TÁTICA\n14 / 90\nSEMI-AUTOMÁTICA · 32 DMG",
+    "afterPurchase": {
+      "ammo": "M9 / PISTOLA TÁTICA\n15 / 90\nSEMI-AUTOMÁTICA · 32 DMG",
+      "credits": "CRÉDITOS\n494\nCR",
+      "message": "M9 +1 BALA · -6 CR"
+    },
+    "creditsUnobscured": true,
+    "fullReserveCharge": 0,
+    "roundActive": "CONTAINMENT / STATUS\n01\nRODADA\n● HORDA ATIVA\nINFECTADOS RESTANTES\n8\nELIMINAÇÕES\n0",
+    "paused": true,
+    "reset": {
+      "ammo": "M9 / PISTOLA TÁTICA\n15 / 90\nSEMI-AUTOMÁTICA · 32 DMG",
+      "credits": "CRÉDITOS\n500\nCR"
+    },
+    "reportVersion": "M8.1.2",
+    "marker": true
+  },
+  "errors": [],
+  "warnings": [
+    "using deprecated parameters for the initialization function; pass a single object instead"
+  ],
+  "httpErrors": []
+}

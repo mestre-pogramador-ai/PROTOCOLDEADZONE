@@ -1,4 +1,4 @@
-import {Box3,Vector3} from 'three';
+import {Box3,Vector3,Mesh,SkinnedMesh,type Object3D,type Camera} from 'three';
 import {modelCacheSnapshot} from '../../src/presentation/rendering/ModelAssets';
 import {createRoot} from 'react-dom/client';
 import {Canvas,useFrame,useThree} from '@react-three/fiber';
@@ -20,7 +20,7 @@ r.enemies.tick=(dt,...args)=>{
   const stats={windup:.45,active:.15,recovery:.9};
   Object.assign(target,{state:pose,walkPhase:poseTime*7,
    timer:pose==='windup'?stats.windup*.5:pose==='active'?stats.active*.5:stats.recovery*.5,
-   hitFlash:pose==='hurt'?.1:0,deathAge:pose==='dead'?Math.min(1.5,poseTime):0});
+   hitFlash:pose==='hurt'?.1:0,deathAge:pose==='dead'?Math.min(2.3,poseTime):0});
  }
  return [];
 };
@@ -34,9 +34,39 @@ function Probe(){
  const {gl,scene}=useThree();
  useFrame(()=>{const now=performance.now();frames.push(now-previous);previous=now;if(frames.length>240)frames.shift();},2);
 
- useEffect(()=>{Object.assign(window,{
+ useEffect(()=>{let viewScene:Object3D|undefined,viewCamera:Camera|undefined;Object.assign(window,{
+  visualViewmodel:()=>{
+   if(!viewScene||!viewCamera)return null;
+   const point=new Vector3();
+   const bounds=()=>({minX:Infinity,maxX:-Infinity,minY:Infinity,maxY:-Infinity});
+   const gun=bounds(),hands={R:bounds(),L:bounds()};
+   const include=(box:ReturnType<typeof bounds>,p:Vector3)=>{if(p.z< -1||p.z>1)return;box.minX=Math.min(box.minX,p.x);box.maxX=Math.max(box.maxX,p.x);box.minY=Math.min(box.minY,p.y);box.maxY=Math.max(box.maxY,p.y);};
+   viewScene.getObjectByName('M9')?.traverse(o=>{
+    if(o instanceof Mesh)for(let i=0;i<o.geometry.getAttribute('position').count;i++)include(gun,point.fromBufferAttribute(o.geometry.getAttribute('position'),i).applyMatrix4(o.matrixWorld).project(viewCamera!));
+   });
+   viewScene.traverse(o=>{
+    if(!(o instanceof SkinnedMesh))return;
+    const indices=o.geometry.getAttribute('skinIndex'),weights=o.geometry.getAttribute('skinWeight');
+    for(let i=0;i<indices.count;i++)for(const side of ['R','L'] as const){
+     let weight=0;
+     for(let j=0;j<4;j++){const bone=o.skeleton.bones[indices.getComponent(i,j)];if(bone.name.endsWith(side)&&/hand|palm|thumb|f_/.test(bone.name))weight+=weights.getComponent(i,j);}
+     if(weight>.6)include(hands[side],o.getVertexPosition(i,point).applyMatrix4(o.matrixWorld).project(viewCamera!));
+    }
+   });
+   const sight=(name:string)=>viewScene!.getObjectByName(name)?.getWorldPosition(new Vector3()).project(viewCamera!).toArray();
+   return {gun,hands,sights:{front:sight('FrontSight'),rear:sight('RearSight')},magazine:viewScene.getObjectByName('Magazine')?.position.toArray(),slide:viewScene.getObjectByName('Slide')?.position.toArray()};
+  },
   visualFloor:()=>r.enemies.snapshots().slice(0,4).map(e=>{
-   const actor=scene.getObjectByName('infected-'+e.id);return actor?new Box3().setFromObject(actor,true).min.y:0;
+   const actor=scene.getObjectByName('infected-'+e.id),point=new Vector3();let floor=Infinity;
+   actor?.traverse(o=>{
+    if(!(o instanceof Mesh)||!o.visible)return;
+    const index=o.geometry.index,position=o.geometry.getAttribute('position');
+    const used=index?new Set(Array.from({length:index.count},(_,i)=>index.getX(i))):Array.from({length:position.count},(_,i)=>i);
+    for(const i of used){
+     if(o instanceof SkinnedMesh)o.getVertexPosition(i,point);else point.fromBufferAttribute(position,i);
+     floor=Math.min(floor,point.applyMatrix4(o.matrixWorld).y);
+    }
+   });return Number.isFinite(floor)?floor:0;
   }),
   visualBounds:()=>r.enemies.snapshots().map(e=>{
    const actor=scene.getObjectByName('infected-'+e.id);
@@ -46,8 +76,18 @@ function Probe(){
    const actor=scene.getObjectByName('infected-'+e.id),head=actor?.getObjectByName('Head'),top=actor?.getObjectByName('HeadTop_End');
    if(!head||!top)return null;const a=head.getWorldPosition(new Vector3()),b=top.getWorldPosition(new Vector3());a.add(b).multiplyScalar(.5);
    return {id:e.id,center:a.toArray(),target:[e.x,1.78,e.z]};
-  }),frames,enemies:r.enemies.snapshots(),programs:gl.info.programs?.length,render:{...gl.info.render},memory:{...gl.info.memory},movement:r.getMovementDiagnostics(),assets:modelCacheSnapshot(),weapon:r.getWeaponState(),combat:r.getCombatState(),trace:r.getShotTrace(),results:r.getResults(),count:r.enemies.snapshots().length}),
+  }),poseTime,frames,enemies:r.enemies.snapshots(),programs:gl.info.programs?.length,render:{...gl.info.render},memory:{...gl.info.memory},movement:r.getMovementDiagnostics(),assets:modelCacheSnapshot(),weapon:r.getWeaponState(),combat:r.getCombatState(),trace:r.getShotTrace(),results:r.getResults(),count:r.enemies.snapshots().length}),
   visualCommand:(command:string,value?:number|string)=>{
+   if(command==='combat'){
+    pose=null;r.enemies.clear();
+    r.enemies.spawn(-1.8,-3.2,100,'common');r.enemies.spawn(-.7,-3.5,70,'runner');r.enemies.spawn(.5,-4,180,'brute');r.enemies.spawn(-.2,-5,120,'predator');
+    r.resume();r.setPointerLocked(true);
+   }
+   if(command==='death-sample'){
+    r.pause();for(const e of r.enemies.snapshots()){const actor=r.enemies.renderState(e.id)!;actor.state='dead';actor.deathAge=Number(value);}
+   }
+   if(command==='close'){pose='idle';poseTime=0;r.enemies.clear();r.enemies.spawn(-1,-1.85,100,'common');r.resume();r.setPointerLocked(true);}
+   if(command==='showcase'){pose='idle';poseTime=0;r.enemies.clear();for(let i=0;i<4;i++)r.enemies.spawn(-2.1+i*1.1,-3.2,100,ENEMY_KINDS[i]);r.resume();r.setPointerLocked(true);}
    if(command==='valid-grid'){
     r.enemies.clear();for(let i=0;i<20;i++)r.enemies.spawn(-2.5+(i%4)*1.2,-3-Math.floor(i/4),100,ENEMY_KINDS[i%4]);
    }
@@ -67,9 +107,12 @@ function Probe(){
    if(command==='clear')r.enemies.clear();
    if(command==='fov')r.configureView(typeof value==='number'?value:80,1);
   },
- });},[gl]);
+ });
+ const original=gl.render.bind(gl);gl.render=(renderScene,renderCamera)=>{if(renderScene.name==='FPSViewmodel'){viewScene=renderScene;viewCamera=renderCamera;}original(renderScene,renderCamera);};
+ return ()=>{gl.render=original;};
+ },[gl]);
  return null;
 }
-createRoot(document.getElementById('root')!).render(<Canvas shadows dpr={1} camera={{fov:80,near:.03,far:100}}><Scene runtime={r}/><Probe/></Canvas>);
+createRoot(document.getElementById('root')!).render(<Canvas shadows dpr={1} camera={{fov:80,near:.03,far:100}}><Scene runtime={r} groundingEnabled={!new URLSearchParams(location.search).has("rawGrounding")}/><Probe/></Canvas>);
 
 }void boot();

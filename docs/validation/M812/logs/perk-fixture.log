@@ -1,0 +1,14 @@
+vite v6.4.5 building for production...
+transforming...
+✓ 99 modules transformed.
+rendering chunks...
+computing gzip size...
+../../tmp/m81-perk-build/tools/browser-fixtures/perks.html      0.36 kB │ gzip:     0.25 kB
+../../tmp/m81-perk-build/assets/perks-CkQrLLJq.css             17.57 kB │ gzip:     4.65 kB
+../../tmp/m81-perk-build/assets/perks-BoZc85cU.js           3,644.63 kB │ gzip: 1,241.75 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.12s

@@ -1,0 +1,29 @@
+[
+  {
+    "file": "textured-pistol.zip",
+    "url": "https://opengameart.org/sites/default/files/pistol.zip",
+    "source": "https://opengameart.org/content/textured-pistol",
+    "author": "Pixel32",
+    "license": "CC-BY-3.0",
+    "bytes": 1831325,
+    "sha256": "58f2b1db1c11ce404c3382ef4e5c2d3a4376c1c215d185e269bda5da0d7d2fc8"
+  },
+  {
+    "file": "zombie-pixelhouse.zip",
+    "url": "https://opengameart.org/sites/default/files/zombie.zip",
+    "source": "https://opengameart.org/content/zombie",
+    "author": "Pixelhouse",
+    "license": "CC-BY-3.0",
+    "bytes": 5060592,
+    "sha256": "062733d16d1ac3146fd82de55ffadb71ab09fcad119c2f8002edae50b9d2a880"
+  },
+  {
+    "file": "zombie-thin.zip",
+    "url": "https://opengameart.org/sites/default/files/new_thin_zom.zip",
+    "source": "https://opengameart.org/content/thin-zombie-awake-zombie-asset",
+    "author": "Rosswet Mobile",
+    "license": "CC-BY-3.0",
+    "bytes": 1621462,
+    "sha256": "ba9a8d2a444f36b77f838251103f2c9c3a3d570db3bf1e10fb38b80f4f480b40"
+  }
+]

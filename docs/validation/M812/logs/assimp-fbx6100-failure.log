@@ -1,0 +1,4 @@
+Launching asset import ...           OK
+Validating postprocessing flags ...  OK
+0 %50 %ERROR: Failed to load file: FBX-DOM unsupported, old format version, supported are only FBX 2011, FBX 2012 and FBX 2013
+assimp info: Unable to load input file /tmp/m812-research/zombie-pixelhouse/walk.FBX
