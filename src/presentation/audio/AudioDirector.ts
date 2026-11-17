@@ -56,10 +56,10 @@ export class AudioDirector {
   if(this.voices.size>=VOICE_LIMIT){const victim=[...this.voices].find(v=>v.group==='enemy');if(!victim)return;this.stop(victim);}
   const source=ctx.createBufferSource(),gain=ctx.createGain();source.buffer=buffer;source.loop=loop;source.playbackRate.value=rate*(loop?1:1+((this.variation++%5)-2)*.012);
   gain.gain.value=volume;source.connect(gain);let panner:PannerNode|undefined;
-  if(position){panner=ctx.createPanner();panner.panningModel='HRTF';panner.distanceModel='inverse';panner.refDistance=2;panner.maxDistance=30;panner.rolloffFactor=1.3;this.position(panner,position);gain.connect(panner);panner.connect(this.channels.get(group)!);}else gain.connect(this.channels.get(group)!);
+  if(position){panner=ctx.createPanner();panner.panningModel='HRTF';panner.distanceModel='inverse';panner.refDistance=2;panner.maxDistance=30;panner.rolloffFactor=1.3;this.position(panner,position,true);gain.connect(panner);panner.connect(this.channels.get(group)!);}else gain.connect(this.channels.get(group)!);
   const voice:Voice={source,gain,panner,group,owner,name};this.voices.add(voice);this.played[name]=(this.played[name]??0)+1;source.onended=()=>this.release(voice);source.start();return voice;
  }
- private position(p:PannerNode,pos:Position):void{if(!this.ctx)return;const t=this.ctx.currentTime;for(const [param,value] of [[p.positionX,pos[0]],[p.positionY,pos[1]],[p.positionZ,pos[2]]] as const)param.setTargetAtTime(value,t,.05);}
+ private position(p:PannerNode,pos:Position,initial=false):void{if(!this.ctx)return;const t=this.ctx.currentTime;for(const [param,value] of [[p.positionX,pos[0]],[p.positionY,pos[1]],[p.positionZ,pos[2]]] as const){if(initial)param.value=value;else param.setTargetAtTime(value,t,.05);}}
  private release(v:Voice):void{this.voices.delete(v);v.source.disconnect();v.gain.disconnect();v.panner?.disconnect();}
  private stop(v:Voice):void{v.source.onended=null;try{v.source.stop();}catch{}this.release(v);}
  private stopAll():void{for(const v of [...this.voices])this.stop(v);}
