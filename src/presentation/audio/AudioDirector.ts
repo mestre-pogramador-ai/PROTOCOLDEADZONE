@@ -7,7 +7,7 @@ import {AUDIO_FILES,audioUrl,musicState,musicLevel,VOICE_LIMIT,ENEMY_VOICE_LIMIT
 type Position=readonly [number,number,number];
 type Group='effects'|'enemy'|'music'|'ambient';
 interface Voice {source:AudioBufferSourceNode;gain:GainNode;panner?:PannerNode;group:Group;owner?:number;retiring?:boolean;name:Sound}
-interface Observed {state:string;phase:number;next:number}
+interface Observed {state:string;phase:number;next:number;x:number;z:number}
 export interface AudioFrame {position:Position;yaw:number;pitch?:number;health:number;phase:string;enemies:readonly InfectedSnapshot[];weapon:WeaponState}
 /** Presentation-only sample mixer. No clock, damage, ammunition or AI authority. */
 export class AudioDirector {
@@ -80,14 +80,14 @@ export class AudioDirector {
   if(frame.weapon.reloading&&!this.inserted&&frame.weapon.reloadRemaining<=frame.weapon.reloadDuration*.3){this.play('magazine',.3);this.inserted=true;}
   let nearest=Infinity;const ids=new Set<number>();
   for(const e of frame.enemies){ids.add(e.id);const dist=Math.hypot(e.x-frame.position[0],e.z-frame.position[2]);if(e.state!=='dead')nearest=Math.min(nearest,dist);
-   let previous=this.observed.get(e.id);if(!previous){previous={state:e.state,phase:e.walkPhase,next:now+1+(e.id%11)*.37};this.observed.set(e.id,previous);}
+   let previous=this.observed.get(e.id);if(!previous){previous={state:e.state,phase:e.walkPhase,x:e.x,z:e.z,next:now+1+(e.id%11)*.37};this.observed.set(e.id,previous);}
    for(const v of this.voices)if(v.owner===e.id&&v.panner)this.position(v.panner,[e.x,1.4,e.z]);
    const rate={common:.88,runner:1.13,brute:.65,predator:1.28}[e.kind];const pair={common:1,runner:3,brute:5,predator:7}[e.kind];
-   const vocal=()=>this.play(`infected-${pair+e.id%2}` as Sound,.45,[e.x,1.4,e.z],'enemy',e.id,rate);
+   const vocal=()=>this.play(`infected-${pair+e.id%2}` as Sound,e.state==='idle'?.3:.45,[e.x,1.4,e.z],'enemy',e.id,rate*(e.state==='dead'?.72:e.state==='hurt'?1.08:1));
    if(previous.state!==e.state){if(['windup','hurt','dead'].includes(e.state)&&dist<28)vocal();if(e.state==='active')this.play('cloth',.35,[e.x,1,e.z],'enemy',e.id,rate);if(e.state==='chase'){previous.next=now+(e.id%7)*.19;}}
    if(e.state!=='dead'&&dist<25&&now>=previous.next){vocal();previous.next=now+4+(e.id%9)*.63;}
-   if(e.state==='chase'&&Math.floor(e.walkPhase/Math.PI)!==Math.floor(previous.phase/Math.PI)&&dist<18)this.play(e.id%2?'step-1':'step-2',.24,[e.x,.1,e.z],'enemy',e.id,rate);
-   previous.state=e.state;previous.phase=e.walkPhase;
+   if(e.state==='chase'&&Math.hypot(e.x-previous.x,e.z-previous.z)>.01&&Math.floor(e.walkPhase/Math.PI)!==Math.floor(previous.phase/Math.PI)&&dist<18)this.play(e.id%2?'step-1':'step-2',.24,[e.x,.1,e.z],'enemy',e.id,rate);
+   previous.state=e.state;previous.phase=e.walkPhase;previous.x=e.x;previous.z=e.z;
   }
   for(const id of this.observed.keys())if(!ids.has(id))this.observed.delete(id);
   const desired=musicState(frame.health,frame.phase,nearest);if(now-this.lastMusic>2){this.setMusic(desired);this.lastMusic=now;}

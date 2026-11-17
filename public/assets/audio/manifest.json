@@ -6,7 +6,8 @@
     "author": "Michel Baradari (apollo-music.de)",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 87532,
-    "sha256": "5e11477de670bcc9faec247082407afe416a1fa0e2dffbd0506be1ebc7d23cef"
+    "sha256": "5e11477de670bcc9faec247082407afe416a1fa0e2dffbd0506be1ebc7d23cef",
+    "originalFile": "pistol.wav"
   },
   {
     "file": "infected-1.wav",
@@ -15,7 +16,8 @@
     "author": "artisticdude",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 75458,
-    "sha256": "a561ddea484baa68438893dce1e25c158d15edf63ee69ffea060f1e32fc47e49"
+    "sha256": "a561ddea484baa68438893dce1e25c158d15edf63ee69ffea060f1e32fc47e49",
+    "originalFile": "zombie-1.wav"
   },
   {
     "file": "infected-2.wav",
@@ -24,7 +26,8 @@
     "author": "artisticdude",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 62594,
-    "sha256": "0b1eea17edcf571517b7b3619f8e512439440f5246d79ccd02d8c7fb8f93a4da"
+    "sha256": "0b1eea17edcf571517b7b3619f8e512439440f5246d79ccd02d8c7fb8f93a4da",
+    "originalFile": "zombie-2.wav"
   },
   {
     "file": "infected-3.wav",
@@ -33,7 +36,8 @@
     "author": "artisticdude",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 51570,
-    "sha256": "7636356e37600999d395497294900e94f0ce5f630c446ff0442e4ecf5c7c0463"
+    "sha256": "7636356e37600999d395497294900e94f0ce5f630c446ff0442e4ecf5c7c0463",
+    "originalFile": "zombie-3.wav"
   },
   {
     "file": "infected-4.wav",
@@ -42,7 +46,8 @@
     "author": "artisticdude",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 64434,
-    "sha256": "02bf9766ee85a64d4d60e1feb256b2f3f033a773b81ab9df4c94c6b563df502c"
+    "sha256": "02bf9766ee85a64d4d60e1feb256b2f3f033a773b81ab9df4c94c6b563df502c",
+    "originalFile": "zombie-4.wav"
   },
   {
     "file": "infected-5.wav",
@@ -51,7 +56,8 @@
     "author": "artisticdude",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 44220,
-    "sha256": "d244a77c099016233dee78626ac1cf0d834176ed3f084310cfc1d4956c2c6a88"
+    "sha256": "d244a77c099016233dee78626ac1cf0d834176ed3f084310cfc1d4956c2c6a88",
+    "originalFile": "zombie-5.wav"
   },
   {
     "file": "infected-6.wav",
@@ -60,7 +66,8 @@
     "author": "artisticdude",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 47894,
-    "sha256": "111544b523e70598e3a11188fd11d34d9086308b32f7f58b1ee13e17d98b6650"
+    "sha256": "111544b523e70598e3a11188fd11d34d9086308b32f7f58b1ee13e17d98b6650",
+    "originalFile": "zombie-6.wav"
   },
   {
     "file": "infected-7.wav",
@@ -69,7 +76,8 @@
     "author": "artisticdude",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 51570,
-    "sha256": "ea7d90524559185fd0a151921ddad1cf62bd6107141b59446a2c166a6ce8670d"
+    "sha256": "ea7d90524559185fd0a151921ddad1cf62bd6107141b59446a2c166a6ce8670d",
+    "originalFile": "zombie-7.wav"
   },
   {
     "file": "infected-8.wav",
@@ -78,7 +86,8 @@
     "author": "artisticdude",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 73620,
-    "sha256": "fc55399674904459fd596004562847bc6b16c98e2594d1eba11cf58b52dc4acf"
+    "sha256": "fc55399674904459fd596004562847bc6b16c98e2594d1eba11cf58b52dc4acf",
+    "originalFile": "zombie-8.wav"
   },
   {
     "file": "slide.wav",
@@ -87,7 +96,8 @@
     "author": "Kenney (mirror Boyquotes)",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 39402,
-    "sha256": "fec591b591b1c4579e03a494228407efa5716e7451b6770f554026619c57577a"
+    "sha256": "fec591b591b1c4579e03a494228407efa5716e7451b6770f554026619c57577a",
+    "originalFile": "metal_click.ogg"
   },
   {
     "file": "magazine.wav",
@@ -96,16 +106,8 @@
     "author": "Kenney (mirror Boyquotes)",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 23128,
-    "sha256": "64c9ab877fa9ebbc599e5cb6d2f195cb2bca8a310fc31e7727e6d18b910ad8e6"
-  },
-  {
-    "file": "metal.wav",
-    "source": "https://raw.githubusercontent.com/Boyquotes/kenney-rpg-audio-for-godot/22eb79bb843bbcadcaa6ed119353a33265ffad11/addons/kenney%20rpg%20audio/metal_pot_1.ogg",
-    "license": "CC0-1.0",
-    "author": "Kenney (mirror Boyquotes)",
-    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
-    "bytes": 128892,
-    "sha256": "d4d7f4f6a6d87522d807a62a3d72a229fcde87df8c930906f272f6ac409cb721"
+    "sha256": "64c9ab877fa9ebbc599e5cb6d2f195cb2bca8a310fc31e7727e6d18b910ad8e6",
+    "originalFile": "metal_latch.ogg"
   },
   {
     "file": "step-1.wav",
@@ -114,7 +116,8 @@
     "author": "Kenney (mirror Boyquotes)",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 22028,
-    "sha256": "b367df6a8c8407393a0c2b66067d93480a1ae6c0a9fc272b4eb6554d311d2aa3"
+    "sha256": "b367df6a8c8407393a0c2b66067d93480a1ae6c0a9fc272b4eb6554d311d2aa3",
+    "originalFile": "footstep_0.ogg"
   },
   {
     "file": "step-2.wav",
@@ -123,7 +126,8 @@
     "author": "Kenney (mirror Boyquotes)",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 24994,
-    "sha256": "37a3ecd4066d329a11a56f9d564aaca06efc7ad8faf135d89a57bbaf044cdf84"
+    "sha256": "37a3ecd4066d329a11a56f9d564aaca06efc7ad8faf135d89a57bbaf044cdf84",
+    "originalFile": "footstep_1.ogg"
   },
   {
     "file": "door.wav",
@@ -132,7 +136,8 @@
     "author": "Kenney (mirror Boyquotes)",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 59618,
-    "sha256": "715a1e21b325a05200ac187958a1764a4fcd2ba469a5fcb150d9663189a2d06b"
+    "sha256": "715a1e21b325a05200ac187958a1764a4fcd2ba469a5fcb150d9663189a2d06b",
+    "originalFile": "door_close_1.ogg"
   },
   {
     "file": "cloth.wav",
@@ -141,7 +146,8 @@
     "author": "Kenney (mirror Boyquotes)",
     "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
     "bytes": 58382,
-    "sha256": "17711bc26e26eed38f4b42f1ff782dec04c33e5533e8c6faab9ab151f82f05ad"
+    "sha256": "17711bc26e26eed38f4b42f1ff782dec04c33e5533e8c6faab9ab151f82f05ad",
+    "originalFile": "cloth_1.ogg"
   },
   {
     "file": "menu.wav",
@@ -216,31 +222,13 @@
     "sha256": "133a470561b861733c867143392ef68b0d1c686ca833fa35dfe3e258489ef4ff"
   },
   {
-    "file": "concrete.wav",
-    "source": "tools/prepare-audio.py",
-    "license": "CC0-1.0",
-    "author": "PROTOCOL DEAD ZONE original DSP",
-    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
-    "bytes": 7982,
-    "sha256": "10fceda6e0c1f01d3361b6d117ee6f7c9c5d3ea533b6db5908da06543399b9c8"
-  },
-  {
-    "file": "glass.wav",
-    "source": "tools/prepare-audio.py",
-    "license": "CC0-1.0",
-    "author": "PROTOCOL DEAD ZONE original DSP",
-    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
-    "bytes": 15478,
-    "sha256": "9579da8f12f1dfcd73348bd5bfe92cbedfe563474b03ffbc3a7f52c860e81e31"
-  },
-  {
     "file": "flesh.wav",
     "source": "tools/prepare-audio.py",
     "license": "CC0-1.0",
     "author": "PROTOCOL DEAD ZONE original DSP",
     "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
     "bytes": 6658,
-    "sha256": "cc46365ca293c4438ea06962cabb42c9c9ce2053bea3f99a7e70b6e4e84dd2ff"
+    "sha256": "dc150b1cefd6411788d9b2e6b65c7a1acea1d9a30c9cfda033bdf4d8a9106e30"
   },
   {
     "file": "alarm.wav",
@@ -249,7 +237,7 @@
     "author": "PROTOCOL DEAD ZONE original DSP",
     "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
     "bytes": 52964,
-    "sha256": "0eeca42829306cc16d199f0369a8e79149fe7201d146279122b510a30a6fa6e0"
+    "sha256": "ca090073a3eb26fb8036fe41cd8841828c723baf870ec1c4c2e3a217b81a35fb"
   },
   {
     "file": "click.wav",
@@ -258,7 +246,7 @@
     "author": "PROTOCOL DEAD ZONE original DSP",
     "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
     "bytes": 4012,
-    "sha256": "fda9a75f8dc28539fcc5567c8506ea7076edebc724e7cdaf4a1b4bd9eb62758b"
+    "sha256": "4e38e83580a9f4372668e4661495354b7b0d15637ef29ddfd83e2e5fda22a14b"
   },
   {
     "file": "headshot.wav",
@@ -267,7 +255,7 @@
     "author": "PROTOCOL DEAD ZONE original DSP",
     "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
     "bytes": 7100,
-    "sha256": "a1793088246bead1624dc438b9accc9cfe0db1b27123f429e5f5efde9b2e51dc"
+    "sha256": "2e633d5c88e656a3f79710ba28bffa6322687716602c7400e0d335f0f3fa4e52"
   },
   {
     "file": "kill.wav",
@@ -276,7 +264,7 @@
     "author": "PROTOCOL DEAD ZONE original DSP",
     "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
     "bytes": 9746,
-    "sha256": "c0a7e97357efcdbdf2780a9333a94805081934979dd05a8c9274781a0d4394ce"
+    "sha256": "ee67c09457aef7e4cd7df31c80c077f391fba0d63267b170f4fe8ae1c27d3b1e"
   },
   {
     "file": "denied.wav",
@@ -285,7 +273,7 @@
     "author": "PROTOCOL DEAD ZONE original DSP",
     "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
     "bytes": 8864,
-    "sha256": "6599dd3922601beb34f65690dd0301e13d26472e6ea3e757f5a47ef98d9d317c"
+    "sha256": "e476f86662d6088e028d53364e697e6617bdd6551cb4b5a7b9fbaa75169e04a5"
   },
   {
     "file": "purchase.wav",
@@ -294,6 +282,36 @@
     "author": "PROTOCOL DEAD ZONE original DSP",
     "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
     "bytes": 11068,
-    "sha256": "671eaa227b486d72011f49aa0eaf835abe3c500d83f2caf97511df7e285b1fa6"
+    "sha256": "3d327800736b083af17467c8f9014750a6758b7f7bfd79ff55d19a01fc8df6b8"
+  },
+  {
+    "file": "glass.wav",
+    "source": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+    "license": "CC0-1.0",
+    "author": "rubberduck",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 26724,
+    "sha256": "ff6f245737b5ca2ee2202f1e7c988837f52ef6de0528d2237ea1a4232b83d2bb",
+    "originalFile": "bfh1_glass_hit_01.ogg"
+  },
+  {
+    "file": "concrete.wav",
+    "source": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+    "license": "CC0-1.0",
+    "author": "rubberduck",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 11484,
+    "sha256": "345b1f6b37db1e9dff2403566270da56cb1ff47484442e0fa845c0a9dea316ca",
+    "originalFile": "bfh1_rock_hit_01.ogg"
+  },
+  {
+    "file": "metal.wav",
+    "source": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+    "license": "CC0-1.0",
+    "author": "rubberduck",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 21064,
+    "sha256": "154eb8083983cadb34db64f7ab8161dc18997cb2dc62d91d1ba8c1d86cf8085f",
+    "originalFile": "bfh1_metal_hit_01.ogg"
   }
 ]
