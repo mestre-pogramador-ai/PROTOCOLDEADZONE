@@ -6,6 +6,7 @@ import {ENEMY_ARCHETYPES} from '../../gameplay/enemies/EnemyArchetypes';
 import type {Runtime} from '../../app/Runtime';
 import {MODEL_PATHS,useModel} from './ModelAssets';
 import {attackClipPhase,presentationDelta,deathGrounding} from './VisualMotion';
+import {applyCharacterCulling} from './CharacterCulling';
 import {createHeadRetarget} from './HeadRetarget';
 
 /** Art follows authoritative actor states; never drives collision or damage. */
@@ -29,7 +30,7 @@ function InfectedSlot({runtime,id,groundingEnabled}:{runtime:Runtime;id:number;g
     let material=materials.get(source);if(!material){material=source.clone();materials.set(source,material);}return material;
    };
    o.material=Array.isArray(o.material)?o.material.map(m=>convert(m as MeshStandardMaterial)):convert(o.material as MeshStandardMaterial);
-   o.receiveShadow=false;o.frustumCulled=false;if(o instanceof SkinnedMesh)skins.push(o);
+   o.receiveShadow=false;o.frustumCulled=false;if(o instanceof SkinnedMesh){applyCharacterCulling(o,kind==='predator'?'hunter':'worker');skins.push(o);}
   });
   // The exported LODs/vest share bind matrices and joint order; one cloned skeleton.
   if(skins.length>1)for(const skin of skins.slice(1)){skin.skeleton.dispose();skin.skeleton=skins[0].skeleton;}

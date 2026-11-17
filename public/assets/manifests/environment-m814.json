@@ -1,0 +1,14 @@
+{
+  "milestone": "M8.1.4",
+  "base": "M8.1.3, 71b6cea",
+  "art_origin": "Original local M8.1.3 environment art, preserved; no new downloaded model or new sector",
+  "art_license": "CC0-1.0, scope defined by ENVIRONMENT_M813.md; third-party weapon/character licenses unchanged",
+  "geometry": {"parts":348,"room_batches":13,"corridor_batches":9,"door_batches":5,"triangles":7178,"indexed_vertices":14564,"attribute_bytes":466048,"index_bytes":43068,"legacy_nonindexed_attribute_bytes":689088},
+  "textures": {"albedo_maps":4,"albedo_resolution":[512,512],"atlas_resolution":[1024,1024],"total_textures":5,"packed_linear_roughness":"floor/paint albedo alpha; RGB remains sRGB albedo","estimated_rgba_mip_mib":10.67},
+  "materials": "Original Standard PBR; roughness reuses the existing albedo sample. Glass and character materials unchanged. No unlit replacement or private GGX specialization in production.",
+  "character_bounds": "character-bounds-m814.json; local animation envelopes plus 0.65 m margin, tied to asset SHA-256",
+  "kit": ["src/presentation/rendering/EnvironmentModuleKit.ts","src/presentation/rendering/EnvironmentTypes.ts","src/presentation/rendering/EnvironmentLights.tsx","src/presentation/rendering/RoomSurfaces.ts"],
+  "documentation": "docs/ENVIRONMENT_MODULE_KIT.md",
+  "memory_note": "Geometry values are CPU typed-array sizes; texture size is analytical, not measured VRAM",
+  "status": "Validated in automated Chromium SwiftShader. Native desktop GPU/60 FPS and human gameplay acceptance remain pending."
+}

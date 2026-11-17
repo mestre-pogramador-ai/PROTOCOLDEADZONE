@@ -1,0 +1,15 @@
+{"stage":"load","count":0,"frames":24}
+{"stage":"load","count":6,"frames":24}
+{"stage":"load","count":12,"frames":24}
+{"stage":"load","count":20,"frames":24}
+{"stage":"load","count":20,"frames":24}
+{"stage":"load","count":12,"frames":24}
+{"stage":"load","count":6,"frames":24}
+{"stage":"load","count":0,"frames":24}
+{"stage":"ablation","option":"default"}
+{"stage":"ablation","option":"no-shadow"}
+{"stage":"ablation","option":"no-roughness"}
+{"stage":"ablation","option":"no-glass"}
+{"stage":"ablation","option":"unlit-room"}
+{"stage":"ablation","option":"default"}
+{"phase":"before","errors":[],"httpErrors":[]}

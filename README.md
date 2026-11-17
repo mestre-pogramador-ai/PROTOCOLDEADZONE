@@ -171,3 +171,13 @@ teto físico bloqueia saltos através do forro. Sem novo setor ou balanceamento.
 [Registro da arte local](public/assets/manifests/environment-m813.json).
 A meta de 60 FPS ainda requer GPU desktop: o relatório registra também a
 regressão observada no renderizador por software, sem declarar homologação.
+
+## M8.1.4 — Otimização e validação
+
+Buffers indexados, roughness compartilhado no albedo, batches por região e
+culling conservador dos infectados preservam o cenário M8.1.3. Kit visual e
+luzes podem ser reutilizados em outros setores; nenhum foi criado nesta etapa.
+
+[Resultados reais, testes e capturas](M8_1_4_OPTIMIZATION_REPORT.md) ·
+[Kit reutilizável](docs/ENVIRONMENT_MODULE_KIT.md).
+Medições são SwiftShader; 60 FPS em GPU desktop continuam pendentes.

@@ -4,6 +4,7 @@ import {AnimationMixer,Group,Vector3,Texture,Mesh} from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {clone} from 'three/addons/utils/SkeletonUtils.js';
 import {createHeadRetarget} from '../presentation/rendering/HeadRetarget';
+import {ENEMY_ARCHETYPES} from '../gameplay/enemies/EnemyArchetypes';
 import {attackClipPhase} from '../presentation/rendering/VisualMotion';
 it('keeps the actual brute head inside its existing tolerance across walk-to-windup blends',async()=>{
  const loader=new GLTFLoader();
@@ -21,7 +22,7 @@ it('keeps the actual brute head inside its existing tolerance across walk-to-win
   for(const weight of [.2,.4,.6,.8,1])for(let frame=0;frame<=20;frame++){
    mixer.stopAllAction();walk.reset().play();attack.reset().play();walk.paused=attack.paused=true;
    walk.setEffectiveWeight(1-weight);attack.setEffectiveWeight(weight);walk.time=frame/20*walk.getClip().duration;
-   attack.time=attackClipPhase('windup',.225,.45,.15,.9)*attack.getClip().duration;
+   attack.time=attackClipPhase('windup',.225,ENEMY_ARCHETYPES.brute.stats.windup,ENEMY_ARCHETYPES.brute.stats.active,ENEMY_ARCHETYPES.brute.stats.recovery)*attack.getClip().duration;
    mixer.update(0);anchor.updateMatrixWorld(true);const before=hips.getWorldPosition(new Vector3());
    worst=Math.max(worst,retarget.apply(-.2,-4));expect(hips.getWorldPosition(new Vector3()).distanceTo(before)).toBeLessThan(1e-8);
   }

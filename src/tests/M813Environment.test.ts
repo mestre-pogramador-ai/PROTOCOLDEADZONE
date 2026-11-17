@@ -73,7 +73,7 @@ describe('M8.1.3 environment safety and cost',()=>{
  it('batches static art into at most thirteen shared batches with bounded geometry and cleanup',()=>{
   const batches=buildEnvironmentBatches(layout),door=buildEnvironmentBatches(createDoorLayout());
   expect(batches.length).toBeLessThanOrEqual(13);expect(door.length).toBeLessThanOrEqual(5);
-  const triangles=[...batches,...door].reduce((n,b)=>n+b.geometry.getAttribute('position').count/3,0);
+  const triangles=[...batches,...door].reduce((n,b)=>n+(b.geometry.index?.count??b.geometry.getAttribute('position').count)/3,0);
   expect(triangles).toBeLessThan(24000);
   const disposed=batches.map(b=>{const spy=vi.fn();b.geometry.addEventListener('dispose',spy);return spy;});disposeEnvironmentBatches(batches);disposeEnvironmentBatches(door);disposed.forEach(spy=>expect(spy).toHaveBeenCalledOnce());
   console.info('M813 environment',layout.length,'parts',batches.length,'static batches',door.length,'door batches',triangles,'triangles');

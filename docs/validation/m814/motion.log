@@ -1,0 +1,23 @@
+
+> protocol-dead-zone@0.9.5 test:motion
+> tsc -p tools/tsconfig.motion.json && node .tmp/motion/tools/run-motion-tests.js
+
+OK  1 W avança no eixo -Z
+OK  2 diagonais não aumentam velocidade
+OK  3 W com yaw 90 graus avança -X
+OK  4 movimento com dt zero é nulo
+OK  5 input de movimento inválido não gera NaN
+OK  6 pulo só começa no chão
+OK  7 pulo no ar é ignorado
+OK  8 agachar impede salto
+OK  9 velocidade terminal limita queda
+OK 10 solo mantém intenção descendente pequena
+OK 11 interpolação 50% fica no meio
+OK 12 interpolação não extrapola
+OK 13 alpha inválido usa posição atual
+13 verificações isoladas passaram. Integração Rapier requer npm install e Vitest.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
