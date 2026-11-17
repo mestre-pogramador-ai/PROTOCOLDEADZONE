@@ -1,8 +1,8 @@
 # PROTOCOL: DEAD ZONE
 
-**M8.1.1 — Integração visual GLB (v0.9.2)** · FPS 3D de sobrevivência no navegador, em desenvolvimento.
+**M8.1.4-A — Horror Audio System + Desktop Test Build** · versão de pacote **0.9.5** · FPS 3D de sobrevivência para navegador e Windows x64, em desenvolvimento.
 
-Este projeto mantém os marcos M0–M6.2 e introduz variantes de infectados nas rodadas. A primeira arena inclui:
+Este projeto preserva os sistemas M0–M8.1.4 e adiciona áudio local, vozes espaciais e música dinâmica. A primeira arena inclui:
 menu, partida, preparação, rodadas, infectados, combate M9, créditos, porta comprável,
 pausa, derrota, relatório e reinício. **Não é o jogo final nem uma demo comercial.**
 
@@ -15,7 +15,7 @@ pausa, derrota, relatório e reinício. **Não é o jogo final nem uma demo come
 ## Instalação
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -24,6 +24,7 @@ Abra a URL local informada pelo Vite. Para testes e compilação:
 ```bash
 npm run test:motion
 npm test
+npx tsc -b
 npm run build
 npm run preview
 ```
@@ -40,20 +41,26 @@ npm run preview
 | Shift | Correr |
 | Ctrl / C | Agachar |
 | Espaço | Pular |
-| E | Interagir com estação de munição ou porta próxima |
+| E | Interagir com munição, porta ou máquina de perk próxima |
 | T | Começar a próxima onda antes do fim da preparação |
 | Esc | Pausar e liberar o mouse |
+| F11 | Alternar tela cheia no Electron |
+| F8 | Marcar um problema no diagnóstico |
+| F9 / BAIXAR ERROS | Exportar relatório JSON |
 
-## Funcionalidades deste milestone
+## Funcionalidades atuais
 
 - Simulação central de 60 Hz com física Rapier manual e uma única ponte R3F.
 - **M6.1:** cápsula cinemática controlada pelo KCC Rapier; deslizamento em paredes,
   detecção de chão por contatos, autostep, snap-to-ground e câmera interpolada.
-- Infectado Comum com perseguição, separação, preparação do ataque, dano e morte.
+- Quatro arquétipos de infectados com perseguição, separação, preparação do ataque, dano e morte.
 - Rodadas escaláveis, sistema de créditos com transações idempotentes, porta comprável.
 - Menus e HUD integrados ao viewport, com opção de tela cheia.
 - Configurações locais: volumes de áudio, mute, FOV, mouse, redução de movimento.
-- Efeitos sonoros sintetizados no navegador, sem assets externos essenciais.
+- 33 WAVs locais com fontes/licenças registradas, vozes 3D, música dinâmica e volume musical persistente.
+- Munição comprável, socorro limitado e quatro perks de sessão.
+- Sala de Contenção com GLBs, materiais PBR, iluminação e batches otimizados.
+- Electron com arquivos locais, isolamento de contexto, sandbox e renderer sem Node.
 - Relatório da operação com estatísticas e recorde local simples.
 
 Para diagnosticar contato e deslocamento use `?debugMovement=1` na URL do jogo.
@@ -74,8 +81,7 @@ O recorde salvo neste navegador permanece.
 - `src/tests`: testes Vitest acumulados de todos os marcos
 - `docs/M6_VERTICAL_SLICE.md`: escopo, limitações e checklist manual
 
-**Limitações:** modelos e sons são placeholders; não há setores adicionais,
-armas alternativas, missões, progressão meta, multiplayer ou extração neste marco.
+**Limitações:** modelos, animações e mixagem continuam em revisão artística. Parte do áudio é de bibliotecas adaptadas e parte é DSP original; isso não constitui aprovação auditiva profissional. Não há novos setores nesta entrega, armas alternativas, missão final, progressão meta, multiplayer ou extração.
 Leia `docs/M6_VERTICAL_SLICE.md` para mais detalhes.
 
 ## M6.2 — estabilidade, combate e IA
@@ -181,3 +187,38 @@ luzes podem ser reutilizados em outros setores; nenhum foi criado nesta etapa.
 [Resultados reais, testes e capturas](M8_1_4_OPTIMIZATION_REPORT.md) ·
 [Kit reutilizável](docs/ENVIRONMENT_MODULE_KIT.md).
 Medições são SwiftShader; 60 FPS em GPU desktop continuam pendentes.
+
+
+## Desktop Windows x64
+
+A versão desktop mantém a versão web e usa os mesmos sistemas de gameplay. Os assets essenciais (GLB, texturas, áudio e Rapier/WASM) estão no pacote; a execução não depende de Vite, Node ou internet.
+
+Para baixar um build, abra [GitHub Actions — Windows Desktop Test Build](https://github.com/mestre-pogramador-ai/PROTOCOLDEADZONE/actions/workflows/desktop-windows.yml), escolha uma execução verde da versão desejada e baixe o artifact **PROTOCOL-DEAD-ZONE-Windows-x64**. Entre em uma conta com acesso ao repositório quando necessário e extraia o ZIP.
+
+- `PROTOCOL-DEAD-ZONE-Portable.exe`: execução portátil.
+- `PROTOCOL-DEAD-ZONE-Setup-0.9.5-x64.exe`: instalador NSIS.
+
+Os pacotes de teste não têm assinatura digital; o Windows pode mostrar aviso de editor desconhecido. A aceleração GPU permanece habilitada por padrão. O smoke automatizado usa o app empacotado em Windows Server 2025 com renderer por software; os wrappers Portable/instalador e Windows 10/11 físico ainda exigem teste manual.
+
+Build local (Windows x64 recomendado para gerar os EXEs):
+
+```bash
+npm ci
+npm run desktop:build
+```
+
+Saída: `release/`. Para desenvolvimento, `npm run desktop:pack` gera a pasta do aplicativo para o sistema atual; `npm run desktop:start` abre o `dist/` já compilado. `npm run test:desktop` executa o smoke Electron, com `DESKTOP_EXECUTABLE` opcional apontando ao executável empacotado.
+
+Detalhes, segurança, validação e limitações: [DESKTOP_BUILD_REPORT.md](DESKTOP_BUILD_REPORT.md).
+
+## M8.1.4-A — Áudio de terror
+
+Disparo e Foley da M9, impactos por material confirmado, vozes dos quatro arquétipos e ambiente posicional. Música com estados de menu, preparação/exploração, suspense, combate, vida crítica e Game Over. Crossfades e períodos de silêncio evitam reprodução contínua de uma única camada.
+
+O áudio é desbloqueado após interação. Os controles de volume geral, efeitos, ambiente, música e mute ficam em **CONFIGURAÇÕES** e são persistidos localmente. A pausa suspende o contexto; o reinício reutiliza buffers e remove fontes antigas. Os limites são 32 vozes totais e 10 de infectados. A trilha final continua durante o Game Over.
+
+Fontes/licenças: [manifest por arquivo](public/assets/audio/manifest.json) e [créditos de áudio](public/assets/audio/licenses/SOURCES.md), também identificados na interface. Pistola genérica: Michel Baradari (CC-BY 3.0); vozes: artisticdude (CC0); Foley: Kenney (CC0); impactos: rubberduck (CC0). Música, ambiente e alguns sinais são DSP original em WAV, não gravações de campo.
+
+Validação registrada do código: **192 testes Vitest**, **13 verificações de movimento**, TypeScript, builds web/Electron, testes no Chromium e smoke Windows. Testes automatizados de decodificação, eventos e vozes **não substituem escuta com fones**. Não foi comprovada a meta de 60 FPS em GPU física.
+
+Resultados, evidências e pendências: [M8_1_4A_AUDIO_REPORT.md](M8_1_4A_AUDIO_REPORT.md). Os relatórios dos marcos anteriores registram o estado de suas respectivas datas; consulte esta seção para a versão atual.
