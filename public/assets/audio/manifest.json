@@ -1,0 +1,299 @@
+[
+  {
+    "file": "m9-shot.wav",
+    "source": "https://opengameart.org/content/chaingun-pistol-rifle-shotgun-shots",
+    "license": "CC-BY-3.0",
+    "author": "Michel Baradari (apollo-music.de)",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 87532,
+    "sha256": "5e11477de670bcc9faec247082407afe416a1fa0e2dffbd0506be1ebc7d23cef"
+  },
+  {
+    "file": "infected-1.wav",
+    "source": "https://opengameart.org/content/zombies-sound-pack",
+    "license": "CC0-1.0",
+    "author": "artisticdude",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 75458,
+    "sha256": "a561ddea484baa68438893dce1e25c158d15edf63ee69ffea060f1e32fc47e49"
+  },
+  {
+    "file": "infected-2.wav",
+    "source": "https://opengameart.org/content/zombies-sound-pack",
+    "license": "CC0-1.0",
+    "author": "artisticdude",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 62594,
+    "sha256": "0b1eea17edcf571517b7b3619f8e512439440f5246d79ccd02d8c7fb8f93a4da"
+  },
+  {
+    "file": "infected-3.wav",
+    "source": "https://opengameart.org/content/zombies-sound-pack",
+    "license": "CC0-1.0",
+    "author": "artisticdude",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 51570,
+    "sha256": "7636356e37600999d395497294900e94f0ce5f630c446ff0442e4ecf5c7c0463"
+  },
+  {
+    "file": "infected-4.wav",
+    "source": "https://opengameart.org/content/zombies-sound-pack",
+    "license": "CC0-1.0",
+    "author": "artisticdude",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 64434,
+    "sha256": "02bf9766ee85a64d4d60e1feb256b2f3f033a773b81ab9df4c94c6b563df502c"
+  },
+  {
+    "file": "infected-5.wav",
+    "source": "https://opengameart.org/content/zombies-sound-pack",
+    "license": "CC0-1.0",
+    "author": "artisticdude",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 44220,
+    "sha256": "d244a77c099016233dee78626ac1cf0d834176ed3f084310cfc1d4956c2c6a88"
+  },
+  {
+    "file": "infected-6.wav",
+    "source": "https://opengameart.org/content/zombies-sound-pack",
+    "license": "CC0-1.0",
+    "author": "artisticdude",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 47894,
+    "sha256": "111544b523e70598e3a11188fd11d34d9086308b32f7f58b1ee13e17d98b6650"
+  },
+  {
+    "file": "infected-7.wav",
+    "source": "https://opengameart.org/content/zombies-sound-pack",
+    "license": "CC0-1.0",
+    "author": "artisticdude",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 51570,
+    "sha256": "ea7d90524559185fd0a151921ddad1cf62bd6107141b59446a2c166a6ce8670d"
+  },
+  {
+    "file": "infected-8.wav",
+    "source": "https://opengameart.org/content/zombies-sound-pack",
+    "license": "CC0-1.0",
+    "author": "artisticdude",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 73620,
+    "sha256": "fc55399674904459fd596004562847bc6b16c98e2594d1eba11cf58b52dc4acf"
+  },
+  {
+    "file": "slide.wav",
+    "source": "https://raw.githubusercontent.com/Boyquotes/kenney-rpg-audio-for-godot/22eb79bb843bbcadcaa6ed119353a33265ffad11/addons/kenney%20rpg%20audio/metal_click.ogg",
+    "license": "CC0-1.0",
+    "author": "Kenney (mirror Boyquotes)",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 39402,
+    "sha256": "fec591b591b1c4579e03a494228407efa5716e7451b6770f554026619c57577a"
+  },
+  {
+    "file": "magazine.wav",
+    "source": "https://raw.githubusercontent.com/Boyquotes/kenney-rpg-audio-for-godot/22eb79bb843bbcadcaa6ed119353a33265ffad11/addons/kenney%20rpg%20audio/metal_latch.ogg",
+    "license": "CC0-1.0",
+    "author": "Kenney (mirror Boyquotes)",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 23128,
+    "sha256": "64c9ab877fa9ebbc599e5cb6d2f195cb2bca8a310fc31e7727e6d18b910ad8e6"
+  },
+  {
+    "file": "metal.wav",
+    "source": "https://raw.githubusercontent.com/Boyquotes/kenney-rpg-audio-for-godot/22eb79bb843bbcadcaa6ed119353a33265ffad11/addons/kenney%20rpg%20audio/metal_pot_1.ogg",
+    "license": "CC0-1.0",
+    "author": "Kenney (mirror Boyquotes)",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 128892,
+    "sha256": "d4d7f4f6a6d87522d807a62a3d72a229fcde87df8c930906f272f6ac409cb721"
+  },
+  {
+    "file": "step-1.wav",
+    "source": "https://raw.githubusercontent.com/Boyquotes/kenney-rpg-audio-for-godot/22eb79bb843bbcadcaa6ed119353a33265ffad11/addons/kenney%20rpg%20audio/footstep_0.ogg",
+    "license": "CC0-1.0",
+    "author": "Kenney (mirror Boyquotes)",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 22028,
+    "sha256": "b367df6a8c8407393a0c2b66067d93480a1ae6c0a9fc272b4eb6554d311d2aa3"
+  },
+  {
+    "file": "step-2.wav",
+    "source": "https://raw.githubusercontent.com/Boyquotes/kenney-rpg-audio-for-godot/22eb79bb843bbcadcaa6ed119353a33265ffad11/addons/kenney%20rpg%20audio/footstep_1.ogg",
+    "license": "CC0-1.0",
+    "author": "Kenney (mirror Boyquotes)",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 24994,
+    "sha256": "37a3ecd4066d329a11a56f9d564aaca06efc7ad8faf135d89a57bbaf044cdf84"
+  },
+  {
+    "file": "door.wav",
+    "source": "https://raw.githubusercontent.com/Boyquotes/kenney-rpg-audio-for-godot/22eb79bb843bbcadcaa6ed119353a33265ffad11/addons/kenney%20rpg%20audio/door_close_1.ogg",
+    "license": "CC0-1.0",
+    "author": "Kenney (mirror Boyquotes)",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 59618,
+    "sha256": "715a1e21b325a05200ac187958a1764a4fcd2ba469a5fcb150d9663189a2d06b"
+  },
+  {
+    "file": "cloth.wav",
+    "source": "https://raw.githubusercontent.com/Boyquotes/kenney-rpg-audio-for-godot/22eb79bb843bbcadcaa6ed119353a33265ffad11/addons/kenney%20rpg%20audio/cloth_1.ogg",
+    "license": "CC0-1.0",
+    "author": "Kenney (mirror Boyquotes)",
+    "changes": "Mono 44100 Hz PCM WAV, limiter; playback variants use modest pitch changes.",
+    "bytes": 58382,
+    "sha256": "17711bc26e26eed38f4b42f1ff782dec04c33e5533e8c6faab9ab151f82f05ad"
+  },
+  {
+    "file": "menu.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 352844,
+    "sha256": "ef7a60dc96f091439a134d655224fbaf3bd9a115c463dcc959a4128f9418e2ca"
+  },
+  {
+    "file": "preparation.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 352844,
+    "sha256": "b343bc4f656689dce6784f724bc7c71ce30400cff5c7b9197e778c23bb5c4060"
+  },
+  {
+    "file": "suspense.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 352844,
+    "sha256": "df3d94f3f7f3897fdb80e154dc2868d1a56c17451fad4eefc28a0c88b1be01c6"
+  },
+  {
+    "file": "combat.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 352844,
+    "sha256": "e7d410f35130f95c4090d64e6516b222b06584d02c7e9aa122bef16556e480d4"
+  },
+  {
+    "file": "critical.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 352844,
+    "sha256": "b6d465deb47f39b729c2efaa8a6532f1a4f6baf38469a8cfefc765758f5c85e0"
+  },
+  {
+    "file": "gameover.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 352844,
+    "sha256": "db817eb0216a961dbfa3264606b548cfea852e8b001b8c057d0bd57cecb94a9a"
+  },
+  {
+    "file": "vent.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 352844,
+    "sha256": "30fe9b68f85dcfcc064fccd51d7e785d3fbf833b9425bed6c164b5a6cd5820fb"
+  },
+  {
+    "file": "electric.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 352844,
+    "sha256": "133a470561b861733c867143392ef68b0d1c686ca833fa35dfe3e258489ef4ff"
+  },
+  {
+    "file": "concrete.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 7982,
+    "sha256": "10fceda6e0c1f01d3361b6d117ee6f7c9c5d3ea533b6db5908da06543399b9c8"
+  },
+  {
+    "file": "glass.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 15478,
+    "sha256": "9579da8f12f1dfcd73348bd5bfe92cbedfe563474b03ffbc3a7f52c860e81e31"
+  },
+  {
+    "file": "flesh.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 6658,
+    "sha256": "cc46365ca293c4438ea06962cabb42c9c9ce2053bea3f99a7e70b6e4e84dd2ff"
+  },
+  {
+    "file": "alarm.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 52964,
+    "sha256": "0eeca42829306cc16d199f0369a8e79149fe7201d146279122b510a30a6fa6e0"
+  },
+  {
+    "file": "click.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 4012,
+    "sha256": "fda9a75f8dc28539fcc5567c8506ea7076edebc724e7cdaf4a1b4bd9eb62758b"
+  },
+  {
+    "file": "headshot.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 7100,
+    "sha256": "a1793088246bead1624dc438b9accc9cfe0db1b27123f429e5f5efde9b2e51dc"
+  },
+  {
+    "file": "kill.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 9746,
+    "sha256": "c0a7e97357efcdbdf2780a9333a94805081934979dd05a8c9274781a0d4394ce"
+  },
+  {
+    "file": "denied.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 8864,
+    "sha256": "6599dd3922601beb34f65690dd0301e13d26472e6ea3e757f5a47ef98d9d317c"
+  },
+  {
+    "file": "purchase.wav",
+    "source": "tools/prepare-audio.py",
+    "license": "CC0-1.0",
+    "author": "PROTOCOL DEAD ZONE original DSP",
+    "changes": "Original synthesis; not a recording. Seamless layer or enveloped transient.",
+    "bytes": 11068,
+    "sha256": "671eaa227b486d72011f49aa0eaf835abe3c500d83f2caf97511df7e285b1fa6"
+  }
+]

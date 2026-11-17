@@ -21,10 +21,10 @@ function safeStorage():Storage|null{try{return typeof window==='undefined'?null:
 function HeaderTitle(){return <><span className="terminal-kicker">OMEGA SYSTEMS / EMERGÊNCIA BIOLÓGICA / SETOR 01</span><div className="m6-wordmark">PROTOCOL <b>DEAD ZONE</b></div></>;}
 
 function SettingsPanel({settings,onChange,onClose}:{settings:GameSettings;onChange:(s:GameSettings)=>void;onClose:()=>void}){
- const slider=(label:string,key:'masterVolume'|'effectsVolume'|'ambientVolume',scale=100)=><label className="option-line" key={key}><span>{label}<strong>{Math.round(settings[key]*scale)}%</strong></span><input type="range" min="0" max="100" step="1" value={Math.round(settings[key]*100)} onChange={e=>onChange({...settings,[key]:Number(e.target.value)/100})}/></label>;
+ const slider=(label:string,key:'masterVolume'|'effectsVolume'|'ambientVolume'|'musicVolume',scale=100)=><label className="option-line" key={key}><span>{label}<strong>{Math.round(settings[key]*scale)}%</strong></span><input type="range" min="0" max="100" step="1" value={Math.round(settings[key]*100)} onChange={e=>onChange({...settings,[key]:Number(e.target.value)/100})}/></label>;
  return <div className="menu-screen settings-screen" role="dialog" aria-modal="true" aria-label="Configurações"><div className="menu-card options-card"><div className="menu-eyebrow">PAINEL DE CONTROLE / PERFIL LOCAL</div><h2>CONFIGURAÇÕES</h2><p>As preferências são salvas apenas neste navegador.</p>
   <div className="options-grid">
-   <div className="option-group"><h3>ÁUDIO</h3>{slider('Volume geral','masterVolume')}{slider('Efeitos','effectsVolume')}{slider('Ambiente','ambientVolume')}<label className="option-check"><input type="checkbox" checked={settings.muted} onChange={e=>onChange({...settings,muted:e.target.checked})}/> Silenciar tudo</label></div>
+   <div className="option-group"><h3>ÁUDIO</h3>{slider('Volume geral','masterVolume')}{slider('Efeitos','effectsVolume')}{slider('Ambiente','ambientVolume')}{slider('Música','musicVolume')}<details><summary>Créditos de áudio</summary><small style={{overflowWrap:'anywhere'}}>Pistola: Michel Baradari · apollo-music.de · CC-BY 3.0 · https://opengameart.org/content/chaingun-pistol-rifle-shotgun-shots · https://creativecommons.org/licenses/by/3.0/. Convertido para mono; variações de pitch. Vozes: artisticdude · CC0. Foley: Kenney · CC0. Música/ambiente: DSP original do projeto · CC0. Fontes e licenças completas em assets/audio/licenses/SOURCES.md, incluído nesta distribuição.</small></details><label className="option-check"><input type="checkbox" checked={settings.muted} onChange={e=>onChange({...settings,muted:e.target.checked})}/> Silenciar tudo</label></div>
    <div className="option-group"><h3>VISUAL E CONTROLE</h3><label className="option-line"><span>Campo de visão (FOV)<strong>{settings.fov}°</strong></span><input type="range" min="70" max="100" step="1" value={settings.fov} onChange={e=>onChange({...settings,fov:Number(e.target.value)})}/></label><label className="option-line"><span>Sensibilidade do mouse<strong>{settings.sensitivity.toFixed(1)}×</strong></span><input type="range" min="0.3" max="2.5" step="0.1" value={settings.sensitivity} onChange={e=>onChange({...settings,sensitivity:Number(e.target.value)})}/></label><label className="option-check"><input type="checkbox" checked={settings.reducedMotion} onChange={e=>onChange({...settings,reducedMotion:e.target.checked})}/> Reduzir movimentos visuais</label><label className="option-check"><input type="checkbox" checked={settings.showControls} onChange={e=>onChange({...settings,showControls:e.target.checked})}/> Mostrar lembrete de controles</label></div>
   </div><a className="asset-credits" href={modelUrl('assets/manifests/ATTRIBUTION.md')} target="_blank" rel="noreferrer">Créditos dos modelos 3D</a><button className="menu-primary" onClick={onClose}>VOLTAR</button>
  </div></div>;
@@ -99,6 +99,7 @@ export function App({createRuntime=createDefaultRuntime}:{createRuntime?:()=>Pro
   const unsubscribePurchase=runtime.bus.on('economy:purchase',syncPurchase);
   const interval=window.setInterval(()=>{
    const c=runtime.getCombatState();
+   const pose=runtime.getSnapshot().current;director.update({position:[pose.position[0],pose.position[1]+pose.eyeHeight,pose.position[2]],yaw:runtime.getLook().yaw,pitch:runtime.getLook().pitch,health:c.health,phase:runtime.getRoundState().phase,enemies:runtime.enemies.snapshots(),weapon:runtime.getWeaponState()});
    setInteraction(runtime.getInteraction()?.message??'');setWeapon(runtime.getWeaponState());setCombat(c);
    setComposition(runtime.enemies.composition());setRound(runtime.getRoundState());setEconomy(runtime.getEconomyState());
    setLiveMetrics(runtime.getResults());setPrompt(runtime.getPrompt().message);
@@ -142,7 +143,7 @@ export function App({createRuntime=createDefaultRuntime}:{createRuntime?:()=>Pro
   setComposition(runtime.enemies.composition());setRound(runtime.getRoundState());setEconomy(runtime.getEconomyState());setStatus('running');
   try{void viewport.current?.requestPointerLock();}catch{/* retry on click */}
  };
- const openSettings=()=>{if(status==='running')pause();setSettingsOpen(true);};
+ const openSettings=()=>{audio.current?.unlock();if(status==='running')pause();setSettingsOpen(true);};
  const health=combat?.health??100;
  const maxHealth=combat?.maxHealth??100;
  const phase=round?.phase??'preparation';

@@ -41,7 +41,7 @@ const fs=require('node:fs'),path=require('node:path');
   };
   stage('diagnostics keyboard');const reportPath=path.resolve(out,'diagnostics.json');
   await nativeKey('F8');await saveReport(reportPath,()=>nativeKey('F9'));
-  const report=JSON.parse(fs.readFileSync(reportPath,'utf8'));if(!report.entries.some(e=>e.code==='user.marker'))throw new Error('Diagnostic marker missing');
+  const report=JSON.parse(fs.readFileSync(reportPath,'utf8'));if(!report.entries.some(e=>e.code==='audio.ready'&&e.values.loaded===33&&e.values.failed===0)||report.entries.some(e=>e.code==='audio.asset.failed'))throw new Error('Desktop audio assets not ready');if(!report.entries.some(e=>e.code==='user.marker'))throw new Error('Diagnostic marker missing');
   stage('diagnostics button');const buttonPath=path.resolve(out,'button-diagnostics.json');
   await saveReport(buttonPath,()=>page.getByRole('button',{name:'BAIXAR ERROS'}).click());JSON.parse(fs.readFileSync(buttonPath,'utf8'));
   const gpu=await app.evaluate(({app})=>app.getGPUFeatureStatus());

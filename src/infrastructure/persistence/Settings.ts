@@ -2,6 +2,7 @@ export interface GameSettings {
   masterVolume:number;
   effectsVolume:number;
   ambientVolume:number;
+  musicVolume:number;
   muted:boolean;
   reducedMotion:boolean;
   showControls:boolean;
@@ -10,7 +11,7 @@ export interface GameSettings {
 }
 export const SETTINGS_KEY='protocol-dead-zone:settings:v1';
 export const DEFAULT_SETTINGS:GameSettings={
-  masterVolume:.65,effectsVolume:.85,ambientVolume:.2,muted:false,reducedMotion:false,
+  masterVolume:.65,effectsVolume:.85,ambientVolume:.2,musicVolume:.3,muted:false,reducedMotion:false,
   showControls:true,fov:80,sensitivity:1,
 };
 export interface SettingsStorage{getItem(key:string):string|null;setItem(key:string,value:string):void}
@@ -21,6 +22,7 @@ export function normalizeSettings(data:unknown):GameSettings{
   masterVolume:clamp(x.masterVolume,0,1,DEFAULT_SETTINGS.masterVolume),
   effectsVolume:clamp(x.effectsVolume,0,1,DEFAULT_SETTINGS.effectsVolume),
   ambientVolume:clamp(x.ambientVolume,0,1,DEFAULT_SETTINGS.ambientVolume),
+  musicVolume:clamp(x.musicVolume,0,1,DEFAULT_SETTINGS.musicVolume),
   muted:typeof x.muted==='boolean'?x.muted:DEFAULT_SETTINGS.muted,
   reducedMotion:typeof x.reducedMotion==='boolean'?x.reducedMotion:DEFAULT_SETTINGS.reducedMotion,
   showControls:typeof x.showControls==='boolean'?x.showControls:DEFAULT_SETTINGS.showControls,

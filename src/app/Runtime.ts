@@ -10,7 +10,7 @@ import { InputManager } from '../core/input/InputManager';
 import { Lifecycle } from '../core/lifecycle/Lifecycle';
 import { AssetManager } from '../infrastructure/assets/AssetManager';
 import { PhysicsWorld, type PhysicsSnapshot } from '../physics/PhysicsWorld';
-import { AMMO_STATION, PERK_MACHINES, DOOR } from '../world/maps/containment';
+import { CONTAINMENT_MODULES, AMMO_STATION, PERK_MACHINES, DOOR } from '../world/maps/containment';
 import { M9, M9Controller } from '../gameplay/weapons/M9';
 import type { CombatTrace } from '../gameplay/combat/EnemyHitScan';
 import {resolveShot} from '../gameplay/combat/ResolveShot';
@@ -151,7 +151,7 @@ export class Runtime {
     if(!this.economy.buy(DOOR.id,ECONOMY.containmentDoorPrice)){
       this.announce(`CRÉDITOS INSUFICIENTES: ${ECONOMY.containmentDoorPrice}`);this.bus.emit('economy:denied',{price:ECONOMY.containmentDoorPrice});return false;
     }
-    this.physics.setDoorOpen(true);this.announce('ACESSO AO CORREDOR LIBERADO');this.bus.emit('economy:purchase',{price:ECONOMY.containmentDoorPrice});return true;
+    this.physics.setDoorOpen(true);this.bus.emit('world:doorOpened',{});this.announce('ACESSO AO CORREDOR LIBERADO');this.bus.emit('economy:purchase',{price:ECONOMY.containmentDoorPrice});return true;
   }
   frame(delta:number):void{
     if(this.disposed||this.lifecycle.state!=='running'||this.gameOver)return;
@@ -184,10 +184,12 @@ export class Runtime {
           doorOpen:this.isDoorOpen(),id:shot.id,damage:shot.damage},shot.headshotMultiplier,this.enemies,this.economy);
         this.lastTrace=trace;this.traceAge=0;
         this.metrics.recordShot(hit,hit&&trace.headshot);
-        this.bus.emit('combat:shot',{hit,headshot:hit&&trace.headshot});
+        const material=CONTAINMENT_MODULES.find(m=>m.id===trace.surfaceId)?.material;
+        const impact=hit?'flesh':trace.hit?(material==='glass'?'glass':material==='wall'||material==='floor'?'concrete':'metal'):undefined;
+        this.bus.emit('combat:shot',{hit,headshot:hit&&trace.headshot,impact,position:trace.end});
         if(killed){this.kills++;this.rounds.recordKill();this.bus.emit('combat:enemyKilled',{headshot:trace.headshot});}
         this.lastHeadshot=hit&&trace.headshot;
-      }else this.traceAge+=dt;
+      }else {this.traceAge+=dt;if(this.locked&&input.pressed.has('fire')&&this.weapon.snapshot().ammo===0&&!this.weapon.snapshot().reloading)this.bus.emit('weapon:empty',{});}
       this.hitAge+=dt;this.playerDamage.tick(dt);
       const attacks=this.enemies.tick(dt,px,pz,this.isDoorOpen());
       const living=this.enemies.snapshots();
