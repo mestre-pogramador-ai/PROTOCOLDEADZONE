@@ -1,3 +1,4 @@
+import {acquireVisualBundle,modelUrl} from '../rendering/ModelAssets';
 import { ENEMY_ARCHETYPES, ENEMY_KINDS } from '../../gameplay/enemies/EnemyArchetypes';
 import { attachDiagnostics, downloadDiagnostics, diagnostics } from '../../core/diagnostics/Diagnostics';
 import { Canvas } from '@react-three/fiber';
@@ -25,7 +26,7 @@ function SettingsPanel({settings,onChange,onClose}:{settings:GameSettings;onChan
   <div className="options-grid">
    <div className="option-group"><h3>ÁUDIO</h3>{slider('Volume geral','masterVolume')}{slider('Efeitos','effectsVolume')}{slider('Ambiente','ambientVolume')}<label className="option-check"><input type="checkbox" checked={settings.muted} onChange={e=>onChange({...settings,muted:e.target.checked})}/> Silenciar tudo</label></div>
    <div className="option-group"><h3>VISUAL E CONTROLE</h3><label className="option-line"><span>Campo de visão (FOV)<strong>{settings.fov}°</strong></span><input type="range" min="70" max="100" step="1" value={settings.fov} onChange={e=>onChange({...settings,fov:Number(e.target.value)})}/></label><label className="option-line"><span>Sensibilidade do mouse<strong>{settings.sensitivity.toFixed(1)}×</strong></span><input type="range" min="0.3" max="2.5" step="0.1" value={settings.sensitivity} onChange={e=>onChange({...settings,sensitivity:Number(e.target.value)})}/></label><label className="option-check"><input type="checkbox" checked={settings.reducedMotion} onChange={e=>onChange({...settings,reducedMotion:e.target.checked})}/> Reduzir movimentos visuais</label><label className="option-check"><input type="checkbox" checked={settings.showControls} onChange={e=>onChange({...settings,showControls:e.target.checked})}/> Mostrar lembrete de controles</label></div>
-  </div><button className="menu-primary" onClick={onClose}>VOLTAR</button>
+  </div><a className="asset-credits" href={modelUrl('assets/manifests/ATTRIBUTION.md')} target="_blank" rel="noreferrer">Créditos dos modelos 3D</a><button className="menu-primary" onClick={onClose}>VOLTAR</button>
  </div></div>;
 }
 function ResultsPanel({result,best,onRetry,onSettings}:{result:OperationResults;best:BestRecord|null;onRetry:()=>void;onSettings:()=>void}){
@@ -64,8 +65,14 @@ export function App({createRuntime=createDefaultRuntime}:{createRuntime?:()=>Pro
  useEffect(()=>{
   let cancelled=false,instance:Runtime|null=null;
   if(!supportsWebGL2()){setStatus('error','WebGL 2 não está disponível neste navegador.');return;}
-  createRuntime().then(r=>{if(cancelled){r.dispose();return;}instance=r;setRuntime(r);setStatus('ready');}).catch((e:unknown)=>{diagnostics.record('error','runtime.initialization');if(!cancelled)setStatus('error',e instanceof Error?e.message:String(e));});
-  return()=>{cancelled=true;instance?.dispose();};
+  const visuals=acquireVisualBundle();
+  const boot=async()=>{
+   await visuals.ready;if(cancelled)return;
+   const r=await createRuntime();if(cancelled){r.dispose();return;}instance=r;
+   setRuntime(r);setStatus('ready');
+  };
+  void boot().catch((e:unknown)=>{instance?.dispose();instance=null;visuals.release();diagnostics.record('error','runtime.initialization');if(!cancelled)setStatus('error',e instanceof Error?e.message:String(e));});
+  return()=>{cancelled=true;instance?.dispose();visuals.release();};
  },[setStatus,createRuntime]);
 
  useEffect(()=>{

@@ -1,0 +1,104 @@
+{
+  "version": "M8.1.1",
+  "assets": [
+    {
+      "name": "9mm Pistol / M9",
+      "path": "models/weapons/m9.glb",
+      "format": "GLB 2.0",
+      "author": "Quaternius",
+      "source": "https://poly.pizza/m/BoZWhFdsj4",
+      "license": "CC-BY-3.0",
+      "bytes": 362552,
+      "sha256": "318b671d6488704c3837c901c6c4234f42018e01b00d8836dfa1632f02e0bf95",
+      "triangles": 3066,
+      "primitives": 8,
+      "textures": [
+        "worn-parkerized-steel",
+        "grip-polymer",
+        "barrel-steel"
+      ],
+      "skins": 0,
+      "joints": [],
+      "animations": [],
+      "status": "provisional-integrated"
+    },
+    {
+      "name": "FPS arms \u2014 tactical adaptation",
+      "path": "models/viewmodels/tactical-arms.glb",
+      "format": "GLB 2.0",
+      "author": "para / MakeHuman team",
+      "source": "https://opengameart.org/content/fps-arms-rigged-only",
+      "license": "CC0-1.0",
+      "bytes": 467732,
+      "sha256": "41855e4220708a8cd59683e54f3c805ab17251805a4f4dc24802f82c03d6d6ac",
+      "triangles": 8152,
+      "primitives": 2,
+      "textures": [
+        "olive-sleeve",
+        "tactical-glove"
+      ],
+      "skins": 1,
+      "joints": [
+        51
+      ],
+      "animations": [
+        "SupportReload"
+      ],
+      "status": "provisional-integrated"
+    },
+    {
+      "name": "Animated Zombie",
+      "path": "models/characters/infected.glb",
+      "format": "GLB 2.0",
+      "author": "Quaternius",
+      "source": "https://poly.pizza/m/jkrEvQZb8J",
+      "license": "CC-BY-3.0",
+      "bytes": 694500,
+      "sha256": "02d990c2e442855a7a524a75b51982dc07aec3ee44a48243d61988e125e75a60",
+      "triangles": 2116,
+      "primitives": 1,
+      "textures": [
+        "Zombie.png"
+      ],
+      "skins": 1,
+      "joints": [
+        41
+      ],
+      "animations": [
+        "Zombie|ZombieBite",
+        "Zombie|ZombieCrawl",
+        "Zombie|ZombieIdle",
+        "Zombie|ZombieRun",
+        "Zombie|ZombieWalk"
+      ],
+      "status": "provisional-integrated"
+    },
+    {
+      "name": "Animated Zombie LOD",
+      "path": "models/characters/infected-lod.glb",
+      "format": "GLB 2.0",
+      "author": "Quaternius / project adaptation",
+      "source": "https://poly.pizza/m/jkrEvQZb8J",
+      "license": "CC-BY-3.0",
+      "bytes": 138796,
+      "sha256": "ff0ea787bc110d2719ab8e02936968d482f73ce98f903d01c1d32f2624e1676d",
+      "triangles": 761,
+      "primitives": 1,
+      "textures": [
+        "Zombie"
+      ],
+      "skins": 1,
+      "joints": [
+        41
+      ],
+      "animations": [],
+      "status": "provisional-integrated"
+    }
+  ],
+  "proceduralAnimations": [
+    "weapon Idle/Walk/Sprint/Fire/ADS/Equip",
+    "magazine withdrawal/insertion normalized to reloadDuration",
+    "infected HitReaction; Collapse adapted from Crawl"
+  ],
+  "licenseCopies": "CC-BY-3.0.txt and CC0-1.0.txt from SPDX license-list-data; official license URLs in ATTRIBUTION.md"
+}

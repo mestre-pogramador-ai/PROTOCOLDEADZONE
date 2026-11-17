@@ -1,0 +1,17 @@
+[
+  {
+    "file": "pistol.glb",
+    "url": "https://static.poly.pizza/e9192aa9-16b4-471d-a9c6-1823f8856b26.glb.br",
+    "sha256": "be431e9fa5b595f0f55c007dc82bad9c00fc930379dffc17a61204e45d3a7d22"
+  },
+  {
+    "file": "zombie.glb",
+    "url": "https://static.poly.pizza/972d277d-6fc4-46c7-85d1-e4d68cf46548.glb.br",
+    "sha256": "02d990c2e442855a7a524a75b51982dc07aec3ee44a48243d61988e125e75a60"
+  },
+  {
+    "file": "fps-arms.7z",
+    "url": "https://opengameart.org/sites/default/files/fps%20arms.7z",
+    "sha256": "31f6c7bd5caea8856c4aafca8461f38a3c8bfdd3d8f05c898e403b9475e54562"
+  }
+]

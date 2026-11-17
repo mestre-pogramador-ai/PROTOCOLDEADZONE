@@ -1,0 +1,14 @@
+Linux-6.18.57-x86_64-with-glibc2.41
+
+node --version
+v24.22.1
+
+npm --version
+11.9.0
+
+chromium --version
+Chromium 156.0.8078.79 built on Debian GNU/Linux 13 (trixie)
+
+blender --version
+Blender 4.3.2
+Browser launch: --use-angle=swiftshader --enable-unsafe-swiftshader; dpr=1

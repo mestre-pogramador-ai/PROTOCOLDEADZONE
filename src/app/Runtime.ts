@@ -232,6 +232,7 @@ export class Runtime {
     hitRecently:this.hitAge<.55,damageAngle:this.lastDamageAngle,gameOver:this.gameOver,lastHeadshot:this.lastHeadshot,
     hitMarker:this.traceAge<.14&&this.lastTrace!==null&&this.lastTrace.enemyId!==null,
     damageEvents:this.playerDamage.events,invulnerability:this.playerDamage.immunity};}
+  getFrameTiming():Readonly<FrameStats>{return this.frameStats;}
   getSnapshot():PhysicsSnapshot&{alpha:number;steps:number;droppedSeconds:number}{return {...this.physics.snapshot(),alpha:this.lifecycle.state==='running'?this.frameStats.alpha:1,steps:this.frameStats.steps,droppedSeconds:this.frameStats.droppedSeconds};}
   /** Optional developer overlay; not coupled to React's frame-by-frame store. */
   getMovementDiagnostics(){return this.physics.movementDiagnostics();}
